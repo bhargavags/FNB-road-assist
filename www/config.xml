@@ -11,7 +11,6 @@
     <description>AA IOS ANDROID Application.</description>
     <icon src="images/AA.png"/>
     <content src="index.html"/> 
-  
 
   <description>
     Assets Track app.
@@ -21,7 +20,7 @@
     Star K Team
   </author>
 
-  <preference name="phonegap-version" value="3.0.0" />
+  <preference name="phonegap-version" value="3.5.1" />
   <icon src="icon.png" />
   <gap:plugin name="org.apache.cordova.core.camera" />
   <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
