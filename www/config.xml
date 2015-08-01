@@ -6,7 +6,12 @@
         id        = "com.phonegap.hello-world"
         version   = "1.0.0">
 
-  <name>Assets Track</name>
+    <name>AA IOS ANDROID</name> 
+    <author>AA IOS ANDROID </author>
+    <description>AA IOS ANDROID Application.</description>
+    <icon src="images/AA.png"/>
+    <content src="index.html"/> 
+  
 
   <description>
     Assets Track app.
