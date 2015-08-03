@@ -3,29 +3,35 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.hello-world"
-        version   = "1.0.0">
+        id        = "com.blo.FNB_Rescue.activities"
+        version   = "1.0.0"
+         versionCode = "10">
 
-    <name>AA IOS ANDROID</name> 
-    <author>AA IOS ANDROID </author>
-    <description>AA IOS ANDROID Application.</description>
-    <icon src="images/AA.png"/>
+  <name>AA IOS ANDROID</name>
+ <icon src="images/AA.png"/>
     <content src="index.html"/> 
-
   <description>
-    Assets Track app.
+  AA IOS ANDROID Application.
   </description>
 
   <author href="http://www.star-knowledge.com/" email="harisha@star-knowledge.org">
     Star K Team
   </author>
-
-  <preference name="phonegap-version" value="3.5.1" />
+   <!-- <rim:permissions>
+      <rim:permit>read_geolocation</rim:permit>
+    </rim:permissions>  -->
+ <access subdomains="true" origin="*"  />
+    <access origin="http://192.168.2.26:9068/Service.asmx" subdomains="true" />
+    <access origin="http://118.139.160.226:9068/AAWebService.asmx" subdomains="true" />
+    <access origin="http://fnbfileupload.star-knowledge.org/aawebservice.asmx" subdomains="true" />
+    <!--<access origin="http://ppcmobi.starsoft-india.com/aawebservice.asmx" subdomains="true" />-->
+    
+  <preference name="phonegap-version" value="3.0.0" />
   <icon src="icon.png" />
   <gap:plugin name="org.apache.cordova.core.camera" />
   <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
   <gap:plugin name="it.mobimentum.phonegapspinnerplugin" />
   <gap:plugin name="org.apache.cordova.dialogs" />
-  <access origin="*" subdomains="true"/>
-  <access uri="*" subdomains="true" />
+
+  
 </widget>
