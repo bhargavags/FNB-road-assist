@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
     <widget xmlns = "http://www.w3.org/ns/widgets"
+            
+       xmlns:rim="http://www.blackberry.com/ns/widgets"
 
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.blo.FNB_Rescue.activities"
@@ -14,9 +16,9 @@
     <icon src="images/AA.png"/>
     <content src="index.html"/> 
 
-  <!--  <rim:permissions>
+   <rim:permissions>
       <rim:permit>read_geolocation</rim:permit>
-    </rim:permissions> -->
+    </rim:permissions> 
 
    <access subdomains="true" origin="*"  />
     <access origin="http://192.168.2.26:9068/Service.asmx" subdomains="true" />
