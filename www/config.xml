@@ -1,12 +1,13 @@
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
     <widget xmlns = "http://www.w3.org/ns/widgets"
 
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.blo.FNB_Rescue.activities"
-        version     = "1.0.0"
-         >
+        version     = "1.0.0">
+         
         
-        <name>AA IOS ANDROID</name> 
+      <name>AA IOS ANDROID</name> 
     <author>AA IOS ANDROID </author>
     <description>AA IOS ANDROID Application.</description>
     <icon src="images/AA.png"/>
