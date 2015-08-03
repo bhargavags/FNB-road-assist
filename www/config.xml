@@ -26,7 +26,7 @@
     <access origin="http://fnbfileupload.star-knowledge.org/aawebservice.asmx" subdomains="true" />
     <!--<access origin="http://ppcmobi.starsoft-india.com/aawebservice.asmx" subdomains="true" />-->
     
-  <preference name="phonegap-version" value="3.7.1" />
+  <preference name="phonegap-version" value="3.5.1" />
   <icon src="icon.png" />
      
          <!-- Core plugins -->
