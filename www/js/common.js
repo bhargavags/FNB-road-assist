@@ -278,6 +278,8 @@ function gotoHistroyPage() {
 	pageData.push(currentPage);
 }
 function gotoAboutAAPage() {
+
+    alert('hello');
 	$.mobile.changePage('#aboutAAPage', {
 		transition : "none",
 		reverse : false,
