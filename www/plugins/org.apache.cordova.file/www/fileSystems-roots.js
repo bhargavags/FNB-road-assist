@@ -20,8 +20,6 @@
 */
 
 // Map of fsName -> FileSystem.
-cordova.define("org.apache.cordova.file.fileSystems-roots", function(require, exports, module) {
-	
 var fsMap = null;
 var FileSystem = require('./FileSystem');
 var exec = require('cordova/exec');
@@ -43,4 +41,4 @@ require('./fileSystems').getFs = function(name, callback) {
         }
     }
 };
-});
+

@@ -29,7 +29,6 @@
  *            target path exists
  */
 cordova.define("org.apache.cordova.file.Flags", function(require, exports, module) {
-	
 function Flags(create, exclusive) {
     this.create = create || false;
     this.exclusive = exclusive || false;

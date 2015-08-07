@@ -19,7 +19,6 @@
  *
 */
 cordova.define("org.apache.cordova.file.Entry", function(require, exports, module) {
-	
 var argscheck = require('cordova/argscheck'),
     exec = require('cordova/exec'),
     FileError = require('./FileError'),
