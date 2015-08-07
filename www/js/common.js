@@ -1,5 +1,5 @@
 // JScript source code nw
-
+// Created by Nagalakshmi
 var currentPage = 'indexPage';
 var prevPage = '';
 var pageData = [ "indexPage" ];
@@ -39,13 +39,7 @@ function gotoaccidentReportPage() {
 }
 function gotoAccidentReportToDescPage() {
 
-	/*
-	 * if (document.getElementById('taidLocDesc').value == "") { alert("Please
-	 * enter the description of your current location!");
-	 * 
-	 * return false; }
-	 */
-
+	
 	$.mobile.changePage('#accidentDescriptionPage', {
 		transition : "none",
 		reverse : false,
@@ -55,13 +49,7 @@ function gotoAccidentReportToDescPage() {
 	pageData.push(currentPage);
 }
 function gotoPhotoPage() {
-	/*
-	 * if (document.getElementById('idAccDesc').value == "") { alert("Please
-	 * enter the description of the accident!"); return false; } else if
-	 * (document.getElementById('idSelectRoadCondition').value == "") {
-	 * alert("Please enter details of the road conditions!"); return false; }
-	 */
-
+	
 	$.mobile.changePage('#photoPage', {
 		transition : "none",
 		reverse : false,
@@ -103,7 +91,7 @@ function gotoSecondPartyPage() {
 }
 
 function gotoWitnessPageFromFP() {
-	var FPEmailID = document.getElementById('txtFirstpartyemail').value;
+	/*var FPEmailID = document.getElementById('txtFirstpartyemail').value;
 	if (document.getElementById('txtidPartyName').value == "") {
 		jAlert("Please enter 3rd party name.", "Warning");
 		return false;
@@ -114,22 +102,12 @@ function gotoWitnessPageFromFP() {
 
 		return false;
 	}
-	/*
-	 * else if (document.getElementById('txtidDriverLicenseNum').value == "") {
-	 * alert("Please enter 3rd party driver’s licence number!"); return false; }
-	 */
+	
 	else if (document.getElementById('txtFirstpartyPhNumber').value == "") {
 		jAlert("Please enter 3rd party phone number.", "");
 		return false;
 	}
-	/*
-	 * else if (FPEmailID == "") { alert("Please enter 3rd party email
-	 * address."); return false; } else if (FPEmailID.indexOf("@", 0) < 0) {
-	 * alert("Please enter a valid email address."); return false; }
-	 * 
-	 * else if (FPEmailID.indexOf(".", 0) < 0) { alert("Please enter a valid
-	 * email address."); return false; }
-	 */
+	
 
 	else if (document.getElementById('txtFirstpartyVehicleMake').value == "") {
 		jAlert("Please enter 3rd party vehicle make.", "");
@@ -154,29 +132,13 @@ function gotoWitnessPageFromFP() {
 
 		return false;
 	}
-	/*
-	 * else if (document.getElementById('txtFirstpartyVINNum').value == "") {
-	 * alert("Please enter 3rd party VIN number!!"); return false; }
-	 */
+	
 
 	else if (document.getElementById('txtFirstpartyInsurer').value == "") {
 		jAlert("Please enter 3rd party insurer.", "");
 		return false;
-	}
-	/*
-	 * else if (document.getElementById('txtFirstpartyInsurerPcnum').value ==
-	 * "") { alert("Please enter party insurer policy number!"); return false; }
-	 * else if (document.getElementById('txtFirstpartyInsurerPhnum').value ==
-	 * "") { alert("Please enter insurance company phone number!"); return
-	 * false; } else if
-	 * (document.getElementById('txtFirstpartyInsurerVcolor').value == "") {
-	 * alert("Please enter party insurer vehicle color!"); return false; } else
-	 * if (document.getElementById('txtFirstpartyInsurerVReg').value == "") {
-	 * alert("Please enter party insurer vehicle registration number!"); return
-	 * false; } else if
-	 * (document.getElementById('txtFirstpartyInsurerVinnum').value == "") {
-	 * alert("Please enter party insurer VIN number!"); return false; }
-	 */
+	}*/
+	
 
 	$.mobile.changePage('#WitnessPage', {
 		transition : "none",
@@ -189,7 +151,7 @@ function gotoWitnessPageFromFP() {
 
 function gotoWitnessPageFromSP() {
 
-	var SPEmailID = document.getElementById('txtSecondpartyemail').value;
+	/*var SPEmailID = document.getElementById('txtSecondpartyemail').value;
 	if (document.getElementById('txtidSecondPartyName').value == "") {
 		jAlert("Please enter 3rd party name.", "");
 		return false;
@@ -199,23 +161,12 @@ function gotoWitnessPageFromSP() {
 		jAlert("Please enter 3rd party ID number.", "");
 		return false;
 	}
-	/*
-	 * else if
-	 * (document.getElementById('txtidSecondpartyDriverLicenseNum').value == "") {
-	 * alert("Please enter driver license number!"); return false; }
-	 */
+	
 	else if (document.getElementById('txtSecondpartyPhNumber').value == "") {
 		jAlert("Please enter 3rd party phone number.", "");
 		return false;
 	}
-	/*
-	 * else if (SPEmailID == "") { alert("Please enter email address!"); return
-	 * false; } else if (SPEmailID.indexOf("@", 0) < 0) { alert("Please enter a
-	 * valid email address!"); return false; }
-	 * 
-	 * else if (SPEmailID.indexOf(".", 0) < 0) { alert("Please enter a valid
-	 * email address!"); return false; }
-	 */
+	
 
 	else if (document.getElementById('txtSecondpartyVehicleMake').value == "") {
 		jAlert("Please enter 3rd party vehicle make.", "");
@@ -237,28 +188,12 @@ function gotoWitnessPageFromSP() {
 		jAlert("Please enter 3rd party vehicle registration number.", "");
 		return false;
 	}
-	/*
-	 * else if (document.getElementById('txtSecondpartyVINNum').value == "") {
-	 * alert("Please enter VIN number!"); return false; }
-	 */
-
+	
 	else if (document.getElementById('txtSecondpartyInsurer').value == "") {
 		jAlert("Please enter 3rd party insurer.", "Info");
 		return false;
-	}
-	/*
-	 * else if (document.getElementById('txtSecondpartyInsurerPcnum').value ==
-	 * "") { alert("Please enter party insurer policy number!"); return false; }
-	 * else if (document.getElementById('txtSecondpartyInsurerPhnum').value ==
-	 * "") { alert("Please enter party insurer phone number!"); return false; }
-	 * else if (document.getElementById('txtSecondpartyInsurerVcolor').value ==
-	 * "") { alert("Please enter party insurer vehicle color!"); return false; }
-	 * else if (document.getElementById('txtSecondpartyInsurerVReg').value ==
-	 * "") { alert("Please enter party insurer vehicle registration number!");
-	 * return false; } else if
-	 * (document.getElementById('txtSecondpartyInsurerVinnum').value == "") {
-	 * alert("Please enter party insurer VIN number!"); return false; }
-	 */
+	}*/
+	
 
 	$.mobile.changePage('#WitnessPage', {
 		transition : "none",
@@ -281,24 +216,7 @@ function gotoSecondWitnessPage() {
 }
 
 function gotopolicecasePageFromFirstWitness() {
-	/*
-	 * var FWEmailID = document.getElementById('txtidwitnessEmail').value; if
-	 * (document.getElementById('txtidwitnessName').value == "") { alert("Please
-	 * enter witness name!"); return false; } else if
-	 * (document.getElementById('txtidwitnessPhnum').value == "") {
-	 * alert("Please enter witness phone number!"); return false; } else if
-	 * (FWEmailID == "") { alert("Please enter witness email address!"); return
-	 * false; } else if (FWEmailID.indexOf("@", 0) < 0) { alert("Please enter a
-	 * valid witness email address!"); return false; }
-	 * 
-	 * else if (FWEmailID.indexOf(".", 0) < 0) { alert("Please enter a valid
-	 * witness email address!"); return false; }
-	 * 
-	 * 
-	 * 
-	 * else if (document.getElementById('txtidwitnessSt').value == "") {
-	 * alert("Please enter witness statment!"); return false; }
-	 */
+	
 	$.mobile.changePage('#policecasePage', {
 		transition : "none",
 		reverse : false,
@@ -309,23 +227,7 @@ function gotopolicecasePageFromFirstWitness() {
 
 }
 function gotopolicecasePageFromSecondWitness() {
-	/*
-	 * var SWEmailID = document.getElementById('txtidSwitnessEmail').value; if
-	 * (document.getElementById('txtidSwitnessName').value == "") {
-	 * alert("Please enter witness name"); return false; } else if
-	 * (document.getElementById('txtidSwitnessPhnum').value == "") {
-	 * alert("Please enter witness phone number"); return false; }
-	 * 
-	 * else if (SWEmailID == "") { alert("Please enter witness email address");
-	 * return false; } else if (SWEmailID.indexOf("@", 0) < 0) { alert("Please
-	 * enter a valid witness email address!"); return false; }
-	 * 
-	 * else if (SWEmailID.indexOf(".", 0) < 0) { alert("Please enter a valid
-	 * witness email address!"); return false; }
-	 * 
-	 * else if (document.getElementById('txtidSwitnessSt').value == "") {
-	 * alert("Please enter witness statment!"); return false; }
-	 */
+	
 	$.mobile.changePage('#policecasePage', {
 		transition : "none",
 		reverse : false,
@@ -376,6 +278,8 @@ function gotoHistroyPage() {
 	pageData.push(currentPage);
 }
 function gotoAboutAAPage() {
+
+   
 	$.mobile.changePage('#aboutAAPage', {
 		transition : "none",
 		reverse : false,
@@ -399,478 +303,72 @@ function getDateTimeIncident() {
 		var month = '0' + month;
 	}
 	if (day.toString().length == 1) {
-		var day = '0' + day;
+		 day = '0' + day;
 	}
 	if (hour.toString().length == 1) {
-		var hour = '0' + hour;
+		 hour = '0' + hour;
 	}
 	if (minute.toString().length == 1) {
-		var minute = '0' + minute;
+		 minute = '0' + minute;
 	}
 	if (second.toString().length == 1) {
-		var second = '0' + second;
+		 second = '0' + second;
 	}
 
 	localStorage.date = day + '/' + month + '/' + year;
 	// localStorage.Time = hour + ':' + minute + ':' + ampm;
 	localStorage.Time = hour + ':' + minute;
-	datetime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':'
+	datetime = day + '-' + month + '-' + year + ' ' + hour + ':' + minute + ':'
 			+ second;
+			
 	$('#txtdatepicker').val(localStorage.date);
 	$('#txttimepicker').val(localStorage.Time);
 
 }
 
 function getGPSIncidentLocation() {
-	// alert("aa");
+	
 	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(showPositionLatLng);
+		navigator.geolocation.getCurrentPosition(showPositionLatLng,Errorpage);
 	} else {
-		x.innerHTML = "Geolocation is not supported by this browser.";
+		
+		jAlert("Please make sure GPS is enabled. Please try again.","");
 	}
+}
+function Errorpage(error){
+	
+	GPSLocationLatitude="0";
+	GPSLocationLongitude = "0";
+	$('#txtidGPSIncident').val("0,0");
 }
 function showPositionLatLng(position) {
 
-	// document.getElementById("txtidGPSIncident").innerHTML = "Latitude: " +
-	// position.coords.latitude + "Longitude: " + position.coords.longitude;
-	$('#txtidGPSIncident').val(
-			position.coords.latitude + ", " + position.coords.longitude);
-	GPSLocationLatitude = position.coords.latitude;
-	GPSLocationLongitude = position.coords.longitude;
-	// var lat = position.coords.latitude;
-	// var lng = position.coords.longitude;
-	// showPosition(lat, lng)
-}
-
-/** *** DB Creation *******15****27****11***** */
-var db = window.openDatabase("DBAAProject", "1.0", "Accident Reports",
-		5 * 1024 * 1024);
-// var TBLDrop = "DROP TABLE TableAAProject";
-var createStatement = "CREATE TABLE IF NOT EXISTS TableAAProjectNew(colid INTEGER PRIMARY KEY AUTOINCREMENT, coldatetimeincident TEXT, collatitude TEXT, collongitude TEXT, colgpslocation TEXT, coldesclocation TEXT, colaccdesc TEXT, colroadcond TEXT,colaccroadnotes TEXT, colphotopath TEXT, coldamagephotopath TEXT, colofficername TEXT,colofficernumber TEXT, colcasenumber TEXT, coltype TEXT)";
-var selectAllStatement = "SELECT * FROM TableAAProjectNew";
-var insertStatement = "INSERT INTO TableAAProjectNew(coldatetimeincident,collatitude,collongitude,colgpslocation,coldesclocation,colaccdesc,colroadcond,colaccroadnotes,colphotopath,coldamagephotopath,colofficername,colofficernumber,colcasenumber,coltype) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-var dataset;
-var createStatementParty = "CREATE TABLE IF NOT EXISTS TablePartyNew(colpartyid INTEGER PRIMARY KEY AUTOINCREMENT,colid INTEGER,colpartytitle TEXT,colpartyname TEXT,colpartysurname TEXT,colpartyidnum TEXT,colpartydlnum TEXT,colscanlphotopath TEXT,colpartyphnum TEXT,colpartyemail TEXT,colpartynotes TEXT,colpartyvmake TEXT,colpartyvmodel TEXT,colpartyvyear TEXT,colpartyvcolor TEXT,colpartyvregnum TEXT,colpartyvvinnum TEXT,colpartyvnotes TEXT,colpartyldiskphotopath TEXT,colpartydamagephotopath TEXT,colpartyinsurer TEXT,colpartyinsurerpolicynum TEXT,colpartyinsurerphnum TEXT,colpartyinsurervcolor TEXT,colpartyinsurervregcolor TEXT,colpartyinsurervvinnum TEXT,colpartytype TEXT)";
-var insertStatementParty = "INSERT INTO TablePartyNew(colid,colpartytitle,colpartyname,colpartysurname,colpartyidnum,colpartydlnum,colscanlphotopath,colpartyphnum,colpartyemail,colpartynotes,colpartyvmake,colpartyvmodel,colpartyvyear,colpartyvcolor,colpartyvregnum,colpartyvvinnum,colpartyvnotes,colpartyldiskphotopath,colpartydamagephotopath,colpartyinsurer,colpartyinsurerpolicynum,colpartyinsurerphnum,colpartyinsurervcolor,colpartyinsurervregcolor,colpartyinsurervvinnum,colpartytype) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
-var selectAllStatementParty = "SELECT * FROM TablePartyNew";
-var createStatementWitness = "CREATE TABLE IF NOT EXISTS TableWitnessNew(colwitnessid INTEGER PRIMARY KEY AUTOINCREMENT,colid INTEGER,colwitnesstitle TEXT,colwitnessname TEXT,colwitnesssurname TEXT,colwitnessphnum TEXT,colwitnessemail TEXT,colwitnesssnotes TEXT,colwitnessstatement TEXT,colmikepath TEXT,colwitnesstype TEXT)";
-var insertStatementWitness = "INSERT INTO TableWitnessNew(colid,colwitnesstitle,colwitnessname,colwitnesssurname,colwitnessphnum,colwitnessemail,colwitnesssnotes,colwitnessstatement,colmikepath,colwitnesstype) VALUES (?, ?, ?, ?, ?, ?, ?,?,?,?)";
-var selectAllStatementWitness = "SELECT * FROM TableWitnessNew";
-
-function initDatabase()// Function Call When Page is ready.
-{
-	try {
-		if (!window.openDatabase)// Check browser is supported SQLite or not.
-		{
-			alert('Databases are not supported in this browser.');
-		} else {
-			createTable(); // If supported then call Function for create table
-							// in SQLite
-		}
-	} catch (e) {
-		if (e == 2) {
-			// Version number mismatch.
-			alert("Invalid database version.");
-		} else {
-			alert("Unknown error " + e + ".");
-		}
-		return;
+	
+	if((position.coords.latitude == undefined) && (position.coords.longitude == undefined)){
+		
+		GPSLocationLatitude="0";
+		GPSLocationLongitude = "0";
+		$('#txtidGPSIncident').val("0,0");
 	}
-}
-function createTable() // Function for Create Table in SQLite.3 tables created
-						// here
-{
-	// db.transaction(function (tx) { tx.executeSql(createStatement, [],
-	// showRecords, onError); });
-	// db.transaction(function (tx) { tx.executeSql(createStatementParty, [],
-	// showRecords, onError); });
-	// db.transaction(function (tx) { tx.executeSql(createStatementWitness, [],
-	// showRecords, onError); });
-	db.transaction(function(tx) {
-		tx.executeSql(createStatement, [], onError);
-	});
-	db.transaction(function(tx) {
-		tx.executeSql(createStatementParty, [], onError);
-	});
-	db.transaction(function(tx) {
-		tx.executeSql(createStatementWitness, [], onError);
-	});
-
-}
-function insertRecord() // Get value from Input and insert record . Function
-						// Call when Save/Submit Button Click..
-{
-	try {
-		var AccidentID;
-		// var InsertSuccessmsg = '0';
-		var DateTimehistroy = $('#txtdatepicker').val();
-		var TimeHistroy = $('#txttimepicker').val();
-		var DateTimeBoth = localStorage.date + '  ' + localStorage.Time;
-		var GPSLocationLatitude = $('#txtidGPSIncident').val();
-		var GPSLocationLongitude = $('#txtidGPSIncident').val();
-		var LocDescription = $('#taidLocDesc').val();
-		var AccDescription = $('#idAccDesc').val();
-		var RoadCondition = $('#idSelectRoadCondition').val();
-		var AccRoadnNotes = $('#idAccDescNotes').val();
-		var separateAllphotopathByComma = '';
-		var separateAllphotopathByCommaDamage = '';
-		$('#idDelImgPhotoImg div').each(
-				function(i, item) {
-					separateAllphotopathByComma += $(item).find('img').attr(
-							"src")
-							+ ',';
-
-				});
-		var PhotoLocationPath = separateAllphotopathByComma;
-
-		$('#idDelImgDamagePhotoImg div').each(
-				function(i, item) {
-					separateAllphotopathByCommaDamage += $(item).find('img')
-							.attr("src")
-							+ ',';
-
-				});
-		var PhotoDamagePath = separateAllphotopathByCommaDamage;
-		var vediopath = '';
-		$('#idVedioShowdiv div').each(function(i, item) {
-			vediopath += $(item).find('source').attr("src") + ',';
-
-		});
-		var TakeVedioPath = vediopath;
-
-		var policename = $('#txtidpolicename').val();
-		var policenumber = $('#txtidpolicenumber').val();
-		var policecasenumber = $('#txtidcasenumber').val();
-
-		db.transaction(function(tx) {
-
-			// tx.executeSql(insertStatement, [DateTimeBoth,
-			// GPSLocationLatitude, GPSLocationLongitude, '', LocDescription,
-			// AccDescription, RoadCondition, AccRoadnNotes, PhotoLocationPath,
-			// PhotoDamagePath, policename, policenumber, policecasenumber, ''],
-			tx.executeSql(insertStatement, [ DateTimeBoth, GPSLocationLatitude,
-					GPSLocationLongitude, TakeVedioPath, LocDescription,
-					AccDescription, RoadCondition, AccRoadnNotes,
-					PhotoLocationPath, PhotoDamagePath, policename,
-					policenumber, policecasenumber, '' ],
-
-			function(tx, results) {
-				AccidentID = results.insertId; // this is the id of the insert
-												// just performed(lastinserted
-												// id)
-				// alert("AccidentID:::::::::" + AccidentID);
-				insertRecordPartys(AccidentID);
-				insertRecordSecondPartys(AccidentID);
-				insertRecordWitness(AccidentID);
-				insertRecordSecondWitness(AccidentID);
-				InsertSuccessmsg = '1';
-
-			});
-
-		});
-
-		// alert("phaoto1::::" + PhotoLocationPath)
-		// alert("Damage:::" + PhotoDamagePath)
-		// alert("TakeVedioPath:::" + TakeVedioPath)
-
-		jAlert(
-				"Your data has been uploaded <br> to the AA Accident webite <br/>www.aaaccident.co.za",
-				"");
-		$('#popup_ok').bind('click', function() {
-			// Do operation after clicking ok button.jAlert ok button id
-			// is#popup_ok
-			prevPage = currentPage;
-			$.mobile.changePage('#indexPage', {
-				transition : "none",
-				reverse : false,
-				changeHash : false
-			});
-			currentPage = 'indexPage';
-		});
-
-	} catch (ex) {
-		// alert("ex" + ex);
+	else{
+		$('#txtidGPSIncident').val(
+				position.coords.latitude + ", " + position.coords.longitude);
+		GPSLocationLatitude = position.coords.latitude;
+		GPSLocationLongitude = position.coords.longitude;
 	}
-}
-/*
- * if (InsertSuccessmsg == '1') { jAlert("your data has been uploaded to the AA
- * Accident webite www.aaaccident.co.za", 'Warning'); prevPage = currentPage;
- * $.mobile.changePage('#indexPage', { transition: "none", reverse: false,
- * changeHash: false }); currentPage = 'indexPage'; }
- */
-
-function insertRecordPartys(Accid) {
-
-	var Ptitle = $('#idselectpartyTitle').val();
-	var Pname = $('#txtidPartyName').val();
-	var Psurname = $('#txtidPartySurName').val();
-	var Pidnum = $('#txtFirstpartyIDNumber').val();
-	var Pdlnum = $('#txtidDriverLicenseNum').val();
-	// photo1
-	var scanlicensephotopathByComma;
-	$('#idDriverLicenseNumPhoto div').each(function(i, item) {
-		scanlicensephotopathByComma += $(item).find('img').attr("src") + ',';
-	});
-	var scanlicensephotopath = scanlicensephotopathByComma;
-
-	var Pphnum = $('#txtFirstpartyPhNumber').val();
-	var Ppemail = $('#txtFirstpartyemail').val();
-	var Ppnotes = $('#txtFirstpartyNotes').val();
-	var Ppvmake = $('#txtFirstpartyVehicleMake').val();
-	var Ppvmodel = $('#txtFirstpartyVehicleModel').val();
-	var Ppvyear = $('#txtFirstpartyVehicleYear').val();
-	var Ppvcolor = $('#txtFirstpartyVehiclecolor').val();
-	var Ppvregnum = $('#txtFirstpartyRegNum').val();
-	var Ppvvinnum = $('#txtFirstpartyVINNum').val();
-	var Ppvnotes = $('#txtFirstpartyVehicleNotes').val();
-	// photo2
-	var scanlicensediskpathByComma;
-	$('#idLicenseDiskPhoto div').each(function(i, item) {
-		scanlicensediskpathByComma += $(item).find('img').attr("src") + ',';
-	});
-	var scanlicensephotodiskpath = scanlicensediskpathByComma;
-	// photo3
-	var damagephotopathByComma;
-	$('#idDamagePhoto div').each(function(i, item) {
-		damagephotopathByComma += $(item).find('img').attr("src") + ',';
-	});
-	var damagephotopath = damagephotopathByComma;
-
-	var Ppvinsurer = $('#txtFirstpartyInsurer').val();
-	var Ppvipcnum = $('#txtFirstpartyInsurerPcnum').val();
-	var Ppviphnum = $('#txtFirstpartyInsurerPhnum').val();
-	var Ppvivcolor = $('#txtFirstpartyInsurerVcolor').val();
-	var Ppviregnum = $('#txtFirstpartyInsurerVReg').val();
-	var Ppvivinnum = $('#txtFirstpartyInsurerVinnum').val();
-
-	db.transaction(function(tx) {
-		tx.executeSql(insertStatementParty, [ Accid, Ptitle, Pname, Psurname,
-				Pidnum, Pdlnum, scanlicensephotopath, Pphnum, Ppemail, Ppnotes,
-				Ppvmake, Ppvmodel, Ppvyear, Ppvcolor, Ppvregnum, Ppvvinnum,
-				Ppvnotes, scanlicensephotodiskpath, damagephotopath,
-				Ppvinsurer, Ppvipcnum, Ppviphnum, Ppvivcolor, Ppviregnum,
-				Ppvivinnum, 'p1' ]);
-	});
+	
 }
 
-function insertRecordSecondPartys(Accid) {
 
-	var SPtitle = $('#idselectsecondpartyTitle').val();
-	var SPname = $('#txtidSecondPartyName').val();
-	var SPsurname = $('#txtidSecondPartySurName').val();
-	var SPidnum = $('#txtSecondpartyIDNumber').val();
-	var SPdlnum = $('#txtidSecondpartyDriverLicenseNum').val();
-	// photo1
-	var scanlicensephotopathByCommaSecondParty;
-	$('#idSecondpartyDriverLicenseNumPhoto div').each(
-			function(i, item) {
-				scanlicensephotopathByCommaSecondParty += $(item).find('img')
-						.attr("src")
-						+ ',';
-			});
-	var scanlicensephotopathSecondParty = scanlicensephotopathByCommaSecondParty;
 
-	var SPphnum = $('#txtSecondpartyPhNumber').val();
-	var SPpemail = $('#txtSecondpartyemail').val();
-	var SPpnotes = $('#txtSecondpartyNotes').val();
-	var SPpvmake = $('#txtSecondpartyVehicleMake').val();
-	var SPpvmodel = $('#txtSecondpartyVehicleModel').val();
-	var SPpvyear = $('#txtSecondpartyVehicleYear').val();
-	var SPpvcolor = $('#txtSecondpartyVehiclecolor').val();
-	var SPpvregnum = $('#txtSecondpartyRegNum').val();
-	var SPpvvinnum = $('#txtSecondpartyVINNum').val();
-	var SPpvnotes = $('#txtSecondpartyVehicleNotes').val();
-	// photo2
-	var scanlicensediskpathByCommaSecondParty;
-	$('#idSecondpartyLicenseDiskPhoto div').each(
-			function(i, item) {
-				scanlicensediskpathByCommaSecondParty += $(item).find('img')
-						.attr("src")
-						+ ',';
-			});
-	var scanlicensephotodiskpathSecondParty = scanlicensediskpathByCommaSecondParty;
-
-	// photo3
-	var damagephotopathByCommaSecondParty;
-	$('#idSecondpartyDamagePhoto div').each(
-			function(i, item) {
-				damagephotopathByCommaSecondParty += $(item).find('img').attr(
-						"src")
-						+ ',';
-			});
-	var damagephotopathSecondParty = damagephotopathByCommaSecondParty;
-
-	var SPpvinsurer = $('#txtSecondpartyInsurer').val();
-	var SPpvipcnum = $('#txtSecondpartyInsurerPcnum').val();
-	var SPpviphnum = $('#txtSecondpartyInsurerPhnum').val();
-	var SPpvivcolor = $('#txtSecondpartyInsurerVcolor').val();
-	var SPpviregnum = $('#txtSecondpartyInsurerVReg').val();
-	var SPpvivinnum = $('#txtSecondpartyInsurerVinnum').val();
-
-	db.transaction(function(tx) {
-		tx.executeSql(insertStatementParty, [ Accid, SPtitle, SPname,
-				SPsurname, SPidnum, SPdlnum, scanlicensephotopathSecondParty,
-				SPphnum, SPpemail, SPpnotes, SPpvmake, SPpvmodel, SPpvyear,
-				SPpvcolor, SPpvregnum, SPpvvinnum, SPpvnotes,
-				scanlicensephotodiskpathSecondParty,
-				damagephotopathSecondParty, SPpvinsurer, SPpvipcnum,
-				SPpviphnum, SPpvivcolor, SPpviregnum, SPpvivinnum, 'p2' ]);
-	});
-
-}
-function insertRecordWitness(Accid) {
-
-	var Wtitle = $('#idselectwitnesstitle').val();
-	var Wname = $('#txtidwitnessName').val();
-	var Wsurname = $('#txtidwitnessSurName').val();
-	var Wphnum = $('#txtidwitnessPhnum').val();
-	var Wemail = $('#txtidwitnessEmail').val();
-	var Wnotes = $('#taidwitnessnotes').val();
-	var Wst = $('#txtidwitnessSt').val();
-	db.transaction(function(tx) {
-		tx.executeSql(insertStatementWitness, [ Accid, Wtitle, Wname, Wsurname,
-				Wphnum, Wemail, Wnotes, Wst, '', 'w1' ]);
-	});
-}
-function insertRecordSecondWitness(Accid) {
-
-	var SWtitle = $('#idselectSwitnesstitle').val();
-	var SWname = $('#txtidSwitnessName').val();
-	var SWsurname = $('#txtidSwitnessSurName').val();
-	var SWphnum = $('#txtidSwitnessPhnum').val();
-	var SWemail = $('#txtidSwitnessEmail').val();
-	var SWnotes = $('#taidSwitnessnotes').val();
-	var SWst = $('#txtidSwitnessSt').val();
-
-	db.transaction(function(tx) {
-		tx.executeSql(insertStatementWitness, [ Accid, SWtitle, SWname,
-				SWsurname, SWphnum, SWemail, SWnotes, SWst, '', 'w2' ]);
-	});
-}
-
-function onError(tx, error) // Function for Hendeling Error...
+$(document).ready(function() 
 {
-	// alert(error.message);
-}
-// Function For Retrive data from Database Display records as list
-/*
- * function showRecords() { db.transaction(function (tx) {
- * 
- * tx.executeSql(selectAllStatement, [], function (tx, result) { dataset =
- * result.rows; var listhistroydata = document.getElementById("lstHistroy");
- * listhistroydata.innerHTML = null; for (var i = 0, item = null; i <
- * dataset.length; i++) { item = dataset.item(i); var DBDateTime =
- * item["coldatetimeincident"]; var displayHistroyIDDateTime = '<div
- * class="HistroyOuterColor1" onclick="gotohistroyDetailsPage(' + item["colid"] +
- * ')"><div class="HistroytimeDiv"><div class="Histroyfields"><div
- * class="DateTimestyle1">' + item["colid"] + '</div> <div
- * class="DateTimestyle2">' + DBDateTime.split(' ')[0] + '</div> <div
- * class="DateTimestyle3">' + DBDateTime.split(' ')[2] + '</div></div></div></div>';
- * listhistroydata.innerHTML += displayHistroyIDDateTime; } });
- * 
- * 
- * }); $.mobile.changePage('#HistroyPage', { transition: "none", reverse: false,
- * changeHash: false }); currentPage = 'HistroyPage';
- * pageData.push(currentPage);
- *  }
- */
-/*
- * function gotohistroyDetailsPage(getclickid) { var selectStatementbyid =
- * "SELECT * FROM TableAAProjectNew where colid = " + getclickid; //inner join
- * two tables var selectStatementPartybyid = "Select
- * TablePartyNew.colpartyname,TablePartyNew.colpartyidnum,TablePartyNew.colpartydlnum,TablePartyNew.colpartytype
- * from TablePartyNew INNER JOIN TableAAProjectNew ON TablePartyNew.colid =" +
- * getclickid + " AND TableAAProjectNew.colid=" + getclickid + ";" var
- * selectStatementWitnessbyid = "Select
- * TableWitnessNew.colwitnessname,TableWitnessNew.colwitnessphnum,TableWitnessNew.colwitnessemail,TableWitnessNew.colwitnessstatement,TableWitnessNew.colwitnesstype
- * from TableWitnessNew INNER JOIN TableAAProjectNew ON TableWitnessNew.colid =" +
- * getclickid + " AND TableAAProjectNew.colid=" + getclickid + ";"
- * 
- * db.transaction(function (tx) { tx.executeSql(selectStatementbyid, [],
- * function (tx, result) { var ListAllAccident =
- * document.getElementById("lstAllAccidentData"); ListAllAccident.innerHTML =
- * null; for (var i = 0; i < result.rows.length; i++) { item =
- * result.rows.item(i);
- *  // var displayAllAccidentData = '<li class="HistroyDetails">Date Time:' +
- * item["coldatetimeincident"] + '</li><li class="HistroyDetails">GPS
- * Location of Incident:' + item["collatitude"] + '</li><li class="HistroyDetails">Description
- * of Location:' + item["coldesclocation"] + '</li><li class="HistroyDetails">Photo:' +
- * item["colphotopath"] + '</li>'; var displayAllAccidentData = '<li class="HistroyDetails">Date
- * Time:' + item["coldatetimeincident"] + '</li><li class="HistroyDetails">GPS
- * Location of Incident:' + item["collatitude"] + '</li><li class="HistroyDetails">Description
- * of Location:' + item["coldesclocation"] + '</li>';
- * ListAllAccident.innerHTML = displayAllAccidentData; }
- * 
- * });
- * 
- * });
- * 
- * db.transaction(function (tx) { tx.executeSql(selectStatementPartybyid, [],
- * function (tx, resultparty) {
- * 
- * var displayAllPartysData = ""; var AllPartysData =
- * document.getElementById("lstAllPartysData"); AllPartysData.innerHTML = null;
- * 
- * for (var i = 0; i < resultparty.rows.length; i++) { item =
- * resultparty.rows.item(i); var PartyNum = ''; if (item["colpartytype"] ==
- * 'p1') { PartyNum = 'First Party'; } else { PartyNum = 'Second party'; }
- * 
- * displayAllPartysData = displayAllPartysData + '<br/><li class="HistroyDetails" >'+PartyNum+'</li><li class="HistroyDetails">Name:' +
- * item["colpartyname"] + '</li><li class="HistroyDetails">ID Number:' +
- * item["colpartyidnum"] + '</li><li class="HistroyDetails">Driver License
- * Number:' + item["colpartydlnum"] + '</li>';
- *  } AllPartysData.innerHTML = displayAllPartysData; }); });
- * 
- * db.transaction(function (tx) { tx.executeSql(selectStatementWitnessbyid, [],
- * function (tx, resultwitness) { var displayAllWitnesssData = ""; var
- * AllWitnesssData = document.getElementById("lstAllWitnessData");
- * AllWitnesssData.innerHTML = null; for (var i = 0; i <
- * resultwitness.rows.length; i++) { item = resultwitness.rows.item(i); var
- * WitnessNum = ''; if (item["colwitnesstype"] == 'w1') { WitnessNum = 'First
- * Witness'; } else { WitnessNum = 'Second Witness'; }
- * 
- * displayAllWitnesssData = displayAllWitnesssData + '<br/><li class="HistroyDetails">' +
- * WitnessNum + '</li><li class="HistroyDetails">Name:' +
- * item["colwitnessname"] + '</li><li class="HistroyDetails">Phone Number:' +
- * item["colwitnessphnum"] + '</li><li class="HistroyDetails">Email Address:' +
- * item["colwitnessemail"] + '</li><li class="HistroyDetails">Witness
- * Statement:' + item["colwitnessstatement"] + '</li>'; }
- * AllWitnesssData.innerHTML = displayAllWitnesssData; }); });
- * 
- * prevPage = currentPage; $.mobile.changePage('#histroyDetailsPage', {
- * transition: "none", reverse: false, changeHash: false }); currentPage =
- * 'histroyDetailsPage'; pageData.push(currentPage);
- *  }
- */
-
-$(document).ready(function() // Call function when page is ready for load..
-{
-	$("body").fadeIn(2000); // Fede In Effect when Page Load..
-	// initDatabase();
+	$("body").fadeIn(2000); 
+	
 
 });
-function btnSaveAllDetails1() {
-	try {
-		/*
-		 * if (document.getElementById('txtidpolicename').value == "") {
-		 * alert("Please enter the attending officer’s name!"); return false; }
-		 * else if (document.getElementById('txtidpolicenumber').value == "") {
-		 * alert("Please enter attending officer’s badge number"); return false; }
-		 * 
-		 * else if (document.getElementById('txtidcasenumber').value == "") {
-		 * alert("Please enter case number!"); return false; }
-		 */
 
-		insertRecord();
-	} catch (err) {
-		alert(err.Message);
-	}
-}
-function btnshowHistroyPage() {
 
-	// showRecords();
-
-}
 var AID = "";
 var LocDescription = "";
 var AccDescription = "";
@@ -935,6 +433,7 @@ var POname = "";
 var POnumber = "";
 var CaseNumber = "";
 function btnSaveAllDetails(msidn) {
+	//jAlert("test");
 	var now = new Date();
 	var year = now.getFullYear();
 	var month = now.getMonth() + 1;
@@ -959,21 +458,12 @@ function btnSaveAllDetails(msidn) {
 		var second = '0' + second;
 	}
 
-	datetime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':'
+	datetime = day + '-' + month + '-' + year + ' ' + hour + ':' + minute + ':'
 			+ second;
 	document.getElementById('view-loading').style.display = "block";
 	try {
 
-		/*
-		 * if (localStorage.latitude == '' || localStorage.latitude == null ||
-		 * localStorage.latitude == undefined) { GPSLocationLatitude = ""; }
-		 * else { GPSLocationLatitude = localStorage.latitude;
-		 * alert(GPSLocationLatitude); } if (localStorage.longitude == '' ||
-		 * localStorage.longitude == null || localStorage.longitude ==
-		 * undefined) { GPSLocationLongitude = ""; } else { GPSLocationLongitude =
-		 * localStorage.longitude;
-		 *  }
-		 */
+		
 		if ($('#taidLocDesc').val() == '' || $('#taidLocDesc').val() == null
 				|| $('#taidLocDesc').val() == undefined) {
 			LocDescription = "";
@@ -1102,13 +592,14 @@ function btnSaveAllDetails(msidn) {
 		} else {
 			SWst = $('#txtidSwitnessSt').val();
 		}
-
-		if ($('#idselectpartyTitle').val() == ''
-				|| $('#idselectpartyTitle').val() == null
-				|| $('#idselectpartyTitle').val() == undefined) {
+//alert(document.getElementById('idselectpartyTitle').value);
+		if (document.getElementById('idselectpartyTitle').value == ''
+				|| document.getElementById('idselectpartyTitle').value == null
+				|| document.getElementById('idselectpartyTitle').value == undefined) {
 			Ptitle = "";
 		} else {
-			Ptitle = $('#idselectpartyTitle').val();
+			
+			Ptitle = document.getElementById('idselectpartyTitle').value;
 		}
 		if ($('#txtidPartyName').val() == ''
 				|| $('#txtidPartyName').val() == null
@@ -1232,12 +723,12 @@ function btnSaveAllDetails(msidn) {
 			Pphnum = $('#txtFirstpartyPhNumber').val();
 		}
 
-		if ($('#idselectsecondpartyTitle').val() == ''
-				|| $('#idselectsecondpartyTitle').val() == null
-				|| $('#idselectsecondpartyTitle').val() == undefined) {
+		if (document.getElementById('idselectsecondpartyTitle').value == ''
+				|| document.getElementById('idselectsecondpartyTitle').value == null
+				|| document.getElementById('idselectsecondpartyTitle').value == undefined) {
 			SPtitle = "";
 		} else {
-			SPtitle = $('#idselectsecondpartyTitle').val();
+			SPtitle = document.getElementById('idselectsecondpartyTitle').value;
 		}
 		if ($('#txtidSecondPartyName').val() == ''
 				|| $('#txtidSecondPartyName').val() == null
@@ -1381,42 +872,19 @@ function btnSaveAllDetails(msidn) {
 			CaseNumber = $('#txtidcasenumber').val();
 		}
 
-		// alert(GPSLocationLatitude + ':::::' + GPSLocationLongitude + ':::::'
-		// + LocDescription + ':::::' + AccDescription + ':::::' + RoadCondition
-		// + ':::::' + AccRoadnNotes);
-
-		// alert(Wtitle + ':::::' + Wname + ':::::' + Wsurname + ':::::' +
-		// Wphnum + '::::' + Wemail + ':::::' + Wnotes + ':::::' + Wst);
-
-		// alert(SWtitle + ':::::' + SWname + ':::::' + SWsurname + ':::::' +
-		// SWphnum + ':::::' + SWemail + ':::::' + SWnotes + ':::::' + SWst);
-
-		// alert(Ptitle + ':::::' + Pname + ':::::' + Psurname + ':::::' +
-		// Pidnum + ':::::' + Pdlnum + ':::::' + Pphnum + ':::::' + Ppemail +
-		// ':::::' + Ppnotes + ':::::' + Ppvmake + ':::::' + Ppvmodel + ':::::'
-		// + Ppvyear + ':::::' + Ppvcolor + ':::::' + Ppvregnum + ':::::' +
-		// Ppvvinnum + ':::::' + Ppvnotes + ':::::' + Ppvinsurer + ':::::' +
-		// Ppvipcnum + ':::::' + Ppviphnum);
-
-		// alert(SPtitle + ':::::' + SPname + ':::::' + SPsurname + ':::::' +
-		// SPidnum + ':::::' + SPdlnum + ':::::' + SPphnum + ':::::' + SPpemail
-		// + ':::::' + SPpnotes + ':::::' + SPpvmake + ':::::' + SPpvmodel +
-		// ':::::' + SPpvyear + ':::::' + SPpvcolor + ':::::' + SPpvregnum +
-		// ':::::' + SPpvvinnum + ':::::' + SPpvnotes + ':::::' + SPpvinsurer +
-		// ':::::' + SPpvipcnum + ':::::' + SPpviphnum);
-
+		
 		insertAccidentRecord(msidn);
 	} catch (err) {
-		jAlert("The System is temporarily <br/>unavailable, please <br/>try again later." + err);
+		jAlert("The System is temporarily <br/>unavailable, please <br/>try again later.");
         document.getElementById('view-loading').style.display = "none";
 	}
 }
 
 function fail(result) {
-	// debugger;
+	
 
 	if (result.message != "") {
-		jAlert("User doesnot exists");
+		jAlert("System temporarly unavailable.<br/> Please try later");
 		document.getElementById('view-loading').style.display = "none";
 	} else {
 		jAlert("System temporarly unavailable.<br/> Please try later");
@@ -1425,13 +893,12 @@ function fail(result) {
 
 }
 function sucess(result) {
-	// debugger;
-	// document.getElementById("mainsavingdiv").style.display = "none";
+	
 
 	var res = result.status;
 	AID = result.ID;
 	if (res == 200) {
-		// alert("200 is success:::::::::"+res + ":::"+ result.ID);
+		
 		uploadLocPicture(AID);
 		uploadAccDmgPicture(AID);
 		uploadDLicensePicture(AID);
@@ -1444,6 +911,55 @@ function sucess(result) {
 		uploadAudio(AID);
 		uploadAudioSwit(AID);
 		document.getElementById("view-loading").style.display = "none";
+
+        
+        if(document.getElementById("idDelImgPhotoImg").innerHTML != ""){
+        document.getElementById("idDelImgPhotoImg").innerHTML = "";
+            $('#idAddPhotoImg').show();
+        }
+        if(document.getElementById("idDelImgDamagePhotoImg").innerHTML != ""){
+            document.getElementById("idDelImgDamagePhotoImg").innerHTML = "";
+            $('#idAddDamagePhotoImg').show();
+            $('#idAddanotherDamagephotoImg').hide();
+           
+        }
+        if(document.getElementById("idDriverLicenseNumPhoto").innerHTML !=""){
+            document.getElementById("idDriverLicenseNumPhoto").innerHTML="";
+        }
+        if(document.getElementById("idLicenseDiskPhoto").innerHTML !=""){
+            document.getElementById("idLicenseDiskPhoto").innerHTML="";
+        }
+        if(document.getElementById("idDamagePhoto").innerHTML !=""){
+            document.getElementById("idDamagePhoto").innerHTML="";
+        }
+        if(document.getElementById("idSecondpartyDriverLicenseNumPhoto").innerHTML !=""){
+            document.getElementById("idSecondpartyDriverLicenseNumPhoto").innerHTML="";
+        }
+        if(document.getElementById("idSecondpartyLicenseDiskPhoto").innerHTML !=""){
+            document.getElementById("idSecondpartyLicenseDiskPhoto").innerHTML="";
+        }
+        if(document.getElementById("idSecondpartyDamagePhoto").innerHTML !=""){
+            document.getElementById("idSecondpartyDamagePhoto").innerHTML="";
+        }
+        if(document.getElementById("idVedioShowdiv").innerHTML !=""){
+            document.getElementById("idVedioShowdiv").innerHTML="";
+            $('#capture-result').text('');
+        }
+        if(document.getElementById("idAudioDiv").innerHTML !=""){
+            document.getElementById("idAudioDiv").innerHTML="";
+            $('#capture-resultAudio').text('');
+        }
+        if(document.getElementById("idSecondWitAudio").innerHTML !=""){
+            document.getElementById("idSecondWitAudio").innerHTML="";
+            $('#capture-resultswitAudio').text('');
+            
+        }
+        
+      
+        
+        
+        $('#idAddanotherphotoImg').hide();
+       
 		$('#taidLocDesc').val("");
 		$('#idAccDesc').val("");
 		$('#idSelectRoadCondition').val("");
@@ -1501,13 +1017,12 @@ function sucess(result) {
 		$('#txtidcasenumber').val("");
 		$('#savecancel').attr('onclick', 'goindexPage()');
 		$('#saveback').attr('onclick', 'gobackPage()');
-		jAlert(
-				"Your data has been uploaded <br/> to the AA Accident <br/>webite www.aaaccident.co.za",
-				"Warning");
+		
+		jAlert("Your FNB Road Assist Accident Report will be <br/>uploaded to your profile on the<br/>  FNB Road Assist website <br/> at  www.fnbroadassist.co.za. <br/>This generally takes a few moments <br/>but is dependent on your service<br/> provider network and file size.","");
 		$("#popup_ok").click(function() {
-			// Do operation after clicking ok button.alert ok button id
-			// is#popup_ok
-			goindexPage();
+			
+			Arrayclear();
+			
 		});
 
 	} else {
@@ -1522,22 +1037,20 @@ function sucess(result) {
 
 }
 CallWebService = function (url, inputData, method, contentType, callback) {
-    // $(window).scrollTop(0);
-    // document.getElementById('loaddingimg').style.top = '0';
-    // document.getElementById('loaddingimg').style.display = "block";
+   
      try {
          var xhr;
-         if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+         if (window.XMLHttpRequest) {
              xhr = new XMLHttpRequest();
-         } else {// code for IE6, IE5bacl
+         } else {
              xhr = new ActiveXObject("Microsoft.XMLHTTP");
          }
          xhr.onreadystatechange = function () {
-             alert(xhr.status);
-             alert(xhr.readyState);
+            // alert(xhr.status);
+            // alert(xhr.readyState);
              if (xhr.readyState == 4 && xhr.status == 200) {
-               //  document.getElementById('loaddingimg').style.display = "none";
-            	 alert(this.responseText);
+               
+            	// alert(this.responseText);
                  callback(this.responseText);
              }
              if (xhr.readyState == 4 && (xhr.status == 404 || xhr.status == 403 || xhr.status == 500 || xhr.status == 504)) {
@@ -1583,6 +1096,7 @@ CallWebService = function (url, inputData, method, contentType, callback) {
 function insertAccidentRecord(msidn) {
 	
 	if (window.navigator.onLine == true) {
+	//alert(datetime);
 		svc = new AppService();
 		var accident = {
 			AccidentDate : datetime,
@@ -1687,8 +1201,8 @@ function insertAccidentRecord(msidn) {
 
 }
 function GetCallback(responsedata){
-	//responsedata = responsedata.replace();118.139.160.226:9068
-	alert('res:  '+responsedata);
+	
+//	alert('res:  '+responsedata);
 	document.getElementById('view-loading').style.display = "none";
 	responsedata = responsedata.replace(/&gt;/gi, '>');
 	responsedata = responsedata.replace(/&lt;/gi, '<');
@@ -1696,7 +1210,7 @@ function GetCallback(responsedata){
 	if (responsedata != '' && responsedata != null) {
 	var parser = new DOMParser();
 	var doc = parser.parseFromString(responsedata, "text/xml");
-	alert(doc.getElementsByTagName('AddAccidentResult')[0].textContent);
+	//alert(doc.getElementsByTagName('AddAccidentResult')[0].textContent);
 	
 	}
 	}catch(ex){
@@ -1704,33 +1218,35 @@ function GetCallback(responsedata){
 		document.getElementById('view-loading').style.display = "none";
 	}
 }
-/*Maps*/
+
 function dBcall()
 {
-//alert("dBcall");
-var db = window.openDatabase("aarescuepoidb", "1.0", "AAPOIdatabase", 4 * 1024 * 1024);
-//alert(db);
-db.transaction(function (tx) {
-    var queryAccom = "CREATE TABLE IF NOT EXISTS AAAccommodation(Name varchar(255) NULL,AA_rating INTEGER NULL,Latitude varchar(255) NULL,Longitude varchar(255) NULL,Seopermalink varchar(255) NULL,PhoneNumber varchar(255) NULL,Email varchar(255) NULL)";
-    // alert(query);
-    tx.executeSql(queryAccom);
 
+var db = window.openDatabase("aarescuepoidb", "1.0", "AAPOIdatabase", 4 * 1024 * 1024);
+
+db.transaction(function (tx) {
+
+    var queryAccom = "CREATE TABLE IF NOT EXISTS AAAccommodation(Name varchar(255) NULL,AA_rating INTEGER NULL,Latitude varchar(255) NULL,Longitude varchar(255) NULL,Seopermalink varchar(255) NULL,PhoneNumber varchar(255) NULL,Email varchar(255) NULL)";
+    
+    tx.executeSql(queryAccom);
+   
     var querySalesAgent = "CREATE TABLE IF NOT EXISTS SalesAgent(Name varchar(255) NULL,Catery varchar(255) NULL,Lat varchar(255) NULL,Long varchar(255) NULL,Tel varchar(255) NULL,Email varchar(255) NULL,Website varchar(255) NULL,AddressStreet varchar(255) NULL,AddressSuburb varchar(255) NULL,AddressCity varchar(255) NULL,AddressPostal varchar(255) NULL)";
-    // alert(query);
+    
     tx.executeSql(querySalesAgent);
 
     var queryFuelStation = "CREATE TABLE IF NOT EXISTS FuelStation(SiteName varchar(255) NULL,SalesAreaName varchar(255) NULL,SalesManager varchar(255) NULL,Latitude varchar(255) NULL,Longitude varchar(255) NULL,DealerName varchar(255) NULL,Telno varchar(255) NULL,StreetNo varchar(255) NULL,StreetName varchar(255) NULL,Suburb varchar(255) NULL,PostCode varchar(255) NULL,AddressLine1 varchar(255) NULL,ProvinceName varchar(255) NULL,CoreArea varchar(255) NULL,LocationType varchar(255) NULL,PricingZone varchar(255) NULL,ExpressShop varchar(255) NULL,ShopSize varchar(255) NULL,WildBean varchar(255) NULL,QSR varchar(255) NULL,CarWash varchar(255) NULL,ATM varchar(255) NULL)";
-    // alert(query);
+  
     tx.executeSql(queryFuelStation);
     tx.executeSql("delete from AAAccommodation");
     tx.executeSql("delete from SalesAgent");
     tx.executeSql("delete from FuelStation");
+ 
     //Accomodation
-    tx.executeSql("INSERT INTO AAAccommodation(Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('1 Marichel', 3, -29.52104, 31.22708, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/1-marichel-PA45854', '+27 (0)83 652-5953', 'djsibbald@yahoo.com')");
+   tx.executeSql("INSERT INTO AAAccommodation(Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('1 Marichel', 3, -29.52104, 31.22708, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/1-marichel-PA45854', '+27 83 652-5953', 'djsibbald@yahoo.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation(Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('1 Neptune Terrace', 2, -34.05541, 24.92225, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/1-neptune-terrace-PA45107', '(042) 2934190', 'henniegiani@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation(Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('11 Simbalina Beach Penthouse', 2, -29.54161, 31.21671, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/11-simbalina-beach-penthouse-PA45099', '+27 (0)82-786-3130', 'accinballito@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation(Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('11 Simbalina Beach Penthouse', 2, -29.54161, 31.21671, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/11-simbalina-beach-penthouse-PA45099', '+27 82-786-3130', 'accinballito@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('12 Stars', 2, -26.17501, 28.00905, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/melville/12-stars-PA42294', '+27 11 482 7979', 'thespace@mweb.co.za')");
 
@@ -1738,13 +1254,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('19 Casablanca Beach Penthouse', 2, -29.53355, 31.2222, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/19-casablanca-beach-penthouse-PA42302', '+27 82 786 3130', 'accinballito@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('2 The End Guest House', 2, -27.72978, 29.92051, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/newcastle/2-the-end-guest-house-PA45762', '+27 (0) 34 315-5942', 'info@2theend.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('2 The End Guest House', 2, -27.72978, 29.92051, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/newcastle/2-the-end-guest-house-PA45762', '+27 34 315-5942', 'info@2theend.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('224 on Kent', 2, -26.10293, 27.99818, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/randburg/224-on-kent-PA42305', '+27 11 781 3166', 'info@224onkent.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('26 Akrotiri', 2, -29.52238, 31.22678, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/26-akrotiri-PA45186', '(032) 525 4636', 'info@ballitobeach.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('26 on Chamberlain Guest House', 3, -31.89462, 26.88976, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/26-on-chamberlain-guest-house-PA42306', '+27 (0) 45 838-4759', 'reservations@26onchamberlain.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('26 on Chamberlain Guest House', 3, -31.89462, 26.88976, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/26-on-chamberlain-guest-house-PA42306', '+27 45 838-4759', 'reservations@26onchamberlain.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('28Â° North West B&B', 2, -28.43594, 21.26182, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/28Â°-north-west-b&b-PA44996', NULL, 'info@28nwguesthouse.co.za')");
 
@@ -1754,7 +1270,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('3 Darling Street Guest House', 1, -31.06732, 24.44241, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/hanover/3-darling-street-guest-house-PA44993', NULL, 'darlingst3@icon.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('3 Flavours Guest House', 3, -34.34833, 18.85307, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/pringle-bay/3-flavours-guest-house-PA2204', '+27 (0)28 273 8917 ', 'info@3flavours.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('3 Flavours Guest House', 3, -34.34833, 18.85307, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/pringle-bay/3-flavours-guest-house-PA2204', '+27 28 273 8917 ', 'info@3flavours.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('305 On Ipahla', 3, -30.03273, 30.90591, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/305-on-ipahla-PA40964', '+27 31 904 1970', 'ipahla305@mweb.co.za')");
 
@@ -1762,23 +1278,23 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('35 Duinesig', 2, -34.11946, 18.8318, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/strand/35-duinesig-PA45105', NULL, 'andri@dutoiteiendomme.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('4 Seasons B&B', 2, -31.89412, 26.88781, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/4-seasons-b&b-PA45573', '+27 (0) 45 839-7459', 'zizikaziv@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('4 Seasons B&B', 2, -31.89412, 26.88781, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/4-seasons-b&b-PA45573', '+27 45 839-7459', 'zizikaziv@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('40 Winks Guest House', 2, -33.90852, 18.40372, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/40-winks-guest-house-PA7735', '214 347 936', '40winks@ct.stormnet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('5 Camp Street Guest House & Self Catering', 9, -33.93432, 18.4102, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/5-camp-street-guest-house-&-self-catering-PA45855', ' +27 21 423 8261', 'info@5campstreet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('505 Les Mouettes', 2, -29.53383, 31.2215, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/505-les-mouettes-PA42531', '+27 (0) 12 809-0492', 'makkink@gds.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('505 Les Mouettes', 2, -29.53383, 31.2215, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/505-les-mouettes-PA42531', '+27 12 809-0492', 'makkink@gds.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('51 on Forest Drive Lodge', 3, -33.94009, 18.50114, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/pinelands/51-on-forest-drive-lodge-PA7738', '+27 21 531 4020 ', 'cls@icon.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('6 Jakaranda House', 3, -33.95154, 22.45728, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/george/6-jakaranda-house-PA45518', '+27 82 623 1177', 'info@jakarandahouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('604 Coral Reef', 2, -29.64072, 31.13569, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/la-mercy/604-coral-reef-PA42534', '+27 (0) 82 775 3799', '604coralreef@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('604 Coral Reef', 2, -29.64072, 31.13569, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/la-mercy/604-coral-reef-PA42534', '+27 82 775 3799', '604coralreef@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('64 Amberely', 1, -30.85934, 30.35955, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/64-amberely-PA45749', '(0) 39 312-2998', 'leticia@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('70 Blakeway Bed & Breakfast', 1, -31.58913, 28.77614, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/70-blakeway-bed-&-breakfast-PA45577', '+27 (0) 47 532 6690', 'dazana@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('70 Blakeway Bed & Breakfast', 1, -31.58913, 28.77614, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/70-blakeway-bed-&-breakfast-PA45577', '+27 47 532 6690', 'dazana@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('75 on Milner Lodge', 2, -28.75448, 24.76895, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/75-on-milner-lodge-PA45229', NULL, '75onmilnerlodge@vodamail.co.za')");
 
@@ -1786,9 +1302,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('A La Fugue Guest House', 2, -28.45746, 21.24265, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/a-la-fugue-guest-house-PA42538', '+27 54 338 0424', 'a-la-fugue@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('A Riviera Garden B&B', 3, -28.45546, 21.25172, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/a-riviera-garden-b&b-PA42539', '+27 (0) 054 332 6554', 'ariviera@upington.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('A Riviera Garden B&B', 3, -28.45546, 21.25172, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/a-riviera-garden-b&b-PA42539', '+27 054 332 6554', 'ariviera@upington.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('A Summer Place Boutique Guest House', 3, -29.11954, 26.1843, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/a-summer-place-boutique-guest-house-PA45279', '+27 (0) 51 522 2412', 'info@thesummerplace.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('A Summer Place Boutique Guest House', 3, -29.11954, 26.1843, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/a-summer-place-boutique-guest-house-PA45279', '+27 51 522 2412', 'info@thesummerplace.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('A Tapestry Garden Guest House', 2, -26.72156, 27.09655, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/potchefstroom/a-tapestry-garden-guest-house-PA45012', '27 182 974 856', 'tapestry@iafrica.com')");
 
@@ -1798,7 +1314,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('AaQtansisi Guest House', 3, -32.2522, 24.53267, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/aaqtansisi-guest-house-PA9143', '498 910 243', 'riadlange@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aat Kanaal B&B', 2, -28.4475, 21.26908, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/aant-kanaal-b&b-PA44768', '+27 (0) 54 332-3722', 'estestrauss@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aat Kanaal B&B', 2, -28.4475, 21.26908, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/aant-kanaal-b&b-PA44768', '+27 54 332-3722', 'estestrauss@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Abalone Guest House', 2, -33.98506, 25.66156, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/abalone-guest-house-PA45831', '+27 41 583 1441', 'cmaguire@xsinet.co.za')");
 
@@ -1810,11 +1326,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Absolute Leisure Cottages', 1, -25.66661, 30.24988, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/machadodorp/absolute-leisure-cottages-PA42559', '+27 11 802 8076', 'info@absoluteleisure.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Acacia Guesthouse', 2, -25.48244, 30.95883, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/acacia-guesthouse-PA45666', '+27 (0) 13 741-1897', 'bookings@acaciaguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Acacia Guesthouse', 2, -25.48244, 30.95883, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/acacia-guesthouse-PA45666', '+27 13 741-1897', 'bookings@acaciaguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Acacia Hof Guest House', 1, -27.92921, 26.80519, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/welkom/acacia-hof-guest-house-PA42561', '+27 57 388 1715', 'acaciaguest@yahoo.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Acacia House Executive Suites', 2, -26.07684, 28.09722, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/sandton/acacia-house-executive-suites-PA45032', '+27 (0) 82 892 1364', 'info@acaciahousejhb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Acacia House Executive Suites', 2, -26.07684, 28.09722, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/sandton/acacia-house-executive-suites-PA45032', '+27 82 892 1364', 'info@acaciahousejhb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Acondri Guest House', 2, -27.68746, 23.04474, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kathu/acondri-guest-house-PA45780', '(0) 53 723 2079', 'acondri@telkomsa.net')");
 
@@ -1826,33 +1342,33 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Addis Bed & Breakfast', 3, -29.71842, 31.08069, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlanga-rocks/addis-bed-&-breakfast-PA42576', '+27 31 561 7302', 'stay@addisbedandbreakfast.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Addo Afrique', 3, -33.41833, 25.89111, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/addo-afrique-PA2307', '+27 (0) 41 468 1903', 'enquiries@addoafrique.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Addo Afrique', 3, -33.41833, 25.89111, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/addo-afrique-PA2307', '+27 41 468 1903', 'enquiries@addoafrique.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Addo Dung Beetle Guest Farm', 3, -33.44807, 25.68817, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/addo-dung-beetle-guest-farm-PA7436', '+27 83 974 5802', 'addodungbeetle@eezi.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Admirals Lodge Guest House', 2, -33.9961, 25.66691, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/admirals-lodge-guest-house-PA7517', '+27 (0)41 583 1894', 'admiralslodge@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Admirals Lodge Guest House', 2, -33.9961, 25.66691, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/admirals-lodge-guest-house-PA7517', '+2741 583 1894', 'admiralslodge@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Africa on Sea', 2, -29.90985, 31.03003, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/africa-on-sea-PA42580', '+27 31 466 3857', 'info@africaonsea.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Diamond Boutique Guest House', 2, -28.74924, 24.78185, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/african-diamond-boutique-guest-house-PA1967', '+27 53 842 1854', 'reception@afridiamond.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Dream', 3, -29.33775, 31.37176, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/stanger/african-dream-PA45672', '+27 (0) 32 482-0130', 'craig@pwr.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Dream', 3, -29.33775, 31.37176, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/stanger/african-dream-PA45672', '+27 32 482-0130', 'craig@pwr.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Dreams', 2, -33.96082, 18.38403, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/camps-bay/african-dreams-PA44994', '27 214 380 901', 'africadream@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Dreams B&B', 3, -33.01345, 27.91756, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/african-dreams-b&b-PA44928', '+27 (0) 43 722-4849', 'info@afdreams.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Dreams B&B', 3, -33.01345, 27.91756, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/african-dreams-b&b-PA44928', '+27 43 722-4849', 'info@afdreams.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Elephant Guest House', 2, -26.24117, 28.16424, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/germiston/african-elephant-guest-house-PA42205', '738 447 224', 'africanelephant@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Sands - Kingsway', 2, -30.02291, 30.91539, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/african-sands--kingsway-PA5519', '+27 31 904 3230', 'africansands@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Silhouette Guesthouse', 2, -26.08303, 28.32745, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/benoni/african-silhouette-guesthouse-PA9153', '+27 (0)83 297 4533', 'asmitsa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Silhouette Guesthouse', 2, -26.08303, 28.32745, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/benoni/african-silhouette-guesthouse-PA9153', '+27 83 297 4533', 'asmitsa.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('African Vineyard Guest House', 3, -28.65639, 21.07834, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/african-vineyard-guest-house-PA43970', '+27 54 491 1400', 'elmariedeb@vodamail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('AfricaSky Guest House', 2, -26.09667, 28.27968, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/kempton-park/africasky-guest-house-PA7770', '+27 82 319 4081', 'africasky@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Afrikhaya Guest House', 3, -28.37567, 32.41946, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/afrikhaya-guest-house-PA2200', '+27 (0) 35 590 1447', 'info@afrikhaya.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Afrikhaya Guest House', 3, -28.37567, 32.41946, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/afrikhaya-guest-house-PA2200', '+27 35 590 1447', 'info@afrikhaya.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Afrique Boutique Hotel Ruimsig', 3, -26.07562, 27.84527, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/roodepoort/afrique-boutique-hotel-ruimsig-PA45126', '+27 11 958 0855', 'info@afriquehotel.co.za')");
 
@@ -1868,7 +1384,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Agape Guest House', 2, -26.6934, 27.08505, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/potchefstroom/agape-guest-house-PA275', '+27 18 293 1686', 'agapeguesthouse@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Agape Guest House', 2, -27.98057, 26.75396, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/welkom/agape-guest-house-PA45289', '+27 (0) 57 352-2549', 'ababinwelkom@vodamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Agape Guest House', 2, -27.98057, 26.75396, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/welkom/agape-guest-house-PA45289', '+27 57 352-2549', 'ababinwelkom@vodamail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Agros Guest House', 2, -28.75196, 24.74325, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/agros-guest-house-PA44900', '(053) 861 4061', 'agrosgh@telkomsa.net')");
 
@@ -1898,11 +1414,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Albion Manor', 3, -29.82523, 31.00963, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/albion-manor-PA43696', '+27 31 313 9700', 'info@albionmanor.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aletheim Guest House Collectio', 3, -28.75402, 24.7712, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/aletheim-guest-house-collection-PA7774', '+27 (0) 53 832-1907', 'aletheimguesthouse@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aletheim Guest House Collectio', 3, -28.75402, 24.7712, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/aletheim-guest-house-collection-PA7774', '+27 53 832-1907', 'aletheimguesthouse@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aletta''s Kuierhuis', 2, -34.4741, 19.8974, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/napier/alettas-kuierhuis-PA42649', '+27 28 423 3857', 'info@alettas.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Alfalfa Verblyf cc', 1, -31.66444, 18.50611, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/vredendal/alfalfa-verblyf-cc-PA45758', '+27 (0) 27 213 2499', 'alfalfa@mylan.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Alfalfa Verblyf cc', 1, -31.66444, 18.50611, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/vredendal/alfalfa-verblyf-cc-PA45758', '+27 27 213 2499', 'alfalfa@mylan.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ala Guest House', 2, -33.9924, 25.67309, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/ala-guest-house-PA42650', '+27 41 583 3511', 'info@alaguesthouse.co.za')");
 
@@ -1916,7 +1432,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aloe Rest B and B', 2, -31.58681, 28.75956, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/aloe-rest-b-and-b-PA43672', '+27 47 532 5011', 'yquma@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aloe View Rock Lodge', 2, -27.91637, 32.27407, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/aloe-view-rock-lodge-PA44955', '+27 (0)79 394 1284', 'info@aloeviewlodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aloe View Rock Lodge', 2, -27.91637, 32.27407, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/aloe-view-rock-lodge-PA44955', '+2779 394 1284', 'info@aloeviewlodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Alpha and Omega Guest House', 3, -30.54212, 29.41641, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/alpha-and-omega-guest-house-PA43715', '+27 39 727 3822', 'alphaandomega@cybersmart.co.za')");
 
@@ -1928,13 +1444,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amafana Guest House', 1, -30.89183, 28.98197, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mount-frere/amafana-guest-house-PA45771', '(0) 83 687 0761', 'ndicks@webmail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amafu Forest Lodge', 2, -24.52241, 30.88617, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/kampersrus/amafu-forest-lodge-PA45304', '+27 (0) 78 478 2638', 'trollip@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amafu Forest Lodge', 2, -24.52241, 30.88617, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/kampersrus/amafu-forest-lodge-PA45304', '+27 78 478 2638', 'trollip@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amakoekoe Guest Lodge & Conference Venue', 3, -26.07879, 27.92502, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/roodepoort/amakoekoe-guest-lodge-&-conference-venue-PA838', '117 953 508', 'info@amakoekoe.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amali Guest Houses and Karoo Manor', 2, -32.16479, 25.61859, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cradock/amali-guest-houses-and-karoo-manor-PA43078', '+27 (0) 48 881-5185', 'mcoetzee@isat.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amali Guest Houses and Karoo Manor', 2, -32.16479, 25.61859, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cradock/amali-guest-houses-and-karoo-manor-PA43078', '+27 48 881-5185', 'mcoetzee@isat.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amali Self Catering', 2, -32.15856, 25.61764, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cradock/amali-self-catering-PA24425', '+27 (0) 48 881-4895', 'mcoetzee@isat.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amali Self Catering', 2, -32.15856, 25.61764, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cradock/amali-self-catering-PA24425', '+27 48 881-4895', 'mcoetzee@isat.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amanzi Guest House', 3, -26.12631, 28.02439, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/craighall-park/amanzi-guest-house-PA41547', '+27 11 880 0205', 'info@amanziguesthouse.co.za')");
 
@@ -1946,7 +1462,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amble Inn Guest House and Conference Centre', 2, -28.74331, 31.89326, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/empangeni/amble-inn-guest-house-and-conference-centre-PA5558', '+27 35 792 4693', 'info@ambleinn.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ammazulu African Palace', 3, -29.76861, 30.84387, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kloof/ammazulu-african-palace-PA44874', '+27 (0)31 764 8000', 'info@ammazulupalace.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ammazulu African Palace', 3, -29.76861, 30.84387, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kloof/ammazulu-african-palace-PA44874', '+2731 764 8000', 'info@ammazulupalace.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Amper Bo Guest House', 2, -25.72959, 28.20921, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/amper-bo-guest-house-PA7796', '+27 12 329 2581', 'info@amperbo.co.za')");
 
@@ -1970,13 +1486,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Angasii Game Lodge', 3, -24.54035, 27.2024, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/northam/angasii-game-lodge-PA42755', '+27 14 784 0497', 'info@angasii.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Anglers Paradise', 2, -34.08057, 24.25798, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/storms-river/anglers-paradise-PA42756', '+27 (0) 84 814 1023', 'anglersparadise@huntessential.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Anglers Paradise', 2, -34.08057, 24.25798, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/storms-river/anglers-paradise-PA42756', '+27 84 814 1023', 'anglersparadise@huntessential.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Annelines Gastehuis', 2, -30.71837, 25.0973, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/annelines-gastehuis-PA45452', NULL, 'annelines@colesberginfo.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Annies Self-Catering', 1, -29.74549, 31.0588, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/la-lucia/annies-selfcatering-PA42757', '+27 31 562 8056', 'annelienbarnes@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Annies cottage', 3, -29.66078, 17.88554, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/springbok/annies-cottage-PA7488', '+27 (0)27 7121451', 'annie@springbokinfo.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Annies cottage', 3, -29.66078, 17.88554, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/springbok/annies-cottage-PA7488', '+2727 7121451', 'annie@springbokinfo.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('AnnVilla Guest House', 3, -26.85646, 26.6686, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/klerksdorp/annvilla-guest-house-PA42758', '+27 83 504 2820', 'info@annvilla.co.za')");
 
@@ -1986,7 +1502,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Appledew Guest House', 2, -26.93757, 29.24646, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/standerton/appledew-guest-house-PA42761', '+27 17 719 2543', 'info@appledew.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aquamarine Guest House', 2, -34.18207, 22.13773, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/aquamarine-guest-house-PA45228', '+27 (0) 71 373 3136', 'aquamarine.gh@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aquamarine Guest House', 2, -34.18207, 22.13773, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/aquamarine-guest-house-PA45228', '+27 71 373 3136', 'aquamarine.gh@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aquarius Beach House', 1, -30.83249, 30.3839, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/uvon/aquarius-beach-house-PA45148', NULL, 'onthebeach@mweb.co.za')");
 
@@ -1998,7 +1514,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Arch Rock Seaside Accommodatio', 2, -34.05484, 23.37225, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/arch-rock-seaside-accommodation-PA2774', ' +27 44 535 9409', 'info@archrock.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ardeco Knysna Guest House', 2, -34.03649, 23.02597, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/ardeco-knysna-guest-house-PA45250', '+27 (0) 44 382 1653', 'info@ardecoknysna.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ardeco Knysna Guest House', 2, -34.03649, 23.02597, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/ardeco-knysna-guest-house-PA45250', '+27 44 382 1653', 'info@ardecoknysna.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Areena Riverside Resort & Private Game Reserve', 3, -32.53006, 28.03404, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cintsa/areena-riverside-resort-&-private-game-reserve-PA42787', '+27 43 734 3055', 'info@areenaresort.com')");
 
@@ -2010,7 +1526,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aristotle Guest House', 3, -33.97575, 25.63731, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/aristotle-guest-house-PA1517', '415 850 816', 'aristotleguesthouse@telkomsa.net')");
     //Acc may 6th
-   tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Around the Corner', 2, -32.98651, 27.91011, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/around-the-corner-PA42803', '+27 43 727 0555', 'aroundthecorner@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Around the Corner', 2, -32.98651, 27.91011, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/around-the-corner-PA42803', '+27 43 727 0555', 'aroundthecorner@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Artists'' Colony B&B', 2, -30.21488, 26.53615, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/smithfield/artists-colony-b&b-PA44944', '(051) 683 1138', 'colony@global.co.za')")
 
@@ -2022,7 +1538,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Askari Game Lodge & Spa', 2, -25.93613, 27.51801, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/magaliesberg-range/askari-game-lodge-&-spa-PA8257', '+27 14 577-2658/9', 'info@askarilodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('At Belurana River Boutique Hotel', 3, -28.46125, 21.24298, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/at-belurana-river-boutique-hotel-PA45260', '+27 (0) 54 332 4323', 'belurana@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('At Belurana River Boutique Hotel', 3, -28.46125, 21.24298, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/at-belurana-river-boutique-hotel-PA45260', '+27 54 332 4323', 'belurana@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('At Judys Guest House', 2, -28.74548, 24.73802, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/at-judys-guest-house-PA42809', '+27 53 861 2555', 'info@atjudys.co.za')");
 
@@ -2058,7 +1574,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Auberge Hollandaise', 3, -29.78991, 31.0339, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/auberge-hollandaise-PA7811', '+27 31 564 8568  ', 'cheryl@ahguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Audreys Vineyard Cottage & Homestead', 1, -33.3921, 19.36967, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/worcester/audreys-vineyard-cottage-&-homestead-PA42863', '+27 (0) 23 347 8717', 'info@audreys.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Audreys Vineyard Cottage & Homestead', 1, -33.3921, 19.36967, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/worcester/audreys-vineyard-cottage-&-homestead-PA42863', '+27 23 347 8717', 'info@audreys.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Augrabies Falls Lodge and Camp', 1, -28.3855, 20.955, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/augrabies-falls/augrabies-falls-lodge-and-camp-PA42874', '+27 54 451 7203', 'augrabiesl.c@mweb.co.za')");
 
@@ -2066,23 +1582,23 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Augustine Avenue BnB', 2, -28.53879, 29.77658, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/augustine-avenue-bnb-PA42876', '+27 36 631 2829', 'nickykrugel@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Australian Arms Guest Lodge', 2, -28.73759, 24.75459, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/australian-arms-guest-lodge-PA7812', '+27 (0)53 832 1526', 'info@australianarms.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Australian Arms Guest Lodge', 2, -28.73759, 24.75459, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/australian-arms-guest-lodge-PA7812', '+2753 832 1526', 'info@australianarms.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avalon Guest House', 2, -30.06041, 30.87363, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/avalon-guest-house-PA1974', '+27 (0) 31 903-2924', 'bookings@avalon-bb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avalon Guest House', 2, -30.06041, 30.87363, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/avalon-guest-house-PA1974', '+27 31 903-2924', 'bookings@avalon-bb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avalon Guest Manor', 3, -27.72325, 29.92011, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/newcastle/avalon-guest-manor-PA42883', '+27 34 325 0591', 'info@avalonguestmanor.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avalon Springs Hotel', 3, -33.76432, 20.12156, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/montagu/avalon-springs-hotel-PA2853', '+27 23 614 1150', 'reservations@avalonsprings.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avalon Springs Resort', 2, -33.79637, 20.12239, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/montagu/avalon-springs-resort-PA44965', '+27 (0) 23 614-1150', 'reservations@avalonsprings.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avalon Springs Resort', 2, -33.79637, 20.12239, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/montagu/avalon-springs-resort-PA44965', '+27 23 614-1150', 'reservations@avalonsprings.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avalone Guest House', 3, -28.37372, 32.41436, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/avalone-guest-house-PA5600', '+27 (0) 35 590-2112', 'info@avalone-guesthouse.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avalone Guest House', 3, -28.37372, 32.41436, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/avalone-guest-house-PA5600', '+27 35 590-2112', 'info@avalone-guesthouse.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avian Leisure', 2, -34.20603, 18.45359, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/simons-town/avian-leisure-PA2858', '+27 21 786 1414', 'enquiries@avianleisure.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Aview - 13 Theresa Avenue', 3, -33.96148, 18.38541, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/aview--13-theresa-avenue-PA45085', NULL, 'aview@iafrica.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avon Lodge', 2, -26.65885, 27.99554, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/vereeniging/avon-lodge-PA45451', '+27 (0) 16 423 3967', 'avonlodge@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Avon Lodge', 2, -26.65885, 27.99554, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/vereeniging/avon-lodge-PA45451', '+27 16 423 3967', 'avonlodge@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Azalea Guest House', 1, -27.44072, 23.43213, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kuruman/azalea-guest-house-PA45000', '537 122 240', 'azaleaguesthouse@gmail.com ')");
 
@@ -2094,13 +1610,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Badgerleur Bush Lodge', 2, -26.82652, 28.66535, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/balfour/badgerleur-bush-lodge-PA45164', NULL, 'vivienne@compumail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Badplaas - A Forever Resort', 1, -25.95736, 30.53942, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/badplaas/badplaas--a-forever-resort-PA45481', '+27 (0) 17 844-8000', 'badplaasres3@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Badplaas - A Forever Resort', 1, -25.95736, 30.53942, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/badplaas/badplaas--a-forever-resort-PA45481', '+27 17 844-8000', 'badplaasres3@foreversa.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bains House', 3, -28.45297, 21.25393, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/bains-house-PA7825', '+27 54 332 1333', 'mail@bainshouse.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bakgatla Resort', 1, -25.23435, 27.04704, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/pilanesberg-national-park/bakgatla-resort-PA637', '145 551 000', 'marketing@ldenleopardresorts.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bakubung Bush Lodge', 3, -25.2043, 27.0322, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/pilanesberg-national-park/bakubung-bush-lodge-PA9841', '+27 (0) 14 552 6000 ', 'bakubung@legacyhotels.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bakubung Bush Lodge', 3, -25.2043, 27.0322, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/pilanesberg-national-park/bakubung-bush-lodge-PA9841', '+27 14 552 6000 ', 'bakubung@legacyhotels.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Balladon Cottage', 2, -27.3246, 30.52385, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/paulpietersburg/balladon-cottage-PA45759', NULL, 'claire@koubad.co.za')");
 
@@ -2116,7 +1632,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Banksia Boutique', 3, -33.9529, 18.47905, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/banksia-boutique-PA7822', '+27 21 689 2992', 'info@banksiaboutique.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bar-T-Nique Guest House', 3, -34.18584, 22.14623, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/bar-t-nique-guest-house-PA9484', '+27 (0)44 690 4554', 'info@bar-t-nique.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bar-T-Nique Guest House', 3, -34.18584, 22.14623, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/bar-t-nique-guest-house-PA9484', '+2744 690 4554', 'info@bar-t-nique.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Barnacle Bills Beach Cottage', 2, -30.70345, 30.48642, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/port-shepstone/barnacle-bills-beach-cottage-PA42950', '+27 39 695 2602', 'irven@telkomsa.net')");
 
@@ -2146,7 +1662,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Beaufort Manor Self Catering Cottages', 3, -32.34706, 22.58385, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/beaufort-west/beaufort-manor-self-catering-cottages-PA43000', '+27 23 415 2175', 'bmanor@internext.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bedrock Lodge', 2, -29.24809, 16.86812, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/port-nolloth/bedrock-lodge-PA1194', '+27 (0) 27 851 8865', 'bedrocklodge@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bedrock Lodge', 2, -29.24809, 16.86812, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/port-nolloth/bedrock-lodge-PA1194', '+27 27 851 8865', 'bedrocklodge@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Beethoven Lodge', 2, -30.04348, 30.8933, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/beethoven-lodge-PA45755', '27 319 037 227', 'admin@beethoven.co.za')");
 
@@ -2158,7 +1674,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bell Street B&B', 3, -26.09821, 27.81739, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/krugersdorp/bell-street-b&b-PA43688', '+27 11 954 5405', 'm-fourie@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bell-Lu Guest House', 1, -28.75423, 24.77071, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/belllu-guest-house-PA43095', '+27 (0) 53 833 1098', 'email@bell-lu.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bell-Lu Guest House', 1, -28.75423, 24.77071, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/belllu-guest-house-PA43095', '+27 53 833 1098', 'email@bell-lu.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bella''s Guest House', 2, -33.30046, 26.51609, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/grahamstown/bellas-guest-house-PA45798', '827 710 013', 'info@bellas.co.za')");
 
@@ -2170,11 +1686,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bellvista Lodge', 2, -33.88, 18.63176, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bellville/bellvista-lodge-PA9716', '+27 21 918 4444', 'bvista@belpark.sun.ac.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Belvedere Guest House', 2, -28.77151, 20.61604, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kakamas/belvedere-guest-house-PA45714', '+27 (0) 54 431-1600', 'belvedere@electronet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Belvedere Guest House', 2, -28.77151, 20.61604, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kakamas/belvedere-guest-house-PA45714', '+27 54 431-1600', 'belvedere@electronet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Belvidere Manor Hotel', 3, -34.04368, 22.99815, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/belvidere-manor-hotel-PA7843', '+27 44 387 1055', 'manager@belvidere.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Benri Bed and Breakfast', 3, -32.95093, 28.01523, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nubie/benri-bed-and-breakfast-PA9339', '+27 (0)43 740-3331 ', 'benri@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Benri Bed and Breakfast', 3, -32.95093, 28.01523, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nubie/benri-bed-and-breakfast-PA9339', '+2743 740-3331 ', 'benri@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Berg en Dal Guest House', 2, -33.98969, 19.28974, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/villiersdorp/berg-en-dal-guest-house-PA43105', '+27 28 840 1442', 'benje@vinet.co.za')");
 
@@ -2182,7 +1698,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bergview', 2, -28.14958, 30.23381, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/dundee/bergview-PA2186', '+27 34 218 1203 ', 'aloehouse@absamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bhotani B&B', 2, -33.95117, 25.54752, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/bhotani-b&b-PA45134', '+27 (0) 41 364 0975', 'info@bhotanibnb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bhotani B&B', 2, -33.95117, 25.54752, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/bhotani-b&b-PA45134', '+27 41 364 0975', 'info@bhotanibnb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bibby''s Guest House', 2, -32.99742, 27.92461, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/bibbys-guest-house-PA43110', '+27 43 735 1129', 'info@bibbys.co.za')");
 
@@ -2196,7 +1712,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('BillsBest - All The Tides', 2, -30.8961, 30.3453, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ramsgate/billsbest--all-the-tides-PA5540', '+27 39 314 4837', 'bbinfo@billsbest.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('BillsBest - Boathouse B&B', 2, -30.86426, 30.35652, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ramsgate/billsbest--boathouse-b&b-PA44260', '+27 (0) 39 314-4837', 'bbinfo@billsbest.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('BillsBest - Boathouse B&B', 2, -30.86426, 30.35652, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ramsgate/billsbest--boathouse-b&b-PA44260', '+27 39 314-4837', 'bbinfo@billsbest.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('BillsBest - Claridges', 2, -30.88957, 30.34683, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ramsgate/billsbest--claridges-PA43111', '+27 39 314 4837', 'bbinfo@billsbest.co.za')");
 
@@ -2218,9 +1734,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Birds Of Paradise BnB', 2, -28.88312, 31.45966, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/eshowe/birds-of-paradise-bnb-PA5672', ' (035) 474 4430/ 082 532 4', 'reservations@birdsofparadise.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bishops Guest House & Conference Centre', 2, -27.7598, 30.79515, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/vryheid/bishops-guest-house-&-conference-centre-PA45560', '+27 (0) 34 980-7097', 'williamw@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bishops Guest House & Conference Centre', 2, -27.7598, 30.79515, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/vryheid/bishops-guest-house-&-conference-centre-PA45560', '+27 34 980-7097', 'williamw@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Biweda Nguni B&B Lodge', 1, -27.70921, 31.79109, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mkuze/biweda-nguni-b&b-lodge-PA45026', '+27 (0) 35 573-1060 ', 'admin@biweda.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Biweda Nguni B&B Lodge', 1, -27.70921, 31.79109, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mkuze/biweda-nguni-b&b-lodge-PA45026', '+27 35 573-1060 ', 'admin@biweda.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bizafrika Guest Lodge', 3, -29.77445, 30.85512, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/bizafrika-guest-lodge-PA43131', '+27 31 764 2844', 'information@bizafrika-ltd.com')");
 
@@ -2236,17 +1752,17 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Blue Horizon Guest House', 3, -34.15862, 18.88223, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/rdons-bay/blue-horizon-guest-house-PA2239', '218 565 324', 'info@bhorizon.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Blue Mountain Guest House', 2, -33.80932, 18.47488, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bloubergstrand/blue-mountain-guest-house-PA44262', '+27 (0) 21 554 1657 ', 'bluemtn@iafrica.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Blue Mountain Guest House', 2, -33.80932, 18.47488, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bloubergstrand/blue-mountain-guest-house-PA44262', '+27 21 554 1657 ', 'bluemtn@iafrica.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Blue Rain Guest House', 2, -28.45746, 21.24265, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/blue-rain-guest-house-PA44902', NULL, 'cjbts123@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Blue Waters Hotel', 3, -29.84012, 31.03482, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/blue-waters-hotel-PA8394', '+27 31 327 7000', 'reservations@bluewatershotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bluebells', 2, -34.05487, 19.6047, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/greyton/bluebells-PA45230', '+27 (0) 84 941 2678', 'marikevdw@ovi.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bluebells', 2, -34.05487, 19.6047, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/greyton/bluebells-PA45230', '+27 84 941 2678', 'marikevdw@ovi.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bluegum Country Lodge', 2, -26.44712, 29.45964, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/bethal/bluegum-country-lodge-PA43156', '+27 17 647 5970', 'book@bluegumcountrylodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Blyde Canyon a Forever Resort', 2, -24.58048, 30.77255, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/graskop/blyde-canyon-a-forever-resort-PA456', '+27 (0) 86 122 6966 / 0861 CANYO', 'blydebanq@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Blyde Canyon a Forever Resort', 2, -24.58048, 30.77255, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/graskop/blyde-canyon-a-forever-resort-PA456', '+27 86 122 6966 / 0861 CANYO', 'blydebanq@foreversa.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Blyde Lodge', 1, -24.93091, 30.84252, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/graskop/blyde-lodge-PA658', '+27 13 767 1535', 'pierre@blydelodge.co.za')");
 
@@ -2256,7 +1772,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bonamanzi Game Reserve', 2, -28.062, 32.30225, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/bonamanzi-game-reserve-PA5688', '+27 35 562 0181', 'info@bonamanzi.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bonne Esperance Guest Lodge', 2, -33.9367, 18.86832, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/bonne-esperance-guest-lodge-PA2108', '+27 (0) 21 887 0225', 'stay@bonneesperance.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bonne Esperance Guest Lodge', 2, -33.9367, 18.86832, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/bonne-esperance-guest-lodge-PA2108', '+27 21 887 0225', 'stay@bonneesperance.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bonza Bay Lodge', 2, -32.97408, 27.95837, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/bonza-bay-lodge-PA43169', '+27 43 748 1610', 'edgelodge@telkomsa.net')");
 
@@ -2264,7 +1780,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Botha House', 3, -30.394, 30.6904, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pennington/botha-house-PA43171', '+27 39 975 1227', 'enquiries@bothahouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Boulders Lodge & Spa', 3, -33.5698, 22.21023, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/oudtshoorn/boulders-lodge-&-spa-PA7866', '+27 (0) 44 272 5559 ', 'info@boulderslodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Boulders Lodge & Spa', 3, -33.5698, 22.21023, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/oudtshoorn/boulders-lodge-&-spa-PA7866', '+27 44 272 5559 ', 'info@boulderslodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Boulevard 44 Boutique Hotel', 3, -29.50781, 31.2005, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlali/boulevard-44-boutique-hotel-PA44784', '+27 32 947 1660', 'confer@boulevard44.co.za')");
 
@@ -2288,7 +1804,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Buffalo Hotel', 9, -25.43643, 31.67955, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/hectorspruit/buffalo-hotel-PA45800', '137 924 227', 'lizzie@buffalohotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Buffalo Thorn Lodge', 3, -25.24353, 27.08705, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/pilanesberg-national-park/buffalo-thorn-lodge-PA43191', '+27 (0) 82 229 1158', 'info@buffalothornlodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Buffalo Thorn Lodge', 3, -25.24353, 27.08705, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/pilanesberg-national-park/buffalo-thorn-lodge-PA43191', '+27 82 229 1158', 'info@buffalothornlodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Buffelsdrift Game Lodge', 2, -33.52571, 22.24607, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/oudtshoorn/buffelsdrift-game-lodge-PA7873', '+27 44 272 0106/0000', 'info@buffelsdrift.com')");
 
@@ -2304,7 +1820,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bush Willow Tented Camp', 1, -25.9772, 27.8411, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/muldersdrift/bush-willow-tented-camp-PA43210', '+27 11 668 1600', 'reservations2@glenburn.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('BushGlam Luxury Holiday Home', 3, -24.35, 30.96667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/bushglam-luxury-holiday-home-PA44953', '+27 (0) 21 790 1699', 'info@lobecotours.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('BushGlam Luxury Holiday Home', 3, -24.35, 30.96667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/bushglam-luxury-holiday-home-PA44953', '+27 21 790 1699', 'info@lobecotours.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Bushmans Nek- First Resort', 2, -29.7923, 29.4938, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/underberg/bushmans-nek-first-resort-PA44858', '334 011 461', 'Bradleyw@firstresorts.co.za')");
 
@@ -2330,23 +1846,23 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Carousel Holiday Resort', 1, -30.58873, 30.56804, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hibberdene/carousel-holiday-resort-PA5743', '+27 39 699 2406', 'carousel@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Carrington Guest House', 2, -29.8814, 30.96908, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/carrington-guest-house-PA45261', '+27 (0)31 261 4577', 'carrington@polka.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Carrington Guest House', 2, -29.8814, 30.96908, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/carrington-guest-house-PA45261', '+2731 261 4577', 'carrington@polka.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Carrington Lodge', 2, -28.75747, 24.76833, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/carrington-lodge-PA1218', '+27 53 831 6448', 'admin@carringtonlodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Carters Rest Guest House', 3, -28.74867, 24.7399, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/carters-rest-guest-house-PA44873', '+27 (0)71 174 9001', 'bookings@cartersrest.co.za  ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Carters Rest Guest House', 3, -28.74867, 24.7399, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/carters-rest-guest-house-PA44873', '+2771 174 9001', 'bookings@cartersrest.co.za  ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Carthews Corner', 3, -31.89727, 26.89475, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/carthews-corner-PA45338', '+27 (0) 45 838-1885', 'info@carthewscorner.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Carthews Corner', 3, -31.89727, 26.89475, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/carthews-corner-PA45338', '+27 45 838-1885', 'info@carthewscorner.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Casa Mia Health Spa & Guest House', 2, -33.5417, 25.66497, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/casa-mia-health-spa-&-guest-house-PA7889', '+27 42 233 0075', 'casamiaspa@alanet.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Casart Game Lodge', 2, -24.10931, 31.01504, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/phalaborwa/casart-game-lodge-PA36050', '+27 71 636 4323', 'info@casartgamelodge.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Casta Diva Guest House', 3, -25.68619, 28.14612, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/casta-diva-guest-house-PA1895', '+27 (0)12 542 4449 ', 'info@castadiva.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Casta Diva Guest House', 3, -25.68619, 28.14612, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/casta-diva-guest-house-PA1895', '+2712 542 4449 ', 'info@castadiva.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Castelo do Mar', 1, -23.86206, 35.37838, 'http://www.aaholidays.co.za/accommodation/mozambique/inhambane/castelo-do-mar-PA45552', NULL, 'info@castelodomar.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Castleto', 3, -34.06204, 23.36863, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/castleton-PA3201', '+27 (0) 44 501-2000', 'reservations@castleton.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Castleto', 3, -34.06204, 23.36863, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/castleton-PA3201', '+27 44 501-2000', 'reservations@castleton.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Cathedral Peak Hotel', 3, -28.94785, 29.20678, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/winterton/cathedral-peak-hotel-PA1112', '+27 36 488 1888', 'info@cathedralpeak.co.za')");
 
@@ -2362,7 +1878,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Centre Court B&B', 3, -29.80135, 31.03153, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/centre-court-b&b-PA1748', '+27 31 573 2484', 'stay@durbanguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Chakas Rock Chalets- First Resorts', 1, -29.51649, 31.22839, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/chakas-rock/chakas-rock-chalets-first-resorts-PA5771', '+27 (0) 32 525-5008', 'funhols@venturenet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Chakas Rock Chalets- First Resorts', 1, -29.51649, 31.22839, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/chakas-rock/chakas-rock-chalets-first-resorts-PA5771', '+27 32 525-5008', 'funhols@venturenet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Chamo Guest House', 9, -33.03859, 27.85312, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/chamo-guest-house-PA45840', '(+27) 043 736 4066', 'info@chamobnb.co.za')");
 
@@ -2370,7 +1886,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Champagne Sports Resort', 2, -28.91292, 29.53305, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/winterton/champagne-sports-resort-PA5778', '+27 36 468 8000', 'reservations@champagnesportsresort.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Chantilly Guest House', 2, -33.36724, 19.3003, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/ceres/chantilly-guest-house-PA3218', '+27 (0)83 441 9532', 'info@chantillyguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Chantilly Guest House', 2, -33.36724, 19.3003, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/ceres/chantilly-guest-house-PA3218', '+2783 441 9532', 'info@chantillyguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Chartwell Castle and Guest House', 3, -25.9912, 27.95471, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/chartwell/chartwell-castle-and-guest-house-PA7907', '+27 10 227 0002', 'info@chartwellcastle.co.za')");
 
@@ -2380,7 +1896,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Check Inn Hotel', 2, -33.90764, 18.40632, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/green-point/check-inn-hotel-PA43282', '+27 21 439 4444', 'checkinn@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Cheerio Trout Fishing and Holiday Resort', 1, -23.8963, 29.9527, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/maebaskloof/cheerio-trout-fishing-and-holiday-resort-PA431', '+27 (0) 83 272 0353', 'cheerio@cheerio.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Cheerio Trout Fishing and Holiday Resort', 1, -23.8963, 29.9527, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/maebaskloof/cheerio-trout-fishing-and-holiday-resort-PA431', '+27 83 272 0353', 'cheerio@cheerio.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Chelsea Villa Guest House', 2, -29.8614, 30.9984, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/glenwood/chelsea-villa-guest-house-PA5784', '+27 31 202 3655', 'cvilla@netactive.co.za')");
 
@@ -2400,7 +1916,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Clouds Guest House', 2, -33.85636, 18.65236, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/durbanville/clouds-guest-house-PA1436', '+27 21 975 1250', 'info@clouds.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Club Hacienda- First Resorts', 2, -30.78735, 30.42124, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shelly-beach/club-hacienda-first-resorts-PA5802', '+27 (0) 39 315-0251', 'clubhacienda@firstresorts.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Club Hacienda- First Resorts', 2, -30.78735, 30.42124, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shelly-beach/club-hacienda-first-resorts-PA5802', '+27 39 315-0251', 'clubhacienda@firstresorts.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Club Mykonos', 2, -33.0911, 18.03331, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/langebaan/club-mykonos-PA3253', '+27 22 707 7000', 'info@clubmykonos.co.za')");
 
@@ -2414,11 +1930,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Coco De Mer Boutique Hotel', 3, -29.53896, 31.21841, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/coco-de-mer-boutique-hotel-PA36034', '+27 32 946 1034', 'info@coco-de-mer.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Cods View', 3, -30.36773, 30.70619, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pennington/cods-view-PA45799', '+27 (0) 84 525 0111', 'bevc12345@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Cods View', 3, -30.36773, 30.70619, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pennington/cods-view-PA45799', '+27 84 525 0111', 'bevc12345@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Colesview Guest House', 2, -30.72563, 25.09184, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/colesview-guest-house-PA45262', '+27 (0)51 753 0025', 'colesview@megadial.com ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Colesview Guest House', 2, -30.72563, 25.09184, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/colesview-guest-house-PA45262', '+2751 753 0025', 'colesview@megadial.com ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Collisheen Estate', 2, -29.50121, 31.19188, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/collisheen-estate-PA43338', '+27 (0) 32 815 1107', 'admin@collisheen.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Collisheen Estate', 2, -29.50121, 31.19188, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/collisheen-estate-PA43338', '+27 32 815 1107', 'admin@collisheen.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Colonel Graham Guest House', 2, -33.30489, 26.52804, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/grahamstown/colonel-graham-guest-house-PA792', '+27 42 622 2274', 'info@colonelgrahamguesthouse.co.za')");
 
@@ -2428,15 +1944,15 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Coral 107 at Century City', 2, -33.88321, 18.5157, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/coral-107-at-century-city-PA43368', '+27 83 573 8364', 'coral107@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Coral Beach Bed & Breakfast', 2, -33.0949, 27.7906, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/coral-beach-bed-&-breakfast-PA43370', '+27 (0) 43 736-9526', 'tsishuba@imperialproperties.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Coral Beach Bed & Breakfast', 2, -33.0949, 27.7906, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/coral-beach-bed-&-breakfast-PA43370', '+27 43 736-9526', 'tsishuba@imperialproperties.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Cosimi Guest House', 2, -33.8177, 18.65101, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/durbanville/cosimi-guest-house-PA45129', '021 975 50 68', 'info@cosimiguesthouse.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Costa Smeralda- First Resorts', 2, -30.86303, 30.36967, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/costa-smeralda-first-resorts-PA43377', '+27 (0) 39 317-3394', 'costasmeralda@firstresorts.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Costa Smeralda- First Resorts', 2, -30.86303, 30.36967, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/costa-smeralda-first-resorts-PA43377', '+27 39 317-3394', 'costasmeralda@firstresorts.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Cosy Posy Guest House', 2, -31.36636, 29.57348, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/lusikisiki/cosy-posy-guest-house-PA43378', '+27 39 253 1208', 'info@cosyposy.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Country Crescent Hotel', 3, -34.06204, 23.36863, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/country-crescent-hotel-PA42289', '+27 (0) 44 533-3033', 'crescent.hotels@pixie.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Country Crescent Hotel', 3, -34.06204, 23.36863, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/country-crescent-hotel-PA42289', '+27 44 533-3033', 'crescent.hotels@pixie.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Country Park', 2, -26.03577, 27.84844, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/muldersdrift/country-park-PA44933', NULL, 'countrypark@global.co.za')");
 
@@ -2444,9 +1960,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Court Classique Suite Hotel', 3, -25.74737, 28.21757, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/court-classique-suite-hotel-PA1114', '+27 12 344 4420', 'reservations@courtclassique.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Coverside Guest Farm', 2, -32.2946, 27.14412, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cathcart/coverside-guest-farm-PA45092', '+27 (0) 45 843-2469', 'coversidefarm@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Coverside Guest Farm', 2, -32.2946, 27.14412, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cathcart/coverside-guest-farm-PA45092', '+27 45 843-2469', 'coversidefarm@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Coweys Corner', 2, -29.84214, 31.00865, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/coweys-corner-PA40934', '+27 (0) 82 568-1635', 'info@coweyscorner.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Coweys Corner', 2, -29.84214, 31.00865, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/coweys-corner-PA40934', '+27 82 568-1635', 'info@coweyscorner.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Cozi Corner Self Catering Accommodatio', 2, -31.89832, 26.88461, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/cozi-corner-self-catering-accommodation-PA45039', NULL, 'rasmussen@telkomsa.net')");
 
@@ -2464,7 +1980,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Croeso Guest House', 2, -29.78885, 30.83205, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kloof/croeso-guest-house-PA45833', '(+27) (031) 764 6894', 'croesokloof@iafrica.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Crowned Crane', 2, -32.94502, 28.02445, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nubie/crowned-crane-PA42939', '+27 (0)43 740 3503', 'clive@crownedcrane.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Crowned Crane', 2, -32.94502, 28.02445, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nubie/crowned-crane-PA42939', '+2743 740 3503', 'clive@crownedcrane.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Crystal Springs Mountain Lodge', 3, -24.8609, 30.7164, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/pilgrims-rest/crystal-springs-mountain-lodge-PA43407', '+27 13 768 5000', 'info@crystalsprings.co.za')");
 
@@ -2496,7 +2012,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('De Stallen Guest House', 3, -29.14277, 26.13914, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/de-stallen-guest-house-PA43475', '+27 82 991 0488', 'info@destallen.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('De Voetpadkloof Resort', 2, -25.83859, 29.53712, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/de-voetpadkloof-resort-PA45770', '+27 (0) 13 245-8500', 'besprekings@devoetpadkloof.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('De Voetpadkloof Resort', 2, -25.83859, 29.53712, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/de-voetpadkloof-resort-PA45770', '+27 13 245-8500', 'besprekings@devoetpadkloof.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('De Waterkant Cottages', 2, -33.91553, 18.41656, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/de-waterkant-cottages-PA1545', '+27 21 421 2300', 'book@dewaterkantcottages.com')");
 
@@ -2524,13 +2040,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Die Ou Pastorie Guest House and Restaurant', 2, -26.39049, 27.61718, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/skeerpoort/die-ou-pastorie-guest-house-and-restaurant-PA45052', '122 071 027', 'susan@dieoupastorie.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Die Voordeur Guest House and Restaurant', 2, -27.91546, 24.84835, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/jan-kempdorp/die-voordeur-guest-house-and-restaurant-PA44869', '+27 (0) 53 456-0220', 'tienusc@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Die Voordeur Guest House and Restaurant', 2, -27.91546, 24.84835, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/jan-kempdorp/die-voordeur-guest-house-and-restaurant-PA44869', '+27 53 456-0220', 'tienusc@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Die Waenhuis', 2, -33.95347, 22.4599, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/george/die-waenhuis-PA2120', '+27 44 874 0034', 'diewaenhuis@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Dieu-Donneè River Lodge', 2, -30.6852, 30.4948, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/southport/dieudonneè-river-lodge-PA5856', '+27 39 681 2733', 'ddrlodge@venturenet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ditholo Game Lodge', 2, -24.88333, 28.28333, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/bela-bela/ditholo-game-lodge-PA1859', '+27 (0) 14 735 0149', 'crsdit@orionhotels.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ditholo Game Lodge', 2, -24.88333, 28.28333, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/bela-bela/ditholo-game-lodge-PA1859', '+27 14 735 0149', 'crsdit@orionhotels.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Dolphin Dance Lodge', 3, -33.84626, 25.64106, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/dolphin-dance-lodge-PA9285', '414 671 469', 'info@dolphindance.co.za')");
 
@@ -2556,21 +2072,21 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Duikerfontein Bed and Breakfast', 2, -29.77195, 31.03718, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/duikerfontein-bed-and-breakfast-PA5882', '+27 82 821 4201', 'duikerfontein@absamail.co')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Duinepos Chalets', 2, -33.09167, 18.03333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/langebaan/duinepos-chalets-PA44923', '+27 (0) 22 707 9900', 'info@duinepos.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Duinepos Chalets', 2, -33.09167, 18.03333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/langebaan/duinepos-chalets-PA44923', '+27 22 707 9900', 'info@duinepos.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Dundi Lodge', 3, -28.6306, 20.3227, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/augrabies-falls/dundi-lodge-PA43615', '+27 54 451 9200/1', 'info@dundilodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Dunkeld Place Botique Hotel', 3, -26.13647, 28.03929, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/dunkeld-west/dunkeld-place-botique-hotel-PA43616', '+27 (0) 11 442-0439', 'info@dunkeldplace.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Dunkeld Place Botique Hotel', 3, -26.13647, 28.03929, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/dunkeld-west/dunkeld-place-botique-hotel-PA43616', '+27 11 442-0439', 'info@dunkeldplace.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Dunwerki', 2, -33.68395, 26.67543, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/kenton-on-sea/dunwerkin-PA43618', '+27 46 648 1173', 'dunwerkin@imaginet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Durban Manor Hotel and Conference Centre', 1, -29.8615, 31.02394, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/durban-manor-hotel-and-conference-centre-PA5887', '+27 31 366 0700', 'reservation@durbanmanorhotel.co.za  ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Durban Sands- First Resorts', 1, -29.85972, 31.03979, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/durban-sands-first-resorts-PA9742', '+27 (0)31 464 5885', 'warrin@vanware.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Durban Sands- First Resorts', 1, -29.85972, 31.03979, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/durban-sands-first-resorts-PA9742', '+2731 464 5885', 'warrin@vanware.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Durban Spa Holiday Resort', 2, -29.85735, 31.03937, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/durban-spa-holiday-resort-PA5889', '+27 (0) 31 332-9366', 'info@dbnspa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Durban Spa Holiday Resort', 2, -29.85735, 31.03937, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/durban-spa-holiday-resort-PA5889', '+27 31 332-9366', 'info@dbnspa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Durnfords Lodge', 2, -28.55425, 29.77391, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/durnfords-lodge-PA5890', '+27 (0) 36 637-2828', 'info@durnfordslodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Durnfords Lodge', 2, -28.55425, 29.77391, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/durnfords-lodge-PA5890', '+27 36 637-2828', 'info@durnfordslodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Dusk to Daw', 3, -27.19563, 31.0011, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/piet-retief/dusk-to-dawn-PA741', '+27 17 821 0601', 'dtd@ptr.dorea.co.za')");
 
@@ -2590,7 +2106,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Eden Dunes 61', 2, -30.80671, 30.4102, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shelly-beach/eden-dunes-61-PA43647', '+27 82 374 3702', 'edendunes@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Edendale Guest Farm', 1, -30.36991, 28.91876, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/matatiele/edendale-guest-farm-PA5901', '+27 (0) 87 151 1812', 'edendaleguest@webmail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Edendale Guest Farm', 1, -30.36991, 28.91876, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/matatiele/edendale-guest-farm-PA5901', '+27 87 151 1812', 'edendaleguest@webmail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Edge Lodge One', 2, -32.96778, 27.93986, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/edge-lodge-one-PA45264', NULL, 'edgelodge@telkomsa.net')");
 
@@ -2598,23 +2114,23 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Edward Charles Manor', 2, -34.18204, 22.13835, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/edward-charles-manor-PA1120', '+27 44 691 2152', 'enquiries@edwardcharles.co.za/edwardcharles@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Edward House', 2, -25.78113, 28.2493, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/edward-house-PA7973', '+27 (0) 12 346 0212', 'Jenny@edwardhouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Edward House', 2, -25.78113, 28.2493, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/edward-house-PA7973', '+27 12 346 0212', 'Jenny@edwardhouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Edward the Guest House', 2, -26.16068, 28.15507, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/bedfordview/edward-the-guest-house-PA43654', '+27 11 453 5826', 'enquiries@edwardtheguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Eendracht Hotel and Self-Catering', 3, -33.93853, 18.86291, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/eendracht-hotel-and-selfcatering-PA7976', '+27 (0)21 883 8843', 'info@eendracht-hotel.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Eendracht Hotel and Self-Catering', 3, -33.93853, 18.86291, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/eendracht-hotel-and-selfcatering-PA7976', '+2721 883 8843', 'info@eendracht-hotel.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Eli Lodge cc', 2, -26.15008, 28.13862, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/edenvale/eli-lodge-cc-PA43655', '+27 11 453 7722', 'reservations@elilodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Eikendal Lodge', 3, -34.01433, 18.82835, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/eikendal-lodge-PA3464', '27 (0)21 855-3617', 'info@eikendallodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Eikendal Lodge', 3, -34.01433, 18.82835, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/eikendal-lodge-PA3464', '2721 855-3617', 'info@eikendallodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('El Palma Guesthouse', 3, -30.06457, 30.87836, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/el-palma-guesthouse-PA5905', ' (031) 9034727', 'elpalma@cybertrade.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('El-Khaya Guest House', 2, -28.74844, 24.7419, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/elkhaya-guest-house-PA45293', NULL, 'el-khaya@kimberley.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elands Bay Hotel', 1, -32.3135, 18.35046, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/elands-bay/elands-bay-hotel-PA43120', '27 (0) 22 972-1640', 'info@elandsbayhotel.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elands Bay Hotel', 1, -32.3135, 18.35046, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/elands-bay/elands-bay-hotel-PA43120', '27 22 972-1640', 'info@elandsbayhotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elandsberg Eco Tourism', 1, -32.17861, 18.89111, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/clanwilliam/elandsberg-eco-tourism-PA43122', '+27 (0) 27 482-2022', 'eland.eco@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elandsberg Eco Tourism', 1, -32.17861, 18.89111, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/clanwilliam/elandsberg-eco-tourism-PA43122', '+27 27 482-2022', 'eland.eco@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elandsrivier Guest House', 2, -33.98509, 24.03993, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/tsitsikamma/elandsrivier-guest-house-PA43797', '+27 42 280 3505', 'bookings@elandsrivier.co.za')");
 
@@ -2626,7 +2142,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elephant In', 1, -22.91998, 30.2094, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/musina-(messina)/elephant-inn-PA44895', NULL, 'elephantinn@lantic.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elephant Lake Hotel', 2, -28.3726, 32.41416, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/elephant-lake-hotel-PA43132', '27 (0)35 5901001 ; 27 (0)35 5901003 ', 'hotel@elephantlake.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elephant Lake Hotel', 2, -28.3726, 32.41416, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/elephant-lake-hotel-PA43132', '2735 5901001 ; 2735 5901003 ', 'hotel@elephantlake.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elephant Lake In', 2, -28.37772, 32.41059, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/elephant-lake-inn-PA43134', '355 901 001', 'info@elephantlake.co.za')");
 
@@ -2636,7 +2152,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elephants Eye Lodge', 2, -34.06328, 18.43784, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/elephants-eye-lodge-PA43798', '+27 21 715 2432', 'info@elephantseyelodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elgin House', 3, -26.06626, 27.99322, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/bryanston/elgin-house-PA43140', '27 (0) 11 462 6862', 'elginhouse@iafrica.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elgin House', 3, -26.06626, 27.99322, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/bryanston/elgin-house-PA43140', '27 11 462 6862', 'elginhouse@iafrica.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elizabeth''s Manor', 2, -26.71024, 27.09206, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/potchefstroom/elizabeths-manor-PA45213', '182 975 561', 'lizette@elizabethsmanor.co.za')");
 
@@ -2644,17 +2160,17 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Elvesida Farm', 2, -29.64727, 30.00685, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/boston/elvesida-farm-PA5916', '+27 33 997 1808', 'bookings@elvesida.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emdoneni Lodge', 2, -28.11696, 32.29188, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/emdoneni-lodge-PA5918', '+27 (0)35 562-7000', 'info@emdonenilodge.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emdoneni Lodge', 2, -28.11696, 32.29188, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/emdoneni-lodge-PA5918', '+2735 562-7000', 'info@emdonenilodge.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emerald Cove Beachfront Holiday Chalets', 2, -30.81768, 30.40477, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shelly-beach/emerald-cove-beachfront-holiday-chalets-PA5919', '+27 39 315 5284', 'emerald@venturenet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emerald Resort and Casino', 2, -26.69306, 27.83524, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/vanderbijlpark/emerald-resort-and-casino-PA43152', '+27 (0)16 982 8000', 'info@emeraldcasino.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emerald Resort and Casino', 2, -26.69306, 27.83524, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/vanderbijlpark/emerald-resort-and-casino-PA43152', '+2716 982 8000', 'info@emeraldcasino.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emoya Estate Basotho Village Hotel and Spa', 3, -29.06436, 26.16794, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/emoya-estate-basotho-village-hotel-and-spa-PA43154', '+27 (0) 51 436 0065/+27 51 436 8471', 'info@emoya.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emoya Estate Basotho Village Hotel and Spa', 3, -29.06436, 26.16794, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/emoya-estate-basotho-village-hotel-and-spa-PA43154', '+27 51 436 0065/+27 51 436 8471', 'info@emoya.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emoya Estate Shanty Town Accommodatio', 1, -29.06436, 26.16794, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/emoya-estate-shanty-town-accommodation-PA43155', '+27 (0) 51 436 0065/ +27 51 436 8471', 'info@emoya.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emoya Estate Shanty Town Accommodatio', 1, -29.06436, 26.16794, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/emoya-estate-shanty-town-accommodation-PA43155', '+27 51 436 0065/ +27 51 436 8471', 'info@emoya.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emoyeni Lodge', 2, -25.5043, 31.00016, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/emoyeni-lodge-PA43159', '27 (0) 13 744-9551', 'reservations@emoyenilodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Emoyeni Lodge', 2, -25.5043, 31.00016, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/emoyeni-lodge-PA43159', '27 13 744-9551', 'reservations@emoyenilodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Endalweni Private Game Reserve', 3, -32.67878, 28.36665, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/kei-mouth/endalweni-private-game-reserve-PA43160', '27 43 841 1526', 'info@endalweni.co.za')");
 
@@ -2662,9 +2178,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Entabeni Safari Conservancy', 2, -24.17432, 28.62144, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/naboomspruit/entabeni-safari-conservancy-PA7980', '+27 11 729 6700', 'reservations@legendlodges.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Erica Bed & Breakfast', 1, -33.91072, 19.12705, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/erica-bed-&-breakfast-PA1466', '+27 (0) 21 876 2825', 'info@ericaguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Erica Bed & Breakfast', 1, -33.91072, 19.12705, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/erica-bed-&-breakfast-PA1466', '+27 21 876 2825', 'info@ericaguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Eshowe Hills', 2, -28.89045, 31.4712, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/eshowe/eshowe-hills-PA45303', '+27 (0) 35 473-5000 ', 'info@eshowehills.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Eshowe Hills', 2, -28.89045, 31.4712, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/eshowe/eshowe-hills-PA45303', '+27 35 473-5000 ', 'info@eshowehills.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Esikhotheni Private Game Reserve', 3, -27.34341, 31.88464, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/jozini/esikhotheni-private-game-reserve-PA45265', NULL, 'elin@esikhotheni.co.za')");
 
@@ -2676,7 +2192,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ex Deo Self Catering Cottage', 2, -25.34505, 31.79741, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/marloth-park/ex-deo-self-catering-cottage-PA43186', '+27 72 556 4508', 'info@exdeo.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Excellent Guest House', 2, -33.8944, 18.64233, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bellville/excellent-guest-house-PA3505', '27 (0)84 474 4444', 'info@excellentguesthouse.')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Excellent Guest House', 2, -33.8944, 18.64233, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bellville/excellent-guest-house-PA3505', '2784 474 4444', 'info@excellentguesthouse.')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Executive Self Catering Unit', 2, -28.74485, 24.77533, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/executive-self-catering-unit-PA45028', NULL, 'dmnel@mweb.co.za')");
 
@@ -2690,27 +2206,27 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fairy Knowe Hotel', 1, -33.99562, 22.61705, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/wilderness/fairy-knowe-hotel-PA3512', '(044) 877-1100', 'reservations@fairyknowe.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Falaza Game Park & Spa', 2, -27.99689, 32.34944, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/falaza-game-park-&-spa-PA5940', '+27 (0) 35 562 2319', 'reservations@falaza.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Falaza Game Park & Spa', 2, -27.99689, 32.34944, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/falaza-game-park-&-spa-PA5940', '+27 35 562 2319', 'reservations@falaza.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Farr Out Guest House', 2, -32.81895, 17.89643, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/paternoster/farr-out-guest-house-PA3518', '+27 22 752 2222', 'marion@farrout.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fat Fish B&B', 2, -33.68725, 26.65866, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/bushmans-river-mouth/fat-fish-b&b-PA43190', '27 (0) 46 648-1590', 'fatfish@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fat Fish B&B', 2, -33.68725, 26.65866, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/bushmans-river-mouth/fat-fish-b&b-PA43190', '27 46 648-1590', 'fatfish@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Felsensicht Holiday Home', 3, -34.20745, 18.45805, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/simons-town/felsensicht-holiday-home-PA3521', '+27 11 786 7271', 'hochreiter@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fernwood Manor Boutique Guest House', 3, -33.97919, 18.4466, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/newlands/fernwood-manor-boutique-guest-house-PA43193', '27 (0) 21 674-4406', 'info@fernwoodmanor.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fernwood Manor Boutique Guest House', 3, -33.97919, 18.4466, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/newlands/fernwood-manor-boutique-guest-house-PA43193', '27 21 674-4406', 'info@fernwoodmanor.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fiddlewood Guest Farm', 3, -29.82556, 31.02228, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/howick/fiddlewood-guest-farm-PA5956', NULL, 'enquiries@fiddlewoodfarm.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Finchley Farm Cottage', 2, -33.29994, 23.48138, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/willowmore/finchley-farm-cottage-PA43164', '+27 (0) 44 923-1801', 'finchleyfarm@baviaans.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Finchley Farm Cottage', 2, -33.29994, 23.48138, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/willowmore/finchley-farm-cottage-PA43164', '+27 44 923-1801', 'finchleyfarm@baviaans.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('First Guest House', 1, -25.76518, 28.26424, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/lynnwood/first-guest-house-PA45027', '+27 (0) 12 348 8566 / 8071', 'info@firstguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('First Guest House', 1, -25.76518, 28.26424, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/lynnwood/first-guest-house-PA45027', '+27 12 348 8566 / 8071', 'info@firstguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fish Eagle Manor', 3, -32.96076, 27.91267, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/fish-eagle-manor-PA823', '043-726-3748', 'info@fisheaglemanor.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fish Eagles Self Catering', 1, -28.95571, 31.75489, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mtunzini/fish-eagles-self-catering-PA5963', '+27 (0) 31 262-1388', 'fisheagles@tiscali.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fish Eagles Self Catering', 1, -28.95571, 31.75489, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mtunzini/fish-eagles-self-catering-PA5963', '+27 31 262-1388', 'fisheagles@tiscali.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Five Acres Guest House', 2, -28.7312, 24.75741, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/five-acres-guest-house-PA45266', '+27 (0) 53 8611179', 'info@fiveacres.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Five Acres Guest House', 2, -28.7312, 24.75741, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/five-acres-guest-house-PA45266', '+27 53 8611179', 'info@fiveacres.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Five Assegais Country Estate', 2, -25.81496, 30.37085, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/machadodorp/five-assegais-country-estate-PA305', '+27 13 256 9263', 'info@fiveassegais.co.za')");
 
@@ -2720,7 +2236,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Flintstones Guest House Durba', 2, -29.80493, 31.03067, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/flintstones-guest-house-durban-PA42243', '+27 31 467 1846', 'guesthouse@flintstones.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Florida Park Hotel', 2, -29.83304, 31.01674, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/florida-park-hotel-PA40877', '+27 (0)31 303 1146', 'info@floridaparkhotel.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Florida Park Hotel', 2, -29.83304, 31.01674, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/florida-park-hotel-PA40877', '+2731 303 1146', 'info@floridaparkhotel.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('FlyDeAar Guesthouse', 1, -30.64585, 24.00877, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/de-aar/flydeaar-guesthouse-PA41022', '+27 53 631 1555', 'flydeaar@telkomsa.net')");
 
@@ -2734,41 +2250,41 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Hotel @ White River', 1, -25.32052, 31.01217, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/white-river/forever-hotel--white-river-PA3546', '445 359 309', 'monica@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Amanzi Mountain Reserve', 1, -25.47621, 29.40132, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-amanzi-mountain-reserve-PA388', '+27 (0) 13 262 3075/6/7', 'loskopres@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Amanzi Mountain Reserve', 1, -25.47621, 29.40132, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-amanzi-mountain-reserve-PA388', '+27 13 262 3075/6/7', 'loskopres@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Centurion Hotel', 2, -25.83385, 28.19353, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/forever-resorts-centurion-hotel-PA2351', '+27 (0) 12 644-6000', 'centurionres@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Centurion Hotel', 2, -25.83385, 28.19353, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/forever-resorts-centurion-hotel-PA2351', '+27 12 644-6000', 'centurionres@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Gariep', 2, -30.59696, 25.50211, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/gariep-dam/forever-resorts-gariep-PA363', ' +27 (0) 51 754 0045', 'gariep@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Gariep', 2, -30.59696, 25.50211, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/gariep-dam/forever-resorts-gariep-PA363', ' +27 51 754 0045', 'gariep@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Isiyala Game Lodge', 1, -25.4827, 29.4574, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-isiyala-game-lodge-PA43197', '+27 (0)13 262 3075', 'loskopres@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Isiyala Game Lodge', 1, -25.4827, 29.4574, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-isiyala-game-lodge-PA43197', '+2713 262 3075', 'loskopres@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Leopards Trail Guest Farm', 1, -25.43034, 29.32213, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-leopards-trail-guest-farm-PA43200', '+27 (0) 13 262 3075/6/7', 'loskopres@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Leopards Trail Guest Farm', 1, -25.43034, 29.32213, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-leopards-trail-guest-farm-PA43200', '+27 13 262 3075/6/7', 'loskopres@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Loskopdam', 1, -25.42064, 29.38774, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/loskop-dam-nature-reserve/forever-resorts-loskopdam-PA475', '+27 (0)13 262 3075', 'loskopres@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Loskopdam', 1, -25.42064, 29.38774, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/loskop-dam-nature-reserve/forever-resorts-loskopdam-PA475', '+2713 262 3075', 'loskopres@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Matombu Wild', 3, -25.47567, 29.34071, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-matombu-wild-PA43215', '+27 (0)13 262 3075/6/7', 'loskopres@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Matombu Wild', 3, -25.47567, 29.34071, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-matombu-wild-PA43215', '+2713 262 3075/6/7', 'loskopres@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Phalaborwa Safari Park', 2, -23.94471, 31.13938, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/phalaborwa/forever-resorts-phalaborwa-safari-park-PA656', '+27 (0)15 781 7500', 'safarires@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Phalaborwa Safari Park', 2, -23.94471, 31.13938, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/phalaborwa/forever-resorts-phalaborwa-safari-park-PA656', '+2715 781 7500', 'safarires@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Plettenberg', 2, -34.00016, 23.3986, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/forever-resorts-plettenberg-PA43225', '+27 (0) 44 535 9309', 'plettrooms@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Plettenberg', 2, -34.00016, 23.3986, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/forever-resorts-plettenberg-PA43225', '+27 44 535 9309', 'plettrooms@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Ramoswe Lodge', 2, -23.85973, 29.38915, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/bela-bela/forever-resorts-ramoswe-lodge-PA43233', '+27 (0) 14 736 8500', 'warmbaths@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Ramoswe Lodge', 2, -23.85973, 29.38915, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/bela-bela/forever-resorts-ramoswe-lodge-PA43233', '+27 14 736 8500', 'warmbaths@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Rexs Ranch', 1, -25.96238, 30.57836, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/badplaas/forever-resorts-rexs-ranch-PA43235', '+27 (0) 17 844-8000', 'badplaas@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Rexs Ranch', 1, -25.96238, 30.57836, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/badplaas/forever-resorts-rexs-ranch-PA43235', '+27 17 844-8000', 'badplaas@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Ruby Cliff Horse Ranch', 1, -25.82925, 29.53462, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-ruby-cliff-horse-ranch-PA43236', '+27 (0) 13 262 3075/6/7', 'loskopres@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Ruby Cliff Horse Ranch', 1, -25.82925, 29.53462, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-ruby-cliff-horse-ranch-PA43236', '+27 13 262 3075/6/7', 'loskopres@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Silver Falls', 1, -25.597972, 29.433083, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-silver-falls-PA43237', '+27 (0) 13 262 3075/6/7', 'loskopres@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Silver Falls', 1, -25.597972, 29.433083, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-silver-falls-PA43237', '+27 13 262 3075/6/7', 'loskopres@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Swadini', 2, -24.54027, 30.79792, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/forever-resorts-swadini-PA373', '27 (0) 15 795 5141', 'swadinifom@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Swadini', 2, -24.54027, 30.79792, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/forever-resorts-swadini-PA373', '27 15 795 5141', 'swadinifom@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Tshipise', 1, -22.54231, 30.35909, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/tshipise/forever-resorts-tshipise-PA43261', '+27 (0) 15 539 0363/4', 'tshipise@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Tshipise', 1, -22.54231, 30.35909, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/tshipise/forever-resorts-tshipise-PA43261', '+27 15 539 0363/4', 'tshipise@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Warmbaths', 2, -24.88994, 28.291511, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/bela-bela/forever-resorts-warmbaths-PA214', '+27 (0) 14 736 8500', 'warmbaths@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Warmbaths', 2, -24.88994, 28.291511, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/bela-bela/forever-resorts-warmbaths-PA214', '+27 14 736 8500', 'warmbaths@foreversa.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts Waterfall Safari Lodge', 1, -25.43665, 29.42002, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/forever-resorts-waterfall-safari-lodge-PA387', '+27 13 262 3075', 'info@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts White River Lodge', 1, -25.32907, 31.01266, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/white-river/forever-resorts-white-river-lodge-PA43288', '+27 (0) 13 751-1100', 'whiteres@foreversa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Forever Resorts White River Lodge', 1, -25.32907, 31.01266, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/white-river/forever-resorts-white-river-lodge-PA43288', '+27 13 751-1100', 'whiteres@foreversa.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fountain Valley Nature Reserve', 2, -25.610958, 29.849972, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/fountain-valley-nature-reserve-PA43290', '(+27 ) 83 409 7503', 'gary@fountainvalley.co.za')");
 
@@ -2776,11 +2292,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fourways Gardens Guest Estate', 2, -26.00249, 27.99877, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/fourways/fourways-gardens-guest-estate-PA1006', '114 655 933', 'jean@fourwaysgardens.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Friesland Cottage', 3, -33.96895, 18.85437, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/friesland-cottage-PA45165', ' +27 (0)21 880 1166', 'mail@frieslandfarm.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Friesland Cottage', 3, -33.96895, 18.85437, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/friesland-cottage-PA45165', ' +2721 880 1166', 'mail@frieslandfarm.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Fusion Boutique Hotel', 3, -23.91945, 29.45631, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/fusion-boutique-hotel-PA43291', '152 914 042', 'reservations@fusionhotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gable Manor', 3, -33.90217, 19.11787, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/gable-manor-PA510', '+27 (0)21 876 3833', 'info@gablemanor.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gable Manor', 3, -33.90217, 19.11787, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/gable-manor-PA510', '+2721 876 3833', 'info@gablemanor.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gaikou Lodge', 2, -34.01266, 20.45728, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/swellendam/gaikou-lodge-PA42268', '+27 28 514 1133', 'reservations@gaikoulodge.co.za')");
 
@@ -2790,7 +2306,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gamamadi Guest Farm', 2, -31.88417, 23.09222, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/three-sisters/gamamadi-guest-farm-PA3585', NULL, 'gamamadi@mtnloaded.co.za ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gariep Country Lodge', 1, -29.66199, 22.74796, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/prieska/gariep-country-lodge-PA44930', '+27 (0)53 353 2552', 'garieplodge@telkomsa.net ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gariep Country Lodge', 1, -29.66199, 22.74796, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/prieska/gariep-country-lodge-PA44930', '+2753 353 2552', 'garieplodge@telkomsa.net ')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gateway Country Lodge', 3, -29.424622, 31.4588, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlanga-rocks/gateway-country-lodge-PA2014', '270 315 661 206', 'info@gatewaycountrylodge.co.za')");
 
@@ -2798,13 +2314,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Genesis Suites & Conferencing', 3, -26.14758, 28.09862, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/genesis-suites-&-conferencing-PA40913', '+27 11 274 5300', 'res@genesissuites.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Getaway Gateway - Polokwane Place', 2, -23.90628, 29.46225, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/getaway-gateway--polokwane-place-PA43359', '+27 (0)15 295 8420', 'info@polokwaneplace.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Getaway Gateway - Polokwane Place', 2, -23.90628, 29.46225, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/getaway-gateway--polokwane-place-PA43359', '+2715 295 8420', 'info@polokwaneplace.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gethlane Lodge', 2, -24.75197, 30.35886, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/burgersfort/gethlane-lodge-PA44853', '013 231 7316/7/8', 'gethlane@firstresorts.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gewel Guest House', 2, -28.87168, 27.87323, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/ficksburg/gewel-guest-house-PA43364', '519 336 119', 'bookings@gewelgastehuis.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ghost Mountain In', 3, -27.61408, 32.035, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mkuze/ghost-mountain-inn-PA5999', '+27 (0) 35 573-1025', 'gmi@ghostmountaininn.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ghost Mountain In', 3, -27.61408, 32.035, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mkuze/ghost-mountain-inn-PA5999', '+27 35 573-1025', 'gmi@ghostmountaininn.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gink Spa at Arniston Hotel', 2, -34.17987, 22.09787, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/arniston/gink-spa-at-arniston-hotel-PA2789', '284 459 000', 'spa@arnistonhotel.com ')");
 
@@ -2832,17 +2348,17 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('nubie Hotel', 1, -32.94004, 28.03045, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nubie/nubie-hotel-PA43413', '27 43 740 4010 ', 'adminnubiehotel@lantic.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('nubie Manor', 1, -32.94206, 28.00037, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nubie/nubie-manor-PA45571', '+27 (0)43-732 1775', 'hosts@nubie-manor.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('nubie Manor', 1, -32.94206, 28.00037, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nubie/nubie-manor-PA45571', '+2743-732 1775', 'hosts@nubie-manor.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('od Hope Farm B&B', 2, -33.52494, 25.67539, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/od-hope-farm-b&b-PA45828', '+27 (0) 42- 234 0357', 'info@addo-odhope.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('od Hope Farm B&B', 2, -33.52494, 25.67539, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/od-hope-farm-b&b-PA45828', '+27 42- 234 0357', 'info@addo-odhope.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('odey''s Guest House', 2, -25.73947, 28.23852, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/odeys-guest-house-PA36286', '123 429 524', 'sleep@odeysguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('GPS Hotel', 2, -23.68019, 27.72327, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/lephalale/gps-hotel-PA43444', '+27 (0) 14 763-1155', 'gpshotel@telkomsa.net ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('GPS Hotel', 2, -23.68019, 27.72327, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/lephalale/gps-hotel-PA43444', '+27 14 763-1155', 'gpshotel@telkomsa.net ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Graceland Guest House', 1, -30.05954, 30.87093, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/graceland-guest-house-PA6017', '27 (0)31 903 5830', 'info@gracelandguesthouse.')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Graceland Guest House', 1, -30.05954, 30.87093, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/graceland-guest-house-PA6017', '2731 903 5830', 'info@gracelandguesthouse.')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Graceland Guesthouse and Country Cottages', 2, -28.99321, 29.45956, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/champagne-valley/graceland-guesthouse-and-country-cottages-PA43447', '+27 (0) 36 468-1011 ', 'reservations@gracelandsa.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Graceland Guesthouse and Country Cottages', 2, -28.99321, 29.45956, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/champagne-valley/graceland-guesthouse-and-country-cottages-PA43447', '+27 36 468-1011 ', 'reservations@gracelandsa.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gracelands Guest Lodge', 1, -30.88156, 30.35456, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ramsgate/gracelands-guest-lodge-PA6018', '+27 39 314 9022', 'sportschool@worldonline.co.za')");
 
@@ -2850,7 +2366,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Grand Kruger Lodge', 2, -25.34337, 31.78687, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/marloth-park/grand-kruger-lodge-PA2041', '+27 82 651 4567', 'info@grandkrugerlodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Grand View B&B', 2, -26.19099, 28.00063, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/grand-view-b&b-PA44160', '+27 (0) 11 837-1724', 'info@grandbnb.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Grand View B&B', 2, -26.19099, 28.00063, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/grand-view-b&b-PA44160', '+27 11 837-1724', 'info@grandbnb.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Granny Dots Country Spot', 2, -23.93344, 30.11667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/tzaneen/granny-dots-country-spot-PA43487', '+27 15 307 5149', 'mwbisset@mweb.co.za')");
 
@@ -2860,7 +2376,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Green Gables', 2, -26.05408, 28.06476, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/sandton/green-gables-PA43973', '+27 11 803 6925', 'green-gables@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Green Haven Guest House', 2, -25.67765, 28.11609, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/green-haven-guest-house-PA43489', '27 (0) 12 549 2252', 'ghaven@global.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Green Haven Guest House', 2, -25.67765, 28.11609, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/green-haven-guest-house-PA43489', '27 12 549 2252', 'ghaven@global.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Green Lantern In', 9, -28.37441, 29.37984, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/van-reenen/green-lantern-inn-PA45316', '586 710 027', 'stay@greenlantern.co.za')");
 
@@ -2876,15 +2392,15 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Guinea Feather Country Lodge', 1, -25.21923, 29.2535, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/groblersdal/guinea-feather-country-lodge-PA45371', '823 301 916', 'gfeather@ctecg.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Guinea-Fowl Guest House', 1, -30.72165, 25.09491, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/guineafowl-guest-house-PA45222', '+27 (0) 51 753 0197', 'guineafowlrock@xsinet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Guinea-Fowl Guest House', 1, -30.72165, 25.09491, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/guineafowl-guest-house-PA45222', '+27 51 753 0197', 'guineafowlrock@xsinet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gum Tree Lodge', 2, -28.73925, 24.80691, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/gum-tree-lodge-PA45006', '+27 (0) 53 832-8577', 'gumtreelodge@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gum Tree Lodge', 2, -28.73925, 24.80691, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/gum-tree-lodge-PA45006', '+27 53 832-8577', 'gumtreelodge@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gum Tree Manor', 3, -25.96626, 28.14242, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/midrand/gum-tree-manor-PA43062', '878 061 406', 'info@thegumtreemanor.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gumtree Lodge', 3, -29.72205, 31.04454, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/gumtree-lodge-PA43497', '+27 (0) 31 539-1360', 'info@gumtree-lodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gumtree Lodge', 3, -29.72205, 31.04454, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/gumtree-lodge-PA43497', '+27 31 539-1360', 'info@gumtree-lodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gunthers Country House', 1, -22.35269, 30.04168, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/musina-(messina)/gunthers-country-house-PA43500', '+27 (0) 15 534-1019 ', 'guntherscountryhouse@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gunthers Country House', 1, -22.35269, 30.04168, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/musina-(messina)/gunthers-country-house-PA43500', '+27 15 534-1019 ', 'guntherscountryhouse@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Gwahumbe Game & Spa', 3, -29.97271, 30.53023, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pietermaritzburg/gwahumbe-game-&-spa-PA6041', '317 811 082', 'info@gwahumbe.co.za')");
 
@@ -2896,21 +2412,21 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Halfway House Hotel', 3, -28.74904, 24.77813, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/halfway-house-hotel-PA44883', '538 316 324', 'info@halfwayhousehotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hampton House Guest House', 2, -25.83758, 28.17809, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/hampton-house-guest-house-PA967', '+27 (0)12 654 1047', 'hamptonhouse@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hampton House Guest House', 2, -25.83758, 28.17809, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/hampton-house-guest-house-PA967', '+2712 654 1047', 'hamptonhouse@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hands On Retreat', 2, -26.11491, 28.02801, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/randburg/hands-on-retreat-PA42259', '113 260 066', 'info@handsonretreat.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hanekraai Bed and Breakfast', 1, -26.95843, 24.72976, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/vryburg/hanekraai-bed-and-breakfast-PA43510', '+27 (0) 53 927-2789', 'hanekraai@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hanekraai Bed and Breakfast', 1, -26.95843, 24.72976, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/vryburg/hanekraai-bed-and-breakfast-PA43510', '+27 53 927-2789', 'hanekraai@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hanover Lodge Hotel', 1, -31.04509, 24.4411, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/hanover/hanover-lodge-hotel-PA45056', '+27 (0) 53 643 0019', 'hanoverlodge@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hanover Lodge Hotel', 1, -31.04509, 24.4411, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/hanover/hanover-lodge-hotel-PA45056', '+27 53 643 0019', 'hanoverlodge@intekom.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Happy Wanderers Holiday Resort', 1, -30.35469, 30.7173, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kelso/happy-wanderers-holiday-resort-PA6049', '+27 (0) 39 975-1104', 'happywanderers@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Happy Wanderers Holiday Resort', 1, -30.35469, 30.7173, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kelso/happy-wanderers-holiday-resort-PA6049', '+27 39 975-1104', 'happywanderers@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Harkerville Forest Lodge', 1, -34.03333, 23.23333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/harkerville/harkerville-forest-lodge-PA9261', '445 327 777', 'info@harkerville.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Harmony Estate Guest Lodge', 1, -29.65167, 17.88418, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/springbok/harmony-estate-guest-lodge-PA45323', NULL, 'harmonyestategl@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hastings Hall- First Resort', 2, -33.93097, 18.40334, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/tamboerskloof/hastings-hall-first-resort-PA44848', '+27 (0) 21 424 2732', 'hastings@firstresorts.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hastings Hall- First Resort', 2, -33.93097, 18.40334, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/tamboerskloof/hastings-hall-first-resort-PA44848', '+27 21 424 2732', 'hastings@firstresorts.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Haswell Guest House', 3, -26.14862, 28.06526, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/haswell-guest-house-PA42265', '+27 11 483 0993', 'reservations@haswellguesthouse.co.za')");
 
@@ -2918,11 +2434,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hawane Resort', 2, -26.13325, 31.09886, 'http://www.aaholidays.co.za/accommodation/swaziland/northern-highlands/hawane-resort-PA1866', '325 255 316', 'infohawane@realnet.co.sz')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hawthorn Towers', 2, -25.84827, 29.2394, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/witbank/hawthorn-towers-PA43586', '+27 (0) 13 650 5047', 'hawthorntowers@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hawthorn Towers', 2, -25.84827, 29.2394, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/witbank/hawthorn-towers-PA43586', '+27 13 650 5047', 'hawthorntowers@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hazelmere Country Lodge', 2, -31.60076, 26.64185, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/hazelmere-country-lodge-PA43590', '459 669 622', 'mortlock@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Heathers B&B Self Catering', 2, -32.24799, 24.52998, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/heathers-b&b-self-catering-PA43587', '+27 (0) 49 892-4000', 'heathersbb@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Heathers B&B Self Catering', 2, -32.24799, 24.52998, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/heathers-b&b-self-catering-PA43587', '+27 49 892-4000', 'heathersbb@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Heidelberg Guest House', 1, -26.21005, 28.05595, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/heidelberg/heidelberg-guest-house-PA45057', '163 495 387', 'info@heidelbergguesthouse.co.za')");
 
@@ -2938,7 +2454,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hermanus Guest House', 3, -34.42174, 19.23535, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/hermanus/hermanus-guest-house-PA3738', '+27 28 313 1433', 'reservations@hermanusguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Heuwelsig Plaashuis', 3, -34.06481, 18.45895, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/heuwelsig-plaashuis-PA43608', '+27 (0) 82 959 5836', 'heuwelsig@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Heuwelsig Plaashuis', 3, -34.06481, 18.45895, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/heuwelsig-plaashuis-PA43608', '+27 82 959 5836', 'heuwelsig@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Highgrove House Country Hotel', 3, -25.12925, 31.02754, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/kiepersol/highgrove-house-country-hotel-PA8973', '+27 13 764 1844', 'house@highgrove.co.za')");
 
@@ -2956,35 +2472,35 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hilldrop B&B', 3, -27.70447, 29.97821, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/newcastle/hilldrop-b&b-PA6070', ' (034) 3124263', 'julie@hilldrop.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hillston Farm', 2, -31.30789, 25.44846, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/middelburg/hillston-farm-PA43380', '+27 (0) 49 842 1627 ', 'info@hillstonfarm.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hillston Farm', 2, -31.30789, 25.44846, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/middelburg/hillston-farm-PA43380', '+27 49 842 1627 ', 'info@hillstonfarm.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hilltop Manor', 3, -29.76595, 31.03925, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/hilltop-manor-PA6073', '315 630 276', 'cheeky@netactive.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hilton Manor Guest House', 3, -28.7629, 32.11971, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/richards-bay/hilton-manor-guest-house-PA45007', '+27 (0)35 753 2179', 'info@hilltonmanor.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hilton Manor Guest House', 3, -28.7629, 32.11971, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/richards-bay/hilton-manor-guest-house-PA45007', '+2735 753 2179', 'info@hilltonmanor.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hippo Hideaway', 2, -28.37631, 32.41123, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/hippo-hideaway-PA7408', '+27 35 590 1025/ +27 31 764 4553', 'reservations@hippohideaway.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Historic Cottages', 2, -33.31109, 26.52249, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/grahamstown/historic-cottages-PA45054', '+27 (0) 46 622 8936 ', 'historic@imaginet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Historic Cottages', 2, -33.31109, 26.52249, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/grahamstown/historic-cottages-PA45054', '+27 46 622 8936 ', 'historic@imaginet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hluhluwe Guest House', 2, -28.02611, 32.28446, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/hluhluwe-guest-house-PA6086', '(+27)035 562 0838', 'hluguest@iafrica.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hlutankungu B&B', 2, -30.28279, 30.32776, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ixopo/hlutankungu-b&b-PA43323', '+27 (0) 39 835-9022', 'hlutankungu.bnb@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hlutankungu B&B', 2, -30.28279, 30.32776, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ixopo/hlutankungu-b&b-PA43323', '+27 39 835-9022', 'hlutankungu.bnb@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hobie Beach Guest House', 2, -33.9847, 25.66117, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/hobie-beach-guest-house-PA939', '415 832 227', 'hobiebeach@intekom.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hogsback Arminel Self Catering Forest Lodges', 2, -32.59543, 26.92703, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/hogsback/hogsback-arminel-self-catering-forest-lodges-PA43312', '800 422 433', 'reservations@katleisure.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hole In One Guest House & Conference Centre', 2, -26.08286, 27.86453, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/roodepoort/hole-in-one-guest-house-&-conference-centre-PA43311', '+27 (0) 11 958 0236', 'info@holeinone.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hole In One Guest House & Conference Centre', 2, -26.08286, 27.86453, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/roodepoort/hole-in-one-guest-house-&-conference-centre-PA43311', '+27 11 958 0236', 'info@holeinone.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hole in the Wall Hotel & Holiday Village - First Resorts', 1, -31.98751, 29.14907, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/coffee-bay/hole-in-the-wall-hotel-&-holiday-village--first-resorts-PA45387', '+27 (0) 47 575-0009', 'reservations@holeinthewall.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hole in the Wall Hotel & Holiday Village - First Resorts', 1, -31.98751, 29.14907, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/coffee-bay/hole-in-the-wall-hotel-&-holiday-village--first-resorts-PA45387', '+27 47 575-0009', 'reservations@holeinthewall.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Home and Away Guest House', 2, -27.73604, 29.93289, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/newcastle/home-and-away-guest-house-PA43305', '343 129 075', 'homeawaybb@yahoo.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Home at last Lodge', 2, -31.59052, 28.75935, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/home-at-last-lodge-PA43299', '+27 (0) 47 531-2208', 'willingbuddies@vodamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Home at last Lodge', 2, -31.59052, 28.75935, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/home-at-last-lodge-PA43299', '+27 47 531-2208', 'willingbuddies@vodamail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Homestead B&B', 2, -33.54451, 25.68708, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/homestead-b&b-PA43296', NULL, 'homestead@webmail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Homestead Guesthouse and Coffee Shoppe', 2, -26.76819, 27.85279, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/sasolburg/homestead-guesthouse-and-coffee-shoppe-PA43066', '+27 (0) 16 971-2790', 'homestead@lantic.net  ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Homestead Guesthouse and Coffee Shoppe', 2, -26.76819, 27.85279, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/sasolburg/homestead-guesthouse-and-coffee-shoppe-PA43066', '+27 16 971-2790', 'homestead@lantic.net  ')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Homtini Guest Farm', 2, -33.94507, 22.93482, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/homtini-guest-farm-PA3778', ' 27 44 3890029', 'bookings@homtini.co.za')");
 
@@ -3008,9 +2524,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hotel Graeme', 2, -34.10609, 18.46815, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/green-point/hotel-graeme-PA43354', '0027 - 21 - 434 92 82', 'info@hotelgraeme.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hotel Numbi and Garden Suites', 2, -25.04792, 31.13094, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/hazyview/hotel-numbi-and-garden-suites-PA43355', '+27 (0) 13 737 7301', 'info@hotelnumbi.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hotel Numbi and Garden Suites', 2, -25.04792, 31.13094, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/hazyview/hotel-numbi-and-garden-suites-PA43355', '+27 13 737 7301', 'info@hotelnumbi.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hotel Savoy and Conference Centre', 3, -31.58825, 28.77728, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/hotel-savoy-and-conference-centre-PA44967', '+27 (0)47 531 0791', 'hotelsavoy@jhgroup.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hotel Savoy and Conference Centre', 3, -31.58825, 28.77728, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/hotel-savoy-and-conference-centre-PA44967', '+2747 531 0791', 'hotelsavoy@jhgroup.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('House Beautiful', 2, -28.50393, 27.93077, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/rosendal/house-beautiful-PA43809', NULL, 'info@housebeautiful.co.za')");
 
@@ -3020,9 +2536,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('House of House Guest House', 3, -33.93531, 18.87836, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/house-of-house-guest-house-PA42278', '+27 21 886 8379', 'john@houseofhouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('House Pinnaqui', 3, -34.07758, 24.91662, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/house-pinnaquin-PA827', '+27 (0) 42 296-0008', 'info@housepinnaquin.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('House Pinnaqui', 3, -34.07758, 24.91662, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/house-pinnaquin-PA827', '+27 42 296-0008', 'info@housepinnaquin.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('House Purfikt @ Kleinemonde', 3, -33.59275, 26.89904, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/house-purfikt--kleinemonde-PA43814', '+27 (0)46 6751156 ', 'marlene@housepurfikt.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('House Purfikt @ Kleinemonde', 3, -33.59275, 26.89904, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/house-purfikt--kleinemonde-PA43814', '+2746 6751156 ', 'marlene@housepurfikt.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('House Yada', 2, -28.75402, 24.7712, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/house-yada-PA45269', NULL, 'aletheimguesthouse@gmail.com')");
 
@@ -3030,31 +2546,31 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Howick Falls Hotel', 2, -29.47731, 30.21438, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/howick/howick-falls-hotel-PA6108', '(033) 330 2809', 'bookings@howickfallshotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hunters Lodge Ladysmith', 2, -28.55518, 29.77233, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/hunters-lodge-ladysmith-PA45440', '+27 (0) 36 637-2359', 'hunterslodge@futurenet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hunters Lodge Ladysmith', 2, -28.55518, 29.77233, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/hunters-lodge-ladysmith-PA45440', '+27 36 637-2359', 'hunterslodge@futurenet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hunters Rest Mountain Resort', 2, -26.03681, 27.62499, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/rustenburg/hunters-rest-mountain-resort-PA1394', '+27 14 537 8300', 'pieter@mountamanzi.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Hydeaway Country Lodge', 2, -33.96722, 25.48583, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/hydeaway-country-lodge-PA40957', NULL, 'info@hydeawaycountrylodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('I Lollo Lodge', 2, -34.14667, 24.83749, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/st-francis-bay/i-lollo-lodge-PA43366', '+27 (0)42 294 0799', 'reservations@ilollo.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('I Lollo Lodge', 2, -34.14667, 24.83749, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/st-francis-bay/i-lollo-lodge-PA43366', '+2742 294 0799', 'reservations@ilollo.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ibis lodge', 3, -29.78443, 31.02753, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/ibis-lodge-PA1354', '270 315 633 586', 'info@ibislodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ibis Place Guest House', 2, -33.961, 22.3699, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/george/ibis-place-guest-house-PA42410', '+27 44 870 0264', 'info@ibisplace.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Idemvelle Guest Rooms And Flats', 2, -28.444072, 21.27449, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/idemvelle-guest-rooms-and-flats-PA43914', '+27 (0) 54 331 3880', 'ijjlange@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Idemvelle Guest Rooms And Flats', 2, -28.444072, 21.27449, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/idemvelle-guest-rooms-and-flats-PA43914', '+27 54 331 3880', 'ijjlange@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Idube BnB', 3, -29.78618, 31.0426, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/idube-bnb-PA7145', ' (031)5638083', 'idubebandb@yahoo.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Idwala Lodge', 3, -28.42464, 29.98269, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/idwala-lodge-PA43367', NULL, 'info@idwalalodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Imbali Boutique Hotel', 3, -30.54089, 29.41896, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/imbali-boutique-hotel-PA43927', '+27 (0)39 727 1162 ', 'res@imbaligh.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Imbali Boutique Hotel', 3, -30.54089, 29.41896, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/imbali-boutique-hotel-PA43927', '+2739 727 1162 ', 'res@imbaligh.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Imbali Guest House', 3, -30.54089, 29.41896, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/imbali-guest-house-PA43371', '+27 (0)39 727 1162 ', 'res@imbaligh.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Imbali Guest House', 3, -30.54089, 29.41896, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/imbali-guest-house-PA43371', '+2739 727 1162 ', 'res@imbaligh.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Indaba Hotel And Conference Centre', 3, -26.06394, 28.02431, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/fourways/indaba-hotel-and-conference-centre-PA43930', '+27 (0) 11 840 6600 ', 'indaba@indabahotel.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Indaba Hotel And Conference Centre', 3, -26.06394, 28.02431, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/fourways/indaba-hotel-and-conference-centre-PA43930', '+27 11 840 6600 ', 'indaba@indabahotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Indlovu River Lodge', 3, -24.17868, 30.56245, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/indlovu-river-lodge-PA42283', '+27 (0) 15 383 9918', 'reservations@irl.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Indlovu River Lodge', 3, -24.17868, 30.56245, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/indlovu-river-lodge-PA42283', '+27 15 383 9918', 'reservations@irl.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ingeli Forest Lodge', 2, -30.55393, 29.42676, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/ingeli-forest-lodge-PA43952', '+27 39 553 0600', 'admin@ingeliforest.co.za')");
 
@@ -3064,7 +2580,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ingwenya Lodge', 2, -28.37932, 32.41439, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/ingwenya-lodge-PA1908', '+27 82 782 8172', 'grootkrokodil@ingwenyalodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Inkwenkwezi Private Game Reserve', 2, -32.88831, 28.05376, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/inkwenkwezi-private-game-reserve-PA1959', '+27 (0)43 734 3234', 'pgr@inkwenkwezi.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Inkwenkwezi Private Game Reserve', 2, -32.88831, 28.05376, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/inkwenkwezi-private-game-reserve-PA1959', '+2743 734 3234', 'pgr@inkwenkwezi.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('InnJoy Boutique Hotel', 3, -25.84315, 28.16153, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/innjoy-boutique-hotel-PA40961', NULL, 'book@innjoy.co.za')");
 
@@ -3074,9 +2590,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Intibane Game Lodge', 2, -28.17802, 31.2535, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ulundi/intibane-game-lodge-PA36144', '+27 82 920 7996 ', 'opsulundi@vodamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Inverdoorn Game Reserve And Safari Lodge', 3, -33.11088, 19.81074, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/ceres/inverdoorn-game-reserve-and-safari-lodge-PA43956', '+27 (0)214 344 639 ', 'info@inverdoorn.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Inverdoorn Game Reserve And Safari Lodge', 3, -33.11088, 19.81074, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/ceres/inverdoorn-game-reserve-and-safari-lodge-PA43956', '+27214 344 639 ', 'info@inverdoorn.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('isiLimela Lodge', 2, -24.35, 30.96667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/isilimela-lodge-PA45239', '+27 (0) 82 783 8594', 'miles.w@zanet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('isiLimela Lodge', 2, -24.35, 30.96667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/isilimela-lodge-PA45239', '+27 82 783 8594', 'miles.w@zanet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Itaga Private Game Lodge', 3, -24.81804, 28.05374, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/mabalingwe-nature-reserve/itaga-private-game-lodge-PA8072', '+27 14 736 6900/ +27 11 289 8020', 'itaga@holidayholdings.co.za')");
 
@@ -3090,7 +2606,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jambo Guest House', 3, -33.90825, 18.40563, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/jambo-guest-house-PA7413', '+27 21 439 4219', 'jamb@iafrica.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jameson In', 1, -33.01945, 27.91522, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/jameson-inn-PA43965', '+27 (0) 43 722-8900', 'info@jamesoninn.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jameson In', 1, -33.01945, 27.91522, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/jameson-inn-PA43965', '+27 43 722-8900', 'info@jamesoninn.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Janets of Knysna Guest House', 1, -34.03758, 23.06125, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/janets-of-knysna-guest-house-PA228', '(044) 382 3401 ', 'janetsofknysna@gmail.com')");
 
@@ -3098,19 +2614,19 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jemima''s Hospitality Bunker on Bailie Guest Lodge', 3, -32.9967, 27.92504, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/jemimas-hospitality-bunker-on-bailie-guest-lodge-PA8086', NULL, 'info@jemimas.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jewel Of The Valley', 1, -25.88333, 27.61667, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/hekpoort/jewel-of-the-valley-PA43514', '+27 (0) 14 576-2364', 'affs.safrica@global.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jewel Of The Valley', 1, -25.88333, 27.61667, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/hekpoort/jewel-of-the-valley-PA43514', '+27 14 576-2364', 'affs.safrica@global.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Joburg Luxury Suites', 2, -26.15743, 27.94951, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/northcliff/joburg-luxury-suites-PA43503', '+27 (0) 11 477-2291', 'anne@joburgluxurysuites.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Joburg Luxury Suites', 2, -26.15743, 27.94951, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/northcliff/joburg-luxury-suites-PA43503', '+27 11 477-2291', 'anne@joburgluxurysuites.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jock Sabie Lodge', 1, -25.09336, 30.77854, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/sabie/jock-sabie-lodge-PA171', '+27 (0)13 764 2178', 'info@jock.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jock Sabie Lodge', 1, -25.09336, 30.77854, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/sabie/jock-sabie-lodge-PA171', '+2713 764 2178', 'info@jock.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Johannesburg Suites', 2, -26.17501, 28.00905, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/melville/johannesburg-suites-PA44712', '117 266 646', 'info@saffronguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jolo Guest Farm', 3, 5.43448, -66.13763, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/rosetta/jolo-guest-farm-PA43967', NULL, 'lorraine@stuartbromfield.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jolyne B&B', 1, -24.51855, 30.88828, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/kampersrus/jolyne-b&b-PA43968', '+27 (0) 83 388 0432', 'jolyne@tiscali.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jolyne B&B', 1, -24.51855, 30.88828, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/kampersrus/jolyne-b&b-PA43968', '+27 83 388 0432', 'jolyne@tiscali.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jozi Apartments', 1, -26.09922, 27.92403, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/roodepoort/jozi-apartments-PA9274', '+27 (0)78 106 2231', 'info@joziapartments.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jozi Apartments', 1, -26.09922, 27.92403, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/roodepoort/jozi-apartments-PA9274', '+2778 106 2231', 'info@joziapartments.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Jozini Tiger Lodge and Spa', 3, -27.43333, 32.06667, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/jozini/jozini-tiger-lodge-and-spa-PA36291', '+27 35 572 1020', 'reservatiosn@jozintigerlodge.co.za')");
 
@@ -3124,11 +2640,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kalahari Lodge Kimberley', 2, -28.78112, 24.73489, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/kalahari-lodge-kimberley-PA43976', '+27 53 831 5085', 'kalaharilodge@kimberley.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kalahari Monate Lodge', 1, -28.36692, 21.14831, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/kalahari-monate-lodge-PA44995', '+27 (0) 54 332 1336 ', 'teuns@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kalahari Monate Lodge', 1, -28.36692, 21.14831, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/kalahari-monate-lodge-PA44995', '+27 54 332 1336 ', 'teuns@intekom.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kalahari Rangers Lodge', 9, -26.19934, 22.57656, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/mccarthys-rest/kalahari-rangers-lodge-PA45781', '(0)79 5804199 ', 'kalaharicc@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kalahari Water Holiday and Adventure', 1, -28.72145, 20.9797, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/keimoes/kalahari-water-holiday-and-adventure-PA43977', '+27 (0) 54 461-2404', 'info@kalahariwater.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kalahari Water Holiday and Adventure', 1, -28.72145, 20.9797, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/keimoes/kalahari-water-holiday-and-adventure-PA43977', '+27 54 461-2404', 'info@kalahariwater.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kamogelo Guest House', 2, -25.22938, 27.03233, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/mogwase/kamogelo-guest-house-PA1338', '145 372 140', 'kadi@mweb.co.za')");
 
@@ -3142,7 +2658,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Karula Hotel', 2, -25.3222, 31.02135, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/white-river/karula-hotel-PA43979', '+27 13 751 2277/8/9', 'email@Karulahotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kassaboera Lodge', 2, -25.73363, 27.87371, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/hartebeespoortdam/kassaboera-lodge-PA43463', '+27 (0) 12 253 1685 ', 'info@kassaboera.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kassaboera Lodge', 2, -25.73363, 27.87371, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/hartebeespoortdam/kassaboera-lodge-PA43463', '+27 12 253 1685 ', 'info@kassaboera.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kasteelkop Guest Farm', 2, -27.28333, 28.51667, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/frankfort/kasteelkop-guest-farm-PA45663', NULL, 'erikal@lantic.net')");
 
@@ -3154,15 +2670,15 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Katse Lodge', 1, -29.33694, 28.50611, 'http://www.aaholidays.co.za/accommodation/lesotho/lebakeng/katse-lodge-PA43995', NULL, 'crskat@orionhotels.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kaya Selati Guest House', 2, -26.35604, 27.37858, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/carletonville/kaya-selati-guest-house-PA43980', '+27 (0) 18 788-3204', 'kayaselati@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kaya Selati Guest House', 2, -26.35604, 27.37858, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/carletonville/kaya-selati-guest-house-PA43980', '+27 18 788-3204', 'kayaselati@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('KB Lodge cc', 2, -25.84211, 29.25647, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/witbank/kb-lodge-cc-PA43464', '136 500 712', 'bookings@kblodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('KBs Exclusive Bed and Breakfast', 1, -31.8911, 26.87644, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/kbs-exclusive-bed-and-breakfast-PA43983', '+27 (0) 45 839-6203', 'kbsbnb@webmail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('KBs Exclusive Bed and Breakfast', 1, -31.8911, 26.87644, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/kbs-exclusive-bed-and-breakfast-PA43983', '+27 45 839-6203', 'kbsbnb@webmail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ke Nako Lodges', 2, -33.9796, 22.69518, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/wilderness/ke-nako-lodges-PA45247', '+27 (0)44 004 2319', 'itistime@kenakolodges.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ke Nako Lodges', 2, -33.9796, 22.69518, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/wilderness/ke-nako-lodges-PA45247', '+2744 004 2319', 'itistime@kenakolodges.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kelbricks Bed and Breakfast', 1, -31.87886, 26.87138, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/kelbricks-bed-and-breakfast-PA43985', '+27 (0) 45 838-1049', 'kofi@eci.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kelbricks Bed and Breakfast', 1, -31.87886, 26.87138, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/kelbricks-bed-and-breakfast-PA43985', '+27 45 838-1049', 'kofi@eci.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ken''s Guest House', 2, -32.84658, 27.44077, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/bhisho/kenns-guest-house-PA43988', '406 369 119', 'resevations@kennsguesthouse.co.za')");
 
@@ -3170,21 +2686,21 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Khaya Ndlovu Manor House', 3, -24.2212, 30.5814, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/khaya-ndlovu-manor-house-PA42281', '+27 15 793 0605/ +27 15 793 0471', 'reservations@jordanprops.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Khokmoya Guest House', 1, -26.23272, 28.16808, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/germiston/khokmoya-guest-house-PA44878', '+27 (0) 11 827-6309', 'khokumoya@yahoo.com ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Khokmoya Guest House', 1, -26.23272, 28.16808, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/germiston/khokmoya-guest-house-PA44878', '+27 11 827-6309', 'khokumoya@yahoo.com ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Khol Newman Bed and Breakfast', 1, -31.9, 26.88333, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/khol-newman-bed-and-breakfast-PA43989', ' +27 (0) 45 857-0046', 'kvsign@yahoo.co.uk')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Khol Newman Bed and Breakfast', 1, -31.9, 26.88333, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/khol-newman-bed-and-breakfast-PA43989', ' +27 45 857-0046', 'kvsign@yahoo.co.uk')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kimberley Rose Guest House', 2, -28.75067, 24.73387, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/kimberley-rose-guest-house-PA45616', '+27(0)53 861 3748', 'kbyroseguest@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kingfisher Guest House', 3, -33.99135, 25.67118, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/kingfisher-guest-house-PA44007', '+27 (0)41 583 2150', 'accommodation@kingfisherpe.co.za ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kingfisher Guest House', 3, -33.99135, 25.67118, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/kingfisher-guest-house-PA44007', '+2741 583 2150', 'accommodation@kingfisherpe.co.za ')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kingfisher Hollow', 1, -34.14129, 18.89833, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/rdon`s-bay/kingfisher-hollow-PA3927', ' +27 21 8560104', 'info@kingfisherhollow.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kingfisher Lodge', 2, -31.59643, 28.77351, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/kingfisher-lodge-PA45029', '+27 (0) 79 072 4200', 'kingfisher@mthatha.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kingfisher Lodge', 2, -31.59643, 28.77351, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/kingfisher-lodge-PA45029', '+27 79 072 4200', 'kingfisher@mthatha.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kings Cottages', 1, -30.81553, 30.40395, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shelly-beach/kings-cottages-PA43982', '393 150 423', 'info@kingscottages.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kings Grant Country Retreat', 2, -30.15124, 30.07464, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ixopo/kings-grant-country-retreat-PA6184', '+27 (0) 39 834-2730', 'reservations@kingsgrant.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kings Grant Country Retreat', 2, -30.15124, 30.07464, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ixopo/kings-grant-country-retreat-PA6184', '+27 39 834-2730', 'reservations@kingsgrant.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kings Guest House', 2, -29.83671, 30.93094, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/westville/kings-guest-house-PA43515', '312 669 815', 'info@kingsaccommodation.co.za')");
 
@@ -3192,7 +2708,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kingston House', 3, -29.72106, 31.08464, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlanga-rocks/kingston-house-PA6187', ' (031) 561 4160', 'info@kingstonhouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Klaasvoogds Cottage', 3, -33.81752, 19.97495, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/robertson/klaasvoogds-cottage-PA43919', '+27 (0) 23 626-3200', 'pbnsqs@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Klaasvoogds Cottage', 3, -33.81752, 19.97495, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/robertson/klaasvoogds-cottage-PA43919', '+27 23 626-3200', 'pbnsqs@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Klein Kunkura Game Lodge', 2, -24.66527, 28.47536, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/modimolle/klein-kunkura-game-lodge-PA43818', '270 147 179 838', 'admin@kunkura.co.za')");
 
@@ -3224,29 +2740,29 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kololo Game Reserve', 2, -24.38917, 27.85417, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/vaalwater/kololo-game-reserve-PA8098', '+27 11 826 2389', 'info@kololo.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kolping Guest House & Conference Facilities', 3, -33.8286, 18.64619, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/kolping-guest-house-&-conference-facilities-PA1200', '+27 (0) 21 970-2900', 'info@kolpingguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kolping Guest House & Conference Facilities', 3, -33.8286, 18.64619, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/kolping-guest-house-&-conference-facilities-PA1200', '+27 21 970-2900', 'info@kolpingguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Komati rge Lodge Fly Fishing and Wildlife Reserve', 2, -26.09477, 29.46001, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/machadodorp/komati-rge-lodge-fly-fishing-and-wildlife-reserve-PA470', '+27 (0) 17 843 3920', 'komatirge@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Komati rge Lodge Fly Fishing and Wildlife Reserve', 2, -26.09477, 29.46001, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/machadodorp/komati-rge-lodge-fly-fishing-and-wildlife-reserve-PA470', '+27 17 843 3920', 'komatirge@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Komati River Chalets', 2, -25.43629, 31.95562, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/komatipoort/komati-river-chalets-PA483', '+27 (0) 13 793-7623', 'info@komatiriverchalets.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Komati River Chalets', 2, -25.43629, 31.95562, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/komatipoort/komati-river-chalets-PA483', '+27 13 793-7623', 'info@komatiriverchalets.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kondowe Game Reserve', 3, -23.56234, 31.07937, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/gravelotte/kondowe-game-reserve-PA43494', '+27 (0) 12 361-0941', 'belinda@kondowe.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kondowe Game Reserve', 3, -23.56234, 31.07937, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/gravelotte/kondowe-game-reserve-PA43494', '+27 12 361-0941', 'belinda@kondowe.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Koorsboom Cottage Guesthouse', 2, -26.17717, 28.12551, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/bedfordview/koorsboom-cottage-guesthouse-PA40983', '+27 11 622-1292 ', 'anemari@koorsboomcottage.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kopano Nokeng Country Lodge', 2, -29.11835, 26.22492, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/kopano-nokeng-country-lodge-PA45069', '+27 (0) 51 441 7819', 'info@kopanonokeng.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kopano Nokeng Country Lodge', 2, -29.11835, 26.22492, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/kopano-nokeng-country-lodge-PA45069', '+27 51 441 7819', 'info@kopanonokeng.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Koppie Alleen Guest House', 2, -27.39501, 31.62423, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ponla/koppie-alleen-guest-house-PA43777', '+27 (0) 34 413-1281', 'koppie.alleen@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Koppie Alleen Guest House', 2, -27.39501, 31.62423, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ponla/koppie-alleen-guest-house-PA43777', '+27 34 413-1281', 'koppie.alleen@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Koppisol Klub', 2, -26.55613, 27.93617, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/vereeniging/koppisol-klub-PA43778', '+27(0) 16 556-6125', 'koppisol@cyberserv.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kosmos Guest House', 2, -28.75836, 24.74743, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/kosmos-guest-house-PA44945', '053-8613795', 'kosmosguesthouse@telkomsa.net ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Koubad Farm Lodge', 3, -27.42225, 30.81741, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/paulpietersburg/koubad-farm-lodge-PA45183', '+27 (0) 83 233 6617', 'claire@koubad.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Koubad Farm Lodge', 3, -27.42225, 30.81741, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/paulpietersburg/koubad-farm-lodge-PA45183', '+27 83 233 6617', 'claire@koubad.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kowie River Chalets - First Resorts', 2, -33.6, 26.88333, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/kowie-river-chalets--first-resorts-PA44847', '466 244 182', 'kowieriver@firstresorts.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Krige Lodge', 2, -29.11813, 26.22309, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/krige-lodge-PA43780', '+27 (0) 51 451-1345', 'adri.gvr@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Krige Lodge', 2, -29.11813, 26.22309, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/krige-lodge-PA43780', '+27 51 451-1345', 'adri.gvr@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kronenhoff Guest House', 3, -33.40082, 25.44661, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/kirkwood/kronenhoff-guest-house-PA8100', '+27 42 230 1448', 'info@kronenhoff.co.za')");
 
@@ -3256,39 +2772,39 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kududu Guest House', 3, -33.51667, 25.61667, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/kududu-guest-house-PA42256', '+27 42 234 0177', 'anri@kududu.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kudusrus Game Lodge', 1, -25.62922, 27.26309, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/rustenburg/kudusrus-game-lodge-PA43781', '+27 (0) 82 441 3396', 'andries@kudusrus.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kudusrus Game Lodge', 1, -25.62922, 27.26309, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/rustenburg/kudusrus-game-lodge-PA43781', '+27 82 441 3396', 'andries@kudusrus.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kumkani Country Lodge', 2, -26.71571, 27.11336, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/potchefstroom/kumkani-country-lodge-PA44988', '+27 18 290 7387/9', 'kumkani@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kurhula Lodge', 2, -24.16158, 30.9354, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/kurhula-lodge-PA42255', '+27 79 251 8487', 'info@kurhulalodge.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kuru Kuru Guest House', 1, -27.45189, 23.43076, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kuruman/kuru-kuru-guest-house-PA43782', '+27 (0) 53 712 0319', 'kurukuru@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kuru Kuru Guest House', 1, -27.45189, 23.43076, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kuruman/kuru-kuru-guest-house-PA43782', '+27 53 712 0319', 'kurukuru@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwa Mahlangu Guest House', 1, -25.12722, 28.98694, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/siyabuswa/kwa-mahlangu-guest-house-PA43787', NULL, 'kwamahlangu@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwa Maritane Bush Lodge', 2, -25.33557, 27.14503, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/pilanesberg-national-park/kwa-maritane-bush-lodge-PA9842', ':+27(0)14 552 5100', 'kwamaritane@legacyhotels.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwaggashoek Game Ranch', 3, -28.73033, 29.3486, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/bergville/kwaggashoek-game-ranch-PA43785', '+27 (0) 82 561 2001', 'kwaggashoek@shisas.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwaggashoek Game Ranch', 3, -28.73033, 29.3486, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/bergville/kwaggashoek-game-ranch-PA43785', '+27 82 561 2001', 'kwaggashoek@shisas.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwambali Riverside Lodge', 2, -25.04278, 31.09886, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/hazyview/kwambali-riverside-lodge-PA45252', NULL, 'peter@tomahawk.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwantu private game reserve', 3, -33.31756, 26.08472, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/alicedale/kwantu-private-game-reserve-PA42155', '+27 (0) 42 203 1400', 'shakir@kwantu.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwantu private game reserve', 3, -33.31756, 26.08472, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/alicedale/kwantu-private-game-reserve-PA42155', '+27 42 203 1400', 'shakir@kwantu.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwela B&B', 2, -30.69931, 26.71251, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/aliwal-north/kwela-b&b-PA45249', '516 347 934', 'kwela@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwena Chalets at Sun City', 2, -25.34028, 27.09083, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/sun-city/kwena-chalets-at-sun-city-PA36218', '+27 14 552 1262', 'kwenachalets@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwindla Bed and Breakfast', 2, -32.93716, 27.74817, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/kwindla-bed-and-breakfast-PA45234', '+27 (0) 78 193 1615', 'kwindlabnb@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Kwindla Bed and Breakfast', 2, -32.93716, 27.74817, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/kwindla-bed-and-breakfast-PA45234', '+27 78 193 1615', 'kwindlabnb@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Bastide', 1, -25.81459, 27.75902, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/skeerpoort/la-bastide-PA45309', NULL, 'pauline@labastide.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Cabriere Country House', 3, -33.90163, 19.14813, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/la-cabriere-country-house-PA4003', '+27 21 876 4780', 'lacabriere@icon.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Cigale', 3, -34.01473, 25.43337, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/la-cigale-PA837', '+27 (0) 41 368-8235', 'info@la-cigale.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Cigale', 3, -34.01473, 25.43337, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/la-cigale-PA837', '+27 41 368-8235', 'info@la-cigale.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Cote D''Azur - First Resorts', 3, -30.85335, 30.37818, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/la-cote-dazur--first-resorts-PA6256', '+27 (0) 39 312-1521', 'dianneu@firstresorts.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Cote D''Azur - First Resorts', 3, -30.85335, 30.37818, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/la-cote-dazur--first-resorts-PA6256', '+27 39 312-1521', 'dianneu@firstresorts.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Galiniere Guest Cottages', 2, -33.90137, 19.1066, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/la-galiniere-guest-cottages-PA40989', '+27 (0)21 876 2579', 'Info@lagaliniere.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Galiniere Guest Cottages', 2, -33.90137, 19.1066, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/la-galiniere-guest-cottages-PA40989', '+2721 876 2579', 'Info@lagaliniere.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La La Nathi', 3, -28.30374, 29.14703, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/la-la-nathi-PA399', '(058) 623 - 0282', 'lalanati@internext.co.za')");
 
@@ -3298,19 +2814,19 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Lot Gastehuis', 1, -27.45605, 23.42937, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kuruman/la-lot-gastehuis-PA45580', NULL, 'laloterasmus@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Maison Bleue', 2, -34.10261, 24.88988, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/la-maison-bleue-PA43795', '+27 (0) 11 803-4645', 'marieannehavart@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Maison Bleue', 2, -34.10261, 24.88988, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/la-maison-bleue-PA43795', '+27 11 803-4645', 'marieannehavart@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Maison du Soleil', 2, -30.37173, 30.70338, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pennington/la-maison-du-soleil-PA45545', NULL, 'maurel.pe@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Maison Guest House', 1, -31.58636, 28.79062, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/la-maison-guest-house-PA45501', '+27 (0) 47 532-1220', 'lamaison@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Maison Guest House', 1, -31.58636, 28.79062, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/la-maison-guest-house-PA45501', '+27 47 532-1220', 'lamaison@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Mercy Beach Hotel', 2, -29.64458, 31.13219, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/la-mercy/la-mercy-beach-hotel-PA43796', '+27 (0) 32 941-6221/2/3/4/5', 'info@lamercybeachhotel.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Mercy Beach Hotel', 2, -29.64458, 31.13219, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/la-mercy/la-mercy-beach-hotel-PA43796', '+27 32 941-6221/2/3/4/5', 'info@lamercybeachhotel.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Mercy Hotel', 2, -29.64415, 31.13202, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/la-mercy-hotel-PA43474', '329 416 221', 'info@lamercybeachhotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Montagne Resort No 611', 2, -29.53325, 31.22224, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/la-montagne-resort-no-611-PA43804', '+27 (0) 82 786 3130', 'accinballito@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Montagne Resort No 611', 2, -29.53325, 31.22224, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/la-montagne-resort-no-611-PA43804', '+27 82 786 3130', 'accinballito@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Montagne-First Resorts', 1, -29.53305, 31.22245, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/la-montagnefirst-resorts-PA4011', '+27 (0) 32 946-2121 ', 'paulg@firstresorts.co.za ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Montagne-First Resorts', 1, -29.53305, 31.22245, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/la-montagnefirst-resorts-PA4011', '+27 32 946-2121 ', 'paulg@firstresorts.co.za ')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Paix Guest House', 1, -32.35335, 22.58976, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/beaufort-west/la-paix-guest-house-PA1475', NULL, 'mekritzinger@telkomsa.net')");
 
@@ -3326,17 +2842,17 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Teranga Bed & Breakfast', 1, -30.54187, 29.42339, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/la-teranga-bed-&-breakfast-PA45242', '397 272 367', 'ousseynu@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Terra de Luc', 3, -33.91667, 19.13333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/la-terra-de-luc-PA43473', '+27 (0) 21 876-2416', 'lois@laviedeluc.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('La Terra de Luc', 3, -33.91667, 19.13333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/la-terra-de-luc-PA43473', '+27 21 876-2416', 'lois@laviedeluc.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ladybrand Guest House', 2, -29.19319, 27.45114, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/ladybrand/ladybrand-guest-house-PA43922', '+27 (0) 51 924-1155', 'ladyguest@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ladybrand Guest House', 2, -29.19319, 27.45114, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/ladybrand/ladybrand-guest-house-PA43922', '+27 51 924-1155', 'ladyguest@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Laon View Lodge', 3, -32.96641, 27.94798, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/laon-view-lodge-PA43923', '+27 (0) 43 748 1980', 'info@laonview.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Laon View Lodge', 3, -32.96641, 27.94798, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/laon-view-lodge-PA43923', '+27 43 748 1980', 'info@laonview.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Laona In', 2, -34.04062, 23.06805, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/laona-inn-PA4036', '+27 44 382 4656', 'info@laona.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Laingsburg Country Hotel', 1, -33.1955, 20.85339, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/laingsburg/laingsburg-country-hotel-PA4039', '+27 23 551 1009', 'hotel@laingsburg.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lake Grappa Guest Farm', 2, -28.60858, 20.34464, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/augrabies-falls/lake-grappa-guest-farm-PA45536', '+27 (0) 82 429 4811', 'lakegrappa@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lake Grappa Guest Farm', 2, -28.60858, 20.34464, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/augrabies-falls/lake-grappa-guest-farm-PA45536', '+27 82 429 4811', 'lakegrappa@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lakeside Lodge', 3, -33.99214, 22.73616, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/sedgefield/lakeside-lodge-PA4046', '+27 44 343 1844', 'stay@lakesidelodge.co.za')");
 
@@ -3352,13 +2868,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lalaphansi', 2, -29.67528, 31.11529, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umdloti-beach/lalaphansi-PA1796', '+27 31 568 1565', 'lalaphan@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Laletsa Lodge', 2, -29.85134, 30.98997, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/berea/laletsa-lodge-PA1244', '+27 (0) 31 201 0785/6 ', 'laletsa@netactive.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Laletsa Lodge', 2, -29.85134, 30.98997, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/berea/laletsa-lodge-PA1244', '+27 31 201 0785/6 ', 'laletsa@netactive.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lambour''s Self Catering Victorian Cottage', 2, -25.59107, 30.76588, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/kaapsehoop/lambourns-self-catering-victorian-cottage-PA44924', NULL, 'wartan@iafrica.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lamor Guest House', 2, -25.75421, 29.47683, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/lamor-guest-house-PA43928', '+27 13 245 2637', 'stay@lamor.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Langberg Guest Farm', 2, -28.75769, 24.76305, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/langberg-guest-farm-PA9196', '+27 (0) 53 832-1001', 'admin@langberg.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Langberg Guest Farm', 2, -28.75769, 24.76305, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/langberg-guest-farm-PA9196', '+27 53 832-1001', 'admin@langberg.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Langrietvlei Chalets', 1, -33.02817, 18.31487, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/hopefield/langrietvlei-chalets-PA4062', '+27 22 783 0856', 'langriet@new.co.za')");
 
@@ -3380,7 +2896,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Le Bac Stay', 2, -33.6569, 18.96182, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/paarl/le-bac-stay-PA42270', '+27 21 864 2960', 'stay@lebac.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Le Chef B&B', 2, -31.60745, 28.74521, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/le-chef-b&b-PA45867', '+27 (0) 47 537 0444', 'lechef.bnb@gmail.com''')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Le Chef B&B', 2, -31.60745, 28.74521, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/le-chef-b&b-PA45867', '+27 47 537 0444', 'lechef.bnb@gmail.com''')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Leeuwenvoet House', 2, -33.92978, 18.40884, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/leeuwenvoet-house-PA1203', '27 21 424 1133', 'stay@leeuwenvoet.co.za')");
 
@@ -3392,19 +2908,19 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Leopard Mountain Game Lodge', 3, -27.81251, 32.03201, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mkuze/leopard-mountain-game-lodge-PA2203', '355 958 218', 'info@leopardmountain.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Leriba Coastal lf Lodge', 3, -29.34336, 31.37418, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/princes-grant/leriba-coastal-lf-lodge-PA43439', '+27 (0) 12 660 3300 ', 'marketing@leriba.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Leriba Coastal lf Lodge', 3, -29.34336, 31.37418, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/princes-grant/leriba-coastal-lf-lodge-PA43439', '+27 12 660 3300 ', 'marketing@leriba.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Leriba lf Lodge', 3, -23.97057, 31.16923, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/phalaborwa/leriba-lf-lodge-PA43437', '+27 (0)12 660 3300', 'marketing@leriba.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Leriba lf Lodge', 3, -23.97057, 31.16923, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/phalaborwa/leriba-lf-lodge-PA43437', '+2712 660 3300', 'marketing@leriba.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Leriba Hotel and Spa', 3, -25.84481, 28.17769, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/leriba-hotel-and-spa-PA1009', '+27 12 660-3300', 'sales@leriba.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Leshiba Wilderness', 3, -23.0066, 29.5774, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/louis-trichardt/leshiba-wilderness-PA9319', '+27 (0) 15 593 0076/ +27 11 483 1841', 'lodge@leshiba.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Leshiba Wilderness', 3, -23.0066, 29.5774, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/louis-trichardt/leshiba-wilderness-PA9319', '+27 15 593 0076/ +27 11 483 1841', 'lodge@leshiba.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Liabela Bed & Breakfast', 9, -29.82803, 30.86537, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pinetown/liabela-bed-&-breakfast-PA45547', '+27 (0)31 702  2161', 'reception@liabela.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Liabela Bed & Breakfast', 9, -29.82803, 30.86537, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pinetown/liabela-bed-&-breakfast-PA45547', '+2731 702  2161', 'reception@liabela.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Liapolis Guest House', 2, -29.8326, 30.85528, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pinetown/liapolis-guest-house-PA7151', '+27 31 709 5013', 'hazel.bond@liapolis.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Libby''s Lodge', 2, -28.45864, 21.24411, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/libbys-lodge-PA1210', '+27 (0) 54 332-2661', 'lgerber@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Libby''s Lodge', 2, -28.45864, 21.24411, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/libbys-lodge-PA1210', '+27 54 332-2661', 'lgerber@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Libertas Guest House', 2, -25.85109, 25.64376, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/mafikeng/libertas-guest-house-PA7487', NULL, 'info@lgh.co.za')");
 
@@ -3418,9 +2934,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lilitha Guest House and Conferencing', 2, -32.33005, 28.14099, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/butterworth/lilitha-guest-house-and-conferencing-PA43443', '+27 47 491 0381', 'lilithaguesthouse@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lilliz Guest House', 2, -31.58167, 28.76322, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/lilliz-guest-house-PA45581', '+27 (0)47 5314757', 'lilliz@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lilliz Guest House', 2, -31.58167, 28.76322, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/lilliz-guest-house-PA45581', '+2747 5314757', 'lilliz@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lily Lo Guest House', 1, -23.91785, 29.53064, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/lily-lo-guest-house-PA43442', '+27 (0) 15 263 6013', 'cdrooftrusses@yahoo.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lily Lo Guest House', 1, -23.91785, 29.53064, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/lily-lo-guest-house-PA43442', '+27 15 263 6013', 'cdrooftrusses@yahoo.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lions Rest Guest House', 3, -25.85109, 25.64376, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/mafikeng/lions-rest-guest-house-PA1376', '+27 18 381 7330', 'info@mafikeng-accommodation.co.za')");
 
@@ -3430,15 +2946,15 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Little Eden St Lucia', 2, -28.37909, 32.41457, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/little-eden-st-lucia-PA45465', '+27 35 590 1527', 'info@littleedensaintlucia.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Little Farm Lodge', 1, -29.25307, 24.49711, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/little-farm-lodge-PA45909', '+27 (0) 83 225 8275', 'llittlefarm@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Little Farm Lodge', 1, -29.25307, 24.49711, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/little-farm-lodge-PA45909', '+27 83 225 8275', 'llittlefarm@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Little Orchard B&B', 2, -34.01756, 18.45861, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/little-orchard-b&b-PA43432', '+27 (0) 21 794 1280', 'little-orchard@iafrica.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Little Orchard B&B', 2, -34.01756, 18.45861, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/little-orchard-b&b-PA43432', '+27 21 794 1280', 'little-orchard@iafrica.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Little Rock Accommodatio', 2, -26.12946, 27.84656, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/roodepoort/little-rock-accommodation-PA43429', '+27 (0) 11 764 4623', 'littlerock@eaglemail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Little Rock Accommodatio', 2, -26.12946, 27.84656, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/roodepoort/little-rock-accommodation-PA43429', '+27 11 764 4623', 'littlerock@eaglemail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Little Swift Chalets', 2, -25.82075, 27.74082, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/skeerpoort/little-swift-chalets-PA206', NULL, 'damsig@swiftchalets.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Liz at Lancaster Guest House', 3, -26.12782, 28.02445, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/rosebank/liz-at-lancaster-guest-house-PA1025', '+27 (0) 11 442-8083', 'info@lizatlancaster.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Liz at Lancaster Guest House', 3, -26.12782, 28.02445, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/rosebank/liz-at-lancaster-guest-house-PA1025', '+27 11 442-8083', 'info@lizatlancaster.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lodge on The Lake', 2, -34.00018, 22.63654, 'http://www.aaholidays.co.za/accommodation/0/0/lodge-on-the-lake-PA1897', '+27 44 877 1097', 'info@lodgeonthelake.co.za')");
 
@@ -3450,7 +2966,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lombardy Estate Boutique Hotel and Conference Venue', 3, -25.79099, 28.36084, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/lombardy-estate-boutique-hotel-and-conference-venue-PA678', '+27 87 725 5591', 'frontoffice@lombardy.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Longtom Farm Guest House', 3, -25.12221, 30.47341, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/lydenburg/longtom-farm-guest-house-PA43423', '+27 (0)13 235 2749 ', 'longfarm@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Longtom Farm Guest House', 3, -25.12221, 30.47341, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/lydenburg/longtom-farm-guest-house-PA43423', '+2713 235 2749 ', 'longfarm@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Loodswaai Game Lodge', 2, -25.30076, 28.59214, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/dinokeng-game-reserve/loodswaai-game-lodge-PA43421', '+27 82 083 9424', 'loodswaai@lantic.net')");
 
@@ -3460,39 +2976,39 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lotz of Joy Guest House', 2, -33.87994, 18.57452, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/lotz-of-joy-guest-house-PA4168', ' +27 21 930 0180', 'info@lotzofjoy.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lowestoffe Country Lodge (Hogsback Area)', 2, -32.59517, 26.93226, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/hogsback/lowestoffe-country-lodge-hogsback-area-PA45082', '+27 (0) 45 843-1716', 'lowestoffe@hogsback.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lowestoffe Country Lodge (Hogsback Area)', 2, -32.59517, 26.93226, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/hogsback/lowestoffe-country-lodge-hogsback-area-PA45082', '+27 45 843-1716', 'lowestoffe@hogsback.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lowveld Lodge- First Resorts', 2, -25.32563, 31.01967, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/white-river/lowveld-lodge-first-resorts-PA44905', '137 500 206', 'lowveld@firstresorts.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lupus Den Country House', 3, -33.4462, 25.56622, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/lupus-den-country-house-PA857', '+27 (0) 72 181 4750', 'lupusden@srvalley.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lupus Den Country House', 3, -33.4462, 25.56622, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/lupus-den-country-house-PA857', '+27 72 181 4750', 'lupusden@srvalley.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lydenburg Manor Guest House', 3, -25.09788, 30.4543, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/lydenburg/lydenburg-manor-guest-house-PA42316', '27 13 235 2099', 'manorgh@intekom.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lynnsview Guest House', 2, -34.16278, 18.43148, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/simons-town/lynnsview-guest-house-PA42400', '+27 (0) 21 786 1966', 'lynnsview@iafrica.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Lynnsview Guest House', 2, -34.16278, 18.43148, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/simons-town/lynnsview-guest-house-PA42400', '+27 21 786 1966', 'lynnsview@iafrica.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mabalingwe Nature Reserve', 2, -24.89752, 28.28107, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/mabalingwe-nature-reserve/mabalingwe-nature-reserve-PA988', '+ 27 (014) 736 9000 ', 'info@mabalingwe.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mac Dougall Lodge', 1, -28.76445, 24.75451, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/mac-dougall-lodge-PA45748', '538 318 777', 'macdougall.lodge@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Maccauvlei on Vaal Country Lodge & Conference Centre', 2, -26.68196, 27.94295, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/viljoensdrift/maccauvlei-on-vaal-country-lodge-&-conference-centre-PA45535', '+27 (0) 16 420-2000', 'res@maccauvleionvaal.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Maccauvlei on Vaal Country Lodge & Conference Centre', 2, -26.68196, 27.94295, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/viljoensdrift/maccauvlei-on-vaal-country-lodge-&-conference-centre-PA45535', '+27 16 420-2000', 'res@maccauvleionvaal.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Machauka Lodge', 2, -23.668, 27.74883, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/lephalale/machauka-lodge-PA42317', '27 83 230 8600', 'info@machaukalodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mackaya Bella Guest House', 2, -29.87355, 30.98502, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/glenwood/mackaya-bella-guest-house-PA6335', '+27 (0) 31 205-8790', 'info@mackayabella.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mackaya Bella Guest House', 2, -29.87355, 30.98502, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/glenwood/mackaya-bella-guest-house-PA6335', '+27 31 205-8790', 'info@mackayabella.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Madi a Thavha Mountain Lodge', 2, -23.05, 29.9, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/louis-trichardt/madi-a-thavha-mountain-lodge-PA36025', NULL, 'info@madiathavha.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Madrid Farm Cottages', 2, -28.53303, 28.51536, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/clarens/madrid-farm-cottages-PA42318', '27 (0)58 256-1098', 'info@madridfarm.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Madrid Farm Cottages', 2, -28.53303, 28.51536, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/clarens/madrid-farm-cottages-PA42318', '2758 256-1098', 'info@madridfarm.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Magadzavane Lodge- Mlawula Nature Reserve', 1, -26.20765, 32.00281, 'http://www.aaholidays.co.za/accommodation/swaziland/mlawula-nature-reserve/magadzavane-lodge-mlawula-nature-reserve-PA45852', '+(268) 2415 0178', 'mnr@africaonline.co.sz')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Magalies Park', 2, -25.81088, 27.76647, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/hartbeespoort/magalies-park-PA36204', '(012) 207 9000', 'info@magaliespark.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Magalies Tranquil Have', 2, -25.90778, 27.59, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/hekpoort/magalies-tranquil-haven-PA45533', '+27 (0) 14 576-1143', 'info@tranquilhaven.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Magalies Tranquil Have', 2, -25.90778, 27.59, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/hekpoort/magalies-tranquil-haven-PA45533', '+27 14 576-1143', 'info@tranquilhaven.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Magaliqua Guest House', 2, -26.08661, 27.79368, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/krugersdorp/magaliqua-guest-house-PA36037', '+27 86 111 5369/ +27 11 954 3129', 'info@magaliqua.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Magellans Passage Guest House', 3, -34.20024, 18.44707, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/simons-town/magellans-passage-guest-house-PA42322', '27 (0) 21 786-5291', 'manager@magellanspassage.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Magellans Passage Guest House', 3, -34.20024, 18.44707, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/simons-town/magellans-passage-guest-house-PA42322', '27 21 786-5291', 'manager@magellanspassage.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Magic Camps Bay', 3, -33.9571, 18.38778, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/camps-bay/magic-camps-bay-PA2610', ' +27 21 438 9805', 'info@magic-camps-bay.de')");
 
@@ -3508,15 +3024,15 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Makarios on Sea', 3, -33.99303, 22.56058, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/george/makarios-on-sea-PA4199', '448 729 019', 'info@makariosonsea.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Makro Lodge', 2, -26.21012, 24.92824, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/setlale/makro-lodge-PA42342', '+27 (0) 82 789 5575', 'makrolodge@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Makro Lodge', 2, -26.21012, 24.92824, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/setlale/makro-lodge-PA42342', '+27 82 789 5575', 'makrolodge@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Makhaya Guest House', 2, -26.17905, 27.99766, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/melville/makhaya-guest-house-PA35972', '114 826 036', 'makhaya@live.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mamagalie Mountain Lodge', 2, -25.81318, 27.52487, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/magaliesberg-range/mamagalie-mountain-lodge-PA1426', '27 (0) 72 568 080627 (0) 84 513 9480', 'info@mamagalie.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mamagalie Mountain Lodge', 2, -25.81318, 27.52487, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/magaliesberg-range/mamagalie-mountain-lodge-PA1426', '27 72 568 080627 84 513 9480', 'info@mamagalie.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mams Megatow', 1, -31.06907, 24.44392, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/hanover/mams-megatown-PA45911', '536 430 333', 'mams-mega@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mandalay B&B and Conference Centre', 2, -29.8, 31.02834, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/mandalay-b&b-and-conference-centre-PA8168', '+27 (0) 31 563-9706', 'enquiries@mandalay.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mandalay B&B and Conference Centre', 2, -29.8, 31.02834, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/mandalay-b&b-and-conference-centre-PA8168', '+27 31 563-9706', 'enquiries@mandalay.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Manora Guest House', 2, -30.54094, 29.41367, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/manora-guest-house-PA44016', '+27 39 727-2963', 'bonnieauret@telkomsa.net')");
 
@@ -3524,7 +3040,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mantenga Lodge', 2, -26.43019, 31.18077, 'http://www.aaholidays.co.za/accommodation/swaziland/ezulwini/mantenga-lodge-PA8872', '00268 2416-1049', 'reservations@mantengalodge.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mantiteng Guest House', 1, -24.83984, 31.04641, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/bushbuckridge/mantiteng-guest-house-PA45876', '+27 (0) 13 799 1066', 'mantiteng@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mantiteng Guest House', 1, -24.83984, 31.04641, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/bushbuckridge/mantiteng-guest-house-PA45876', '+27 13 799 1066', 'mantiteng@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Manyane Resort', 2, -25.16667, 27.05, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/pilanesberg-national-park/manyane-resort-PA640', '145 551 000', 'marketing@ldenleopardresorts.co.za')");
 
@@ -3544,7 +3060,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Marlicht Holiday Resort', 2, -30.8561, 30.37646, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/marlicht-holiday-resort-PA42392', '27-39-3121052', 'marlicht@uasa-ops.org.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Marmalade Boutique Hotel', 3, -29.78536, 31.03546, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/marmalade-boutique-hotel-PA45200', '+27 (0)31 563 8630', 'res@marmaladebh.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Marmalade Boutique Hotel', 3, -29.78536, 31.03546, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/marmalade-boutique-hotel-PA45200', '+2731 563 8630', 'res@marmaladebh.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Marren House', 2, -33.99631, 25.66619, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/marren-house-PA44019', '27 415 834 384', 'info@marrenhouse.co.za')");
 
@@ -3556,7 +3072,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Massinga Beach Lodge', 2, -23.87354, 35.38826, 'http://www.aaholidays.co.za/accommodation/mozambique/inhambane/massinga-beach-lodge-PA45802', NULL, 'gm@massingabeach.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Matoppo In', 3, -32.35164, 22.58433, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/beaufort-west/matoppo-inn-PA4235', '+27 (0) 23 415 1055', 'matoppoinn@isat.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Matoppo In', 3, -32.35164, 22.58433, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/beaufort-west/matoppo-inn-PA4235', '+27 23 415 1055', 'matoppoinn@isat.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mattanu Private Game Reserve', 3, -28.339923, 24.47739, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/mattanu-private-game-reserve-PA44030', '27 538 313 036', 'info@mattanu.com ')");
 
@@ -3566,9 +3082,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mbazwana In', 1, -27.49499, 32.58098, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/sodwana-bay/mbazwana-inn-PA6383', '(035) 5710471 / 5710473', 'sebe.nzuza@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mbingu Lodge', 1, -25.34275, 31.78305, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/marloth-park/mbingu-lodge-PA42406', '+27 (0) 11 849 9026', 'ksnell@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mbingu Lodge', 1, -25.34275, 31.78305, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/marloth-park/mbingu-lodge-PA42406', '+27 11 849 9026', 'ksnell@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mbotyi River Lodge', 1, -31.45964, 29.73467, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mbotyi/mbotyi-river-lodge-PA41020', '+27 (0)82 674 1064', 'info@mbotyi.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mbotyi River Lodge', 1, -31.45964, 29.73467, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mbotyi/mbotyi-river-lodge-PA41020', '+2782 674 1064', 'info@mbotyi.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mcallisters Guest House', 3, -29.83435, 31.01681, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-city/mcallisters-guest-house-PA42407', ' (031) 303 4991/2', 'liza@mcallisters.co.za')");
 
@@ -3578,17 +3094,17 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Meander In', 2, -32.98913, 27.89635, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/meander-inn-PA8185', '437 262 310', 'meanderinn@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Meander Manor Exclusive Guest Lodge', 3, -29.5129, 31.17124, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shakas-rock/meander-manor-exclusive-guest-lodge-PA43100', '+27 (0) 32 525 8107', 'info@meandermanor.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Meander Manor Exclusive Guest Lodge', 3, -29.5129, 31.17124, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shakas-rock/meander-manor-exclusive-guest-lodge-PA43100', '+27 32 525 8107', 'info@meandermanor.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Medindi Manor', 2, -33.95009, 18.48164, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/medindi-manor-PA44088', '+27 21 686 3563', 'reservations@medindimanor.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Meerkat Manor', 1, -30.7275, 25.09568, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/meerkat-manor-PA45716', '+27 (0) 51 753-0511', 'meerkatmanor1@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Meerkat Manor', 1, -30.7275, 25.09568, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/meerkat-manor-PA45716', '+27 51 753-0511', 'meerkatmanor1@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mein Heim Estate', 1, -28.79534, 24.6104, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/mein-heim-estate-PA45772', '+27 (0) 83 281 4062', 'meinheimestate@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mein Heim Estate', 1, -28.79534, 24.6104, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/mein-heim-estate-PA45772', '+27 83 281 4062', 'meinheimestate@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Melrose Guest Farm', 2, -32.19014, 24.54852, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/melrose-guest-farm-PA44032', '+27 49 891 0532', 'melroseguestfarm@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Melville International Backpackers', 2, -26.17837, 28.00249, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/melville/melville-international-backpackers-PA45111', '+27 (0) 11 482 5797', 'm-i-b@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Melville International Backpackers', 2, -26.17837, 28.00249, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/melville/melville-international-backpackers-PA45111', '+27 11 482 5797', 'm-i-b@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mentor Guest House', 1, -31.88782, 26.88667, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/mentor-guest-house-PA45044', NULL, 'info@mentorguesthouse.co.za')");
 
@@ -3600,7 +3116,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Merry Pebbles Resort', 2, -25.09539, 30.76597, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/sabie/merry-pebbles-resort-PA35931', '+27 13 764 2266/ 7641502', 'info@merrypebbles.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Merwehuis B&B', 2, -26.18976, 27.99683, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/merwehuis-b&b-PA45579', '+27 (0)11 837 3887', 'hans@merwehuis.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Merwehuis B&B', 2, -26.18976, 27.99683, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/merwehuis-b&b-PA45579', '+2711 837 3887', 'hans@merwehuis.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mhlangeni Lodge Bed and Breakfast', 2, -30.81542, 30.39801, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/uvon/mhlangeni-lodge-bed-and-breakfast-PA44034', '+27 39 315 0628', 'mhlangeni@absamail.co.za')");
 
@@ -3628,7 +3144,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mohatjane Lodge', 3, -23.36444, 29.32263, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/dendron/mohatjane-lodge-PA42455', '27 76 392 4999', 'info@mohatjane.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Monate Game Lodge', 2, -24.70331, 28.38845, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/modimolle/monate-game-lodge-PA36028', '+27 (0) 14 718-7000', 'info@monatelodge.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Monate Game Lodge', 2, -24.70331, 28.38845, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/modimolle/monate-game-lodge-PA36028', '+27 14 718-7000', 'info@monatelodge.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mondior Manor Guest Accommodatio', 2, -28.75702, 24.7655, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/mondior-manor-guest-accommodation-PA42457', '538 321 971', 'info@mondiormanor.co.za')");
 
@@ -3640,7 +3156,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Monte Video Guest House| Conference and Function Venue', 2, -33.63799, 19.02386, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/wellington/monte-video-guest-house', NULL, '(+ 27) 21 873 4765')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Monte Vista Guest House', 3, -29.01733, 29.87607, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/estcourt/monte-vista-guest-house-PA42460', '27 (0)36 352-6471', 'montevista@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Monte Vista Guest House', 3, -29.01733, 29.87607, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/estcourt/monte-vista-guest-house-PA42460', '2736 352-6471', 'montevista@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mooidraai Guest House', 2, -30.5511, 29.42595, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/mooidraai-guest-house-PA6423', ' (039) 727 3617', 'mooidraai@venturenet.co.za')");
 
@@ -3652,13 +3168,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Moorcroft Manor', 3, NULL, NULL, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/himeville/moorcroft-manor-PA42465', ' 27 33 702 1967', 'info@moorcroft.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mopane Bush Lodge', 3, -22.34398, 30.04195, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/mapungubwe-national-park/mopane-bush-lodge-PA42466', '27 (0) 15 534 7906 ', 'mopanebushlodge@limpopo.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mopane Bush Lodge', 3, -22.34398, 30.04195, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/mapungubwe-national-park/mopane-bush-lodge-PA42466', '27 15 534 7906 ', 'mopanebushlodge@limpopo.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mopanie Guest House', 1, -27.69162, 23.04264, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kathu/mopanie-guest-house-PA45385', '+27 (0) 53 723 2519', 'karinkalp@polka.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mopanie Guest House', 1, -27.69162, 23.04264, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kathu/mopanie-guest-house-PA45385', '+27 53 723 2519', 'karinkalp@polka.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mopipi B&B', 1, -25.35, 26.53333, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/madikwe-game-reserve/mopipi-b&b-PA42507', '27 (0) 83 451 6096', 'mopipi@webmail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mopipi B&B', 1, -25.35, 26.53333, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/madikwe-game-reserve/mopipi-b&b-PA42507', '27 83 451 6096', 'mopipi@webmail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Morgan Bay Hotel', 3, -32.71412, 28.32964, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/morgans-bay/morgan-bay-hotel-PA42508', '27 (0)43 841 1062', 'morganbay@telkomsa.net ; info@morganbayhotel.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Morgan Bay Hotel', 3, -32.71412, 28.32964, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/morgans-bay/morgan-bay-hotel-PA42508', '2743 841 1062', 'morganbay@telkomsa.net ; info@morganbayhotel.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Morning Star Express Hotel', 2, -25.75233, 28.19479, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/morning-star-express-hotel-PA35938', '+27(0) 12 442 0600', 'info@morningstarhotel.co.za')");
 
@@ -3674,7 +3190,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mount Sheba A Forever Lodge', 2, -24.93985, 30.71478, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/pilgrims-rest/mount-sheba-a-forever-lodge-PA385', '+27 13 768 1241', 'shebares@foreversa.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mount Sierra - First Resorts', 2, -33.93392, 18.41076, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/mount-sierra--first-resorts-PA44851', '+27 (0) 21 422 0602', 'info@firstresorts.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mount Sierra - First Resorts', 2, -33.93392, 18.41076, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/mount-sierra--first-resorts-PA44851', '+27 21 422 0602', 'info@firstresorts.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mountain Inn Hotel', 2, -26.34082, 31.15212, 'http://www.aaholidays.co.za/accommodation/swaziland/mbabane/mountain-inn-hotel-PA43921', '+(268) 2404 2781', 'info@mountaininn.sz')");
 
@@ -3686,23 +3202,23 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mountain View B&B', 2, -27.76544, 30.78062, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/vryheid/mountain-view-b&b-PA45308', '(034) 980 1199', 'mountainview@vryheid.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mountain View Swellendam', 1, -34.01667, 20.43333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/swellendam/mountain-view-swellendam-PA45576', '+27 (0)28 5143799', 'mountainview@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mountain View Swellendam', 1, -34.01667, 20.43333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/swellendam/mountain-view-swellendam-PA45576', '+2728 5143799', 'mountainview@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mountainview In', 2, -28.27414, 29.12846, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/mountainview-inn-PA42515', '27 (0) 58 623-0255', 'bookings@bergviewpringles.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mountainview In', 2, -28.27414, 29.12846, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/mountainview-inn-PA42515', '27 58 623-0255', 'bookings@bergviewpringles.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mpekweni Beach Resort', 2, -33.6, 26.88333, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/mpekweni-beach-resort-PA42523', '27 (0) 40 676-1026', 'info@mpekweni.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mpekweni Beach Resort', 2, -33.6, 26.88333, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/mpekweni-beach-resort-PA42523', '27 40 676-1026', 'info@mpekweni.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mt Bijoux Preferred Accommodatio', 3, -33.80253, 18.46178, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bloubergstrand/mt-bijoux-preferred-accommodation-PA44175', '+21 21 554 1150', 'info@mtbijoux.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mthatha Rest Guest House', 1, -31.58173, 28.76425, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/mthatha-rest-guest-house-PA45314', '475 310 837', 'mthatharest@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Muckleneuk Lodge', 2, -25.76277, 28.2024, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/muckleneuk-lodge-PA42525', '27 (0)12 4405691', 'info@mlodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Muckleneuk Lodge', 2, -25.76277, 28.2024, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/muckleneuk-lodge-PA42525', '2712 4405691', 'info@mlodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mufasa Lodge', 2, -23.95, 31.11667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/phalaborwa/mufasa-lodge-PA745', '27 (0)15 781-5514', 'MufasaLodge@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mufasa Lodge', 2, -23.95, 31.11667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/phalaborwa/mufasa-lodge-PA745', '2715 781-5514', 'MufasaLodge@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mulberry Lane Suites', 2, -24.93333, 30.83333, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/graskop/mulberry-lane-suites-PA45212', '+27 13 767 1950', 'africasilksfarm@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Muzuri', 2, -34.03771, 24.92274, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/muzuri-PA45118', '+27 (0) 42 293 4190 ', 'MuzuriTourism@cs.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Muzuri', 2, -34.03771, 24.92274, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/muzuri-PA45118', '+27 42 293 4190 ', 'MuzuriTourism@cs.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Mvula House Bed & Breakfast', 2, -28.76756, 32.12282, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/richards-bay/mvula-house-bed-&-breakfast-PA41030', '+27 35 753 5656', 'mvulahouse@telkomsa.net')");
 
@@ -3710,13 +3226,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('N6 Road Lodge', 2, -30.72381, 26.70814, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/aliwal-north/n6-road-lodge-PA45067', '516 333 383', 'info@n6roadlodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nababeep Hills Guest House', 1, -29.59167, 17.78565, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/nababeep/nababeep-hills-guest-house-PA44767', '+27 (0) 27 713-8083', 'nababeephills@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nababeep Hills Guest House', 1, -29.59167, 17.78565, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/nababeep/nababeep-hills-guest-house-PA44767', '+27 27 713-8083', 'nababeephills@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nahoon Mouth Guest House', 2, -32.98333, 27.86667, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/nahoon-mouth-guest-house-PA42527', '(043) 735 1294', 'nahoonmouth@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Naleli Guest House', 1, -28.87804, 28.05566, 'http://www.aaholidays.co.za/accommodation/lesotho/leribe/naleli-guest-house-PA45209', '(+266) 2240 0409', 'mathafengm@stellar.co.ls')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Namakwari Lodge', 2, -27.69968, 23.05088, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kathu/namakwari-lodge-PA45207', '+27 (0)53 723 2987', 'reservations@namakwari.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Namakwari Lodge', 2, -27.69968, 23.05088, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kathu/namakwari-lodge-PA45207', '+2753 723 2987', 'reservations@namakwari.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Namkelekile Accommodatio', 1, -31.63261, 29.54223, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-st-johns/namkelekile-accommodation-PA42529', '047-5641945', 'yquma@telkomsa.net')");
 
@@ -3724,9 +3240,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Natalia Lodge', 1, -30.54555, 29.42652, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/natalia-lodge-PA45208', '397 274 657', 'info@natalialodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Natanja Guest House B&B', 3, -25.83221, 28.1921, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/natanja-guest-house-b&b-PA1026', '27 (0)12 6644618', 'natanja@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Natanja Guest House B&B', 3, -25.83221, 28.1921, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/natanja-guest-house-b&b-PA1026', '2712 6644618', 'natanja@intekom.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ndaba Guest Lodge', 2, -28.55714, 29.77025, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/ndaba-guest-lodge-PA45317', '+27 (0) 36 631-1969', 'ndabaguestlodge@yahoo.co.uk')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ndaba Guest Lodge', 2, -28.55714, 29.77025, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/ndaba-guest-lodge-PA45317', '+27 36 631-1969', 'ndabaguestlodge@yahoo.co.uk')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ndabushi Bushveld Retreat', 1, -24.22133, 30.80395, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/ndabushi-bushveld-retreat-PA42543', '27 15 7933195', 'info@ndabushi.co.za')");
 
@@ -3738,29 +3254,29 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nelson Mandela Museum', 2, -31.59283, 28.78696, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/nelson-mandela-museum-PA45476', '+27(0) 47 532 5110', 'mandelamuseum2@intekom.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nelspoortjie Karoo Guest Farm', 1, -29.66833, 22.74389, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/prieska/nelspoortjie-karoo-guest-farm-PA45745', '27 (0)53 353 3163', 'nelspoortjie@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nelspoortjie Karoo Guest Farm', 1, -29.66833, 22.74389, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/prieska/nelspoortjie-karoo-guest-farm-PA45745', '2753 353 3163', 'nelspoortjie@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Neptune''s Rest', 3, -34.14252, 18.42528, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/fish-hoek/neptunes-rest-PA44059', '+27 21 782 1981', 'pdnepres@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('New Life Bed and Breakfast', 1, -26.14764, 28.15754, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/edenvale/new-life-bed-and-breakfast-PA44942', '+27 (0)11 453-9700', 'serena530@hotmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('New Life Bed and Breakfast', 1, -26.14764, 28.15754, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/edenvale/new-life-bed-and-breakfast-PA44942', '+2711 453-9700', 'serena530@hotmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nexbed Hotel', 2, -25.7685, 29.45504, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/nexbed-hotel-PA42545', '+27 (0) 13 282 1011', 'info@nexbed.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nexbed Hotel', 2, -25.7685, 29.45504, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/nexbed-hotel-PA42545', '+27 13 282 1011', 'info@nexbed.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ngena Guest House', 2, -25.85918, 28.15752, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/ngena-guest-house-PA42546', '+27)12 653 0673', 'info@ngena.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nibela Lodge', 2, -27.97136, 32.4361, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/nibela-lodge-PA6475', '27 (0) 11 267-8500', 'info@dreamvacs.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nibela Lodge', 2, -27.97136, 32.4361, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/nibela-lodge-PA6475', '27 11 267-8500', 'info@dreamvacs.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nicorene Bed & Breakfast Self-Catering Backpacker', 1, -29.91269, 30.94551, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/nicorene-bed-&-breakfast-selfcatering-backpacker-PA35959', '+27 31 469 3017', 'klopperi@xsinet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('NiederHeim B&B', 2, -33.88562, 18.61532, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bellville/niederheim-b&b-PA43592', '+27 21 913 2899', 'info@niederheim.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nkosi Sikelela iAfrica Guest Houses', 2, -33.81536, 18.47371, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bloubergstrand/nkosi-sikelela-iafrica-guest-houses-PA44886', '+27 (0)87 807 8362', 'dwayne@dtioffice.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nkosi Sikelela iAfrica Guest Houses', 2, -33.81536, 18.47371, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bloubergstrand/nkosi-sikelela-iafrica-guest-houses-PA44886', '+2787 807 8362', 'dwayne@dtioffice.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nolangeni Hotel', 2, -30.55175, 29.42515, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/nolangeni-hotel-PA42553', '397 271 252', 'info@nolangeni.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nolapeace Bed and Breakfast', 1, -32.99796, 27.86707, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/nolapeace-bed-and-breakfast-PA44913', '437 414 485', 'info@nolapeace.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nolas Bed and Breakfast', 2, -31.9072, 26.89131, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/nolas-bed-and-breakfast-PA42557', '27 (0) 45 838-2391', 'nolasbb@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nolas Bed and Breakfast', 2, -31.9072, 26.89131, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/nolas-bed-and-breakfast-PA42557', '27 45 838-2391', 'nolasbb@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nomndeni Fumanekile Lodge', 2, -25.48311, 30.98612, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/nomndeni-fumanekile-lodge-PA9803', NULL, 'stephan@nomndeni.co.za')");
 
@@ -3770,7 +3286,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nsele Safaris', 2, -24.46259, 31.11286, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/nsele-safaris-PA44756', '(+27) 15 793 2443', 'reservations@nsele.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nthatuoa Guest House', 2, -31.58601, 28.75993, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/nthatuoa-guest-house-PA42571', '27 (0) 47 532-4691', 'nthatuoaguesthouse@webmail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nthatuoa Guest House', 2, -31.58601, 28.75993, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/nthatuoa-guest-house-PA42571', '27 47 532-4691', 'nthatuoaguesthouse@webmail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Nutmeg Guest House', 1, -29.48311, 30.22934, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/howick/nutmeg-guest-house-PA44153', '+27 33 3305497', 'info@nutmegbnb.co.za')");
 
@@ -3788,9 +3304,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Oakhurst Hotel', 2, -33.95817, 22.46155, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/george/oakhurst-hotel-PA9204', '448 747 130', 'reservations@oakhursthotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Oasis Country Lodge', 1, -31.78079, 18.62401, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/klawer/oasis-country-lodge-PA4388', '+27 (0) 27 216 1520', 'info@oasiscountrylodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Oasis Country Lodge', 1, -31.78079, 18.62401, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/klawer/oasis-country-lodge-PA4388', '+27 27 216 1520', 'info@oasiscountrylodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ocean Blue Accommodatio', 2, -29.54069, 31.21448, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/ocean-blue-accommodation-PA42577', '27 (0)72 062-5543 ', 'admin@oblue.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ocean Blue Accommodatio', 2, -29.54069, 31.21448, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/ocean-blue-accommodation-PA42577', '2772 062-5543 ', 'admin@oblue.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ocean Hideaway', 3, -30.03427, 30.90351, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/ocean-hideaway-PA6513', '(031) 904 1994', 'reception@oceanhideaway.co.za')");
 
@@ -3804,17 +3320,17 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Oceanview BnB', 2, -34.81094, 20.04476, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/struisbaai/oceanview-bnb-PA4401', '+27 28 435 6254', 'oceanviewbb@vodacomail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Okiep Country Hotel', 1, -29.59753, 17.88149, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/okiep/okiep-country-hotel-PA2385', '+ 27 (0)27 744 1000 ', 'okiep@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Okiep Country Hotel', 1, -29.59753, 17.88149, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/okiep/okiep-country-hotel-PA2385', '+ 2727 744 1000 ', 'okiep@intekom.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Old Mill Guest House', 2, -29.79191, 31.03396, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/old-mill-guest-house-PA45337', '27 (0)31 563-9296', 'deana@bluemoon.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Old Mill Guest House', 2, -29.79191, 31.03396, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/old-mill-guest-house-PA45337', '2731 563-9296', 'deana@bluemoon.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Old Oak Guest House', 2, -33.88909, 18.65734, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bellville/old-oak-guest-house-PA42586', '27 (0) 21 910 0703', 'info@oldoakguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Old Oak Guest House', 2, -33.88909, 18.65734, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bellville/old-oak-guest-house-PA42586', '27 21 910 0703', 'info@oldoakguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Oleander Guest House', 3, -28.75222, 24.77427, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/oleander-guest-house-PA45773', '538 327 088', 'info@oleander.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Olievenfontein Private Game Reserve', 3, -24.29715, 28.11519, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/vaalwater/olievenfontein-private-game-reserve-PA40981', NULL, 'olievenfontein@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Olive Grove Country Lodge and Wedding Venue', 1, -26.65606, 28.58937, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/balfour/olive-grove-country-lodge-and-wedding-venue-PA42587', '27 (0) 17 779-0346 ', 'olivegrovelodge@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Olive Grove Country Lodge and Wedding Venue', 1, -26.65606, 28.58937, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/balfour/olive-grove-country-lodge-and-wedding-venue-PA42587', '27 17 779-0346 ', 'olivegrovelodge@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Olive Grove Guest Farm', 2, -32.30226, 22.34567, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/beaufort-west/olive-grove-guest-farm-PA1802', '+27 23 414 3397', 'info@olivegrove.co.za')");
 
@@ -3822,13 +3338,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('On The Spot B&B at St Francis Bay', 3, -34.17392, 24.83616, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/st-francis-bay/on-the-spot-b&b-at-st-francis-bay-PA36143', '042-294 0846', 'onthespot@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('On The Vermont Guest House', 3, -34.41645, 19.14741, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/hermanus/on-the-vermont-guest-house-PA42590', '27 (0)28 316 2873 ', 'info@onthevermont.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('On The Vermont Guest House', 3, -34.41645, 19.14741, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/hermanus/on-the-vermont-guest-house-PA42590', '2728 316 2873 ', 'info@onthevermont.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('One Fountain B&B', 1, -28.53487, 24.52485, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/barkley-west/one-fountain-b&b-PA8235', NULL, 'onefountainBB@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Onze Rust Guest House', 1, -30.72898, 25.09191, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/onze-rust-guest-house-PA45634', '828 893 057', 'prvj1@xsinet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Opikopi Guest House', 3, -25.80971, 28.27273, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/opikopi-guest-house-PA1765', '+27 (0) 833 80 40 50 ', 'info@opikopi.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Opikopi Guest House', 3, -25.80971, 28.27273, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/opikopi-guest-house-PA1765', '+27 833 80 40 50 ', 'info@opikopi.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Orange Grove Farm', 3, -33.74272, 19.78857, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/robertson/orange-grove-farm-PA45034', '(023) 626 6442', 'info@ogf1812.co.za')");
 
@@ -3840,13 +3356,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ou Skool Guest House', 2, -28.75218, 20.99612, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/keimoes/ou-skool-guest-house-PA42600', '544 640 125', 'info@ouskoolguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Oude Pastorie Kothuise', 2, -32.17062, 25.6155, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cradock/oude-pastorie-kothuise-PA42610', '27 (0) 48 881-3011', 'bruweri@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Oude Pastorie Kothuise', 2, -32.17062, 25.6155, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cradock/oude-pastorie-kothuise-PA42610', '27 48 881-3011', 'bruweri@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ouplaas Country House Wedding and Conference Centre', 3, -25.98476, 25.73385, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/ottosdal/ouplaas-country-house-wedding-and-conference-centre-PA42611', '27 (0) 18 571-1388', 'ouplaas@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ouplaas Country House Wedding and Conference Centre', 3, -25.98476, 25.73385, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/ottosdal/ouplaas-country-house-wedding-and-conference-centre-PA42611', '27 18 571-1388', 'ouplaas@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Oyster Creek Lodge', 3, -34.039, 23.0175, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/oyster-creek-lodge-PA4466', '+27 44 382 0808', 'oystercreek@jhgroup.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palapa Place Self Catering Accommodatio', 2, -29.68186, 31.11099, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umdloti-beach/palapa-place-self-catering-accommodation-PA42613', '27 (0) 31 568-2149', 'palapaplace@telkomsa.net.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palapa Place Self Catering Accommodatio', 2, -29.68186, 31.11099, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umdloti-beach/palapa-place-self-catering-accommodation-PA42613', '27 31 568-2149', 'palapaplace@telkomsa.net.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm Beach Guest House', 3, -33.98975, 25.67303, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/palm-beach-guest-house-PA42616', '(0)	41	 583 2493', 'palmbeachguesthouse@gmail.com')");
 
@@ -3854,59 +3370,59 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm Haven Lodge', 1, -23.04624, 29.90466, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/louis-trichardt/palm-haven-lodge-PA45318', NULL, 'palmhaven@xnets.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm House', 3, -34.00008, 18.46506, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/palm-house-PA440', '+27 (0)21 761 5009', 'info@palmhouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm House', 3, -34.00008, 18.46506, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/palm-house-PA440', '+2721 761 5009', 'info@palmhouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm House B&B', 1, -33.31385, 26.53269, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cradock/palm-house-b&b-PA45747', '+27 (0) 48 881-4229', 'marilynn.cavendish-d@aasa.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm House B&B', 1, -33.31385, 26.53269, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cradock/palm-house-b&b-PA45747', '+27 48 881-4229', 'marilynn.cavendish-d@aasa.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm Lodge', 2, -31.58913, 28.77614, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/palm-lodge-PA45115', '475 312 079', 'palm@mthatha.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm Park- First Resort', 2, -30.86303, 30.36967, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/palm-park-first-resort-PA42619', NULL, 'palmpark@firstresorts.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm Springs B&B and Self Catering', 1, -32.33272, 28.14381, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/butterworth/palm-springs-b&b-and-self-catering-PA42621', '27 (0) 31 572-5855', 'laks@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palm Springs B&B and Self Catering', 1, -32.33272, 28.14381, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/butterworth/palm-springs-b&b-and-self-catering-PA42621', '27 31 572-5855', 'laks@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palmhof Chalets', 1, -28.7745, 20.61297, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kakamas/palmhof-chalets-PA45142', '544 311 111', 'admin@palmhof.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palmietfontein Guest House', 1, -30.71948, 25.09672, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/palmietfontein-guest-house-PA45475', '+27 (0) 51 753 0101', 'palmietfontein1@vodamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Palmietfontein Guest House', 1, -30.71948, 25.09672, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/palmietfontein-guest-house-PA45475', '+27 51 753 0101', 'palmietfontein1@vodamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pangaea Manor Guest House', 2, -26.07767, 28.0528, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/sandton/pangaea-manor-guest-house-PA42641', '27 (0) 11 783-2287', 'pangaea@worldonline.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pangaea Manor Guest House', 2, -26.07767, 28.0528, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/sandton/pangaea-manor-guest-house-PA42641', '27 11 783-2287', 'pangaea@worldonline.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Panorama Guest Farm', 2, -25.36446, 30.83789, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/panorama-guest-farm-PA1433', '+27 (0) 13 755-2398', 'panorama@xwi.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Panorama Guest Farm', 2, -25.36446, 30.83789, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/panorama-guest-farm-PA1433', '+27 13 755-2398', 'panorama@xwi.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Panorama Guest House', 2, -33.59847, 26.89068, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/panorama-guest-house-PA44997', '466 245 853', 'marianne.rob@portalfredpanorama.com ')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Papkuil Safari Lodge', 3, -28.18467, 23.53011, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/danielskuil/papkuil-safari-lodge-PA45008', NULL, 'gers@netralink.com ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Papkuilsfontein Guest Farm', 2, -29.97866, 19.37832, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/nieuwoudtville/papkuilsfontein-guest-farm-PA42642', '27 (0)27 218 1246', 'info@papkuilsfontein.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Papkuilsfontein Guest Farm', 2, -29.97866, 19.37832, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/nieuwoudtville/papkuilsfontein-guest-farm-PA42642', '2727 218 1246', 'info@papkuilsfontein.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Parade Hotel', 1, -29.85306, 31.03798, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/parade-hotel-PA6552', ' (031) 337 4565', 'paradehotel@eca.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Paradise', 2, -30.98166, 30.27562, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/palm-beach/paradise-PA45821', NULL, 'joan@primeleather.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Paradise Found', 2, -34.033986, 23.032923, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/paradise-found-PA1566', '+27 (0)44 382 5955', 'info@paradisefound.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Paradise Found', 2, -34.033986, 23.032923, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/paradise-found-PA1566', '+2744 382 5955', 'info@paradisefound.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Paradise Holiday Resort', 2, -30.97606, 30.27454, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/southbroom/paradise-holiday-resort-PA6553', ' (039) 313 0655', 'paradise@megadial.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Parkers Cottages', 3, -28.3793, 32.41435, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/parkers-cottages-PA42742', '27 (0)35 590 1576', 'info@parkerscottages.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Parkers Cottages', 3, -28.3793, 32.41435, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/parkers-cottages-PA42742', '2735 590 1576', 'info@parkerscottages.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Parkmore Lodge B&B', 2, -26.0945, 28.03987, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/sandton/parkmore-lodge-b&b-PA42743', '27 11 884 1180 ', 'karen@parkmorelodge.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Patrys Paradys', 1, -26, 27.54583, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/magaliesburg/patrys-paradys-PA42744', '27 (0)82 905-6101', NULL)");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Patrys Paradys', 1, -26, 27.54583, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/magaliesburg/patrys-paradys-PA42744', '2782 905-6101', NULL)");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Peacehaven Guest House', 2, -30.50963, 29.40632, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kokstad/peacehaven-guest-house-PA6561', ' (039) 7273312/ 0828558663', 'peacehavenguesthouse@telk')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pearl Valley lf Lodge', 1, -33.90839, 19.11724, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/pearl-valley-lf-lodge-PA2266', '+27 (0) 82 558 5070', 'lfsafarisa@global.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pearl Valley lf Lodge', 1, -33.90839, 19.11724, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/pearl-valley-lf-lodge-PA2266', '+27 82 558 5070', 'lfsafarisa@global.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pearly Shells', 2, -30.28572, 30.75379, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/scottburgh/pearly-shells-PA4510', '+27 (0) 39) 976 2065', 'pearly.shells@eastcoast.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pearly Shells', 2, -30.28572, 30.75379, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/scottburgh/pearly-shells-PA4510', '+27 39) 976 2065', 'pearly.shells@eastcoast.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pecanwood Estate- No 9 Lakeview', 2, -25.76936, 27.85721, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/hartbeespoort/pecanwood-estate-no-9-lakeview-PA45335', '+27 (0) 82 533 6687', 'foundersportfolio@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pecanwood Estate- No 9 Lakeview', 2, -25.76936, 27.85721, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/hartbeespoort/pecanwood-estate-no-9-lakeview-PA45335', '+27 82 533 6687', 'foundersportfolio@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pegasus Equestrian Estate', 2, -33.59137, 26.89521, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/pegasus-equestrian-estate-PA45231', NULL, 'pegasusregina@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pelenechi Manor', 3, -25.3222, 31.02135, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/white-river/pelenechi-manor-PA42799', '27-13-751-1418', 'info@pelenechi.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pennington Beach Cottage', 2, -30.37708, 30.69885, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pennington/pennington-beach-cottage-PA42800', '27 (0)39 975-1248', 'farland@scottnet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pennington Beach Cottage', 2, -30.37708, 30.69885, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pennington/pennington-beach-cottage-PA42800', '2739 975-1248', 'farland@scottnet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Penny Farthing Country House', 2, -28.39231, 30.36587, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/dundee/penny-farthing-country-house-PA42801', '27 (0)34 642-1925', NULL)");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Penny Farthing Country House', 2, -28.39231, 30.36587, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/dundee/penny-farthing-country-house-PA42801', '2734 642-1925', NULL)");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Penryn Bed & Breakfast', 3, -28.15844, 30.23239, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/dundee/penryn-bed-&-breakfast-PA7136', '+27 34 218 2269', 'jean@trustnet.co.za')");
 
@@ -3916,29 +3432,29 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Perna Perna St Lucia', 5, -28.37773, 32.41065, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/perna-perna-st-lucia-PA44909', NULL, 'pernastlucia@firstresorts.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Peter B Self Catering Accommodatio', 2, -31.89828, 26.8851, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/peter-b-self-catering-accommodation-PA42815', '27 (0) 45 838-9702', 'peterbacela@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Peter B Self Catering Accommodatio', 2, -31.89828, 26.8851, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/peter-b-self-catering-accommodation-PA42815', '27 45 838-9702', 'peterbacela@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Petite Provence B&B', 3, -29.5061, 31.23265, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/petite-provence-b&b-PA2173', NULL, 'info@petiteprovence.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Phefumula Luxury Self Catering Cottages', 3, -25.87374, 27.41861, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/maanhaarrand/phefumula-luxury-self-catering-cottages-PA42817', '27 (0) 82 550 8965', 'phefumula@iburst.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Phefumula Luxury Self Catering Cottages', 3, -25.87374, 27.41861, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/maanhaarrand/phefumula-luxury-self-catering-cottages-PA42817', '27 82 550 8965', 'phefumula@iburst.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Phomolo Guest House', 1, -29.375, 27.54778, 'http://www.aaholidays.co.za/accommodation/lesotho/maseru/phomolo-guest-house-PA45135', '+(266) 580 50012', 'phomolo.guesthouse@ilesotho.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Phumula Kruger Lodge and Safaris', 2, -25.34794, 31.77735, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/marloth-park/phumula-kruger-lodge-and-safaris-PA2146', '+27 (0) 13 792 4215', 'info@phumulakruger.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Phumula Kruger Lodge and Safaris', 2, -25.34794, 31.77735, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/marloth-park/phumula-kruger-lodge-and-safaris-PA2146', '+27 13 792 4215', 'info@phumulakruger.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Piggs Peak Hotel and Casino', 1, -25.72768, 31.48039, 'http://www.aaholidays.co.za/accommodation/swaziland/piggs-peak/piggs-peak-hotel-and-casino-PA43994', '+(268) 2431-3104/5', 'gm@piggspeakhotelandcasino.co.sz')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pillow and Spoon Guest House', 2, -25.79803, 28.30628, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/pillow-and-spoon-guest-house-PA44998', '129 933 124', 'info@pillowandspoon.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pine Lodge Resort', 2, -33.96879, 22.48733, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/george/pine-lodge-resort-PA40919', '+27 (0)44 871 1974', 'info@pinelodgegeorge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pine Lodge Resort', 2, -33.96879, 22.48733, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/george/pine-lodge-resort-PA40919', '+2744 871 1974', 'info@pinelodgegeorge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pinnacle Point - lf Safari SA', 2, -34.19867, 22.09509, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/pinnacle-point---lf-safari-sa-PA40847', NULL, 'lfsafarisa@global.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pinnacle Point Beach & lf Resort -  Lodge No 2', 3, -34.18333, 22.13333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/pinnacle-point-beach-&-lf-resort---lodge-no-2-PA42828', '27 (0) 11 234-0991', 'info@pinnaclepointlodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pinnacle Point Beach & lf Resort -  Lodge No 2', 3, -34.18333, 22.13333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/pinnacle-point-beach-&-lf-resort---lodge-no-2-PA42828', '27 11 234-0991', 'info@pinnaclepointlodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pinnaquin Holiday Apartments', 2, -34.03407, 24.92824, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/pinnaquin-holiday-apartments-PA42829', '27 (0) 42 296-1111', 'pinnaquin@pinnaquin.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pinnaquin Holiday Apartments', 2, -34.03407, 24.92824, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/pinnaquin-holiday-apartments-PA42829', '27 42 296-1111', 'pinnaquin@pinnaquin.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Plover Cottages', 1, -29.11253, 26.23156, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/plover-cottages-PA42831', '27 (0)83 262-0861', 'info@plovergroup.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Plover Cottages', 1, -29.11253, 26.23156, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/plover-cottages-PA42831', '2783 262-0861', 'info@plovergroup.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Plumba Guest House', 3, -25.11278, 31.06917, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/hazyview/plumba-guest-house-PA273', '+27 13 737 8806', 'plumbaguesthouse@mweb.co.za')");
 
@@ -3948,65 +3464,65 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Point of View Luxury Accommodatio', 2, -25.72943, 27.86485, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/hartbeespoort-dam/point-of-view-luxury-accommodation-PA41543', '+27 12 253 2263', 'pointofview@c-all.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Point Village Hotel', 2, -34.18287, 22.15652, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/point-village-hotel-PA9911', '+27 (0)44 690 3156', 'stay@pointvillagehotel.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Point Village Hotel', 2, -34.18287, 22.15652, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/mossel-bay/point-village-hotel-PA9911', '+2744 690 3156', 'stay@pointvillagehotel.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ponciana Guest House', 3, -25.74771, 27.89554, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/hartbeespoort/ponciana-guest-house-PA8021', '270 122 591 310', 'guesthouseponciana@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Port Indi Guest House', 2, -29.25092, 16.86919, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/port-nolloth/port-indi-guest-house-PA1223', '+27 (0)27 851 8012', 'portindi@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Port Indi Guest House', 2, -29.25092, 16.86919, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/port-nolloth/port-indi-guest-house-PA1223', '+2727 851 8012', 'portindi@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Port Owen Marina- First Resort', 2, -32.78529, 18.14646, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/velddrift/port-owen-marina-first-resort-PA4561', ' 27 (0) 39 312-8190', 'info@portowenmarina.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Port Owen Marina- First Resort', 2, -32.78529, 18.14646, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/velddrift/port-owen-marina-first-resort-PA4561', ' 27 39 312-8190', 'info@portowenmarina.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Porter House Eleve', 1, -33.36552, 19.31045, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/ceres/porter-house-eleven-PA4562', '+27 23 3121278', 'dubarry@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Positano Guest House', 3, -31.89014, 26.88335, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/positano-guest-house-PA42841', '27 (0) 45 839-4956', 'pos@isat.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Positano Guest House', 3, -31.89014, 26.88335, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/positano-guest-house-PA42841', '27 45 839-4956', 'pos@isat.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Premier Hotel Edwardia', 2, -31.05836, 30.21769, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/port-edward/premier-hotel-edwardian-PA7219', '393 113 618', 'edwardian@premierhotels.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Premier Hotel OR Tambo', 2, -26.12229, 28.23222, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/kempton-park/premier-hotel-or-tambo-PA44797', '+27 (0)11 393 8000', 'ortambo@premierhotels.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Premier Hotel OR Tambo', 2, -26.12229, 28.23222, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/kempton-park/premier-hotel-or-tambo-PA44797', '+2711 393 8000', 'ortambo@premierhotels.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Premier Hotel Pinetow', 2, -29.81466, 30.86584, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pinetown/premier-hotel-pinetown-PA42845', '+27 (0) 31 701-0130', 'info@premierhotels.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Premier Hotel Pinetow', 2, -29.81466, 30.86584, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pinetown/premier-hotel-pinetown-PA42845', '+27 31 701-0130', 'info@premierhotels.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Profcon Country Cottages', 2, -32.25228, 24.53095, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/profcon-country-cottages-PA8265', '+27 (0)49 892 3185', 'profconresort@gmail.com ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Profcon Country Cottages', 2, -32.25228, 24.53095, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/profcon-country-cottages-PA8265', '+2749 892 3185', 'profconresort@gmail.com ')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Promenade Hotel - Orion Group', 2, -25.47108, 30.98149, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/promenade-hotel--orion-group-PA42598', NULL, 'gmprom@orionhotels.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Protea Hotel Cape Castle', 2, -33.91138, 18.41506, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/protea-hotel-cape-castle-PA9076', '+27 21 4391016', 'reservations@castles.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Protea Hotel Hluhluwe - Self-Catering Lodge', 3, -28.0292, 32.28123, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/protea-hotel-hluhluwe--selfcatering-lodge-PA42850', '27 (0) 35 562-4000', 'gm@hluhluwehotel.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Protea Hotel Hluhluwe - Self-Catering Lodge', 3, -28.0292, 32.28123, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/protea-hotel-hluhluwe--selfcatering-lodge-PA42850', '27 35 562-4000', 'gm@hluhluwehotel.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Protea Hotel Hluhluwe and Safaris', 2, -28.0292, 32.28123, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/protea-hotel-hluhluwe-and-safaris-PA50', '27 35 5624000', 'reservations@hluhluwehotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Protea Ridge Guest Cottages and Conference Centre', 3, -26.07777, 27.92912, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/randburg/protea-ridge-guest-cottages-and-conference-centre-PA42869', '27 (0) 10 220 5556', 'amkel@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Protea Ridge Guest Cottages and Conference Centre', 3, -26.07777, 27.92912, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/randburg/protea-ridge-guest-cottages-and-conference-centre-PA42869', '27 10 220 5556', 'amkel@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Psa Holiday Resort', 2, -32.9672, 27.95462, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/psa-holiday-resort-PA42870', '(043) 732 1022', 'info@psaresort.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Pumula Beach Hotel', 3, -30.62256, 30.54357, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umzumbe/pumula-beach-hotel-PA6611', '(039) 684 6717', 'reservations@pumulabeachhotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Purple Gecko Guest House', 2, -25.10403, 30.47407, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/lydenburg/purple-gecko-guest-house-PA42872', '27 (0) 13 235-4486', 'nfo@purplegecko.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Purple Gecko Guest House', 2, -25.10403, 30.47407, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/lydenburg/purple-gecko-guest-house-PA42872', '27 13 235-4486', 'nfo@purplegecko.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Purple Plum Guest House', 2, -28.45411, 26.79678, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/purple-plum-guest-house-PA42900', '27 (0) 58 622-2290', 'info@purpleplumguest.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Purple Plum Guest House', 2, -28.45411, 26.79678, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/purple-plum-guest-house-PA42900', '27 58 622-2290', 'info@purpleplumguest.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Purple Trumpet Guest House', 2, -25.77853, 28.25131, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/purple-trumpet-guest-house-PA45315', '+27 (0) 12 346 5121', 'millie21young@yahoo.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Purple Trumpet Guest House', 2, -25.77853, 28.25131, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/purple-trumpet-guest-house-PA45315', '+27 12 346 5121', 'millie21young@yahoo.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Q on First', 2, -26.14317, 28.03322, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/parktown-north/q-on-first-PA45071', '+27 (0) 11­ 447-5767', 'info@quartersonfirst.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Q on First', 2, -26.14317, 28.03322, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/parktown-north/q-on-first-PA45071', '+27 11­ 447-5767', 'info@quartersonfirst.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Quarry Lake In', 3, -32.99562, 27.90684, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/quarry-lake-inn-PA8269', '+27 (0)43 707 5400', 'info@quarrylakeinn.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Quarry Lake In', 3, -32.99562, 27.90684, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/quarry-lake-inn-PA8269', '+2743 707 5400', 'info@quarrylakeinn.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Queens Casino & Hotel', 2, -31.89826, 26.88119, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/queens-casino-&-hotel-PA44990', '458 079 777', 'reservations@queenscasino.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Queens Place', 2, -26.19314, 28.1105, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/queens-place-PA9133', '116 157 974', 'queensplace@megaweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Queens Terrace B&B', 2, -30.68641, 26.70975, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/aliwal-north/queens-terrace-b&b-PA45578', '+27 (0) 51 634-2291', 'nff@xsinet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Queens Terrace B&B', 2, -30.68641, 26.70975, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/aliwal-north/queens-terrace-b&b-PA45578', '+27 51 634-2291', 'nff@xsinet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Queenstown Mountainview B&B', 2, -31.88069, 26.87908, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/queenstown-mountainview-b&b-PA45912', '458 383 993', 'mercymountainviewbbqtn@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Quinlands Farm Cottages', 2, -34.01667, 20.43333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/swellendam/quinlands-farm-cottages-PA42944', '27 (0) 28 512-3014', 'lyn@swellendam.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Quinlands Farm Cottages', 2, -34.01667, 20.43333, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/swellendam/quinlands-farm-cottages-PA42944', '27 28 512-3014', 'lyn@swellendam.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Qwantani Berg and Bush Resort', 2, -28.27294, 29.12453, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/qwantani-berg-and-bush-resort-PA44845', '586 230 882', 'gm@qwantani-resort.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Raaswater River Lodge', 1, -26.9335, 27.05917, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/potchefstroom/raaswater-river-lodge-PA1012', '(018) 291 1758', 'raaswater@vodamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Radloff Nine Lodge', 2, -26.83792, 26.67304, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/klerksdorp/radloff-nine-lodge-PA42981', '27 (0) 18 468 7830', 'radloff9@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Radloff Nine Lodge', 2, -26.83792, 26.67304, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/klerksdorp/radloff-nine-lodge-PA42981', '27 18 468 7830', 'radloff9@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rain Farm Game and Lodge', 3, -29.48333, 31.23333, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlali/rain-farm-game-and-lodge-PA42982', '27-32-8151050 ; 27-32-8151051', 'info@rainfarmgameandlodge.com')");
 
@@ -4018,9 +3534,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ratanang Bed and Breakfast', 1, -25.85007, 25.64368, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/mafikeng/ratanang-bed-and-breakfast-PA43014', '(+27) (018) 381 5137', 'apolus@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Re Etile Family House B&B', 2, -25.69841, 28.30976, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/re-etile-family-house-b&b-PA43016', '27 (0) 12 806-8182', 'info@reetiledand.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Re Etile Family House B&B', 2, -25.69841, 28.30976, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/re-etile-family-house-b&b-PA43016', '27 12 806-8182', 'info@reetiledand.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Redcliffe', 2, -32.00645, 26.26021, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/tarkastad/redcliffe-PA43027', '27 (0)45 848-0152', 'info@dtours.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Redcliffe', 2, -32.00645, 26.26021, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/tarkastad/redcliffe-PA43027', '2745 848-0152', 'info@dtours.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Reilly''s Rock Hilltop Lodge', 2, -26.48014, 31.19495, 'http://www.aaholidays.co.za/accommodation/swaziland/ezulwini/reillys-rock-hilltop-lodge-PA8756', NULL, 'tourism@biggameparks.org')");
 
@@ -4036,9 +3552,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rethabise Premium Guest Lodge', 2, -27.62787, 27.24283, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/kroonstad/rethabise-premium-guest-lodge-PA45294', '056 212 2151 / 056 212 5438', 'info@rethabise.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rhino River Lodge', 2, -27.88648, 32.06673, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/rhino-river-lodge-PA6640', '+27 (0) 83 781 4924', 'info@rhinoriverlodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rhino River Lodge', 2, -27.88648, 32.06673, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hluhluwe/rhino-river-lodge-PA6640', '+27 83 781 4924', 'info@rhinoriverlodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Richterhuyz Lifestyle Guest House', 3, -25.76717, 28.24765, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/richterhuyz-lifestyle-guest-house-PA42879', '+27 (0) 12 346-2025', 'info@richtershuyz.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Richterhuyz Lifestyle Guest House', 3, -25.76717, 28.24765, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/richterhuyz-lifestyle-guest-house-PA42879', '+27 12 346-2025', 'info@richtershuyz.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Riders Rest B&B', 2, -33.59361, 26.89885, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/riders-rest-b&b-PA45225', '+27 46 624 5471', 'estelle@ridersrestbandb.co.za')");
 
@@ -4046,19 +3562,19 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rietfontein Guest Farm', 2, -33.63055, 20.94633, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/ladismith/rietfontein-guest-farm-PA4621', ' +27 28 551 2128', 'sandra1@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rietpoort Guest Farm (Britstown)', 2, -30.59974, 23.51333, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/britstown/rietpoort-guest-farm-britstown-PA44879', '+27 (0) 53) 004-0150', 'rietpoortguesthouse@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rietpoort Guest Farm (Britstown)', 2, -30.59974, 23.51333, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/britstown/rietpoort-guest-farm-britstown-PA44879', '+27 53) 004-0150', 'rietpoortguesthouse@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rietvlei Country Estate', 3, -34.0222, 23.38038, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/rietvlei-country-estate-PA42880', '+27 (0)82 969 3600', 'info@plettrietvleiaccom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rietvlei Country Estate', 3, -34.0222, 23.38038, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/rietvlei-country-estate-PA42880', '+2782 969 3600', 'info@plettrietvleiaccom.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rio Vista Lodge', 2, -25.48632, 31.50458, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/malelane/rio-vista-lodge-PA42881', '+27 13 790 1246', 'riovista@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('River Bank Lodge', 2, -28.45511, 21.25212, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/river-bank-lodge-PA42882', '+27 (0)54 331 3015', 'info@riverbanklodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('River Bank Lodge', 2, -28.45511, 21.25212, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/river-bank-lodge-PA42882', '+2754 331 3015', 'info@riverbanklodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('River Club Villas- First Resort', 2, -34.05, 23.36667, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/plettenberg-bay/river-club-villas-first-resort-PA44844', '315 612 255', 'salamander@firstresorts.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('River Crossing B&B & Self Catering', 3, -28.57236, 29.28324, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/drakensberg-central/river-crossing-b&b-&-self-catering-PA6650', ' (082) 4950912', 'rivercrossing@absamail.co')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('River Road Guest House', 2, -33.97091, 25.58883, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/river-road-guest-house-PA8279', '+27 (0) 41 581 5995', 'info@riverroad.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('River Road Guest House', 2, -33.97091, 25.58883, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/river-road-guest-house-PA8279', '+27 41 581 5995', 'info@riverroad.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('River Valley Nature Reserve', 2, -30.83567, 30.3582, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/river-valley-nature-reserve-PA6651', '(039) 317 3474', 'ajlewis@mtnloaded.co.za ')");
 
@@ -4070,13 +3586,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Riverview B&B', 1, -28.28748, 31.41396, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ulundi/riverview-b&b-PA45834', NULL, 'riverviewbb@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Riverwalk B&B', 2, -28.51423, 28.42027, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/clarens/riverwalk-b&b-PA42896', '+27 (0) 58 256-1420', 'riverwalk.clarens@yahoo.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Riverwalk B&B', 2, -28.51423, 28.42027, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/clarens/riverwalk-b&b-PA42896', '+27 58 256-1420', 'riverwalk.clarens@yahoo.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rivonia Bed & Breakfast', 3, -26.05046, 28.06528, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/rivonia/rivonia-bed-&-breakfast-PA8290', '+27 11 803 2790', 'info@rivoniabb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rockwood', 3, -29.29998, 30.28012, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/howick/rockwood-PA45047', '+27 31 502 4043 ', 'info@rockwood.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rolbos', 2, -30.95656, 19.44348, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/calvinia/rolbos-PA45088', '+27 (0) 27 341 1666', 'joey@rolbos.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rolbos', 2, -30.95656, 19.44348, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/calvinia/rolbos-PA45088', '+27 27 341 1666', 'joey@rolbos.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rondawel Guest Farm', 1, -31.36448, 23.91796, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/richmond/rondawel-guest-farm-PA45477', NULL, 'rondawel@wam.co.za')");
 
@@ -4094,13 +3610,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rose Cottage', 1, -30.58416, 25.50397, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/gariep-dam/rose-cottage-PA44897', '+27 82 822 6847', 'booking@rose-cottage.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rose Petals Guest House', 2, -32.97339, 27.90588, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/rose-petals-guest-house-PA45237', '+27 (0) 43 726 5115', 'info@rosepetals.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rose Petals Guest House', 2, -32.97339, 27.90588, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/rose-petals-guest-house-PA45237', '+27 43 726 5115', 'info@rosepetals.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rose Villa Guest House', 2, -27.66013, 27.23886, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/kroonstad/rose-villa-guest-house-PA44989', '+27 (0) 56 212 5220', 'rosevilla@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rose Villa Guest House', 2, -27.66013, 27.23886, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/kroonstad/rose-villa-guest-house-PA44989', '+27 56 212 5220', 'rosevilla@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rose Well Spa Guest House', 2, -25.99863, 27.54157, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/magaliesburg/rose-well-spa-guest-house-PA1678', '+27 82 400 3993', 'guesthouse@mwebbiz.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rosebank Lodge Guest House', 2, -26.15143, 28.04445, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/rosebank-lodge-guest-house-PA8294', '+27 (0) 11 880 1747', 'info@rosebanklodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rosebank Lodge Guest House', 2, -26.15143, 28.04445, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/rosebank-lodge-guest-house-PA8294', '+27 11 880 1747', 'info@rosebanklodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rosedale Organic Farm Bed and Breakfast and Self Catering', 2, -33.55781, 25.69086, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/rosedale-organic-farm-bed-and-breakfast-and-self-catering-PA42864', '(+27) 42 2330404', 'info@rosedalebnb.co.za')");
 
@@ -4108,13 +3624,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Route 62 B&B', 1, -33.80578, 19.87827, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/robertson/route-62-b&b-PA4679', ' +27 23 6265988', 'joub@absamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rouxwil Country House', 3, -34.1236, 19.31053, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/caledon/rouxwil-country-house-PA42940', '+27 (0) 28 215-8922', 'rouxwil@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rouxwil Country House', 3, -34.1236, 19.31053, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/caledon/rouxwil-country-house-PA42940', '+27 28 215-8922', 'rouxwil@intekom.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Royal Country In', 2, -28.16466, 30.23505, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/dundee/royal-country-inn-PA6673', '+27 34 212 2147', 'reservations@royalcountryinn.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Roydon Private Nature Reserve', 2, -31.96271, 26.92338, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/roydon-private-nature-reserve-PA42941', '+27 (0) 45 838-3338', 'reservations@roydon.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Roydon Private Nature Reserve', 2, -31.96271, 26.92338, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/roydon-private-nature-reserve-PA42941', '+27 45 838-3338', 'reservations@roydon.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Royl Court Guest House', 3, -28.76054, 24.75735, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/royl-court-guest-house-PA43030', '+27 (0) 82 564 9343', 'roylcourt@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Royl Court Guest House', 3, -28.76054, 24.75735, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/royl-court-guest-house-PA43030', '+27 82 564 9343', 'roylcourt@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Royston Hall', 2, -30.71206, 30.45164, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umtentweni/royston-hall-PA45166', '396 950 083', 'info@roystonhall.co.za')");
 
@@ -4122,9 +3638,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rustenburg Guest House', 2, -25.69417, 27.22481, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/rustenburg/rustenburg-guest-house-PA43032', '145 334 155', 'booking@rustenburgguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rusticana Bed and Breakfast', 2, -34.09213, 21.25497, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/riversdale/rusticana-bed-and-breakfast-PA43055', '+27 (0) 28 713-3366', 'rusticana@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rusticana Bed and Breakfast', 2, -34.09213, 21.25497, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/riversdale/rusticana-bed-and-breakfast-PA43055', '+27 28 713-3366', 'rusticana@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rustpunt', 2, -31.86364, 24.55316, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nieu-bethesda/rustpunt-PA43033', '+27 (0) 49 841-1667', 'amschep@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Rustpunt', 2, -31.86364, 24.55316, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nieu-bethesda/rustpunt-PA43033', '+27 49 841-1667', 'amschep@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Saffron Guest House', 2, -26.1752, 28.00924, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/saffron-guest-house-PA44730', '+27(0)117266646', 'info@saffronguesthouse.co.za ')");
 
@@ -4136,65 +3652,65 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Samburu Cottage', 2, -33.91544, 18.93554, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/samburu-cottage-PA4710', ' +27 21 8851625', 'bertram@iafrica.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sanambo Guest House', 2, -26.09956, 28.19857, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/kempton-park/sanambo-guest-house-PA43034', '+27 (0) 11 976-5486', 'monika@sanamboguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sanambo Guest House', 2, -26.09956, 28.19857, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/kempton-park/sanambo-guest-house-PA43034', '+27 11 976-5486', 'monika@sanamboguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sand Castle Beach House', 2, -33.61352, 26.88102, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/sand-castle-beach-house-PA45300', '+27 (0) 31 267 2139', 'fitzfam@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sand Castle Beach House', 2, -33.61352, 26.88102, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/sand-castle-beach-house-PA45300', '+27 31 267 2139', 'fitzfam@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sand River Guest House', 2, -26.05391, 28.06742, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/rivonia/sand-river-guest-house-PA1776', '112 341 666', 'reservations@sandriverguesthouse.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sandals Guest House', 3, -34.16821, 24.83028, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/st-francis-bay/sandals-guest-house-PA36257', '+27 42 294 0551', 'enquiries@sandalsguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sandkasteel', 1, -34.05323, 24.923, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/sandkasteel-PA42832', '+ 27 (0) 42 293 1585', 'info@sandkasteel.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sandkasteel', 1, -34.05323, 24.923, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/sandkasteel-PA42832', '+ 27 42 293 1585', 'info@sandkasteel.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sandringham Bed & Breakfast', 2, -31.90679, 26.8879, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/sandringham-bed-&-breakfast-PA45045', NULL, 'mariuscoetzer48@yahoo.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sandriver Lodge', 2, -34.171, 24.82975, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/st-francis-bay/sandriver-lodge-PA43035', '+27 (0) 42 294-1052', 'info@sandriverlodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sandriver Lodge', 2, -34.171, 24.82975, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/st-francis-bay/sandriver-lodge-PA43035', '+27 42 294-1052', 'info@sandriverlodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sandstone Chameleon Guest House', 2, -28.61772, 28.20939, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/fouriesburg/sandstone-chameleon-guest-house-PA42666', '+27 (0) 58 223-0038', 'sandstonechameleon@vodamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sandstone Chameleon Guest House', 2, -28.61772, 28.20939, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/fouriesburg/sandstone-chameleon-guest-house-PA42666', '+27 58 223-0038', 'sandstonechameleon@vodamail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sandton Lodge Inanda', 2, -26.11972, 28.05787, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/sandton/sandton-lodge-inanda-PA45010', '+ 27 11 788 4169 ', 'info@sandtonlodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sangweni Lodge B and B and Conference Centre', 1, -32.79306, 26.83111, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/alice/sangweni-lodge-b-and-b-and-conference-centre-PA42835', '+27 (0) 40 653-0183', 'sangwenilodge@sainet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sangweni Lodge B and B and Conference Centre', 1, -32.79306, 26.83111, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/alice/sangweni-lodge-b-and-b-and-conference-centre-PA42835', '+27 40 653-0183', 'sangwenilodge@sainet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sani Top Chalet', 2, -29.79455, 29.49344, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/sani-pass/sani-top-chalet-PA1870', '(033)7021313', 'sanitop@futurenet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sani Valley Fly-Fishing and Game Lodge', 3, -29.65, 29.45, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/himeville/sani-valley-flyfishing-and-game-lodge-PA6691', '+27 (0) 33 702 0203', 'info@sanivalley.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sani Valley Fly-Fishing and Game Lodge', 3, -29.65, 29.45, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/himeville/sani-valley-flyfishing-and-game-lodge-PA6691', '+27 33 702 0203', 'info@sanivalley.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Santa Lucia Guest House', 3, -28.37691, 32.41352, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/santa-lucia-guest-house-PA6692', '+27 35 590 1151', 'rika@santalucia.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Santana Holiday Resort', 2, -30.85876, 30.37467, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/santana-holiday-resort-PA42855', '+27 (0) 39 312-2443', 'admin@santana.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Santana Holiday Resort', 2, -30.85876, 30.37467, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/santana-holiday-resort-PA42855', '+27 39 312-2443', 'admin@santana.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sante Hotel & Spa', 3, -33.72429, 18.95591, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/paarl/sante-hotel-&-spa-PA8711', '+27 21 875 8100', 'res@santesa.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Santorini Guest House', 3, -32.99725, 27.92534, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/santorini-guest-house-PA42842', '437 351 598', 'santoriniguesthouse@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Santorini- Ballito', 1, -29.52238, 31.22678, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/santorini-ballito-PA42836', '+27 (0) 12 348-1891', 'jj@maranatha.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Santorini- Ballito', 1, -29.52238, 31.22678, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/santorini-ballito-PA42836', '+27 12 348-1891', 'jj@maranatha.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sanyati Guest House', 2, -27.7, 23.05, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kathu/sanyati-guest-house-PA45206', '537 231 666', 'annette@sanyatibb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sarah''s Dynasty', 3, -28.37931, 32.41436, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/sarahs-dynasty-PA45256', NULL, 'sarahs.dynasty@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Savanna Private Game Reserve', 3, -24.51483, 31.24206, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/sabi-sabi/savanna-private-game-reserve-PA8713', '+27 (0) 11 883-7819', 'res@savannalodge.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Savanna Private Game Reserve', 3, -24.51483, 31.24206, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/sabi-sabi/savanna-private-game-reserve-PA8713', '+27 11 883-7819', 'res@savannalodge.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Schneider''s Guesthouse', 3, -25.28965, 30.99924, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/white-river/schneiders-guesthouse-PA8309', NULL, 'info@schneidersguesthouse.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Schoongezich Boutique Hotel and Spa', 3, -25.81578, 28.25486, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/schoongezich-boutique-hotel-and-spa-PA45011', '+27 (0)12 347 2233', 'guesthouse@schoongezich.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Schoongezich Boutique Hotel and Spa', 3, -25.81578, 28.25486, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/schoongezich-boutique-hotel-and-spa-PA45011', '+2712 347 2233', 'guesthouse@schoongezich.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Scotia Inn Hotel', 2, -29.24805, 16.86791, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/port-nolloth/scotia-inn-hotel-PA42875', '+27 27 851 8353 ', 'infoscotia@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Scotts Manor Guest House and Conference Centre', 3, -26.1455, 26.1598, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/lichtenburg/scotts-manor-guest-house-and-conference-centre-PA283', '+27 (0) 18 632-0255', 'scottsmanor@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Scotts Manor Guest House and Conference Centre', 3, -26.1455, 26.1598, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/lichtenburg/scotts-manor-guest-house-and-conference-centre-PA283', '+27 18 632-0255', 'scottsmanor@intekom.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sea Cottages| Salt Rock', 2, -29.50183, 31.23972, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/salt-rock/sea-cottages', NULL, '+27 (0) 32 525 5446')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sea Cottages| Salt Rock', 2, -29.50183, 31.23972, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/salt-rock/sea-cottages', NULL, '+27 32 525 5446')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sea Side Villa', 1, -29.65701, 31.12539, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umdloti-beach/sea-side-villa-PA42857', '+27 (0) 31 303-2590', 'padmini@sncanvas.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sea Side Villa', 1, -29.65701, 31.12539, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umdloti-beach/sea-side-villa-PA42857', '+27 31 303-2590', 'padmini@sncanvas.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sea Whisper Bed And Breakfast', 3, -34.04212, 24.92431, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/sea-whisper-bed-and-breakfast-PA42861', '+27 (0) 42 293-3917', 'seawhisper@isat.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sea Whisper Bed And Breakfast', 3, -34.04212, 24.92431, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/sea-whisper-bed-and-breakfast-PA42861', '+27 42 293-3917', 'seawhisper@isat.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Seabreeze Cabanas', 2, -34.003, 22.54523, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/victoria-bay/seabreeze-cabanas-PA1900', '+27 (0) 44 889-0098', 'seabreeze@pixie.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Seabreeze Cabanas', 2, -34.003, 22.54523, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/victoria-bay/seabreeze-cabanas-PA1900', '+27 44 889-0098', 'seabreeze@pixie.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Seagull Holiday Apartments- Main Beach', 2, -30.861, 30.3706, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/seagull-holiday-apartments-main-beach-PA6713', ' (039) 3121563', 'seagull@venturenet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Seashells', 3, -34.03531, 24.93176, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/seashells-PA42856', '+27 (0) 42 293-1104', 'info@seashell.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Seashells', 3, -34.03531, 24.93176, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/seashells-PA42856', '+27 42 293-1104', 'info@seashell.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Seaside Lodge', 1, -29.49986, 31.23862, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/salt-rock/seaside-lodge-PA6722', ' (032) 525 4103/072 240 52', 'seasidelodge@telkomsa.net')");
 
@@ -4212,15 +3728,15 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Selkirk House', 3, -34.40408, 19.24842, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/hermanus/selkirk-house-PA35952', NULL, 'info@selkirkhouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shad Palm Beach', 3, -30.97849, 30.27146, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/port-edward/shad-palm-beach-PA43057', '+27 (0) 12 667-4271 ', 'corarobberts@yahoo.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shad Palm Beach', 3, -30.97849, 30.27146, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/port-edward/shad-palm-beach-PA43057', '+27 12 667-4271 ', 'corarobberts@yahoo.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shady Pines', 3, -28.27332, 29.12971, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/shady-pines-PA406', '(058) 622 3020', 'info@shadypines.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shalimar Gardens Hotel', 1, -33.96993, 18.54564, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/shalimar-gardens-hotel-PA43059', '+27 (0) 21 637-5552', 'kaskar@shalimar.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shalimar Gardens Hotel', 1, -33.96993, 18.54564, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/shalimar-gardens-hotel-PA43059', '+27 21 637-5552', 'kaskar@shalimar.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shalom Bed and Breakfast', 2, -28.54866, 29.77121, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/shalom-bed-and-breakfast-PA45320', '036-637-4148', 'info@shalombnb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shandon Lodge', 3, -25.5029, 31.00023, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/shandon-lodge-PA35939', '+27 (0)13 744 9934       ', 'info@shandon.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shandon Lodge', 3, -25.5029, 31.00023, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/shandon-lodge-PA35939', '+2713 744 9934       ', 'info@shandon.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shenindor B&B', 2, -29.76583, 30.73083, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hillcrest/shenindor-b&b-PA35961', '+27 31 777 1168', 'bridget@shenindor.co.za')");
 
@@ -4230,45 +3746,45 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shibula Lodge and Bush Spa', 3, -24.19562, 27.87231, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/vaalwater/shibula-lodge-and-bush-spa-PA8679', NULL, 'shibula2_at_iafrica.com talis@galaxy.za.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shikwaru Lodge', 5, -24.15, 28.73333, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/mokopane/shikwaru-lodge-PA45117', '+27 (0) 15 491 1174 ', 'shikwaru@rag.org.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shikwaru Lodge', 5, -24.15, 28.73333, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/mokopane/shikwaru-lodge-PA45117', '+27 15 491 1174 ', 'shikwaru@rag.org.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shiluvari Lakeside Lodge', 2, -23.10009, 30.08346, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/louis-trichardt/shiluvari-lakeside-lodge-PA7522', '+27 (0) 15 556-3406', 'info@shiluvari.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shiluvari Lakeside Lodge', 2, -23.10009, 30.08346, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/louis-trichardt/shiluvari-lakeside-lodge-PA7522', '+27 15 556-3406', 'info@shiluvari.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Shining Waters Guest House', 2, -34.00021, 22.61949, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/wilderness/shining-waters-guest-house-PA4773', ' +27 44 877 1958', 'info@shiningwaters.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sibuya Game ReserveLodge PtyLtd', 2, -33.67811, 26.6772, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/kenton-on-sea/sibuya-game-reservelodge-ptyltd-PA7524', '270 466 481 040', 'reservations@sibuya.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sidwell B&B', 1, -31.90091, 26.8792, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/sidwell-b&b-PA45575', '+27 (0) 45 839-6844', 'sidwell.noni@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sidwell B&B', 1, -31.90091, 26.8792, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/sidwell-b&b-PA45575', '+27 45 839-6844', 'sidwell.noni@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Siesta Guest House & Wedding Venue', 2, -27.2582, 28.52551, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/frankfort/siesta-guest-house-&-wedding-venue-PA45463', '+27 (0) 58 813-1382', 'info@siestaguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Siesta Guest House & Wedding Venue', 2, -27.2582, 28.52551, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/frankfort/siesta-guest-house-&-wedding-venue-PA45463', '+27 58 813-1382', 'info@siestaguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Silonque Bush Estate', 2, -23.93333, 31.11667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/phalaborwa/silonque-bush-estate-PA670', '+27 (0) 15 781-0399', 'info@silonque.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Silonque Bush Estate', 2, -23.93333, 31.11667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/phalaborwa/silonque-bush-estate-PA670', '+27 15 781-0399', 'info@silonque.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Silver Hill Lodge', 3, -29.18888, 30.11301, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kamberg/silver-hill-lodge-PA6756', '+27 (0)33 267 7430', 'silverhill@icon.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Silver Hill Lodge', 3, -29.18888, 30.11301, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/kamberg/silver-hill-lodge-PA6756', '+2733 267 7430', 'silverhill@icon.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Silver Mist Country In', 2, -25.5898, 30.76801, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/kaapsehoop/silver-mist-country-inn-PA8682', NULL, 'silmist_at_mweb.co.za talis@galaxy.za.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Silver Oaks Boutique Hotel', 2, -29.84993, 30.99915, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/silver-oaks-boutique-hotel-PA6757', ' (031) 201 1614', 'info@silveroaks.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Silverdawn Bed and Breakfast', 1, -33.00213, 27.92205, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/silverdawn-bed-and-breakfast-PA45030', '+27 (0)43 726 2128', 'silverdawn@vodamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Silverdawn Bed and Breakfast', 1, -33.00213, 27.92205, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/silverdawn-bed-and-breakfast-PA45030', '+2743 726 2128', 'silverdawn@vodamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sir Henry Barkly Guest House', 2, -30.96876, 27.59608, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/barkly-east/sir-henry-barkly-guest-house-PA42782', '+27 (0) 45 971 0302', 'sirhenrybarkly@vodamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sir Henry Barkly Guest House', 2, -30.96876, 27.59608, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/barkly-east/sir-henry-barkly-guest-house-PA42782', '+27 45 971 0302', 'sirhenrybarkly@vodamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sir Henry''s Guest House - Clarens', 2, -28.51085, 28.42085, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/clarens/sir-henrys-guest-house--clarens-PA42783', '+27 (0) 58 256-1194', 'sirhenry@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sir Henry''s Guest House - Clarens', 2, -28.51085, 28.42085, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/clarens/sir-henrys-guest-house--clarens-PA42783', '+27 58 256-1194', 'sirhenry@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Six Liliez Bed and Breakfast', 1, -25.85598, 25.64031, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/mafikeng/six-liliez-bed-and-breakfast-PA45321', '+27 (0) 18 381 1468', 'sixliliezbnb@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Six Liliez Bed and Breakfast', 1, -25.85598, 25.64031, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/mafikeng/six-liliez-bed-and-breakfast-PA45321', '+27 18 381 1468', 'sixliliezbnb@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Siza''s Guest house & Spa', 1, -32.87706, 27.40634, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/king-williams-town/sizas-guest-house-&-spa-PA45698', '436 433 223', 'info@sizasguesthouseandspa.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('SkipSkop', 1, -25.99782, 27.53487, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/magaliesburg/skipskop-PA45668', NULL, 'gpscheepers@webmail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sleep And Dream Guest House', 2, -31.59533, 28.74862, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/sleep-and-dream-guest-house-PA42786', '+27 (0) 47 537-8003', 'sleepanddream@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sleep And Dream Guest House', 2, -31.59533, 28.74862, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/sleep-and-dream-guest-house-PA42786', '+27 47 537-8003', 'sleepanddream@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sneezewood Farm', 2, -28.19793, 30.2009, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/dundee/sneezewood-farm-PA40965', NULL, 'info@sneezewood.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Soli Deo Gloria Boutique Hotel', 3, -26.05835, 27.92702, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/randburg/soli-deo-gloria-boutique-hotel-PA4806', ' +27 71 132 1440', 'quintus@sdghotel.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Somabula Nature Reserve', 2, -25.71037, 28.51727, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/cullinan/somabula-nature-reserve-PA42877', '+27 (0)82 550 1892 ', 'info@somabula.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Somabula Nature Reserve', 2, -25.71037, 28.51727, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/cullinan/somabula-nature-reserve-PA42877', '+2782 550 1892 ', 'info@somabula.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Somer Place B&B', 2, -34.07694, 18.83465, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/somerset-west/somer-place-b&b-PA4807', ' +27 21 8517992', 'info@somerplace.co.za')");
 
@@ -4286,11 +3802,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Soverby Guest House', 3, -33.9368, 18.85969, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/soverby-guest-house-PA4829', ' +27 21 8813838', 'soverby@adept.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sparkling Waters Hotel & Spa', 2, -25.65969, 27.24319, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/rustenburg/sparkling-waters-hotel-&-spa-PA276', '+27 (0) 14 535-0000/6', 'info@sparklingwaters.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sparkling Waters Hotel & Spa', 2, -25.65969, 27.24319, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/rustenburg/sparkling-waters-hotel-&-spa-PA276', '+27 14 535-0000/6', 'info@sparklingwaters.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Speshi''s Guesthouse', 2, -33.99962, 25.65154, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/summerstrand/speshis-guesthouse-PA45244', '+27 (0) 41 583 6649', 'paula.kali@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Speshi''s Guesthouse', 2, -33.99962, 25.65154, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/summerstrand/speshis-guesthouse-PA45244', '+27 41 583 6649', 'paula.kali@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Springbuck Lodge', 2, -32.48776, 24.6492, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/springbuck-lodge-PA42452', '+27 (0) 49 891-0433', 'parkes@isat.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Springbuck Lodge', 2, -32.48776, 24.6492, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/springbuck-lodge-PA42452', '+27 49 891-0433', 'parkes@isat.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('St  Aidans Guest Cottage', 3, -33.30553, 26.52228, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/grahamstown/st--aidans-guest-cottage-PA7543', '466 223 077', 'reservations@staidansacc.co.za')");
 
@@ -4300,7 +3816,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('St Lucia Wilds', 1, -28.38264, 32.40823, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/st-lucia-wilds-PA6788', '+27 35 590 1033', 'info@stluciawilds.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('St Peter''s Place Boutique Hotel', 2, -26.1729, 28.07377, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/st-peters-place-boutique-hotel-PA9563', '+27 (0) 114872305', 'reservation@stpetersplace.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('St Peter''s Place Boutique Hotel', 2, -26.1729, 28.07377, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/st-peters-place-boutique-hotel-PA9563', '+27 114872305', 'reservation@stpetersplace.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Stanford Lake Lodge', 2, -23.91522, 29.97475, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/haenertsburg/stanford-lake-lodge-PA435', '+27 82 322 9729', 'mail@stanfordlake.co.za')");
 
@@ -4310,9 +3826,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Stokkiesdraai Holiday Flats', 1, -28.37773, 32.41065, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/stokkiesdraai-holiday-flats-PA6799', '(035) 590 1216', 'info@stokkiesdraai.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Stone Hill', 2, -25.99883, 27.56516, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/magaliesburg/stone-hill-PA7549', '+27 (0)82 447 6893', 'info@stone-hill.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Stone Hill', 2, -25.99883, 27.56516, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/magaliesburg/stone-hill-PA7549', '+2782 447 6893', 'info@stone-hill.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Stone House', 1, -31.89105, 26.8755, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/stone-house-PA45275', '+27 (0) 45 838-3819', 'stonehousegh@yahoo.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Stone House', 1, -31.89105, 26.8755, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/stone-house-PA45275', '+27 45 838-3819', 'stonehousegh@yahoo.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Stoneridge Guest House', 3, -30.6009, 25.49226, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/gariep-dam/stoneridge-guest-house-PA43490', '+27 51 754 0362', 'stay@stoneridgesa.co.za')");
 
@@ -4334,9 +3850,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Summer Garden Guest House', 2, -26.16484, 28.30675, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/benoni/summer-garden-guest-house-PA45302', '118 495 359', 'bookings@summergarden.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Summerstrand Beach Lodge', 2, -33.9876, 25.66973, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/summerstrand/summerstrand-beach-lodge-PA42592', '+27 (0) 41 583 2786', 'summerstrandbeachlodge@absamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Summerstrand Beach Lodge', 2, -33.9876, 25.66973, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/summerstrand/summerstrand-beach-lodge-PA42592', '+27 41 583 2786', 'summerstrandbeachlodge@absamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Summerwood Guest House', 3, -33.93482, 18.8843, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/summerwood-guest-house-PA7550', '+27 (0)21 887-4112', 'info@summerwood.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Summerwood Guest House', 3, -33.93482, 18.8843, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/summerwood-guest-house-PA7550', '+2721 887-4112', 'info@summerwood.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sun River Kalahari Lodge', 2, -28.45746, 21.24265, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/sun-river-kalahari-lodge-PA44946', '(+27) 54 332 2210', 'info@sunriverlodge.co.za')");
 
@@ -4344,9 +3860,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sundowner Lodge', 2, -28.74918, 24.76587, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/sundowner-lodge-PA45843', '053 831 1145/6', 'sundowner@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sunnyside Suites', 2, -33.94767, 25.58769, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/sunnyside-suites-PA42647', '+27 (0) 41 373-4567', 'audrey@sunnysidesuites.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sunnyside Suites', 2, -33.94767, 25.58769, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/sunnyside-suites-PA42647', '+27 41 373-4567', 'audrey@sunnysidesuites.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sunset Lodge', 1, -28.37773, 32.41065, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/sunset-lodge-PA45462', '+27 (0)35 590 1197', 'info@sunsetstlucia.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sunset Lodge', 1, -28.37773, 32.41065, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/st-lucia/sunset-lodge-PA45462', '+2735 590 1197', 'info@sunsetstlucia.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sunset View', 1, -29.06962, 23.74041, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/douglas/sunset-view-PA44919', NULL, 'sunsetviewdouglas@gmail.com')");
 
@@ -4356,13 +3872,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Surfers Corner Apartments', 2, -34.10744, 18.4695, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/muizenberg/surfers-corner-apartments-PA45013', NULL, 'info@surferscorner.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Swallows Nest Country Cottages', 2, -33.87211, 25.47887, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/storms-river/swallows-nest-country-cottages-PA42657', '+27 (0) 42 281-1701', 'info@swallowsnest-tsitsikamma.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Swallows Nest Country Cottages', 2, -33.87211, 25.47887, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/storms-river/swallows-nest-country-cottages-PA42657', '+27 42 281-1701', 'info@swallowsnest-tsitsikamma.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Swellendam Country Lodge', 3, -34.03624, 20.42647, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/swellendam/swellendam-country-lodge-PA41555', '+27 28 514 3629', 'info@swellendamlodge.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Swellengrebel Hotel', 1, -34.14818, 19.91416, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/swellendam/swellengrebel-hotel-PA4928', '+27 28 514 1144', 'reservations@swellengrebelhotel.co.za ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Swiss Villa Guest House', 2, -31.37854, 19.11358, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/nieuwoudtville/swiss-villa-guest-house-PA45319', '+27 (0) 27 218 1347', 'jacobschris@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Swiss Villa Guest House', 2, -31.37854, 19.11358, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/nieuwoudtville/swiss-villa-guest-house-PA45319', '+27 27 218 1347', 'jacobschris@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Sylvan Grove Guest House', 3, -29.7462, 31.07449, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlanga-rocks/sylvan-grove-guest-house-PA1226', '270 315 615 137', 'info@sylvangrove.co.za')");
 
@@ -4370,11 +3886,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tambuti Lodge', 3, -25.16704, 26.98242, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/pilanesberg-national-park/tambuti-lodge-PA45123', NULL, 'info@tambutilodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tapama Lodge', 1, -25.45775, 23.71519, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/brits/tapama-lodge-PA42695', '+27 (0) 53 937-0020', 'tapama@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tapama Lodge', 1, -25.45775, 23.71519, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/brits/tapama-lodge-PA42695', '+27 53 937-0020', 'tapama@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tarentaal Oorslaap', 2, -25.46583, 30.98528, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/tarentaal-oorslaap-PA45679', NULL, 'laurenta@sonpark.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tatenda Guest House', 1, -30.89569, 28.99632, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mount-frere/tatenda-guest-house-PA2297', '+27 (0) 39 255-1821', 'info@tatendabnb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tatenda Guest House', 1, -30.89569, 28.99632, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mount-frere/tatenda-guest-house-PA2297', '+27 39 255-1821', 'info@tatendabnb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tau Game Lodge', 2, -24.6869, 26.238, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/madikwe-game-reserve/tau-game-lodge-PA1391', '+27 11 314 4350', 'taugame@mweb.co.za')");
 
@@ -4384,7 +3900,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thaba Tshwene Game Lodge', 2, -26.75741, 26.44289, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/hartbeesfontein/thaba-tshwene-game-lodge-PA42772', NULL, 'info@thabatshwene.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thaba Tsweni Lodge & Safaris', 2, -24.85373, 30.84824, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/graskop/thaba-tsweni-lodge-&-safaris-PA42774', '+27 (0) 13 767-1380', 'thabatsweni@absamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thaba Tsweni Lodge & Safaris', 2, -24.85373, 30.84824, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/graskop/thaba-tsweni-lodge-&-safaris-PA42774', '+27 13 767-1380', 'thabatsweni@absamail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thaba Ya Batswana', 3, -26.29391, 28.01568, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/thaba-ya-batswana-PA42796', '27 11 959 0777', 'info@tyb.co.za')");
 
@@ -4396,17 +3912,17 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thatchers Guest House', 2, -25.87343, 29.22253, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/witbank/thatchers-guest-house-PA42797', '136 558 300', 'enquiries@thatchers-bb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thatches Of Bryansto', 3, -26.05035, 28.03455, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/bryanston/thatches-of-bryanston-PA1043', '27 (0)11 706 5001 ', 'info@thatches-of-bryanston.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thatches Of Bryanston', 3, -26.05035, 28.03455, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/bryanston/thatches-of-bryanston-PA1043', '2711 706 5001 ', 'info@thatches-of-bryanston.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Albatros Guest House', 3, -30.86766, 30.3674, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/the-albatros-guest-house-PA6851', '393 174 446', 'info@thealbatros.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Angler and Antelope', 3, -32.72151, 25.58717, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/somerset-east/the-angler-and-antelope-PA7573', '+27 (0) 42 243 3440', 'anglerandantelope@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Angler and Antelope', 3, -32.72151, 25.58717, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/somerset-east/the-angler-and-antelope-PA7573', '+27 42 243 3440', 'anglerandantelope@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Ascot Boutique Hotel', 2, -26.15855, 28.07625, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/the-ascot-boutique-hotel-PA42814', '+27 11 483 3371', 'info@ascothotel.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Ballito House', 3, -29.5281, 31.2229, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/the-ballito-house-PA44991', '+27 32 586 1021', 'info@theballitohouse.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Bantry Bay', 3, -33.92809, 18.38033, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bantry-bay/the-bantry-bay-PA45814', '+27 (0) 21 434-4311', 'olga_odman@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Bantry Bay', 3, -33.92809, 18.38033, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bantry-bay/the-bantry-bay-PA45814', '+27 21 434-4311', 'olga_odman@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Barracks Guest House', 3, -30.73209, 25.06661, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/the-barracks-guest-house-PA42860', '+27 (051) 753 2286', 'thebarracks@mtnloaded.co.za')");
 
@@ -4416,13 +3932,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Beach House', 2, -29.24313, 16.88054, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/port-nolloth/the-beach-house-PA45219', NULL, 'beachhouse.portnolloth@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Beach House Lodge', 3, -29.50255, 31.23898, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/salt-rock/the-beach-house-lodge-PA42862', '+27 (0) 32 525-8865', 'beachhouselodge@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Beach House Lodge', 3, -29.50255, 31.23898, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/salt-rock/the-beach-house-lodge-PA42862', '+27 32 525-8865', 'beachhouselodge@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Beach House Port Alfred', 3, -33.61356, 26.88704, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/the-beach-house-port-alfred-PA43158', '+27 46 624 1920', 'info@thebeachhouseportalfred.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Boathouse In Ballito', 3, -29.54568, 31.21292, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/the-boathouse-in-ballito-PA6862', '+27 32 946 0300', 'reservations@boathouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Canelands Beach Club and Spa', 3, -29.50255, 31.23898, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/salt-rock/the-canelands-beach-club-and-spa-PA42904', '+27 (0) 32 525-2300', 'info@thecanelands.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Canelands Beach Club and Spa', 3, -29.50255, 31.23898, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/salt-rock/the-canelands-beach-club-and-spa-PA42904', '+27 32 525-2300', 'info@thecanelands.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Caver', 3, -28.73393, 29.35038, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/bergville/the-cavern-PA1365', '+27 36 438 6270', 'info@cavern.co.za')");
 
@@ -4432,21 +3948,21 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Cock Inn Guest House', 3, -32.67878, 28.36665, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/kei-mouth/the-cock-inn-guest-house-PA45049', '438 411 527', 'cockin@absamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Colonial Guest House', 2, -25.86799, 28.22107, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/the-colonial-guest-house-PA44250', '+27 (0) 12 667-5877', 'colonialguesthouse@telkomsa.net ')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Colonial Guest House', 2, -25.86799, 28.22107, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/the-colonial-guest-house-PA44250', '+27 12 667-5877', 'colonialguesthouse@telkomsa.net ')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Copper Pot Guest House', 2, -33.95484, 25.57234, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/the-copper-pot-guest-house-PA42901', '827 827 090', 'reservations@copperpotguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Docklands Hotel', 2, -29.87238, 31.04809, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/the-docklands-hotel-PA36271', '+27(0)313328190', 'moses.gama@thedocklands.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Fairway Hotel and Spa', 3, -26.11434, 27.96673, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/randburg/the-fairway-hotel-and-spa-PA44637', '+27 (0)11 478 8000', 'reservations@thefairway.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Fairway Hotel and Spa', 3, -26.11434, 27.96673, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/randburg/the-fairway-hotel-and-spa-PA44637', '+2711 478 8000', 'reservations@thefairway.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Falls Guest House', 3, -28.60859, 20.34477, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/augrabies-falls/the-falls-guest-house-PA596', '+27 (0)82 928 7938 ', 'info@thefallsaugrabies.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Falls Guest House', 3, -28.60859, 20.34477, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/augrabies-falls/the-falls-guest-house-PA596', '+2782 928 7938 ', 'info@thefallsaugrabies.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Feathered Nest Guest Farm', 2, -25.9994, 27.22618, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/rustenburg/the-feathered-nest-guest-farm-PA42983', NULL, 'info@featherednest.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Front House', 2, -29.50873, 31.23421, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/salt-rock/the-front-house-PA44856', '329 470 337', 'alicemay@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Gardens Guest House - Uxolo', 2, -26.14835, 28.07656, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/the-gardens-guest-house--uxolo-PA42985', '+27 (0) 83 673 6687', 'info@gardensguesthouse.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Gardens Guest House - Uxolo', 2, -26.14835, 28.07656, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/johannesburg/the-gardens-guest-house--uxolo-PA42985', '+27 83 673 6687', 'info@gardensguesthouse.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Getaway Guest House', 3, -30.04143, 30.89516, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/the-getaway-guest-house-PA6890', '319 036 766', 'thegetaway@telkomsa.net')");
 
@@ -4462,31 +3978,31 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Grange Guest House', 3, -29.78472, 31.03378, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/the-grange-guest-house-PA41561', '+27 31 563 6826/6829', 'agrange@iafrica.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Green Perridot', 2, -28.442, 21.27183, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/the-green-perridot-PA45570', '+27 (0) 54 338-0920', 'thegreenperridot@vodamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Green Perridot', 2, -28.442, 21.27183, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/the-green-perridot-PA45570', '+27 54 338-0920', 'thegreenperridot@vodamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Guesthouse (Dolphin-North Coast)', 3, -29.51168, 31.22903, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shakas-rock/the-guesthouse-dolphinnorth-coast-PA7459', '+27 (0)32-5255683', 'info@theguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Guesthouse (Dolphin-North Coast)', 3, -29.51168, 31.22903, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shakas-rock/the-guesthouse-dolphinnorth-coast-PA7459', '+2732-5255683', 'info@theguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Herb Garden Guest House', 1, -31.19462, 24.95281, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/the-herb-garden-guest-house-PA45268', '051-7530245', 'stay@herbguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Hideaway', 3, -34.01914, 20.45087, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/swellendam/the-hideaway-PA1911', '+27 (0)28 514-3316', 'info@hideawaybb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Hideaway', 3, -34.01914, 20.45087, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/swellendam/the-hideaway-PA1911', '+2728 514-3316', 'info@hideawaybb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Highlander', 3, -25.42157, 30.09499, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/dullstroom/the-highlander-PA372', '+27 (0) 13 254-8000', 'highlanderres@urbanhiphotels.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Highlander', 3, -25.42157, 30.09499, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/dullstroom/the-highlander-PA372', '+27 13 254-8000', 'highlanderres@urbanhiphotels.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Hogsback In', 1, -32.59517, 26.93226, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/hogsback/the-hogsback-inn-PA9256', NULL, 'manager@hogsbackinn.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Holy Hill B&B and Conference Venue', 1, -33.01887, 27.91694, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/the-holy-hill-b&b-and-conference-venue-PA45534', '+27 (0) 43 722-5017', 'theholyhill@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Holy Hill B&B and Conference Venue', 1, -33.01887, 27.91694, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/the-holy-hill-b&b-and-conference-venue-PA45534', '+27 43 722-5017', 'theholyhill@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Homestead', 2, -29.62506, 30.39925, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pietermaritzburg/the-homestead-PA5019', ' +27 44 384 0764', 'kea@global.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Humewood Hotel', 2, -33.97468, 25.64413, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/the-humewood-hotel-PA43362', '+27 (0)41 585 8961', 'reservations@humewoodhotel.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Humewood Hotel', 2, -33.97468, 25.64413, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/the-humewood-hotel-PA43362', '+2741 585 8961', 'reservations@humewoodhotel.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Lodge At Atlantic Beach', 3, -33.73907, 18.45273, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/melkbosstrand/the-lodge-at-atlantic-beach-PA5031', ' +27 21 553 4653', 'enquiries@thelodgeAB.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Lodge At Princes Grant', 2, -29.3431, 31.3753, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/princes-grant/the-lodge-at-princes-grant-PA6904', ' (032) 482 0005', 'pllodge@saol.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Lodge Stay-In Style', 3, -26.45482, 29.46748, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/bethal/the-lodge-stayin-style-PA43088', '+27 (0) 17 647 2173', 'thelodge@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Lodge Stay-In Style', 3, -26.45482, 29.46748, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/bethal/the-lodge-stayin-style-PA43088', '+27 17 647 2173', 'thelodge@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Lofts Boutique Hotel', 3, -34.04708, 23.04769, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/the-lofts-boutique-hotel-PA5036', '+27 (0)44 302-5710', 'thelofts@theboatshed.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Lofts Boutique Hotel', 3, -34.04708, 23.04769, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/the-lofts-boutique-hotel-PA5036', '+2744 302-5710', 'thelofts@theboatshed.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Longhouse Guest House', 2, -32.18102, 18.89457, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/clanwilliam/the-longhouse-guest-house-PA43098', '274 821 240', 'info@thelonghouse.co.za')");
 
@@ -4504,13 +4020,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Oaktree Lodge Guest House', 2, -31.58913, 28.77614, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/the-oaktree-lodge-guest-house-PA45157', '475 325 048', 'springy@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Old Berkshire', 2, -29.5422, 30.2799, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hilton/the-old-berkshire-PA43117', '+27 (0) 33 343-4239', 'theoldberkshire@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Old Berkshire', 2, -29.5422, 30.2799, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/hilton/the-old-berkshire-PA43117', '+27 33 343-4239', 'theoldberkshire@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Orange Apple Guest House', 2, -28.43907, 21.29153, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/the-orange-apple-guest-house-PA43119', NULL, 'orangeapple@live.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Overlook', 2, -28.7098, 20.9771, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/keimoes/the-overlook-PA43124', '+27 (0) 54 461-1235', 'overlook@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Overlook', 2, -28.7098, 20.9771, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/keimoes/the-overlook-PA43124', '+27 54 461-1235', 'overlook@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Palace Guest House', 2, -33.98431, 25.6615, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/summerstrand/the-palace-guest-house-PA43143', '+27 (0) 41 583-3170', 'reservations@thepalacepe.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Palace Guest House', 2, -33.98431, 25.6615, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/summerstrand/the-palace-guest-house-PA43143', '+27 41 583-3170', 'reservations@thepalacepe.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Palace- First Resorts', 1, -29.852, 31.03789, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/the-palace-first-resorts-PA44906', '313 328 351', 'palace@firstresorts.co.za / warrenj@firstresorts.co.za')");
 
@@ -4518,9 +4034,9 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Paxton Hotel', 3, -33.97223, 25.63175, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/the-paxton-hotel-PA854', NULL, 'resevations@paxton.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Pine', 2, -25.84765, 28.19485, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/the-pine-PA43065', '+27 (0) 12 643-0144', 'elainel@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Pine', 2, -25.84765, 28.19485, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/the-pine-PA43065', '+27 12 643-0144', 'elainel@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Potting Shed Guest House', 2, -34.41537, 19.23297, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/hermanus/the-potting-shed-guest-house-PA1609', '+27 (0) 28 312-1712', 'potshed@hermanus.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Potting Shed Guest House', 2, -34.41537, 19.23297, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/hermanus/the-potting-shed-guest-house-PA1609', '+27 28 312-1712', 'potshed@hermanus.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Quays on Timeball', 2, -29.87041, 31.04942, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban/the-quays-on-timeball-PA7687', '313 374 967', 'reservations@quays.co.za')");
 
@@ -4534,39 +4050,39 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Riviera Suite- First Resorts', 2, -33.91765, 18.38639, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/sea-point/the-riviera-suite-first-resorts-PA44843', '214 341 040', 'rivierasuites@firstresorts.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Robertson Small Hotel', 3, -33.8005, 19.87982, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/robertson/the-robertson-small-hotel-PA43089', '+27 (0) 23 626-7200', 'riaan@therobertsonsmallhotel.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Robertson Small Hotel', 3, -33.8005, 19.87982, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/robertson/the-robertson-small-hotel-PA43089', '+27 23 626-7200', 'riaan@therobertsonsmallhotel.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Royal Hotel', 3, -33.38314, 18.89667, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/riebeek-kasteel/the-royal-hotel-PA7602', '+27 22 448 1378', 'info@royalinriebeek.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Royal Princess Gardens', 2, -26.11418, 27.99073, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/randburg/the-royal-princess-gardens-PA45130', '117 823 111', 'info@royalprincessgarden.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Royal St Andrews Lodge', 3, -33.60414, 26.88712, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/the-royal-st-andrews-lodge-PA43102', '+27 (0) 46 624-1379', 'hilander@border.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Royal St Andrews Lodge', 3, -33.60414, 26.88712, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/the-royal-st-andrews-lodge-PA43102', '+27 46 624-1379', 'hilander@border.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Royal Terrace Guest Lodge', 2, -28.23336, 28.31272, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bethlehem/the-royal-terrace-guest-lodge-PA43103', '+27 (0) 58 303-9335', 'royalt@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Royal Terrace Guest Lodge', 2, -28.23336, 28.31272, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bethlehem/the-royal-terrace-guest-lodge-PA43103', '+27 58 303-9335', 'royalt@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Shamrock Lodge', 2, -23.88763, 29.48612, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/the-shamrock-lodge-PA45253', '+27 (0) 15 291-4665', 'info@theshamrock.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Shamrock Lodge', 2, -23.88763, 29.48612, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/the-shamrock-lodge-PA45253', '+27 15 291-4665', 'info@theshamrock.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Sir David Boutique Guest House', 3, -33.79756, 18.45969, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bloubergstrand/the-sir-david-boutique-guest-house-PA45546', '+27 (0)21 554 5987', 'office@thesirdavid.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Sir David Boutique Guest House', 3, -33.79756, 18.45969, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/bloubergstrand/the-sir-david-boutique-guest-house-PA45546', '+2721 554 5987', 'office@thesirdavid.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Spotted Grunter Resort', 2, -31.59806, 29.52833, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-st-johns/the-spotted-grunter-resort-PA942', '475 641 279', 'info@spottedgrunter.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Springbok Lodge', 3, -28.2928, 29.5068, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/the-springbok-lodge-PA36259', '+27 (0) 36 637-9604', 'springbok@nambiti.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Springbok Lodge', 3, -28.2928, 29.5068, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/the-springbok-lodge-PA36259', '+27 36 637-9604', 'springbok@nambiti.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Stables', 2, -28.27332, 29.12971, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/the-stables-PA43107', '+27 (0) 58 622-3020', 'info@shadypines.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Stables', 2, -28.27332, 29.12971, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/the-stables-PA43107', '+27 58 622-3020', 'info@shadypines.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Stagger Inn (carnarvon Estate - Queenstown District)', 1, -31.90955, 26.89678, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/the-stagger-inn-carnarvon-estate--queenstown-district-PA45574', '+27 (0) 45 966-0408', 'finance@nerpo.org.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Stagger Inn (carnarvon Estate - Queenstown District)', 1, -31.90955, 26.89678, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/the-stagger-inn-carnarvon-estate--queenstown-district-PA45574', '+27 45 966-0408', 'finance@nerpo.org.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Studio B&B', 1, -31.88218, 26.88309, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/the-studio-b&b-PA45339', '+27 (0) 45 839-6226', 'karel@dewaalbaxter.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Studio B&B', 1, -31.88218, 26.88309, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/the-studio-b&b-PA45339', '+27 45 839-6226', 'karel@dewaalbaxter.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Sunset', 2, -32.76831, 18.15024, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/velddrift/the-sunset-PA44036', '+27 (0)22 783 2763', 'sunsetrest@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Sunset', 2, -32.76831, 18.15024, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/velddrift/the-sunset-PA44036', '+2722 783 2763', 'sunsetrest@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Syrene Boutique Hotel', 3, -26.04065, 28.06187, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/rivonia/the-syrene-boutique-hotel-PA42164', '+27 11 231 3900', 'dani@thesyrene.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Thatch Guest House', 3, -32.96979, 27.95723, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/the-thatch-guest-house-PA43127', '+27 (0) 43 748-3672', 'thethatch@absamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Thatch Guest House', 3, -32.96979, 27.95723, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/the-thatch-guest-house-PA43127', '+27 43 748-3672', 'thethatch@absamail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Thorntree Country House', 2, -33.3107, 22.04186, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/oudtshoorn/the-thorntree-country-house-PA9714', NULL, 'thethorntree@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Trend Guest House', 2, -31.89094, 26.87436, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/the-trend-guest-house-PA43668', '+27 (0) 45 839 4725', 'thetrendguesthouse@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Trend Guest House', 2, -31.89094, 26.87436, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/the-trend-guest-house-PA43668', '+27 45 839 4725', 'thetrendguesthouse@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Upper Room', 2, -25.64674, 28.29231, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/the-upper-room-PA44921', '128 191 323', 'upperroom@lantic.net')");
 
@@ -4574,35 +4090,35 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Venue', 2, -27.7557, 24.82707, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/hartswater/the-venue-PA44956', NULL, 'info@thevenuenc.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The View', 2, -34.04642, 24.91738, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/the-view-PA43669', '+27 (0) 83 287 7108', 'rodney@knt.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The View', 2, -34.04642, 24.91738, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/the-view-PA43669', '+27 83 287 7108', 'rodney@knt.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The View Sunny Cove', 3, -34.14377, 18.43629, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/fish-hoek/the-view-sunny-cove-PA45198', '+27 (0) 21 782 9357', 'booking@theviewsunnycove.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The View Sunny Cove', 3, -34.14377, 18.43629, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/fish-hoek/the-view-sunny-cove-PA45198', '+27 21 782 9357', 'booking@theviewsunnycove.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Village At Fairview', 3, -23.82241, 30.16086, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/tzaneen/the-village-at-fairview-PA43136', '+27 (0) 15 307-2679', 'reservations@fairviewtzaneen.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Village At Fairview', 3, -23.82241, 30.16086, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/tzaneen/the-village-at-fairview-PA43136', '+27 15 307-2679', 'reservations@fairviewtzaneen.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Village Guest House', 2, -26.53667, 28.06452, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/henley-on-klip/the-village-guest-house-PA43137', '+27 (0) 16 366-0707', 'thevillage@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Village Guest House', 2, -26.53667, 28.06452, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/henley-on-klip/the-village-guest-house-PA43137', '+27 16 366-0707', 'thevillage@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Vineyard On Ballito', 3, -29.53928, 31.21249, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/the-vineyard-on-ballito-PA6940', ' (032) 946 1204', 'info@vineyardonballito.co')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Vision Guest House', 3, -31.59199, 28.80394, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/the-vision-guest-house-PA43144', '+27 (0) 47 532-3733', 'pinky3@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Vision Guest House', 3, -31.59199, 28.80394, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/the-vision-guest-house-PA43144', '+27 47 532-3733', 'pinky3@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Walden House', 2, -33.92935, 18.40725, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/the-walden-house-PA1699', '+27 (0) 21 424-4256 ', 'waldenh@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Walden House', 2, -33.92935, 18.40725, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/the-walden-house-PA1699', '+27 21 424-4256 ', 'waldenh@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Wallow Guest House', 2, -33.98394, 22.58714, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/wilderness/the-wallow-guest-house-PA45469', '+27 (0)44 877 1096', 'thewallow@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Wallow Guest House', 2, -33.98394, 22.58714, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/wilderness/the-wallow-guest-house-PA45469', '+2744 877 1096', 'thewallow@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Wardrobe Guest House', 2, -25.76799, 28.24597, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/the-wardrobe-guest-house-PA36136', '+27 12 756 1385', 'info@thewardrobeguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Whistling Duck', 2, -27.31944, 30.62611, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/wakkerstroom/the-whistling-duck-PA43145', '349 950 060', 'info@whistlingduck.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The White House B&B', 3, -32.94111, 28.03352, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nubie/the-white-house-b&b-PA43147', '+27 (0) 43 740-0344', 'accommodation@thewhitehousebandb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The White House B&B', 3, -32.94111, 28.03352, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/nubie/the-white-house-b&b-PA43147', '+27 43 740-0344', 'accommodation@thewhitehousebandb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The White House Jeffereys Bay', 1, -34.04871, 24.92324, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/jeffreys-bay/the-white-house-jeffereys-bay-PA45835', '+27 (42) 293 3116', 'whitehousejbay@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The White Rose Guest House', 2, -32.16952, 25.61446, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/cradock/the-white-rose-guest-house-PA45218', '048-8811450', 'whiteroseguesthouse@telkomsa.net ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Woodpecker In', 3, -25.819934, 28.311578, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/the-woodpecker-inn-PA766', '+27 (0) 12 993-5838', 'pecker@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('The Woodpecker In', 3, -25.819934, 28.311578, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/the-woodpecker-inn-PA766', '+27 12 993-5838', 'pecker@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Theftero Spiti', 3, -29.34212, 31.37573, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/princes-grant/theftero-spiti-PA43150', '+27 (0) 11 234-7473/4', 'hermank@datasolve.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Theftero Spiti', 3, -29.34212, 31.37573, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/princes-grant/theftero-spiti-PA43150', '+27 11 234-7473/4', 'hermank@datasolve.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thesen Islands Lodges', 3, -34.04839, 23.05522, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/thesen-islands-lodges-PA5106', '+27 44 382 1462', 'reservations@thesenislandslodges.co.za')");
 
@@ -4620,87 +4136,87 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thula Meetse Mountain Lodge', 2, -24.49755, 28.69819, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/naboomspruit/thula-meetse-mountain-lodge-PA45101', '+27 11 230 1903 ', 'bookings@thulameetse.co.za ')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thulani Lodge', 2, -26.17674, 28.01192, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/melville/thulani-lodge-PA43177', '+27 (0) 11 482-1106', 'thulanilodge@iafrica.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thulani Lodge', 2, -26.17674, 28.01192, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/melville/thulani-lodge-PA43177', '+27 11 482-1106', 'thulanilodge@iafrica.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thunzi Bush Lodge', 3, -33.98031, 25.30383, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/thunzi-bush-lodge-PA2231', '+27 41 3722082 ', 'info@thunzi.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thylitshia Villa', 3, -33.65535, 22.0851, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/oudtshoorn/thylitshia-villa-PA7610', '+27 44 272 7814', 'thylitshia@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thyme & Again B&B Graaff Reinet', 2, -32.25702, 24.53303, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/thyme-&-again-b&b-graaff-reinet-PA43181', '+27 (0) 49 892-5413', 'pringle@gam.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thyme & Again B&B Graaff Reinet', 2, -32.25702, 24.53303, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/thyme-&-again-b&b-graaff-reinet-PA43181', '+27 49 892-5413', 'pringle@gam.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Thyme and Again B and B Estcourt', 2, -29.01132, 29.8774, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/estcourt/thyme-and-again-b-and-b-estcourt-PA6953', ' (036) 352 4706 / 08282473', 'villagessip@lantic.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tienfontein B&B', 3, -30.32953, 26.99005, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/zastron/tienfontein-b&b-PA43670', '+27 (0) 82 374-9612', 'emheyns@nokwi.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tienfontein B&B', 3, -30.32953, 26.99005, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/zastron/tienfontein-b&b-PA43670', '+27 82 374-9612', 'emheyns@nokwi.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tillietudlem Game and Trout Lodge', 3, -29.6148, 29.9386, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/dargle/tillietudlem-game-and-trout-lodge-PA6958', '(033) 2344226/011-886 898', 'tillietudlem@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tinley Manor Hil''s', 3, -29.45499, 31.28101, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlali/tinley-manor-hils-PA43195', '+27 (0) 82 572 0993', 'hilarys@techopen.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tinley Manor Hil''s', 3, -29.45499, 31.28101, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlali/tinley-manor-hils-PA43195', '+27 82 572 0993', 'hilarys@techopen.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tipi Bush Camp', 1, -33.41898, 25.89048, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/paterson/tipi-bush-camp-PA45368', '828 219 944', 'info@tipibushcamp.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tirhani Lodge', 1, -23.89626, 29.46707, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/tirhani-lodge-PA43198', '+27 (0) 15 297-5988', 'info@tirhanilodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tirhani Lodge', 1, -23.89626, 29.46707, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/tirhani-lodge-PA43198', '+27 15 297-5988', 'info@tirhanilodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Toll Inn Guest Farm', 2, -30.70353, 26.70903, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/aliwal-north/toll-inn-guest-farm-PA45094', '051-6341541', 'nff@xsinet.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tomjachu Bush lodge', 3, -25.58658, 31.08011, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/nelspruit/tomjachu-bush-lodge-PA1042', NULL, 'office@tomjachu.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Toms Place', 3, -28.27324, 29.13113, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/toms-place-PA43201', '+27 (0) 58 623-0006', 'tomsplace@harrismith.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Toms Place', 3, -28.27324, 29.13113, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/harrismith/toms-place-PA43201', '+27 58 623-0006', 'tomsplace@harrismith.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Topiary Guest House', 2, -31.3306, 27.82383, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/elliot/topiary-guest-house-PA45050', '+27 (0) 45 931-1384', 'topiary01@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Topiary Guest House', 2, -31.3306, 27.82383, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/elliot/topiary-guest-house-PA45050', '+27 45 931-1384', 'topiary01@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Touraco Guest House', 2, -25.75098, 28.3153, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/touraco-guest-house-PA43202', '+27 (0) 12 803-8585', 'travel@touraco.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Touraco Guest House', 2, -25.75098, 28.3153, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/touraco-guest-house-PA43202', '+27 12 803-8585', 'travel@touraco.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Toverberg Guest Houses', 2, -30.72269, 25.09522, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/toverberg-guest-houses-PA1662', '+27 (0) 51 753-0422', 'toverberg@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Toverberg Guest Houses', 2, -30.72269, 25.09522, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/colesberg/toverberg-guest-houses-PA1662', '+27 51 753-0422', 'toverberg@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tozandre Guest House', 2, -26.93575, 29.24666, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/standerton/tozandre-guest-house-PA43209', '+27 (0) 17 714-0039', 'info@tozandreguesthouse.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tozandre Guest House', 2, -26.93575, 29.24666, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/standerton/tozandre-guest-house-PA43209', '+27 17 714-0039', 'info@tozandreguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tradewinds Country In', 1, -30.0444, 30.89329, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mtunzini/tradewinds-country-inn-PA6968', ' (035) 340 2266/083 647 77', 'tradewindscountryinn@mweb')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tradewinds Lodge', 3, -30.0642, 30.87987, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/tradewinds-lodge-PA43216', '+27 (0) 31 903-7254', 'trawind@iafrica.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tradewinds Lodge', 3, -30.0642, 30.87987, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/tradewinds-lodge-PA43216', '+27 31 903-7254', 'trawind@iafrica.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tramonto Wedding & Function Venue and Guest House', 3, -33.96493, 22.37311, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/george/tramonto-wedding-&-function-venue-and-guest-house-PA43217', '+27 (0) 44 870 7150', 'guesthouse@tramonto-venue.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tramonto Wedding & Function Venue and Guest House', 3, -33.96493, 22.37311, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/george/tramonto-wedding-&-function-venue-and-guest-house-PA43217', '+27 44 870 7150', 'guesthouse@tramonto-venue.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tranquil House', 2, -31.91691, 26.83733, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/tranquil-house-PA44718', NULL, 'tranquilhouse@vodamail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Travalia Guest Farm', 1, -31.90089, 23.04837, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/three-sisters/travalia-guest-farm-PA44841', '+27 53 622 0009', 'info@travalia.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Travel Lodge', 1, -25.77653, 29.47919, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/travel-lodge-PA45673', '+27 (0) 13 282 6297 ', 'travellodge@webafrica.org.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Travel Lodge', 1, -25.77653, 29.47919, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/middelburg/travel-lodge-PA45673', '+27 13 282 6297 ', 'travellodge@webafrica.org.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Trawal B&B', 1, -31.77563, 18.62647, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/klawer/trawal-b&b-PA5139', NULL, 'trawal@mylan.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Treetop Heights', 2, -26.01539, 28.02001, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/fourways/treetop-heights-PA43220', '+27 (0) 11 465-5232', 'jennifer@treetopheights.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Treetop Heights', 2, -26.01539, 28.02001, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/fourways/treetop-heights-PA43220', '+27 11 465-5232', 'jennifer@treetopheights.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tshukudu Safaris - Marula Camp', 1, -24.35, 30.96667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/tshukudu-safaris--marula-camp-PA45466', '+27 (0)15 001-7084', 'info@marulacamp.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tshukudu Safaris - Marula Camp', 1, -24.35, 30.96667, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/hoedspruit/tshukudu-safaris--marula-camp-PA45466', '+2715 001-7084', 'info@marulacamp.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tsibana Guest House Sunnyside', 1, -25.75529, 28.20519, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/tsibana-guest-house-sunnyside-PA43263', '+27 (0) 12 342-7553', 'mothatams@tut.ac.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tsibana Guest House Sunnyside', 1, -25.75529, 28.20519, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/tsibana-guest-house-sunnyside-PA43263', '+27 12 342-7553', 'mothatams@tut.ac.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tsitsikamma On Sea Luxury Lodge', 3, -32.22139, 26.77361, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/tsitsikamma/tsitsikamma-on-sea-luxury-lodge-PA43375', '+27 (0) 42 280-9900', 'admin.tos@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tsitsikamma On Sea Luxury Lodge', 3, -32.22139, 26.77361, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/tsitsikamma/tsitsikamma-on-sea-luxury-lodge-PA43375', '+27 42 280-9900', 'admin.tos@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tswingwana Guest Lodge', 1, -26.32201, 27.65213, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/the-cradle-of-human-kind/tswingwana-guest-lodge-PA43385', '+27 (0) 11 210-3900', 'ajardine@xavier.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tswingwana Guest Lodge', 1, -26.32201, 27.65213, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/the-cradle-of-human-kind/tswingwana-guest-lodge-PA43385', '+27 11 210-3900', 'ajardine@xavier.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tudor Lodge & Tours (Sandton)', 2, -26.06335, 28.07451, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/gallo-manor/tudor-lodge-&-tours-sandton-PA43392', '+27 (0) 11 802-4436', 'monmar@absamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tudor Lodge & Tours (Sandton)', 2, -26.06335, 28.07451, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/gallo-manor/tudor-lodge-&-tours-sandton-PA43392', '+27 11 802-4436', 'monmar@absamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tuishuis Lodge', 2, -25.83382, 28.17782, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/tuishuis-lodge-PA43394', '+27 (0) 12 654-5713', 'tuishuis@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tuishuis Lodge', 2, -25.83382, 28.17782, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/tuishuis-lodge-PA43394', '+27 12 654-5713', 'tuishuis@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tuningi Safari Lodge', 3, -24.76538, 26.17192, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/madikwe-game-reserve/tuningi-safari-lodge-PA7279', '+27 (0) 11 781-5384', 'reservations@tuningi.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tuningi Safari Lodge', 3, -24.76538, 26.17192, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/madikwe-game-reserve/tuningi-safari-lodge-PA7279', '+27 11 781-5384', 'reservations@tuningi.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Turning Tides B&B', 1, -33.58837, 26.88267, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/turning-tides-b&b-PA5152', '+27 (0)46 624 4700', 'turningtides@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Turning Tides B&B', 1, -33.58837, 26.88267, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-alfred/turning-tides-b&b-PA5152', '+2746 624 4700', 'turningtides@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tuscan View Guest House', 3, -30.01538, 30.92521, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/amanzimtoti/tuscan-view-guest-house-PA42264', '+27 31 904 1710', 'info@tuscanview.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tuskers B&B', 1, -28.55384, 29.77161, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/tuskers-b&b-PA43397', '+27 (0) 36 637-4746', 'tuskersbnb@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tuskers B&B', 1, -28.55384, 29.77161, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ladysmith/tuskers-b&b-PA43397', '+27 36 637-4746', 'tuskersbnb@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Twentysevenchelsea', 1, -29.789, 31.0354, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/durban-north/twentysevenchelsea-PA43398', NULL, 'sharon@twentysevenchelsea.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Twins Guest House', 3, -32.88215, 27.39698, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/king-williams-town/twins-guest-house-PA1380', '+27 (0) 43 642-1149', 'alidaj@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Twins Guest House', 3, -32.88215, 27.39698, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/king-williams-town/twins-guest-house-PA1380', '+27 43 642-1149', 'alidaj@intekom.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Two Views', 2, -30.36768, 30.70526, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pennington/two-views-PA43430', '+27 (0) 39 975-1424', 'emmaschultz@hotmail.co.uk')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Two Views', 2, -30.36768, 30.70526, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pennington/two-views-PA43430', '+27 39 975-1424', 'emmaschultz@hotmail.co.uk')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Tzaneen Country Lodge', 2, -23.81801, 30.30016, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/tzaneen/tzaneen-country-lodge-PA43433', '015-3043290/1', 'reservations@tznlodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ubuntu Guest House', 2, -28.7426, 24.78229, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kimberley/ubuntu-guest-house-PA44926', '538 327 000', 'info@ubuntuguesthouse.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ukhozi Bush Lodge', 2, -28.81933, 29.53247, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/winterton/ukhozi-bush-lodge-PA43435', '+27 (0) 36 488-1327', 'ukhozi@lantic.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ukhozi Bush Lodge', 2, -28.81933, 29.53247, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/winterton/ukhozi-bush-lodge-PA43435', '+27 36 488-1327', 'ukhozi@lantic.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Umbhaba Lodge', 2, -25.06298, 31.12289, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/hazyview/umbhaba-lodge-PA1307', '+27(0)13 737-7636', 'reservations@umbhaba.co.za')");
 
@@ -4710,11 +4226,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Umfolozi River Lodge and Bird Park', 2, -28.48032, 32.18253, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mtubatuba/umfolozi-river-lodge-and-bird-park-PA7006', '+27 35 550 5023', 'lodge@umfolozi.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Umhambi Lodge', 2, -28.78455, 32.09395, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/richards-bay/umhambi-lodge-PA43438', '+27 (0) 35 753-1038', 'umhambi@isat.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Umhambi Lodge', 2, -28.78455, 32.09395, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/richards-bay/umhambi-lodge-PA43438', '+27 35 753-1038', 'umhambi@isat.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Umngazi River Bungalows & Spa', 3, -31.66667, 29.45, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-st-johns/umngazi-river-bungalows-&-spa-PA1322', '+27 (0) 47 564-1115/6/8/9', 'gm@umngazi.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Umngazi River Bungalows & Spa', 3, -31.66667, 29.45, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-st-johns/umngazi-river-bungalows-&-spa-PA1322', '+27 47 564-1115/6/8/9', 'gm@umngazi.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Umthunzi Boutique Hotel', 2, -30.71663, 30.47416, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umtentweni/umthunzi-boutique-hotel-PA43445', '+27 (0) 39 695 0852', 'reservations@umthunzi.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Umthunzi Boutique Hotel', 2, -30.71663, 30.47416, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umtentweni/umthunzi-boutique-hotel-PA43445', '+27 39 695 0852', 'reservations@umthunzi.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Umzimvubu Retreat Guest House', 1, -31.63179, 29.5447, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-st-johns/umzimvubu-retreat-guest-house-PA45102', '475 641 741', 'bookings@umzimvuburetreat.co.za')");
 
@@ -4722,11 +4238,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Undulata Country Lodge', 1, -29.67925, 17.88382, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/springbok/undulata-country-lodge-PA44737', '(027) 712 3732', 'undulatalodge@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Urban Manor BnB', 2, -33.95728, 25.59604, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/urban-manor-bnb-PA43466', '+27 (0) 41 373-7824', 'yharrison@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Urban Manor BnB', 2, -33.95728, 25.59604, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/port-elizabeth/urban-manor-bnb-PA43466', '+27 41 373-7824', 'yharrison@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Ushaka Manor Guest House', 3, -29.7288, 31.08164, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlanga-rocks/ushaka-manor-guest-house-PA7033', ' (031) 561 2028/082 552 53', 'dlowes@ushakamanor.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Usiba Country Lodge', 3, -25.98207, 27.53715, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/magaliesburg/usiba-country-lodge-PA43472', '+27 (0) 83 585 5813', 'usiba@usibalodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Usiba Country Lodge', 3, -25.98207, 27.53715, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/magaliesburg/usiba-country-lodge-PA43472', '+27 83 585 5813', 'usiba@usibalodge.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Val d''O', 3, -33.87818, 19.06152, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/franschhoek/val-do-PA7625', '218 763 902', 'info@valdor.co.za')");
 
@@ -4736,17 +4252,17 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Valley View Lodge', 2, -25.10041, 30.78262, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/sabie/valley-view-lodge-PA44952', NULL, 'stay@valleyviewlodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Van Eeden Accommodatio', 2, -31.75626, 18.22755, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/strandfontein/van-eeden-accommodation-PA5181', '+27 (0)27 215 1045 ', 'accomstrandfontein@mylan.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Van Eeden Accommodatio', 2, -31.75626, 18.22755, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/strandfontein/van-eeden-accommodation-PA5181', '+2727 215 1045 ', 'accomstrandfontein@mylan.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Van Zijl Guest Houses & Smidswinkel Restaurant', 1, -31.37461, 19.11071, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/nieuwoudtville/van-zijl-guest-houses-&-smidswinkel-restaurant-PA43771', '+27 (0) 27 218-1535', 'nieuvz@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Van Zijl Guest Houses & Smidswinkel Restaurant', 1, -31.37461, 19.11071, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/nieuwoudtville/van-zijl-guest-houses-&-smidswinkel-restaurant-PA43771', '+27 27 218-1535', 'nieuvz@intekom.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Velmore Hotel Estate', 2, -25.81438, 28.09323, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/centurion/velmore-hotel-estate-PA45464', '(012) 370 -7000', 'fomvelmore@orion-hotels.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Verbara Forest Lodge', 2, -29.89347, 30.95294, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlali/verbara-forest-lodge-PA43498', '+27 (0) 32 947-9000/11', 'seaton@verbaralodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Verbara Forest Lodge', 2, -29.89347, 30.95294, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/umhlali/verbara-forest-lodge-PA43498', '+27 32 947-9000/11', 'seaton@verbaralodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Verbe Farm Accommodatio', 2, -30.21955, 17.92356, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kamieskroon/verbe-farm-accommodation-PA45257', '+27 (0) 27 672 1772', 'verbenoheep@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Verbe Farm Accommodatio', 2, -30.21955, 17.92356, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/kamieskroon/verbe-farm-accommodation-PA45257', '+27 27 672 1772', 'verbenoheep@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vetho Apartment Hotels', 2, -26.13048, 28.19914, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/kempton-park/vetho-apartment-hotels-PA43529', '+27 (0) 11 974-7009', 'tskonthzm@yahoo.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vetho Apartment Hotels', 2, -26.13048, 28.19914, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/kempton-park/vetho-apartment-hotels-PA43529', '+27 11 974-7009', 'tskonthzm@yahoo.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vetho House', 3, -29.54284, 31.21645, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/vetho-house-PA7178', ' (032) 9460687', 'vethohouse@vetho.co.za')");
 
@@ -4756,21 +4272,21 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Victoria Manor', 2, -31.89476, 26.86604, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/victoria-manor-PA45696', '(0) 45 838 4249 ', 'bookings@victoriamanor.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Victoria Place Guest House', 3, -23.91231, 29.46467, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/victoria-place-guest-house-PA43530', '+27 (0) 15 295-7599', 'reservations@victoriaplace.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Victoria Place Guest House', 3, -23.91231, 29.46467, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/victoria-place-guest-house-PA43530', '+27 15 295-7599', 'reservations@victoriaplace.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Victoria Place Self Catering', 2, -23.91297, 29.46381, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/victoria-place-self-catering-PA43531', '+27 (0) 15 295-7599', 'reservations@victoriaplace.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Victoria Place Self Catering', 2, -23.91297, 29.46381, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/polokwane/victoria-place-self-catering-PA43531', '+27 15 295-7599', 'reservations@victoriaplace.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vikings Rest', 2, -30.85048, 30.38007, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shelly-beach/vikings-rest-PA43533', '+27 (0) 39 315-5005', 'elna.brits@vodamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vikings Rest', 2, -30.85048, 30.38007, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shelly-beach/vikings-rest-PA43533', '+27 39 315-5005', 'elna.brits@vodamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Azure', 3, -33.96676, 18.38447, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/villa-azure-PA5204', '+27 (0) 21 438-1760', 'reservations@villaazure.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Azure', 3, -33.96676, 18.38447, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/villa-azure-PA5204', '+27 21 438-1760', 'reservations@villaazure.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa de Ghaap Guest House & Restaurant', 1, -29.05775, 23.77102, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/douglas/villa-de-ghaap-guest-house-&-restaurant-PA45143', '+ 27 (0) 53 298-4314', 'villadeghaap@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa de Ghaap Guest House & Restaurant', 1, -29.05775, 23.77102, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/douglas/villa-de-ghaap-guest-house-&-restaurant-PA45143', '+ 27 53 298-4314', 'villadeghaap@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Del Peche', 2, -29.48744, 31.25395, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ramsgate/villa-del-peche-PA7052', ' (039) 3144751 / 3121143', 'ethel.lemmer@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Del Sol', 2, -30.85605, 30.37497, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/villa-del-sol-PA7053', ' (039) 312 1143 ', 'vdsol@venturenet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Garda Bed and Breakfast', 2, -33.94819, 18.4702, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/villa-garda-bed-and-breakfast-PA7809', '+ 27 (0) 21 686 8138', 'villagarda@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Garda Bed and Breakfast', 2, -33.94819, 18.4702, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/cape-town/villa-garda-bed-and-breakfast-PA7809', '+ 27 21 686 8138', 'villagarda@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa L'' Apparita', 3, -29.50674, 31.22968, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/salt-rock/villa-l-apparita-PA7639', '325 257 487', 'info@lapparita.co.za')");
 
@@ -4780,13 +4296,13 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Moyal', 3, -26.14254, 28.04642, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/melrose/villa-moyal-PA42186', '+27 11 447 6399', 'jenny.villamoyel@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Reinet Guest House', 2, -32.25318, 24.52902, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/villa-reinet-guest-house-PA42250', '+27 (0) 49 892 5525', 'info@villareinet.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Reinet Guest House', 2, -32.25318, 24.52902, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/graaff-reinet/villa-reinet-guest-house-PA42250', '+27 49 892 5525', 'info@villareinet.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Royal Palm Guest House', 2, -25.42859, 31.95238, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/komatipoort/villa-royal-palm-guest-house-PA45136', '+27 (0)13 793 7463', 'villa-candilabra@webmail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Royal Palm Guest House', 2, -25.42859, 31.95238, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/komatipoort/villa-royal-palm-guest-house-PA45136', '+2713 793 7463', 'villa-candilabra@webmail.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa San Giovanni Accommodatio', 2, -25.6555, 28.2156, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/wonderboom/villa-san-giovanni-accommodation-PA43538', '+ 27 0 12 543 0501', 'info@vsg.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Siesta No 4', 3, -30.84578, 30.38951, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/villa-siesta-no-4-PA43539', '+27 (0) 31 764-0877', 'brenda@zestholidays.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Siesta No 4', 3, -30.84578, 30.38951, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/margate/villa-siesta-no-4-PA43539', '+27 31 764-0877', 'brenda@zestholidays.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Spa Holiday Resort', 2, -30.1182, 30.84738, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/illovo-beach/villa-spa-holiday-resort-PA7063', '(031) 916 4939', 'info@villaspa.co.za')");
 
@@ -4794,31 +4310,31 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villa Victoria Executive Guest House', 2, -26.19987, 28.29644, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/benoni/villa-victoria-executive-guest-house-PA7641', '+27 11 421-2886', 'stanhitchcock@iburst.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Village Guest House And Restaurant', 2, -33.36978, 19.31139, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/ceres/village-guest-house-and-restaurant-PA43556', '+27 (0) 23 316-2035', 'villageguest@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Village Guest House And Restaurant', 2, -33.36978, 19.31139, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/ceres/village-guest-house-and-restaurant-PA43556', '+27 23 316-2035', 'villageguest@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villiera Guest House', 3, -29.05539, 23.76926, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/douglas/villiera-guest-house-PA43557', '+27 (0) 53 298-1453', 'villiera@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Villiera Guest House', 3, -29.05539, 23.76926, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/douglas/villiera-guest-house-PA43557', '+27 53 298-1453', 'villiera@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vincent Valley Lodge', 2, -32.97451, 27.91568, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/vincent-valley-lodge-PA43558', '+27 (0) 43 726-3131', 'info@vvl.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vincent Valley Lodge', 2, -32.97451, 27.91568, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/vincent-valley-lodge-PA43558', '+27 43 726-3131', 'info@vvl.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Virginia Townhouse', 3, -31.59204, 28.76242, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/virginia-townhouse-PA45682', '+27 (0) 47 531-9099', 'info@virginiatownhouse.biz')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Virginia Townhouse', 3, -31.59204, 28.76242, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/virginia-townhouse-PA45682', '+27 47 531-9099', 'info@virginiatownhouse.biz')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Visit Vakasha Town Lodge', 1, -25.8803, 29.2308, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/witbank/visit-vakasha-town-lodge-PA45296', NULL, 'visitvakasha@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('VJ''s Guest House', 3, -33.75796, 25.40781, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/uitenhage/vjs-guest-house-PA43559', '+27 (0) 41 992-3597', 'wfgviljoen@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('VJ''s Guest House', 3, -33.75796, 25.40781, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/uitenhage/vjs-guest-house-PA43559', '+27 41 992-3597', 'wfgviljoen@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Von Abercron Residence', 2, -34.40195, 19.25652, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/hermanus/von-abercron-residence-PA5258', '+27 28 312 1551', 'info@abercron-residence-hermanus.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vrede Self Catering', 3, -34.07694, 18.83782, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/somerset-west/vrede-self-catering-PA45072', NULL, 'enquiries@vredeselfcatering.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vredelust B&B', 2, -33.99088, 19.28901, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/villiersdorp/vredelust-b&b-PA7646', '+27 (0)28 840 1735', 'gpdall@iafrica.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vredelust B&B', 2, -33.99088, 19.28901, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/villiersdorp/vredelust-b&b-PA7646', '+2728 840 1735', 'gpdall@iafrica.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vultures Lodge', 3, -30.29742, 27.07535, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/zastron/vultures-lodge-PA45334', '+27 (0) 76 227 3913', 'vultureslodge@webmail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Vultures Lodge', 3, -30.29742, 27.07535, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/zastron/vultures-lodge-PA45334', '+27 76 227 3913', 'vultureslodge@webmail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wan Inn Bed & Breakfast', 2, -31.88522, 26.88822, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/wan-inn-bed-&-breakfast-PA43562', '+27 (0) 45 839-6709', 'waninn17@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wan Inn Bed & Breakfast', 2, -31.88522, 26.88822, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/queenstown/wan-inn-bed-&-breakfast-PA43562', '+27 45 839-6709', 'waninn17@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wakenshaw Manor', 2, -29.50609, 31.23529, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/wakenshaw-manor-PA45832', '+27 (0) 86 111 3281', 'jay@homesonline.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wakenshaw Manor', 2, -29.50609, 31.23529, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/wakenshaw-manor-PA45832', '+27 86 111 3281', 'jay@homesonline.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Warmkaros B&B', 2, -32.97589, 27.91199, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/warmkaros-b&b-PA43563', '+27 (0) 43 726-3536', 'info@warmkaros.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Warmkaros B&B', 2, -32.97589, 27.91199, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/warmkaros-b&b-PA43563', '+27 43 726-3536', 'info@warmkaros.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wartburg Hotel - Orion Group', 2, -29.4325, 30.58, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/wartburg/wartburg-hotel--orion-group-PA42599', NULL, 'gmwart@orionhotels.co.za')");
 
@@ -4828,47 +4344,47 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterford Manor', 2, -29.29588, 29.98039, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/rosetta/waterford-manor-PA2102', NULL, 'waterford@lantic.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterfront Guest Farm and Venue', 2, -28.44933, 21.26399, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/waterfront-guest-farm-and-venue-PA45095', '+27 (0)54 332 6415', 'info@waterfrontkalahari.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterfront Guest Farm and Venue', 2, -28.44933, 21.26399, 'http://www.aaholidays.co.za/accommodation/south-africa/northern-cape/upington/waterfront-guest-farm-and-venue-PA45095', '+2754 332 6415', 'info@waterfrontkalahari.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterfront Guest House', 2, -26.11214, 27.99487, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/randburg/waterfront-guest-house-PA45348', NULL, 'hildaj@dreamvacs.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterfront Guest House Carolina', 2, -26.0609, 30.11278, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/carolina/waterfront-guest-house-carolina-PA43566', '+27 (0) 17 843-2632', 'info@waterfrontcarolina.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterfront Guest House Carolina', 2, -26.0609, 30.11278, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/carolina/waterfront-guest-house-carolina-PA43566', '+27 17 843-2632', 'info@waterfrontcarolina.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterfront Lodge', 3, -34.03922, 23.01547, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/knysna/waterfront-lodge-PA380', ' +27 44 382 1696', 'waterfr@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterglen Guest Lodge', 3, -25.74285, 27.26712, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/rustenburg/waterglen-guest-lodge-PA1313', '+27 (0) 14 537-2412', 'waterglengh@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterglen Guest Lodge', 3, -25.74285, 27.26712, 'http://www.aaholidays.co.za/accommodation/south-africa/north-west/rustenburg/waterglen-guest-lodge-PA1313', '+27 14 537-2412', 'waterglengh@mweb.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Watermelons B&B', 2, -31.59712, 28.78148, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/watermelons-b&b-PA45233', NULL, 'watermelonsbnb@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Waterwoods', 2, -29.41807, 29.90891, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/nottingham-road/waterwoods-PA45369', NULL, 'lynford@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Weavind Place', 2, -25.73457, 28.27333, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/weavind-place-PA43567', '+27 (0) 12 804-0434', 'weavindp@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Weavind Place', 2, -25.73457, 28.27333, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/weavind-place-PA43567', '+27 12 804-0434', 'weavindp@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wedgeview Country House and Spa', 3, -33.94389, 18.85879, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/wedgeview-country-house-and-spa-PA7659', '+27 (0)21 881 3525', 'info@wedgeview.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wedgeview Country House and Spa', 3, -33.94389, 18.85879, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/wedgeview-country-house-and-spa-PA7659', '+2721 881 3525', 'info@wedgeview.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welcome Guest House', 2, -26.657, 27.9729, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/vereeniging/welcome-guest-house-PA43568', NULL, 'info@welcomeguesthouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welcome In', 2, -26.17159, 28.31714, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/benoni/welcome-inn-PA9123', '011 849-6588', 'info@welcomeinn.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welgekozen Country Lodge', 3, -27.00399, 30.80156, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/piet-retief/welgekozen-country-lodge-PA43569', '+27 (0)17 826 2910', 'welgekozen@worldonline.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welgekozen Country Lodge', 3, -27.00399, 30.80156, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/piet-retief/welgekozen-country-lodge-PA43569', '+2717 826 2910', 'welgekozen@worldonline.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welgelegen Guest Farm', 2, -28.62909, 28.20894, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/fouriesburg/welgelegen-guest-farm-PA43570', '+27 (0) 58 223-0495', 'info@vivit.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welgelegen Guest Farm', 2, -28.62909, 28.20894, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/fouriesburg/welgelegen-guest-farm-PA43570', '+27 58 223-0495', 'info@vivit.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welgelegen Manor', 3, -26.65606, 28.58937, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/balfour/welgelegen-manor-PA43571', '+27 (0) 83 281 1706', 'info@welgelegenmanor.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welgelegen Manor', 3, -26.65606, 28.58937, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/balfour/welgelegen-manor-PA43571', '+27 83 281 1706', 'info@welgelegenmanor.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welgemoed Chalets', 1, -30.69054, 26.71437, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/aliwal-north/welgemoed-chalets-PA43572', '+27 (0) 51 633-2692', 'wssmith@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Welgemoed Chalets', 1, -30.69054, 26.71437, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/aliwal-north/welgemoed-chalets-PA43572', '+27 51 633-2692', 'wssmith@intekom.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wen do lin Traveller''s Rest', 1, -29.11835, 26.22492, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/bloemfontein/wen-do-lin-travellers-rest-PA45104', '(+27) 051 861 2062', 'mcwilson@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wensleydale Guest Lodge', 2, -29.60535, 30.41325, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pietermaritzburg/wensleydale-guest-lodge-PA1573', '+27 (0) 33 346-1302', 'info@wensleydalelodge.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wensleydale Guest Lodge', 2, -29.60535, 30.41325, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/pietermaritzburg/wensleydale-guest-lodge-PA1573', '+27 33 346-1302', 'info@wensleydalelodge.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Westlodge B and B', 3, -24.92442, 30.84612, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/graskop/westlodge-b-and-b-PA43588', '+27 (0) 13 767-1390', 'westlodge@icon.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Westlodge B and B', 3, -24.92442, 30.84612, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/graskop/westlodge-b-and-b-PA43588', '+27 13 767-1390', 'westlodge@icon.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wetlands Country House and Sheds', 2, -27.34314, 30.14278, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/wakkerstroom/wetlands-country-house-and-sheds-PA35921', '+27 (017) 730 0101', 'info@wetlandscountryhouse.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wetlands Country Retreat', 2, -27.3328, 30.12429, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/wakkerstroom/wetlands-country-retreat-PA45306', NULL, 'gianwes@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wetlands Dullstroom Country Lodge', 1, -25.39924, 30.12262, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/dullstroom/wetlands-dullstroom-country-lodge-PA43774', '+27 (0) 12 804-3590', 'johann@edelweiss.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wetlands Dullstroom Country Lodge', 1, -25.39924, 30.12262, 'http://www.aaholidays.co.za/accommodation/south-africa/mpumalanga/dullstroom/wetlands-dullstroom-country-lodge-PA43774', '+27 12 804-3590', 'johann@edelweiss.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Whale Away Guest House', 2, -34.41377, 19.24797, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/hermanus/whale-away-guest-house-PA7656', '+27 28 312 4468  ', 'info@whaleaway.com')");
 
@@ -4878,35 +4394,35 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Whinstone Farm B and B', 1, -29.06298, 30.59248, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/greytown/whinstone-farm-b-and-b-PA7084', ' (082) 5730559', 'umvotivet@m.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Whispering Whale', 3, -32.97382, 17.88741, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/jacobsbaai/whispering-whale-PA43591', '+27 (0) 82 770 4109', 'info@whisperingwhale.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Whispering Whale', 3, -32.97382, 17.88741, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/jacobsbaai/whispering-whale-PA43591', '+27 82 770 4109', 'info@whisperingwhale.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('White Mountain Conference & Team Building Resort', 2, -29.20028, 29.5275, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/giants-castle-nature-reserve/white-mountain-conference-&-team-building-resort-PA7088', '+27 (0) 36 353-3437', 'whitemountain@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('White Mountain Conference & Team Building Resort', 2, -29.20028, 29.5275, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/giants-castle-nature-reserve/white-mountain-conference-&-team-building-resort-PA7088', '+27 36 353-3437', 'whitemountain@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('White Shores Guesthouse', 3, -30.92566, 30.31057, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/southbroom/white-shores-guesthouse-PA7089', ' (039) 316 6534', 'whiteshores@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Whittals Chalets', 1, -30.71694, 26.71223, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/aliwal-north/whittals-chalets-PA43594', '+27 (0) 51 634-1189', 'whittals@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Whittals Chalets', 1, -30.71694, 26.71223, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/aliwal-north/whittals-chalets-PA43594', '+27 51 634-1189', 'whittals@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wild Olive Guest House', 3, -33.97277, 18.4734, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/newlands/wild-olive-guest-house-PA2141', '+27 (0)21 683 0880', 'stay@wildolive.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wild Olive Guest House', 3, -33.97277, 18.4734, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/newlands/wild-olive-guest-house-PA2141', '+2721 683 0880', 'stay@wildolive.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wild Waves', 2, -30.79601, 30.4179, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/shelly-beach/wild-waves-PA7093', ' (039) 315 7334', 'wildwaves@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wilderness Manor Guest House', 3, -33.99247, 22.57773, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/wilderness/wilderness-manor-guest-house-PA5352', ' +27 44 877 0264', 'wildman@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Willy''s Chateau', 2, -26.1947, 28.1101, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/kensington/willys-chateau-PA910', '+27 (0) 11 615-5210', 'steincape@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Willy''s Chateau', 2, -26.1947, 28.1101, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/kensington/willys-chateau-PA910', '+27 11 615-5210', 'steincape@telkomsa.net')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wilmot Cottages', 2, -33.99429, 25.66957, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/summerstrand/wilmot-cottages-PA43605', '+27 (0) 41 583-1770', 'nwilmot@mweb.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wilmot Cottages', 2, -33.99429, 25.66957, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/summerstrand/wilmot-cottages-PA43605', '+27 41 583-1770', 'nwilmot@mweb.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Winburg Guest House', 2, -28.52036, 27.0219, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/winburg/winburg-guest-house-PA43607', '+27 (0) 51 881-0233', 'wguesthouse@mtnloaded.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Winburg Guest House', 2, -28.52036, 27.0219, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/winburg/winburg-guest-house-PA43607', '+27 51 881-0233', 'wguesthouse@mtnloaded.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Winterton Country Lodge', 2, -28.81379, 29.53633, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/winterton/winterton-country-lodge-PA42288', '+27 (0)36-4881049', 'rosecot@intekom.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Winterton Country Lodge', 2, -28.81379, 29.53633, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/winterton/winterton-country-lodge-PA42288', '+2736-4881049', 'rosecot@intekom.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Woodleigh Guest Lodge', 2, -32.99071, 27.93441, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/woodleigh-guest-lodge-PA43775', '+27 (0) 43 735-4285', 'bev.forword@absamail.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Woodleigh Guest Lodge', 2, -32.99071, 27.93441, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/east-london/woodleigh-guest-lodge-PA43775', '+27 43 735-4285', 'bev.forword@absamail.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Woodridge Country Hotel and Spa', 3, -29.40047, 30.05482, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/balwan/woodridge-country-hotel-and-spa-PA1623', '+27 (0) 33 234-4423', 'woodridge@worldonline.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Woodridge Country Hotel and Spa', 3, -29.40047, 30.05482, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/balwan/woodridge-country-hotel-and-spa-PA1623', '+27 33 234-4423', 'woodridge@worldonline.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wyndford Holiday Farm', 2, -28.88632, 27.88352, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/caledonspoort/wyndford-holiday-farm-PA43627', '+27 (0) 58 223-0274', 'reception@wyndford.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Wyndford Holiday Farm', 2, -28.88632, 27.88352, 'http://www.aaholidays.co.za/accommodation/south-africa/free-state/caledonspoort/wyndford-holiday-farm-PA43627', '+27 58 223-0274', 'reception@wyndford.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Xamarin Guest Farm', 1, -32.09472, 18.31275, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/lamberts-bay/xamarin-guest-farm-PA43628', '+27 (0) 27 432-1325', 'hayes@cybertrade.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Xamarin Guest Farm', 1, -32.09472, 18.31275, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/lamberts-bay/xamarin-guest-farm-PA43628', '+27 27 432-1325', 'hayes@cybertrade.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Yellow Aloe Guest House', 2, -32.18446, 18.89927, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/clanwilliam/yellow-aloe-guest-house-PA5386', ' +27 27 4822018', 'yellowaloe@mweb.co.za')");
 
@@ -4916,11 +4432,11 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zebra Country Lodge', 2, -25.51314, 28.48827, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/leeuwkloof/zebra-country-lodge-PA1237', '+27 12 361 6303', 'reservations@legendlodges.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zebra Hills Game Reserve', 3, -27.7411, 32.10282, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mkuze/zebra-hills-game-reserve-PA43629', '+27 (0) 35 595-8125', 'zebrahills@telkomsa.net')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zebra Hills Game Reserve', 3, -27.7411, 32.10282, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/mkuze/zebra-hills-game-reserve-PA43629', '+27 35 595-8125', 'zebrahills@telkomsa.net')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zebula Country Club Unit 107', 3, -23.97478, 28.29944, 'http://www.aaholidays.co.za/accommodation/south-africa/limpopo-province/bela-bela/zebula-country-club-unit-107-PA43631', NULL, 'foundersportfolio@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zeldagar Guest House', 2, -25.71203, 28.26346, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/zeldagar-guest-house-PA43641', '+27 (0) 12 333-9324', 'info@zeldagar.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zeldagar Guest House', 2, -25.71203, 28.26346, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/zeldagar-guest-house-PA43641', '+27 12 333-9324', 'info@zeldagar.co.za')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zeldagar Lodge', 2, -25.70789, 28.26152, 'http://www.aaholidays.co.za/accommodation/south-africa/gauteng/pretoria/zeldagar-lodge-PA43642', '123 339 324', 'info@zeldagar.co.za')");
 
@@ -4928,33 +4444,34 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zevenwacht Wine Farm', 3, -33.92201, 18.68437, 'http://www.aaholidays.co.za/accommodation/south-africa/western-cape/stellenbosch/zevenwacht-wine-farm-PA5402', ' +27 21 903 5123 ', 'reservations@zevenwacht.co.za')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zimbali- No 12 Thulabali', 3, -29.55285, 31.20169, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/zimbali-no-12-thulabali-PA43646', '+27 (0) 83 462 3624', 'foundersportfolio@gmail.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zimbali- No 12 Thulabali', 3, -29.55285, 31.20169, 'http://www.aaholidays.co.za/accommodation/south-africa/kwazulu-natal/ballito/zimbali-no-12-thulabali-PA43646', '+27 83 462 3624', 'foundersportfolio@gmail.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zovuyo Guest House & Conference Centre', 2, -32.33272, 28.14381, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/butterworth/zovuyo-guest-house-&-conference-centre-PA45065', NULL, 'zovuyo.guesthouse@gmail.com')");
 
-    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('ZQ Guest House', 2, -31.59239, 28.75596, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/zq-guest-house-PA45305', '+27 (0) 47 532 5305', 'nsiban@yahoo.com')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('ZQ Guest House', 2, -31.59239, 28.75596, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/mthatha/zq-guest-house-PA45305', '+27 47 532 5305', 'nsiban@yahoo.com')");
 
     tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zuurberg Mountain Village', 2, -33.31667, 25.68333, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/zuurberg-mountain-village-PA43650', NULL, 'henri@addo.co.za')");
 
-    
-    //Acc end
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zuurberg Mountain Village', 2, 12.3323016, 76.6393292, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/zuurberg-mountain-village-PA43650', NULL, 'henri@addo.co.za')");
+    tx.executeSql("INSERT INTO AAAccommodation (Name, AA_rating, Latitude, Longitude, Seopermalink, PhoneNumber, Email) VALUES ('Zuurberg Mountain Village', 2, 12.3323016, 76.6393292, 'http://www.aaholidays.co.za/accommodation/south-africa/eastern-cape/addo/zuurberg-mountain-village-PA43650', NULL, 'henri@addo.co.za')");
+    //Acc end  Beyers Naude Drive comma removed  & Walmer Park Shopping Centre
 
     //sales
     tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('East Londo', NULL, -32.98481, 27.90552, '(043)7260601', 'reception@harveyworld-el.co.za  shamema@harveytravl-el.co.za', NULL, '45 Devereux Avenue, Vincent, East Londo', 'East Londo', 'Eastern Cape', 'HWT East London, P.O. Box 8051, Nahoon, East London, 5210')");
 
-    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Port Elizabeth', NULL, -33.98096, 25.55761, '(041)368 6452', 'chantells.teaa@gmail.com  tracym.teaa@gmail.com', NULL, 'Shop 19A, Walmer Park Shopping Centre, Main Road, ', 'Walmer', 'Port Elizabeth', 'Private Bag x0002, the Fig Tree, Charlo, Port Elizabeth, 6033')");
+    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Port Elizabeth', NULL, -33.98096, 25.55761, '(041)368 6452', 'chantells.teaa@gmail.com  tracym.teaa@gmail.com', NULL, 'Shop 19A, Walmer Park Shopping Centre, Main Road', 'Walmer', 'Port Elizabeth', 'Private Bag x0002, the Fig Tree, Charlo, Port Elizabeth, 6033')");
 
     tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Bloemfontei', NULL, -29.121944, 26.220556, '(051)4476191', 'helenh.teaa@gmail.com  elizabethh@teaa.gmail.com', NULL, 'Shop SO1B, Third Floor, Loch Logan Waterfront, Henry Street, Bloemfontei', 'Bloemfontei', 'Free State', 'P.O. Box 784527 Sandton 2146')");
 
-    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('East Rand Mall', NULL, -26.18144, 28.24284, '(011)8261512/11', 'susan.fonorama@galileosa.co.za   ditsac52@gmail.com', NULL, 'Shop 102, East Rand Mall, C/o North Rand & Bentel Avenue', 'Boksburg', 'Gauteng', 'P.O. Box 26696 East Rand 1462')");
+    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('East Rand Mall', NULL, -26.18144, 28.24284, '(011)8261512  (011)8261511', 'susan.fonorama@galileosa.co.za   ditsac52@gmail.com', NULL, 'Shop 102, East Rand Mall, C/o North Rand & Bentel Avenue', 'Boksburg', 'Gauteng', 'P.O. Box 26696 East Rand 1462')");
 
-    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Centurio', NULL, -25.5245, 28.0948, '(011)6535513', 'carinai.teaa@gmail.com    julier.teaa@gmail.com', NULL, 'Shop F6, Banking Mall area, Centurion Lifestyle centre, Cnr Lenchen Ave & Old Jhb Road', 'Centurio', 'Gauteng', 'P.O. Box 784527 Sandton 2146')");
+    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Centurio', NULL, -25.5245, 28.0948, '(011)6535513', 'carinai.teaa@gmail.com    julier.teaa@gmail.com', NULL, 'Shop F6, Banking Mall area, Centurion Lifestyle centre, Cnr Lenchen Ave & Old Jhb Road', 'Centurion', 'Gauteng', 'P.O. Box 784527 Sandton 2146')");
 
-    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Cresta', NULL, -26.1305, 27.971429, '(011)4785312', 'busisiwe.magubane@aasa.co.za  cleodenes@aasa.co.za', NULL, 'Cresta Regional Shoppin Centre, Beyers Naude Drive, ', 'Cresta', 'Gauteng', 'No P.O. Box address')");
+    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Cresta', NULL, -26.1305, 27.971429, '(011)4785312', 'busisiwe.magubane@aasa.co.za  cleodenes@aasa.co.za', NULL, 'Cresta Regional Shoppin Centre, Beyers Naude Drive', 'Cresta', 'Gauteng', 'No P.O. Box address')");
 
-    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Park Meadows', NULL, -26.1835, 28.1146, '(011)6157946   (011)615 7852', 'elizabethz.teaa@gmail.com    bongam.teaa@gmail.com', NULL, 'Shop 33, Park Meadows Shopping Centre, Cumberland Road,Kensingto', 'Kensingto', 'Gauteng', 'P.O. Box 784527 Sandton 2146')");
+    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Park Meadows', NULL, -26.1835, 28.1146, '(011)6157946  (011)6157852', 'elizabethz.teaa@gmail.com    bongam.teaa@gmail.com', NULL, 'Shop 33, Park Meadows Shopping Centre, Cumberland Road,Kensingto', 'Kensingto', 'Gauteng', 'P.O. Box 784527 Sandton 2146')");
 
-    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Menly', NULL, -25.780596, 28.274227, '(012)348 2522', 'justine@zaplanet.co.za colleen@zaplanet.co.za', NULL, 'Shop 2 Level P3, Menlyn Park Shopping Centre, Atterbury Road', 'Menly', 'Gauteng', 'P.O. Box 36070 Menlo Park 0102')");
+    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Menlyn', NULL, -25.780596, 28.274227, '(012)348 2522', 'justine@zaplanet.co.za colleen@zaplanet.co.za', NULL, 'Shop 2 Level P3, Menlynn Park Shopping Centre, Atterbury Road', 'Menlyn', 'Gauteng', 'P.O. Box 36070 Menlo Park 0102')");
 
     tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Benmore', NULL, -26.6, 28.257, '(011)8844104', 'samanthag.teaa@gmail.com stephana.teaa@gmail.com', NULL, 'Shop G02, Benmore Gardens Shopping Centre, Cnr Grayston & Benmore Road, Benmore', 'Benmore', 'Gauteng', 'P.O. Box 784527 Sandton 2146')");
 
@@ -4964,7 +4481,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Hilto', NULL, -29.551416, 30.300267, '(033) 343 1380', 'juanita@hiltontravel.co.za    jane@hiltontravel.co.za', NULL, 'Shop 52, Lower Quarry Centre, Hilton Avenue', 'Hilto', 'Kwazulu Natal', 'P.O. Box 236, Hilton, Kwazulu Natal,3245')");
 
-    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('La Lucia', NULL, -29.451448, 31.034822, '(031)5727852/54', 'tasleema.teaa@gmail.com  shereenr@gmail.com', NULL, 'Shop 205, Entrance 2, La Lucia, Kwazulu Natal', 'La Lucia', 'Kwazulu Natal', 'P.O. Box 784527 Sandton 2146')");
+    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('La Lucia', NULL, -29.451448, 31.034822, '(031)5727852  (031)5727854', 'tasleema.teaa@gmail.com  shereenr@gmail.com', NULL, 'Shop 205, Entrance 2, La Lucia, Kwazulu Natal', 'La Lucia', 'Kwazulu Natal', 'P.O. Box 784527 Sandton 2146')");
 
     tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Richards Bay', NULL, -28.45272, 32.03115, '(035)7893017', 'heathero@harveyworld.co.za   karon.mcgarr@harveyworld.co.za', NULL, 'Shop 18b, Lakeside Mall, 5 Markstrasse Road', 'Richards Bay', 'Kwazulu Natal', 'P.O. Box 58, Richards Bay, Kwazulu Natal, 3900')");
 
@@ -4988,9 +4505,10 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Garsfontei', NULL, -25.49548, 28.18873, '(012)9408999', 'teller2@voetspore.co.za  raymond@voetspore.co.za', NULL, 'Shop 315, Woodlands Boulevard, c/0 Garsfontein & De Villa Bois Str', 'Pretoria', 'Gauteng', 'P.O. Box 92256, Mooikloof,0059')");
 
-    //sales end
+    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Garsfontei', NULL, 12.3323016, 76.6393292, '(012)9408999', 'teller2@voetspore.co.za  raymond@voetspore.co.za', NULL, 'Shop 315, Woodlands Boulevard, c/0 Garsfontein & De Villa Bois Str', 'Pretoria', 'Gauteng', 'P.O. Box 92256, Mooikloof,0059')");
+    tx.executeSql("INSERT INTO SalesAgent (Name, Catery, Lat, Long, Tel, Email, Website, AddressStreet, AddressSuburb, AddressCity, AddressPostal) VALUES ('Garsfontei', NULL, 12.3323016, 76.6393292, '(012)9408999', 'teller2@voetspore.co.za  raymond@voetspore.co.za', NULL, 'Shop 315, Woodlands Boulevard, c/0 Garsfontein & De Villa Bois Str', 'Pretoria', 'Gauteng', 'P.O. Box 92256, Mooikloof,0059')");
 
-    // fUEL STATION
+    // FUEL STATION
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Loxton Motors', 'Rtl Sales Ops-Cape Tow', 'Engelbrecht, Sharlene', -32.90486, 18.76815, 'Dippenaar, Jaco (MR J)', '022 913 1136', 60, 'Langstreet', 'PIKETBERG', 7320, NULL, 'Western Cape', 'Core 4 - The Rest', NULL, '06B', '--', '--', '--', '--', '--', '--')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Lubbe Motors', 'Rtl Sales Ops-Gauteng South', 'Mthembu, Baldwi', -30.043366, 25.790953, 'Lubbe, Frik (MR F)', '051 7130439', 19, 'Louw Street', 'TROMPSBURG', 9913, NULL, 'Free State', 'Core 4 - The Rest', NULL, '08A', '--', '--', '--', '--', '--', '--')");
@@ -5067,7 +4585,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Mummy''s Motors', 'Rtl Sales Ops-Gauteng South', 'Mthembu, Baldwi', -29.18944, 26.22729, 'Sello, Francis (MR F)', '051 434 1822', 11910, 'Tau Street', 'KAGISANONG', 9300, NULL, 'Free State', 'Core 4 - The Rest', NULL, '11C', '--', '--', '--', '--', '--', 'ABSA')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Nagina Service statio', 'Rtl Sales Ops-Durba', 'Pillay, Promona', -29.86959, 30.813, 'Ramlall, B (MR B)', '031 7064603', 2, 'Soniway', 'MARIANHILL', 3610, 2, 'KwaZulu Natal', 'Core 2 - Durba', NULL, '01A', '--', '--', '--', '--', '--', '--')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Nagina Service station', 'Rtl Sales Ops-Durba', 'Pillay, Promona', -29.86959, 30.813, 'Ramlall, B (MR B)', '031 7064603', 2, 'Soniway', 'MARIANHILL', 3610, 2, 'KwaZulu Natal', 'Core 2 - Durba', NULL, '01A', '--', '--', '--', '--', '--', '--')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Nakisa Service Station', 'Rtl Sales Ops-Durba', 'Panya, Arnold', -31.7829, 28.4202, 'Thabede, Sibusiso (MR S)', '082 443 9254', 83, 'Southerland Street', 'UMTATA', 5100, NULL, 'Eastern Cape', 'Core 4 - The Rest', NULL, '06A', '--', '--', '--', '--', '--', '--')");
 
@@ -5117,7 +4635,7 @@ db.transaction(function (tx) {
     //Fuel ma6th  
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Palm Service Centre', 'Rtl Sales Ops-Durba', 'vender, Devrani', -28.741082, 32.053294, 'Van Rooyen, Nico (MR N)', '035 7897039', 14, 'Bullion Boulevard', 'RICHARDS BAY', 3900, NULL, 'KwaZulu Natal', 'Core 4 - The Rest', 'Urban Road', '05A', 'BP Express', 'Shop 201 - 399 m2', 'WBC', '--', '--', '--')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Pelican Service Station', 'Rtl Sales Ops-Durba', 'Pillay, Promona', -29.917871, 30.941338, 'Callanan, Frank (MR F)', '0314622521/3683', NULL, 'Pelican Place', 'YELLOWWOOD PARK', 4011, NULL, 'KwaZulu Natal', 'Core 2 - Durba', NULL, '01A', '--', '--', '--', '--', '--', '--')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Pelican Service Station', 'Rtl Sales Ops-Durba', 'Pillay, Promona', -29.917871, 30.941338, 'Callanan, Frank (MR F)', '0314622521  0314623683', NULL, 'Pelican Place', 'YELLOWWOOD PARK', 4011, NULL, 'KwaZulu Natal', 'Core 2 - Durba', NULL, '01A', '--', '--', '--', '--', '--', '--')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Pinati Service Station', 'Rtl Sales Ops-Cape Tow', 'Dagnin, Bronwy', -33.992707, 18.516357, 'Firfiray, Husain A (MR H A)', '021 6916813', NULL, 'cnr Induland & Blomvlei Roads', 'LANSDOWNE', 7780, NULL, 'Western Cape', 'Core 3 - Cape', NULL, '01A', '--', '--', '--', '--', '--', '--')");
 
@@ -5325,7 +4843,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Zoo Lake Garage', 'Rtl Sales Ops-Gauteng South', 'Ntuli, Zanele', -26.159549, 28.025627, 'Vos, Anne (MRS A)', '011 6461808', 52, 'Ennis Road', 'PARKVIEW', 2122, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', '--', '--', '--', '--', '--')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('ZZZ Service Station', 'Rtl Sales Ops-Durba', 'Panya, Arnold', -31.600772, 28.780699, 'Ntobongwana, Fezile (MRMRS F & K)', '047 5312072/4', NULL, 'cnr Madeira & Eagle Streets', 'UMTATA', 5100, NULL, 'Eastern Cape', 'Core 4 - The Rest', NULL, '06A', '--', '--', '--', '--', '--', 'STD')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('ZZZ Service Station', 'Rtl Sales Ops-Durba', 'Panya, Arnold', -31.600772, 28.780699, 'Ntobongwana, Fezile (MRMRS F & K)', '0475312072  0475312074', NULL, 'cnr Madeira & Eagle Streets', 'UMTATA', 5100, NULL, 'Eastern Cape', 'Core 4 - The Rest', NULL, '06A', '--', '--', '--', '--', '--', 'STD')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('222 Service Station', 'Rtl Sales Ops-Durba', 'Panya, Arnold', -32.995999, 27.903169, 'Pasiya, Unathi (MS U)', '043 7420607', 10, 'Gately Street', 'EAST LONDO', 5205, NULL, 'Eastern Cape', 'Core 4 - The Rest', NULL, '01A', 'BP Express', 'Shop 91 - 136 m2', '--', '--', '--', '--')");
 
@@ -5419,7 +4937,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Braamfontei', 'Rtl Sales Ops-Gauteng South', 'Ntuli, Zanele', -26.195377, 28.031371, 'Vieira, Marco (MR M)', '011 403 5862', 120, 'Smit Street', 'BRAAMFONTEI', 1459, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 91 - 136 m2', '--', 'Steers', '--', 'STD')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Brakpa', 'Rtl Sales Ops-Gauteng South', 'Rakhuba, Kagiso', -26.242125, 28.367688, 'Pillay,  (MR S)', '011 740 1537/8', NULL, 'Prince George Ave', 'BRAKPA', 1501, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', '--', '--', '--', '--', '--')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Brakpa', 'Rtl Sales Ops-Gauteng South', 'Rakhuba, Kagiso', -26.242125, 28.367688, 'Pillay,  (MR S)', '0117401537  0117401538', NULL, 'Prince George Ave', 'BRAKPA', 1501, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', '--', '--', '--', '--', '--')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Bramley', 'Rtl Sales Ops-Gauteng South', 'Ntuli, Zanele', -26.115446, 28.105885, 'Vargas, Jose (MR J)', '011 8821113', 22, 'Canning Road', 'BRAMLEY', 2090, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', '--', '--', '--', '--', 'FNB')");
 
@@ -5443,7 +4961,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Cavendish', 'Rtl Sales Ops-Cape Tow', 'Dagnin, Bronwy', -33.98494, 18.46631, 'Hunt-Davis, Robin Timo (MR R T)', '021 6742974', 214, 'Main Road', 'CLAREMONT', 7740, NULL, 'Western Cape', 'Core 3 - Cape', NULL, '01A', 'BP Express', 'Shop 0 - 90 m2', '--', '--', 'BP Superwash', 'NED')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Centurio', 'Rtl Sales Ops-Gauteng North', 'Makpela, Jacqueline', -25.86677, 28.19507, 'Toerien, Anton (MR A)', '012 665 0093', 5, 'Bloukrans Street', 'HIGHVELD EXT 1', 46, 5, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 137 - 200 m2', 'WBC', '--', 'BP Superwash', 'STD/NED')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Centurion', 'Rtl Sales Ops-Gauteng North', 'Makpela, Jacqueline', -25.86677, 28.19507, 'Toerien, Anton (MR A)', '012 665 0093', 5, 'Bloukrans Street', 'HIGHVELD EXT 1', 46, 5, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 137 - 200 m2', 'WBC', '--', 'BP Superwash', 'STD/NED')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Charles Street', 'Rtl Sales Ops-Gauteng North', 'Ledwaba, Emma', -25.774502, 28.267903, 'Rayne, Mike (MR M)', '012 4608654', NULL, 'cnr Charles & Atterbury Streets', 'PRETORIA', 28, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 137 - 200 m2', 'WBC', '--', '--', 'FNB')");
 
@@ -5487,7 +5005,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Elardus Park', 'Rtl Sales Ops-Gauteng North', 'Ledwaba, Emma', -25.826841, 28.260168, 'Maarten, Jasper (MR J)', '012 3454812', 849, 'Barnard Street', 'ELARDUS PARK', 153, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', '--', '--', '--', '--', 'STD')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Eldo Gle', 'Rtl Sales Ops-Gauteng North', 'Makpela, Jacqueline', -25.834149, 28.137353, 'Snyman, Werner (MR W)', '012 658 5730', NULL, 'Cnr Willem Botha & K103 (Hans Stry)', 'ELDORAIGNE, CENTURIO', 157, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', '--', 'WBC', '--', 'BP Superwash', 'STD')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Eldo Gle', 'Rtl Sales Ops-Gauteng North', 'Makpela, Jacqueline', -25.834149, 28.137353, 'Snyman, Werner (MR W)', '012 658 5730', NULL, 'Cnr Willem Botha & K103 (Hans Stry)', 'ELDORAIGNE, CENTURION', 157, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', '--', 'WBC', '--', 'BP Superwash', 'STD')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Eldorado Park 2', 'Rtl Sales Ops-Gauteng South', 'Sekthe, Lorraine', -26.289229, 27.888064, 'Foster, George (MR G)', '011 945 6064', NULL, 'cnr Main & Circle Roads Extention 5', 'ELDORADO PARK', 1811, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 137 - 200 m2', '--', '--', '--', '--')");
 
@@ -5539,7 +5057,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Hyper', 'Rtl Sales Ops-Gauteng South', 'Rakhuba, Kagiso', -26.20788, 28.24972, 'Patel, Pradip (MR P)', '082 466 3140', 2, 'CRN CASON AND RIETFONTEIN ROAD', 'BOKSBURG NORTH', 1502, 2, 'Gauteng', 'Core 1 - Gauteng', 'Shopping Centre - Loc', '09C', '--', 'Kiosk / Non-Express', '--', '--', '--', '--')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Jean Avenue', 'Rtl Sales Ops-Gauteng North', 'Makpela, Jacqueline', -25.840396, 28.187343, 'Harmse, Hennie (MR H)', '012 6646294', NULL, 'cnr Rabie & Jean Avenue', 'CENTURIO', 46, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 137 - 200 m2', 'WBC', 'Wimpy', 'BP Superwash', 'ABSA')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Jean Avenue', 'Rtl Sales Ops-Gauteng North', 'Makpela, Jacqueline', -25.840396, 28.187343, 'Harmse, Hennie (MR H)', '012 6646294', NULL, 'cnr Rabie & Jean Avenue', 'CENTURION', 46, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 137 - 200 m2', 'WBC', 'Wimpy', 'BP Superwash', 'ABSA')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Jozini', 'Rtl Sales Ops-Durba', 'vender, Devrani', -27.46806, 32.06419, 'Wilhelm, Willemse (MR W)', '035 572 1204', NULL, 'Main Road', 'JOZINI', 3969, NULL, 'KwaZulu Natal', 'Core 4 - The Rest', 'Rural Road', '57A', '--', '--', '--', '--', '--', 'FNB')");
 
@@ -5565,7 +5083,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Leeuwpoort', 'Rtl Sales Ops-Gauteng South', 'Rakhuba, Kagiso', -26.224094, 28.259558, 'De Wit, Adriana (MRS A)', '011 4635531', 150, 'Leeupoort Street', 'BOKSBURG', 1511, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', 'Kiosk / Non-Express', '--', '--', '--', '--')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Letchworth', 'Rtl Sales Ops-Cape Tow', 'Engelbrecht, Sharlene', -33.86905, 18.54611, 'Pritchard, Butch (MR B)', '021 558 8510/20', NULL, 'Letchworth Drive', 'EDGEMEAD', 7441, NULL, 'Western Cape', 'Core 3 - Cape', NULL, '01A', 'BP Express', 'Shop 201 - 399 m2', 'WBC', '--', 'BP Superwash', 'NED')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Letchworth', 'Rtl Sales Ops-Cape Tow', 'Engelbrecht, Sharlene', -33.86905, 18.54611, 'Pritchard, Butch (MR B)', '0215588510  0215588520', NULL, 'Letchworth Drive', 'EDGEMEAD', 7441, NULL, 'Western Cape', 'Core 3 - Cape', NULL, '01A', 'BP Express', 'Shop 201 - 399 m2', 'WBC', '--', 'BP Superwash', 'NED')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Linden Park', 'Rtl Sales Ops-Gauteng South', 'Ntuli, Zanele', -26.417402, 28.467482, 'Van Heerden, Ronnie (MR R)', '011 888 8915', NULL, 'Cnr Bramfischer Drive & 1st Ave', 'LINDE', 2123, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 91 - 136 m2', 'WBC', '--', 'BP Superwash', 'ABSA')");
 
@@ -5763,7 +5281,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Zambezi', 'Rtl Sales Ops-Gauteng North', 'Moshoeshoe, Pinky', -25.67897, 28.25395, 'Prinsloo, Peter (MR P)', '012 548 5387', NULL, 'Zambezi Drive', 'MONTANA PARK', 1, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 91 - 136 m2', 'WBC', '--', '--', 'NED')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Zeerust', 'Rtl Sales Ops-Gauteng South', 'Moopeloa, Lucky', -25.54239, 26.10714, 'de Paiva, Lucian (MR L)', '018 642 2015/6', NULL, 'cnr Kerk & Russel Streets', 'ZEERUST', 2865, NULL, 'North West', 'Core 4 - The Rest', NULL, '10C', '--', '--', '--', '--', '--', '--')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('BP Zeerust', 'Rtl Sales Ops-Gauteng South', 'Moopeloa, Lucky', -25.54239, 26.10714, 'de Paiva, Lucian (MR L)', '018 642 2015  018 642 2016', NULL, 'cnr Kerk & Russel Streets', 'ZEERUST', 2865, NULL, 'North West', 'Core 4 - The Rest', NULL, '10C', '--', '--', '--', '--', '--', '--')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Braairock Cafe & Filling Sta', 'Rtl Sales Ops-Gauteng South', 'Mthembu, Baldwi', -28.27492, 29.13216, 'Kuun, Johan (MR J)', '058 6232178', 100, 'Meckechnie Street', 'HARRISMITH', 9880, NULL, 'Free State', 'Core 4 - The Rest', NULL, '06C', '--', '--', '--', '--', '--', '--')");
 
@@ -5915,7 +5433,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Grayston Drive', 'Rtl Sales Ops-Gauteng North', 'Coxon, Joh', -26.097716, 28.05954, 'Joselowsky, Solly (MR S)', '011 884 7099', 119, 'Grayston Drive & North Roads', 'SANDOWNS', 2010, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 137 - 200 m2', 'WBC', 'KFC', '--', 'STD')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Grobler''s Service Station', 'Rtl Sales Ops-Gauteng South', 'Bottoman, Nolwazi', -26.26047, 28.12048, 'Grobler, Dirk (MR D)', '011 724 3013/20', 1, 'Voortrekker Street & Glen Albyn Str', 'ALBERTO', 1450, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', '--', '--', '--', '--', '--')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Grobler''s Service Station', 'Rtl Sales Ops-Gauteng South', 'Bottoman, Nolwazi', -26.26047, 28.12048, 'Grobler, Dirk (MR D)', '0117243013  0117243020', 1, 'Voortrekker Street & Glen Albyn Str', 'ALBERTO', 1450, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', '--', '--', '--', '--', '--')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Grove Auto City', 'Rtl Sales Ops-Gauteng South', 'Ntuli, Zanele', -26.1703, 28.07324, 'Seedat, Moosa (MR M)', '011 483 1002', NULL, 'Louis Botha Avenue', 'ORANGE GROVE', 2001, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', 'BP Express', 'Shop 91 - 136 m2', '--', '--', '--', 'FNB')");
 
@@ -6005,7 +5523,7 @@ db.transaction(function (tx) {
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Kruin Motors', 'Rtl Sales Ops-Gauteng North', 'Mnqeta, Zintle', -26.15995, 27.8699, 'Maduwa, Daniel (MR D)', '011 766 1167', NULL, 'Cnr Hooft & Mooi Streets', 'ROODEPOORT', 1725, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', '--', '--', '--', '--', '--')");
 
-    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Kwikfit Bredasdorp', 'Rtl Sales Ops-Cape Tow', 'Tomose, Chris', -34.52981, 20.04659, 'Lesch, Anton (MR A)', '028 4251160/1/2', 72, 'Kerkstraat', 'BREDASDORP', 7280, NULL, 'Western Cape', 'Core 4 - The Rest', NULL, '06A', '--', '--', '--', '--', '--', '--')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Kwikfit Bredasdorp', 'Rtl Sales Ops-Cape Tow', 'Tomose, Chris', -34.52981, 20.04659, 'Lesch, Anton (MR A)', '028 4251160  028 4251161  028 4251162', 72, 'Kerkstraat', 'BREDASDORP', 7280, NULL, 'Western Cape', 'Core 4 - The Rest', NULL, '06A', '--', '--', '--', '--', '--', '--')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Kya Sand Service Station', 'Rtl Sales Ops-Gauteng North', 'Mnqeta, Zintle', -26.02052, 27.94885, 'Mansingh, Sudhirsing (MR R M)', '011 7082344', NULL, 'Cnr Bernie & River Road', 'KYA SANDS', 2001, NULL, 'Gauteng', 'Core 1 - Gauteng', NULL, '09C', '--', '--', '--', '--', '--', 'ABSA')");
 
@@ -6038,8 +5556,10 @@ db.transaction(function (tx) {
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Lorraine Motors', 'Rtl Sales Ops-Cape Tow', 'Joubert, Bradley', -33.9659, 25.50925, 'Easton, Barry (MR B)', '041 367 2319', 136, 'Luneville Road', 'LORRAINE', 6070, 136, 'Eastern Cape', 'Core 4 - The Rest', NULL, '01A', '--', '--', '--', '--', '--', '--')");
 
     tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Loskop Vallei Vulstasie', 'Rtl Sales Ops-Gauteng North', 'Ledwaba, Emma', -25.16441, 29.39499, 'Jardin, Johnnie (MR J)', '013 2625565', NULL, 'Cnr Hereford & Van Riebeeck Street', 'GROBLERSDAL', 450, NULL, 'Mpumalanga', 'Core 4 - The Rest', NULL, '10C', '--', '--', '--', '--', '--', '--')");
-
-    document.getElementById('view-loadingpoi').style.display = "none";
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Loskop Vallei Vulstasie', 'Rtl Sales Ops-Gauteng North', 'Ledwaba, Emma', 12.3323016, 76.6393292, 'Jardin, Johnnie (MR J)', '013 2625565', NULL, 'Cnr Hereford & Van Riebeeck Street', 'GROBLERSDAL', 450, NULL, 'Mpumalanga', 'Core 4 - The Rest', NULL, '10C', '--', '--', '--', '--', '--', '--')");
+    tx.executeSql("INSERT INTO FuelStation (SiteName, SalesAreaName, SalesManager, Latitude, Longitude, DealerName, Telno, StreetNo, StreetName, Suburb, PostCode, AddressLine1, ProvinceName, CoreArea, LocationType, PricingZone, ExpressShop, ShopSize, WildBean, QSR, CarWash, ATM) VALUES ('Loskop Vallei Vulstasie', 'Rtl Sales Ops-Gauteng North', 'Ledwaba, Emma', 12.3323016, 76.6393292, 'Jardin, Johnnie (MR J)', '013 2625565', NULL, 'Cnr Hereford & Van Riebeeck Street', 'GROBLERSDAL', 450, NULL, 'Mpumalanga', 'Core 4 - The Rest', NULL, '10C', '--', '--', '--', '--', '--', '--')");
+ 
+    
     //FUEL STATION END
 
 });

@@ -8,10 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable = no"/>
 
 
-<!--<link href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" rel="stylesheet" />
-  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-<script src="js/common.js"></script>-->
 
  <link rel="stylesheet" href="js/jquery.mobile-1.2.0.css" />
     <link href="css/mycss.css" rel="stylesheet" type="text/css" />
@@ -36,18 +32,19 @@ NativeBridge.call("callbackfun", [0,0,1]);
 </script>
 
 </head>
-<body style="background-color:black">
+<body style="background-color:white! important">
 
-<div data-role="page" id="AboutAA">
+<div data-role="page" id="AboutAA" class="BodyBackground">
    <div data-role="header" data-position="fixed">
       
-   <table class="HeaderTable" width="100%" >
+   <table class="HeaderTable" width="100%" style="padding:0px; margin: 0px;">
             <tr class="HeaderTr">
-                <td width="15%" style="text-align:center!important;" onclick="gobackPage()"> 
-               
+                <td width="15%" style="text-align:center!important;" onclick="window.jsinterface.getAbtString();"> 
+                
+                <img src="images/2left-arrow.png" alt="" />
                 </td>
                 <td  width="70%" style="text-align:center!important;">
-                 About AA Rescue service
+                 About FNB Road Assist
                 </td>
                  <td width="15%" style="text-align:left!important;">
                <!-- <img src="images/3Cancel.png" alt="" onclick="goindexPage()"/>-->
@@ -60,24 +57,18 @@ NativeBridge.call("callbackfun", [0,0,1]);
     <table class="ContentTable" cellspacing="0" cellpadding="0">
          <tr>
             
-             <td class="tdcenterspace">
-               <p class="paraAboutAA">AA Rescue Service is a suite of mobile phone applications designed to give you critical help on the road. The suite currently comprises:</p>
+             <p class="paraAboutAA"><b style="color:#009999 !important;">FNB Road Assist Service </b>is a suite of mobile phone applications designed to give you critical help on the road. With this app you'll get:</p>
              <p class="paraAboutAA">
-<span class="paraAboutAAbold">AA Rescue:<span> A roadside emergency alert button that,  as registered user, sends your name, AA Membership number where applicable, vehicle and location details to the AA Emergency Call Centre to provide you with necessary roadside assistance and medical evacuation.  As an AA Member, you will get instant access to your Membership benefits, and if you are not an AA Member we will provide emergency assistance at market related rates.
+<span class="paraAboutAAbold"><b style="color:#009999 !important;">FNB Road Assist: </b></span>  A roadside emergency alert button that, as registered user, sends your name, vehicle and location details to the AA's Emergency Call Centre to provide you with necessary roadside assistance and medical evacuation.  You'll get instant access to your AA Emergency Roadside Assistance benefit entitlements.
 
              </p>
 <p class="paraAboutAA">
-<span class="paraAboutAAbold">AA Accident Assist:<span>
-his mobile application provides invaluable assistance at the scene of an accident, guiding you through the accident process, and recording all the information, photos, recordings and videos you will need for an insurance claim, or for later legal action, so that nothing is forgotten. Your incident will be saved to your website profile, so you can update the information at any time... and send the details directly to your insurer.
+<span class="paraAboutAAbold"><b style="color:#009999 !important;">FNB Road Assist's Accident Service:</b></span>
+This mobile application provides invaluable assistance at the scene of an accident, guiding you through the accident process, and recording all the information, photos, recordings and videos you'll need for an insurance claim, or for later legal action, so that nothing is forgotten. Your incident will be saved to your website profile, so you can Update the information at any time...and send the details directly to your insurer.
 
 </p>
-<p class="paraAboutAA">
-Do not find yourself in a critical situation without the expert help and guidance you need get the power of the AA in your pocket with the AA Rescue Service app suite.  Remember, anyone can register and download the app, so make sure your friends and family are registered too, at <a href="http://www.aaaccident.co.za" target="_blank">www.aaaccident.co.za.</a>
+<p class="paraAboutAA"><span class="paraAboutAAbold"><b style="color:#009999 !important;">Points of Interest: </b></span>This feature helps you to find what you're looking for in an unfamiliar area. Whether it is the closest hospital in an emergency, accommodation for an overnight stay or even the nearest fuel station...this feature will locate it for you quickly and easily.</p>
 
-</p>
-<p class="paraAboutAA">
-If you would like to become an AA Member to get all the help you need in a roadside emergency, visit <a href="http://www.aa.co.za" target="_blank"> www.aa.co.za </a> or call us on 0861 000 234, weekdays between 8am and 5pm.
-</p>
 
              </td>
              
