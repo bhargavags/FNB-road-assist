@@ -57,9 +57,10 @@ body,p,div,ul,li,table,td,tr,textarea{
 .ui-bar-a 
 {
 	border-top:0px!important;
-	border-bottom:1px solid white!important;
+	border-bottom:1px solid teal!important;
 	border-left:0px!important;
 	border-right:0px!important;
+    color:teal;
 }
 
 .leftdiv
