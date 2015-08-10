@@ -905,6 +905,13 @@ text-shadow: none!important;
 }
 .BodyBackground
 {
+     background-color:white!important;
+  /*  background-color:white!important;*/
+   /* max-height:100%;*/
+}
+
+.BodyBackgroundgrey
+{
      background-color:#eaeaea!important;
   /*  background-color:white!important;*/
    /* max-height:100%;*/
