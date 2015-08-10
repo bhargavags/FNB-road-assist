@@ -238,6 +238,23 @@ border:none!important;
      float:right!important;
 }
 /***AA **/
+
+/* new added class to give text color to wht to do text*/
+.paraAboutwhattodo
+{
+font-family:'FNB Sans'!important;
+/*color: #009999!important;*/
+color: #009999!important;
+
+font-size: 14px!important;
+text-align:justify!important;
+line-height:150%!important;
+text-shadow:none!important;
+/*padding:20px!important;*/
+
+
+}
+
 .paraAboutAA
 {
 font-family:'FNB Sans'!important;
@@ -252,6 +269,8 @@ text-shadow:none!important;
 
 
 }
+
+
 .paraAboutAABold
 {
 font-family:'FNB Sans'!important;
