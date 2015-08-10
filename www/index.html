@@ -62,14 +62,21 @@ FNB Sans
 	text-shadow: none !important;
 }
 
-.listDataCall {
-	font-family:arial!important;
-	font-size: 14px !important;
-	background-color: #ffffff !important;
-	border-bottom: 1px solid teal !important;
-	
-	
+    .listDataCall {
+        font-family: arial !important;
+        font-size: 14px !important;
+        background-color: #ffffff !important;
+        border-bottom: 1px solid teal !important;
+    }
+	#header {
+    background-color:yellow;
+    color:black;
+    text-align:center;
+    padding:5px;
+    float:right;
 }
+	
+
 </style>
 <script type="text/javascript">
 var Locphotos = [];
@@ -1219,23 +1226,23 @@ listDataCall
 		<div data-role="content" style="padding: 0px !important">
 			<div class="listDataCall" onclick="gotoWhatTodoPage()">
 
-				<div style="padding: 20px; color: black">What To Do</div>
+				<div style="padding: 20px; color: teal">What To Do</div>
 			</div>
 			<div class="listDataCall" onclick="gotoaccidentReportPage()">
-				<div style="padding: 20px; color: black; float:initial;">Report An Accident</div>
+				<div style="padding: 20px; color: teal; float:initial;">Report An Accident</div>
 
 			</div>
 			<div class="listDataCall">
 
 				<a class="Assist" href="tel:10111"
 					style="text-decoration: none; color: White">
-					<div style="padding: 20px; color: black">Call Police</div> </a>
+					<div style="padding: 20px; color: teal">Call Police</div> </a>
 			</div>
 			<div class="listDataCall">
 
 				<!-- <a href="tel:0861000234" style="text-decoration: none; color: White;">CALL </a>-->
 				<a href="tel:0860706050"
-					style="text-decoration: none; color: black;">
+					style="text-decoration: none; color: teal;">
 					<div style="padding: 20px">Call AA</div> </a>
 
 			</div>
@@ -1319,21 +1326,25 @@ listDataCall
 					<div class="DateTime">Date</div>
 					<div class="DateTime">Time</div>
 				</div>
-				<div class="dateDiv" style="width: 50% !important">
-
-					<div class="innerFields">
-						<div class="leftdivReport1">
-							<input type="text" class="inputImg1" id="txtdatepicker" disabled />
-							<!--<input type='text' id='datepick' onclick="Dateshow()" />-->
 
 
-						</div>
-						<div class="leftdivReport2">
-							<img src="images/14Date.png" id="btndatepicker"
-								click="getDatePicker()" alt="" />
-						</div>
-					</div>
-				</div>
+                <div id="header" align="center" width:60px; height 20px>
+                    <div class="dateDiv" style="width: 50% !important">
+
+                        <div class="innerFields">
+                            <div class="leftdivReport1">
+                                <input type="text" class="inputImg1" id="txtdatepicker" disabled />
+                                <!--<input type='text' id='datepick' onclick="Dateshow()" />-->
+
+
+                            </div>
+                        </div>
+                        <div class="leftdivReport2">
+                            <img src="images/14Date.png" id="btndatepicker"
+                                 click="getDatePicker()" alt="" />
+                        </div>
+                    </div>
+                </div>
 				<div class="timeDiv" style="width: 50% !important">
 
 					<div class="innerFields">
