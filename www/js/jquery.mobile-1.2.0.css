@@ -1155,10 +1155,13 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-footer .ui-title { margin: .6em 15px .8em; }
 /*content area*/
 /*.ui-contenttext { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px;}*/
-.ui-content { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px;margin-top:50px!important;
-    text-align:center!important; }
+
 .ui-contenttext { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px;
     }
+
+.ui-content { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px;margin-top:50px!important;
+    text-align:center!important; }
+
 /* icons sizing */
 .ui-icon { width: 18px; height: 18px; }
 /* non-js content hiding */
