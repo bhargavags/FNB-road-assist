@@ -464,7 +464,7 @@ margin-bottom: 1%!important;
 .inputFields
 {
     
-    width:75%!important;
+    width:100%!important;
    
     
 }
@@ -891,7 +891,7 @@ padding-top:3%;
 
 .PhotoLocationHeading
 {
-width:100%;
+ /*width:100%;*/
 color: #009999!important;
 font-family: 'FNB Sans'!important;
 font-size: 14px!important;
@@ -900,7 +900,7 @@ margin-top:10px!important;
 font-weight:normal;
 margin-bottom:10px!important;
 /* newly added*/
-text-align:left!important;
+ /*text-align:left!important;*/
 /*border-bottom:1px solid #009999;*/
 
 }
