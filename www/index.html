@@ -1326,40 +1326,49 @@ listDataCall
 				<div style="width: 100% !important">
 					<div class="DateTime">Date</div>
 					<div class="DateTime">Time</div>
+                    <!-- newly added-->
 				</div>
+                <div style="width: 100% !important">
+                    <div class="DateTime">Time</div>
+                </div>
+                <!-- newly added-->
+                    <div id="header" align="center" width:60px; height 20px>
+                        <div class="dateDiv" style="width: 50% !important">
+
+                            <div class="innerFields">
+                                <div class="leftdivReport1">
+                                    <input type="text" class="inputImg1" id="txtdatepicker" disabled />
+                                    <!--<input type='text' id='datepick' onclick="Dateshow()" />-->
 
 
-                <div id="header" align="center" width:60px; height 20px>
-                    <div class="dateDiv" style="width: 50% !important">
+                                </div>
+                            </div>
+                            <!-- newly added-->
+                            <div class="innerFields">
+                                <!-- newly added-->
+                                <div class="leftdivReport2">
+                                    <img src="images/14Date.png" id="btndatepicker"
+                                         click="getDatePicker()" alt="" />
+                                    <!-- newly added-->
+                                </div>
+                                <!-- newly added-->
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeDiv" style="width: 50% !important">
 
                         <div class="innerFields">
                             <div class="leftdivReport1">
-                                <input type="text" class="inputImg1" id="txtdatepicker" disabled />
-                                <!--<input type='text' id='datepick' onclick="Dateshow()" />-->
-
+                                <input type="text" class="inputImg1" id="txttimepicker" disabled />
+                                <!--  <input type="text" class="txttimepicker" />-->
 
                             </div>
-                        </div>
-                        <div class="leftdivReport2">
-                            <img src="images/14Date.png" id="btndatepicker"
-                                 click="getDatePicker()" alt="" />
+                            <div class="leftdivReport2">
+                                <img src="images/15Clock.png" alt="" id="btntimepicker" />
+                            </div>
                         </div>
                     </div>
                 </div>
-				<div class="timeDiv" style="width: 50% !important">
-
-					<div class="innerFields">
-						<div class="leftdivReport1">
-							<input type="text" class="inputImg1" id="txttimepicker" disabled />
-							<!--  <input type="text" class="txttimepicker" />-->
-
-						</div>
-						<div class="leftdivReport2">
-							<img src="images/15Clock.png" alt="" id="btntimepicker" />
-						</div>
-					</div>
-				</div>
-			</div>
 
 
 			<div class="fieldname">GPS Location of Incident</div>
@@ -2299,6 +2308,7 @@ listDataCall
              <!----   <div class="headerspan">-->
 
                <!----  <span><font color="blue">Officer Name:</font></span>-->
+            <div class="fieldname">Officer Name</div>
           <div class="inputFields">
                         <input type="text" class="inputText" id="txtidpolicename" placeholder="Enter Officer Name" />
                <!---- <input class="headerspan" type="text" name="fname" placeholder="Enter Officer Name" style="border: none;" size="100" background-color #ffffff;> -->
