@@ -1159,7 +1159,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-contenttext { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px;
     }
 
-.ui-content { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px;margin-top:50px!important;
+.ui-content { border-width: 0; overflow: visible; overflow-x: hidden; /*padding: 15px;*/margin-top:50px!important;
     text-align:center!important; }
 
 /* icons sizing */
