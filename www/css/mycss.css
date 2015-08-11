@@ -255,6 +255,20 @@ text-shadow:none!important;
 
 }
 
+/*newly added header*/
+.headerspan {
+    background-color:white;
+   
+    text-align:left;
+    padding:5px;
+  border-bottom:solid ;
+   border-top: solid ;
+     border-right-style: solid;
+	  border-left-style: solid;
+	  border-color: teal;
+        
+}
+
 .paraAboutAA
 {
 font-family:'FNB Sans'!important;
