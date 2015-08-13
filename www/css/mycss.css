@@ -510,6 +510,7 @@ font-size: 14px!important;
 text-shadow: none!important;
 margin-top: 3%!important;
 margin-bottom:1%!important;
+ margin: auto;
 }
 
 .PartyInsurance
@@ -540,8 +541,9 @@ margin-bottom: 1%!important;
 .inputFieldspolice
 {
     
-    width:80%!important;
+    width:90%!important;
      margin: auto;
+     hieght:100%!important;
   /* border:1px solid #009999;*/ 
     padding: 10px;
     
@@ -560,8 +562,10 @@ text-shadow:none!important;
 height:40px!important;
 border:1px solid #009999;
 padding-left:20%!important;
-background-image:url(images/Mike.png);
-background-position:5% 50%;
+ background-size: 15px 15px;
+ background-repeat: no-repeat;
+background-image:url(../images/greenpointer.png);
+background-position: 5% 10%;
 
 
 }
