@@ -1156,11 +1156,17 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 /*content area*/
 /*.ui-contenttext { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px;}*/
 
-.ui-contenttext { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px;
-    }
-    /* paddin changed to 0 from 15*/
-.ui-content { border-width: 0; overflow: visible; overflow-x: hidden; padding: 0px;margin-top:50px!important;
+.ui-contenttext { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px;  } 
+   
+  /* paddin changed to 0 from 15*/
+.ui-content { border-width: 0; overflow: visible; overflow-x: hidden; padding: 0px;margin-top:0px!important;
     text-align:center!important; }
+
+/* newly added*/
+
+.ui-contenttwo { border-width: 0; overflow: visible; overflow-x: hidden; padding:0px;margin-top:0px!important;
+    text-align:center; }
+
 
 /* icons sizing */
 .ui-icon { width: 18px; height: 18px; }

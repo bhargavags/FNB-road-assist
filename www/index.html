@@ -57,7 +57,8 @@ FNB Sans
 }
 
 .footerfont{
-	color: white !important;
+	/*color: white !important;*/
+    color: teal !important;
 	font-size: 14px !important;
 	text-shadow: none !important;
 }
@@ -1229,13 +1230,13 @@ listDataCall
 
 				<div style="padding: 20px; color: teal">What To Do
                 
-                    <img src="images/line_arrow.png" alt="" width="90px" height="30px" style="position:fixed;right: 9%;" />
+                    <img src="images/line_arrow.png" alt="" width="40px" height="30px" style="position:fixed;right: 9%;" />
                 </div>
 			</div>
 			<div class="listDataCall" onclick="gotoaccidentReportPage()">
 				<div style="padding: 20px; color: teal; float:initial;">Report An Accident
                 
-                    <img src="images/line_arrow.png" alt="" width="90px" height="30px" style="position:fixed;right: 9%;" />
+                    <img src="images/line_arrow.png" alt="" width="40px" height="30px" style="position:fixed;right: 9%;" />
                 </div>
 
 			</div>
@@ -1244,7 +1245,7 @@ listDataCall
 				<a class="Assist" href="tel:10111"
 					style="text-decoration: none; color: teal">
 					<div style="padding: 20px; color: teal">Call Police
-                        <img src="images/line_arrow.png" alt="" width="90px" height="28px" style="position:fixed;right: 9%;" />
+                        <img src="images/line_arrow.png" alt="" width="40px" height="30px" style="position:fixed;right: 9%;" />
                     
                     </div> </a>
 			</div>
@@ -1254,7 +1255,7 @@ listDataCall
 				<a href="tel:0860706050"
 					style="text-decoration: none; color: teal;">
 					<div style="padding: 20px">Call AA
-                        <img src="images/line_arrow.png" alt="" width="90px" height="23px" style="position:fixed;right: 9%;" />
+                        <img src="images/line_arrow.png" alt="" width="40px" height="30px" style="position:fixed;right: 9%;" />
                     
                     </div> </a>
 
@@ -1267,7 +1268,7 @@ listDataCall
 			<table width="100%" cellpadding="0" cellspacing="0">
 				<tr>
 					<td
-						style="background-image: url('images/aabutton.png'); height: 70px; border-bottom: 2px solid black;"
+						style="background-image: url('images/aabutton.png'); height: 70px; border-bottom: 1px solid teal; border-top: 1px solid teal "
 						align="center" colspan="4" onclick="goindexPage()">
 						<div>
 							<img src="images/Caricon.png" alt="" />
@@ -1277,7 +1278,7 @@ listDataCall
 				</tr>
 				<tr>
 					<td
-						style="background-image: url('images/aabutton.png'); height: 90px; border-right: 2px solid black;"
+						style="background-image: url('images/aabutton.png'); height: 90px; border-right: 1px solid teal;"
 						align="center" width="25%"
 						onclick="window.jsinterface.getpoiString();">
 						<div>
@@ -1292,7 +1293,7 @@ listDataCall
                                 <div class="footerfont">Flashlight</div>
                                 </td>-->
 					<td
-						style="background-image: url('images/aabutton.png'); height: 90px; border-right: 2px solid black;"
+						style="background-image: url('images/aabutton.png'); height: 90px; border-right: 1px solid teal;"
 						align="center" width="25%"
 						onclick="window.jsinterface.getSomeString();">
 						<div>
@@ -1304,7 +1305,7 @@ listDataCall
 						style="background-image: url('images/aabutton.png'); height: 70px;"
 						align="center" width="25%" onclick="gotoAboutAAPage();">
 						<div>
-							<img src="images/AAnew.png" alt="" />
+							<img src="images/aa.png" alt="" />
 							<div>
 								<div class="footerfont">About</div>
 					</td>
@@ -1333,20 +1334,59 @@ listDataCall
 
 		</div>
        
+        <!--       
+
+            <div data-role="page" id="FirstPartyPage" class="BodyBackground">
+		<div data-role="header" data-position="fixed">
+			<table class="HeaderTable" width="100%"
+				style="border-bottom: 1px solid white !important;">
+				<tr class="HeaderTr">
+					<td width="15%" style="text-align: center !important;width:10%!important;"
+						onclick="gobackPage()"><img src="images/2left-arrow.png"
+						alt="" />
+					</td>
+					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
+						an Accident</td>
+					<td width="15%" style="text-align: left !important;"><img
+						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+					</td>
+				</tr>
+			</table>
+			<table class="ContentTable" cellspacing="0" cellpadding="0">
+				<tr class="PartyRow">
+					<td class="Party">3rd Party(1)</td>
+				</tr>
+			</table>
+		</div>
+
+        -->
 		<div data-role="content" class="BodyBackground">
   
             <div style="width: 100% !important; display: inline-block;">
-                <div align="left" style="border:1px solid teal" class="Partytwo">
+             <!--   <div align="left" style="border:1px solid teal" class="Partytwo">
                     Accident Date And Location
+                </div>-->
+               
+                <div data-role="header" class="ui-content" >
+
+                    <table class="ContentTable" cellspacing="0" cellpadding="0">
+                        <tr class="PartyRow">
+                            <td class="Party" top=10px;>Accident Date And Location</td>
+                        </tr>
+                    </table>
+
                 </div>
-				<div style="width: 100% !important">
-					<div class="DateTime">Date</div>
-					<div class="DateTime">Time</div>
-				</div> </div>
+                    
+
+                    <div style="width: 100% !important">
+                        <div class="DateTime">Date</div>
+                        <div class="DateTime">Time</div>
+                    </div>
+                </div>
 
 
               <!---  <div id="header" align="center" width:60px; height 20px> -->
-                    <div class="dateDiv" style="width: 50% !important">
+                  <!---   <div class="dateDiv" style="width: 50% !important">
 
                         <div class="innerFields">
                             <div class="leftdivReport1">
@@ -1354,19 +1394,23 @@ listDataCall
                                 <!--<input type='text' id='datepick' onclick="Dateshow()" />-->
 
 
-                            </div>
+                         <!---    </div> -->
                       <!---   </div> -->
-                        <div class="leftdivReport2">
+                       <!---  <div class="leftdivReport2">
                             <img src="images/14Date.png" id="btndatepicker"
                                  click="getDatePicker()" alt="" />
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+
+    
 				<div class="timeDiv" style="width: 50% !important">
 
 					<div class="innerFields">
 						<div class="leftdivReport1">
-							<input type="text" class="inputImg1" id="txttimepicker" disabled />
+
+							<input type="text" class="inputImg1" id="txttimepicker"   disabled />
 							<!--  <input type="text" class="txttimepicker" />-->
 
 						</div>
@@ -1469,48 +1513,62 @@ listDataCall
 				</tr>
 			</table>
 		</div>
-		<div data-role="content">
-            <div align="left" style="border:1px solid teal" class="PhotoLocationHeading">
-                Accident Date And Location
+        <div data-role="content" class="ui-content">
+
+            <div data-role="header" >
+              
+
+                <table class="ContentTable" cellspacing="0" cellpadding="0">
+                    <tr class="PartyRow">
+                        <td class="Party" top=10px;>Location Photo And Video</td>
+                    </tr>
+                </table>
+
             </div>
-			<!--<div class="PhotoLocationHeading">Photo of Location</div>-->
-			<div class="inputFields" id="idAddPhotoImg">
-				<img src="images/Addphoto.png" style="width: 50%;" alt=""
-					onclick="capturePhotoWithFile();" />
-			</div>
-			<div id="idDelImgPhotoImg">
-				<!--<div class="deleteImg">
+
+
+            <!--    <div align="left" style="border:1px solid teal" class="PhotoLocationHeading">
+                 Location Photo And Video
+            </div>-->
+            <!--<div class="PhotoLocationHeading">Photo of Location</div>-->
+
+
+            <div class="inputFields" id="idAddPhotoImg" text-align="center!important;">
+                <img src="images/Addphoto.png" style="width: 50%;" alt=""
+                     onclick="capturePhotoWithFile();" />
+            </div>
+            <div id="idDelImgPhotoImg">
+                <!--<div class="deleteImg">
                 <img src="images/delete.png" alt="" style="width: 100%" /></div>
             <div class="photodiv">
                 <img src="images/5mount-img.png" alt="" style="width: 100%" /></div>-->
-			</div>
-			<div style="margin-top: 10px; display: none;"
-				id="idAddanotherphotoImg">
-				<img src="images/6Addanotherphoto.png" alt="" style="width: 100%"
-					onclick="capturePhotoWithFile();" />
-			</div>
+            </div>
+            <div style="margin-top: 10px; display: none;"
+                 id="idAddanotherphotoImg">
+                <img src="images/6Addanotherphoto.png" alt="" style="width: 100%"
+                     onclick="capturePhotoWithFile();" />
+            </div>
 
-			<div id="idVedioShowdiv" style="display: none"></div>
-			<div style="margin-top: 20px !important;"></div>
-			<div style="display: block;" id="idVediocapturediv">
-				<img src="images/Capture.png" alt="" style="width:50%;"
-					onclick="captureVedio();" />
-			</div>
+            <div id="idVedioShowdiv" style="display: none"></div>
+            <div style="margin-top: 20px !important;"></div>
+            <div style="display: block;" id="idVediocapturediv">
+                <img src="images/Capture.png" alt="" style="width:50%;"
+                     onclick="captureVedio();" />
+            </div>
 
-			<div class="result-block" style="display: none">
-				<div style="color: White">Capture Result:</div>
-				<span id="capture-result" style="color: White"></span><br /> <span
-					id="capture-data"></span><br />
-				<!--<div id="audio-result"  style="color:White">Play Vedio</div>-->
+            <div class="result-block" style="display: none">
+                <div style="color: White">Capture Result:</div>
+                <span id="capture-result" style="color: White"></span><br /> <span id="capture-data"></span><br />
+                <!--<div id="audio-result"  style="color:White">Play Vedio</div>-->
 
-			</div>
+            </div>
 
 
-			<div class="heightBtn">
-				<img src="images/nxt.png" alt="" onclick="gotoDamagePhotoPage()"
-					width="100%" />
-			</div>
-		</div>
+            <div class="heightBtn">
+                <img src="images/nxt.png" alt="" onclick="gotoDamagePhotoPage()"
+                     width="100%" />
+            </div>
+        </div>
 
 
 	</div>
@@ -2290,6 +2348,8 @@ listDataCall
 		</div>
 	</div>
 
+    <!--  police case page   -->
+
 	<div data-role="page" id="policecasePage" class="BodyBackground">
 		<div data-role="header" data-position="fixed">
 			<table class="HeaderTable" width="100%"
@@ -2317,24 +2377,28 @@ listDataCall
 
              <!----   <div class="headerspan">-->
 
-               <!----  <span><font color="blue">Officer Name:</font></span>-->
-            <div class="fieldname">Officer Name</div>
-          <div class="inputFields">
-                        <input type="text" class="inputText" id="txtidpolicename" placeholder="Enter Officer Name" />
-               <!---- <input class="headerspan" type="text" name="fname" placeholder="Enter Officer Name" style="border: none;" size="100" background-color #ffffff;> -->
-                </div>
+             
+                <div class="fieldname">Officer Name</div>
+
+            <div class="inputFieldspolice">
+                <input type="text" class="inputTextpolice" id="txtidpolicename" placeholder="Enter Officer Name" />
+
+            </div>
 
                 <div class="fieldname">Officer Number</div>
-                <div class="inputFields">
-                    <input type="text" class="inputText" id="txtidpolicenumber" placeholder="Enter Officer Number" />
-                </div>
+
+            <div class="inputFieldspolice">
+                <input type="text" class="inputTextpolice" id="txtidpolicenumber" placeholder="Enter Officer Number" />
+            </div>
+
                 <div class="fieldnameAccident">Case Number</div>
-                <div class="inputFields">
-                    <input type="text" class="inputText" id="txtidcasenumber" placeholder="Enter Case Number" />
-                </div>
+
+            <div class="inputFieldspolice">
+                <input type="text" class="inputTextpolice" id="txtidcasenumber" placeholder="Enter Case Number" />
+            </div>
 
                 <div class="heightBtn">
-                    <img src="images/SAVE.png" alt="" onclick="btnSaveAllDetails(sid)" width="50%" />
+                    <img src="images/SAVE.png" alt="" onclick="btnSaveAllDetails(sid)" width="100%" />
                 </div>
 
 
@@ -2342,6 +2406,8 @@ listDataCall
             </div>
 
 	</div>
+
+    <!--  police case page   -->
 
 	<!--
 <div data-role="page" id="HistroyPage">
