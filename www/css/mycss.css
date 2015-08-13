@@ -559,12 +559,12 @@ font-size: 14px!important;
 background-color:white!important;
 font-weight: normal;
 text-shadow:none!important;
-height:40px!important;
+height:60px!important;
 border:1px solid #009999;
 padding-left:20%!important;
  background-size: 15px 15px;
  background-repeat: no-repeat;
-background-image:url(../images/greenpointer.png);
+background-image:url(images/greenpointer.png);
 background-position: 5% 10%;
 
 
@@ -825,6 +825,15 @@ font-size: 14px!important;
 text-shadow: none!important;
 margin-top: 4%!important;
 margin-bottom:3%!important;
+
+
+
+	/*border-top:0px!important;
+	border-bottom:1px solid teal!important;
+	border-left:0px!important;
+	border-right:0px!important;*/
+
+
     
    
 }
@@ -881,6 +890,11 @@ width:40%;
 margin-top: 10px;
 margin-left:20px;
 
+}
+
+.img{
+
+    margin-top:35px;
 }
 
 .Histroyfields
