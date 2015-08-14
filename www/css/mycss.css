@@ -897,10 +897,10 @@ margin-left:20px;
 
    margin-top:5%;
    z-index: 1; 
-  position: fixed;
+  position: absolute;
  
-  width:50%; 
-  height:10%; 
+  width:5%; 
+  height:3%; 
 
   left:-10%; 
 }
