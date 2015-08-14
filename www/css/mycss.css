@@ -895,14 +895,14 @@ margin-left:20px;
 
 .img{
 
-   margin-top:10%;
+   margin-top:13%;
    z-index: 1; 
   position: absolute;
  
   width:50%; 
   height:3%; 
-
-  left:-10%; 
+  position:absolute
+  left:-15%; 
 }
 
 .Histroyfields
