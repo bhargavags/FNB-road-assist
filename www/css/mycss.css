@@ -552,6 +552,29 @@ margin-bottom: 1%!important;
     
 }
 
+/*
+    newly added
+
+*/
+
+.inputFieldspolice1
+{
+    
+    width:45%!important;
+     margin: auto;
+     hieght:50%!important;
+  /* border:1px solid #009999;*/ 
+  border-bottom:1px solid teal;
+  border-top:1px solid teal;
+  border-bottom-left-radius:1px solid teal;
+  border-bottom-right-radius:1px solid teal;
+   
+    
+    
+}
+
+
+
 .inputTextpolice
 {
      width:80%!important;
