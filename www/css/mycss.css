@@ -471,8 +471,8 @@ margin-right: 13px;
 .fieldname
 {
 	
-width:50%;
-float:left;
+width:75%;
+/*float:left;*/
 font-weight:normal;
 color: #009999!important;
 font-family: 'FNB Sans'!important;
