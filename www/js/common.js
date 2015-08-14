@@ -433,7 +433,9 @@ var POname = "";
 var POnumber = "";
 var CaseNumber = "";
 function btnSaveAllDetails(msidn) {
-	//jAlert("test");
+    //jAlert("test");
+
+    alert(document.getElementById("txtidpolicenumber").value)
 	var now = new Date();
 	var year = now.getFullYear();
 	var month = now.getMonth() + 1;
