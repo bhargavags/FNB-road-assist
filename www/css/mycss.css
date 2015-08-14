@@ -844,6 +844,7 @@ float:right;
 margin-top: 3%!important;
 margin-bottom:3%!important;
 }
+
 .HistroyOuter
 {
     width: 100%!important; display: inline-block; 
@@ -894,7 +895,14 @@ margin-left:20px;
 
 .img{
 
-    margin-top:-10px;
+   margin-top:10px;
+   z-index: 1; 
+  position: absolute;
+ 
+  width:100px; 
+  height:100px; 
+
+  left:20px; 
 }
 
 .Histroyfields
