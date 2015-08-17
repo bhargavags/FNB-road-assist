@@ -142,18 +142,18 @@ color: #222 ;
 .Tdclass
 {
 
-    border-top:1px solid teal!important;
-    border-bottom:1px solid teal!important;
-    border-left:1px solid teal!important;
+    border-top:0px solid teal!important;
+    border-bottom: 0px solid teal!important;
+    border-left: 0px solid teal!important;
     border-right:white!important;
 }
 .Thclass
 {
 
-    border-top:1px solid teal!important;
-    border-bottom:1px solid teal!important;
+    border-top:0.5% solid teal!important;
+    border-bottom:0.5% solid teal!important;
     border-left:white!important ;
-    border-right:1px solid teal!important;
+    border-right:0.5% solid teal!important;
 }
 /* start */
 .HeaderTable
@@ -173,7 +173,9 @@ color: #222 ;
    background-color: #009999;
      margin: auto!important;
     margin-top:5%!important;
-
+   
+  
+     
 }
 
 
