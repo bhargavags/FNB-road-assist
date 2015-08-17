@@ -1318,59 +1318,64 @@ listDataCall
 	</div>
 
 
-	<div data-role="page" id="accidentReportPage" class="BodyBackground">
-		<div data-role="header" data-position="fixed">
+    <div data-role="page" id="accidentReportPage" class="BodyBackground">
+        <div data-role="header" data-position="fixed">
 
-			<table class="HeaderTable" width="100%">
-				<tr class="HeaderTr">
-					<td width="15%" style="padding-top:6px;padding-left: 25px; text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
-					</td>
-					<td width="70%" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial;">Report
-						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
-					</td>
-				</tr>
-			</table>
+            <table class="HeaderTable" width="100%">
+                <tr class="HeaderTr">
+                    <td width="15%" style="padding-top:6px;padding-left: 25px; text-align: center !important;width:10%!important;"
+                        onclick="gobackPage()">
+                        <img src="images/2left-arrow.png"
+                             alt="" />
+                    </td>
+                    <td width="70%" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial;">
+                        Report
+                        an Accident
+                    </td>
+                    <td width="15%" style="text-align: left !important;">
+                        <img src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+                    </td>
+                </tr>
+            </table>
 
-		</div>
-       
-        <!--       
+        </div>
+
+        <!--
 
             <div data-role="page" id="FirstPartyPage" class="BodyBackground">
-		<div data-role="header" data-position="fixed">
-			<table class="HeaderTable" width="100%"
-				style="border-bottom: 1px solid white !important;">
-				<tr class="HeaderTr">
-					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
-					</td>
-					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
-						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
-					</td>
-				</tr>
-			</table>
-			<table class="ContentTable" cellspacing="0" cellpadding="0">
-				<tr class="PartyRow">
-					<td class="Party">3rd Party(1)</td>
-				</tr>
-			</table>
-		</div>
+        <div data-role="header" data-position="fixed">
+            <table class="HeaderTable" width="100%"
+                style="border-bottom: 1px solid white !important;">
+                <tr class="HeaderTr">
+                    <td width="15%" style="text-align: center !important;width:10%!important;"
+                        onclick="gobackPage()"><img src="images/2left-arrow.png"
+                        alt="" />
+                    </td>
+                    <td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
+                        an Accident</td>
+                    <td width="15%" style="text-align: left !important;"><img
+                        src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+                    </td>
+                </tr>
+            </table>
+            <table class="ContentTable" cellspacing="0" cellpadding="0">
+                <tr class="PartyRow">
+                    <td class="Party">3rd Party(1)</td>
+                </tr>
+            </table>
+        </div>
 
         -->
-		<div data-role="content" class="BodyBackground">
-  
+        <!--   Accident date and Location page        -->
+
+        <div data-role="content" class="BodyBackground">
+
             <div style="width: 100% !important; display: inline-block;">
-             <!--   <div align="left" style="border:1px solid teal" class="Partytwo">
+                <!--   <div align="left" style="border:1px solid teal" class="Partytwo">
                     Accident Date And Location
                 </div>-->
-               
-                <div data-role="header" class="ui-content" >
+
+                <div data-role="header" class="ui-content">
 
                     <table class="ContentTable" cellspacing="0" cellpadding="0">
                         <tr class="PartyRow">
@@ -1379,63 +1384,148 @@ listDataCall
                     </table>
 
                 </div>
-                    
-
-                    <div style="width: 100% !important">
-                        <div class="DateTime">Date</div>
-                        <div class="DateTime">Time</div>
-                    </div>
-                </div>
 
 
-              <!---  <div id="header" align="center" width:60px; height 20px> -->
-                  <!---   <div class="dateDiv" style="width: 50% !important">
-
-                        <div class="innerFields">
-                            <div class="leftdivReport1">
-                                <input type="text" class="inputImg1" id="txtdatepicker" disabled />
-                                <!--<input type='text' id='datepick' onclick="Dateshow()" />-->
 
 
-                         <!---    </div> -->
-                      <!---   </div> -->
-                       <!---  <div class="leftdivReport2">
+                <table class="HeaderTabledate" width="100%">
+                    <tr class="HeaderTr">
+
+                        <td width="50%" style="padding-top:6px;padding-left: 25px; text-align: center !important; background-color:#ffffff">
+
+                            <font color="teal" style="position:absolute;left:0px;">Date:</font>
+                        </td>
+
+                        <td width="50%" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial; background-color:white">
+                            <input type="text" class="inputImg1" id="txtdatepicker" disabled />
+
                             <img src="images/14Date.png" id="btndatepicker"
                                  click="getDatePicker()" alt="" />
-                        </div>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+
+
+
+            <!---  <div id="header" align="center" width:60px; height 20px> -->
+            <!---   <div class="dateDiv" style="width: 50% !important">
+
+              <div class="innerFields">
+                  <div class="leftdivReport1">
+                      <input type="text" class="inputImg1" id="txtdatepicker" disabled />
+                      <!--<input type='text' id='datepick' onclick="Dateshow()" />-->
+            <!---    </div> -->
+            <!---   </div> -->
+            <!---  <div class="leftdivReport2">
+                        <img src="images/14Date.png" id="btndatepicker"
+                             click="getDatePicker()" alt="" />
                     </div>
-                </div> -->
+                </div>
+            </div> -->
 
 
+            <table class="HeaderTabledate" width="100%">
+                <tr class="HeaderTr">
+
+                    <td width="50%" class="Tdclass" style="padding-top:6px;padding-left: 25px; text-align: center !important; background-color:#ffffff">
+
+                        <font color="teal" style="position:absolute;left:0px;">Time:</font>
+                    </td>
+
+                    <td width="50%" class="Thclass" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial; background-color:white">
+                        <input type="text" class="inputImg1" id="txttimepicker" disabled />
+
+                        <img src="images/15Clock.png" alt="" id="btntimepicker" />
+
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+
+
+
+
+
+
+
+        <!--<div class="timeDiv" style="width: 50% !important">
+
+            <div class="innerFields">
+                <div class="leftdivReport1">
+
+                    <input type="text" class="inputImg1" id="txttimepicker"   disabled />
+                    <!--  <input type="text" class="txttimepicker" />-->
+        <!-- </div>
+                    <div class="leftdivReport2">
+                        <img src="images/15Clock.png" alt="" id="btntimepicker" />
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <table class="HeaderTabledate" width="100%">
+            <tr class="HeaderTr">
+
+                <td width="10%" class="Tdclass" style="padding-top:6px;padding-left: 25px; text-align: center !important; background-color:#ffffff" ;>
+
+                    <font color="teal" style="position:absolute;left:0px;">GPS Location of Incident:</font>
+                </td>
+
+                <td width="50%" class="Thclass" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial; background-color:white;">
+                    <input type="text" id="txtidGPSIncident" class="inputTextnew"
+                           readonly />
+                </td>
+            </tr>
+        </table>
+
+
+
+        <table class="HeaderTabledate" width="100%">
+            <tr class="HeaderTr">
+
+                <td width="10%" class="Tdclass" style="padding-top:6px;padding-left: 25px; text-align: center !important; background-color:#ffffff">
+
+                    <font color="teal" style="position:absolute;left:0px;">Description of Location:</font>
+                </td>
+
+                <td width="50%" class="Thclass" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial; background-color:white; border_right:white">
+                    <textarea rows="4" cols="150" class="inputText" id="taidLocDesc"></textarea>
+                </td>
+            </tr>
+        </table>
     
-				<div class="timeDiv" style="width: 50% !important">
-
-					<div class="innerFields">
-						<div class="leftdivReport1">
-
-							<input type="text" class="inputImg1" id="txttimepicker"   disabled />
-							<!--  <input type="text" class="txttimepicker" />-->
-
-						</div>
-						<div class="leftdivReport2">
-							<img src="images/15Clock.png" alt="" id="btntimepicker" />
-						</div>
-					</div>
-				</div>
-			</div>
 
 
-			<div class="fieldname">GPS Location of Incident</div>
+
+
+
+
+
+
+		<!--	<div class="fieldname">GPS Location of Incident</div>
 			<div class="inputFields">
 				<input type="text" id="txtidGPSIncident" class="inputTextnew"
 					readonly />
 				<!--<p style="background-color:Blue" id="txtidGPSIncidentPara"></p>-->
-			</div>
+		<!--	</div>-->
 
-			<div class="fieldnameAccident">Description of Location</div>
+
+
+
+
+
+			<!--<div class="fieldnameAccident">Description of Location</div>
 			<div class="inputFields">
 				<textarea rows="4" cols="150" class="inputText" id="taidLocDesc"></textarea>
-			</div>
+			</div>-->
+
 
 			<div class="heightBtn">
                 <img src="images/nxt.png" alt=""
@@ -1444,7 +1534,9 @@ listDataCall
 			</div>
 		</div>
 
-	</div>
+	
+
+    <!-- End  of Accident date and Location page        -->
 
 
 
@@ -1592,8 +1684,31 @@ listDataCall
 				</tr>
 			</table>
 		</div>
+
+
 		<div data-role="content">
-			<div class="PhotoLocationHeading">Photo of Damage</div>
+
+       
+
+
+
+
+
+
+            <table class="ContentTable" cellspacing="0" cellpadding="0">
+                <tr class="PartyRow">
+                    <td class="Party">Photo of Damages</td>
+                </tr>
+            </table>
+          
+
+
+
+
+
+
+		<!--	<div class="PhotoLocationHeading">Photo of Damage</div> -->
+
 			<div class="inputFields" id="idAddDamagePhotoImg">
 				<img src="images/Addphoto.png" style="width: 50% ;hieght:15%" alt=""
 					onclick="capturePhotoWithFiledamagePhoto();" />
