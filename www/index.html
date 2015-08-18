@@ -57,16 +57,17 @@ FNB Sans
 }
 
 .footerfont {
-	color: white !important;
+	color: Teal !important;
 	font-size: 14px !important;
 	text-shadow: none !important;
+  
 }
 
 .listDataCall {
 	font-family:arial!important;
 	font-size: 14px !important;
 	background-color: #ffffff !important;
-	border-bottom: 1px solid white !important;
+	border-bottom: 1px solid Teal !important;
 	
 	
 }
@@ -1218,19 +1219,26 @@ var TimeHistroy = $('#txttimepicker').val();
 		<div data-role="content" style="padding: 0px !important">
 			<div class="listDataCall" onclick="gotoWhatTodoPage()">
 
-				<div style="padding: 20px; color: teal">What To Do</div>
-                            <img src="images/line_arrow.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;" />
+				<div style="padding: 20px; color: teal">What To Do
+                    <img src="images/line_arrow.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;" />
+                </div>
+                           
 			</div>
 			<div class="listDataCall" onclick="gotoaccidentReportPage()">
-				<div style="padding: 20px; color: teal; float:initial;">Report An Accident</div>
+				<div style="padding: 20px; color: teal; float:initial;">Report An Accident
+                
+                    <img src="images/line_arrow.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;" />
+                </div>
 
 			</div>
 			<div class="listDataCall">
 
 				<a class="Assist" href="tel:10111"
 					style="text-decoration: none; color: teal">
-					<div style="padding: 20px; color: teal">Call Police</div> </a>
-                                          <img src="images/line_arrow.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;" />
+					<div style="padding: 20px; color: teal">Call Police
+                        <img src="images/line_arrow.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;" />
+                    </div> </a>
+                                         
 			</div>
 			<div class="listDataCall">
 
@@ -1250,7 +1258,7 @@ var TimeHistroy = $('#txttimepicker').val();
 			<table width="100%" cellpadding="0" cellspacing="0">
 				<tr>
 					<td
-						style="background-image: url('images/aabutton.png'); height: 70px; border-bottom: 2px solid teal;"
+						style="background-image: url('images/aabutton.png'); height: 70px; border-bottom: 1px solid teal; border-top: 1px solid teal;"
 						align="center" colspan="4" onclick="goindexPage()">
 						<div>
 							<img src="images/Caricon.png" alt="" />
@@ -1260,7 +1268,7 @@ var TimeHistroy = $('#txttimepicker').val();
 				</tr>
 				<tr>
 					<td
-						style="background-image: url('images/aabutton.png'); height: 90px; border-right: 2px solid teal;"
+						style="background-image: url('images/aabutton.png'); height: 90px; border-right: 1px solid teal;"
 						align="center" width="25%"
 						onclick="window.jsinterface.getpoiString();">
 						<div>
@@ -1275,7 +1283,7 @@ var TimeHistroy = $('#txttimepicker').val();
                                 <div class="footerfont">Flashlight</div>
                                 </td>-->
 					<td
-						style="background-image: url('images/aabutton.png'); height: 90px; border-right: 2px solid teal;"
+						style="background-image: url('images/aabutton.png'); height: 90px; border-right: 1px solid teal;"
 						align="center" width="25%"
 						onclick="window.jsinterface.getSomeString();">
 						<div>
@@ -1285,9 +1293,9 @@ var TimeHistroy = $('#txttimepicker').val();
 					</td>
 					<td
 						style="background-image: url('images/aabutton.png'); height: 70px;"
-						align="center" width="25%" onclick="gotoAboutAAPage();">
+						align="center" width="25%"  onclick="gotoAboutAAPage();">
 						<div>
-							<img src="images/AAnew.png" alt="" />
+							<img src="images/aa.png" alt="" />
 							<div>
 								<div class="footerfont">About</div>
 					</td>
@@ -1296,84 +1304,133 @@ var TimeHistroy = $('#txttimepicker').val();
 		</div>
 	</div>
 
+    
+    <div data-role="page" id="accidentReportPage" class="BodyBackground">
+        <div data-role="header" data-position="fixed">
 
-	<div data-role="page" id="accidentReportPage" class="BodyBackground">
-		<div data-role="header" data-position="fixed">
+            <table class="HeaderTable" width="100%">
+                <tr class="HeaderTr">
+                    <td width="15%" style="padding-top:6px;padding-left: 25px; text-align: center !important;width:10%!important;"
+                        onclick="gobackPage()">
+                        <img src="images/bck.png" alt="" />
 
-			<table class="HeaderTable" width="100%">
-				<tr class="HeaderTr">
-					<td width="15%" style="padding-top:6px;padding-left: 25px; text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
-					</td>
-					<td width="70%" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial;">Report
-						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
-					</td>
-				</tr>
-			</table>
+                    </td>
+                    <td width="70%" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial;">
+                        Report
+                        an Accident
+                    </td>
+                    <td width="15%" style="text-align: left !important;">
+                        <img src="images/cancel.png" alt="" onclick="goindexPage()" />
+                    </td>
+                </tr>
+            </table>
 
-		</div>
-		<div data-role="content" class="BodyBackground">
+            <table class="ContentTable" cellspacing="0" cellpadding="0">
+                <tr class="PartyRow">
+                    <td class="Party">Accident Date And Location</td>
+                </tr>
+            </table>
 
-			<div style="width: 100% !important; display: inline-block;">
-				<div style="width: 100% !important">
-					<div class="DateTime">Date</div>
-					<div class="DateTime">Time</div>
-				</div>
-				<div class="dateDiv" style="width: 50% !important">
+        </div>
+      
+            <div data-role="content" class="BodyBackground">
 
-					<div class="innerFields">
-						<div class="leftdivReport1">
-							<input type="text" class="inputImg1" id="txtdatepicker" disabled />
-							<!--<input type='text' id='datepick' onclick="Dateshow()" />-->
+                <div style="width: 100% !important; display: inline-block;">
+
+                    <div class="dateDiv" style="width: 20% !important">
+
+                        <div class="innerFields">
+                            <div class="leftdivReport1">
+                                <font color="teal">Date:</font>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeDiv" style="width: 50% !important">
+
+                        <div class="innerFields">
+                            <div class="leftdivReport1">
+                                <input type="text" class="inputImg1" id="txtdatepicker" disabled />
+                                <!-- <input type="text" class="inputImg1" id="txttimepicker" disabled />-->
+                                <!--  <input type="text" class="txttimepicker" />-->
+
+                            </div>
+                            <div class="leftdivReport2">
+
+                                <img src="images/14Date.png" id="btndatepicker"
+                                     click="getDatePicker()" alt="" />
+                                <!-- <img src="images/15Clock.png" alt="" id="btntimepicker" />-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
-						</div>
-						<div class="leftdivReport2">
-							<img src="images/14Date.png" id="btndatepicker"
-								click="getDatePicker()" alt="" />
-						</div>
-					</div>
-				</div>
-				<div class="timeDiv" style="width: 50% !important">
-
-					<div class="innerFields">
-						<div class="leftdivReport1">
-							<input type="text" class="inputImg1" id="txttimepicker" disabled />
-							<!--  <input type="text" class="txttimepicker" />-->
-
-						</div>
-						<div class="leftdivReport2">
-							<img src="images/15Clock.png" alt="" id="btntimepicker" />
-						</div>
-					</div>
-				</div>
-			</div>
 
 
-			<div class="fieldname">GPS Location of Incident</div>
-			<div class="inputFields">
-				<input type="text" id="txtidGPSIncident" class="inputTextnew"
-					readonly />
-				<!--<p style="background-color:Blue" id="txtidGPSIncidentPara"></p>-->
-			</div>
+                <!--   newly added -->
+                <div style="width: 100% !important; display: inline-block;">
 
-			<div class="fieldnameAccident">Description of Location</div>
-			<div class="inputFields">
-				<textarea rows="4" cols="150" class="inputText" id="taidLocDesc"></textarea>
-			</div>
+                    <div class="dateDiv" style="width: 20% !important">
 
-			<div class="heightBtn">
-				<img src="images/next.png" alt=""
-					onclick="gotoAccidentReportToDescPage()" id="btnidAccidentReport"
-					width="50%" />
-			</div>
-		</div>
+                        <div class="innerFields">
+                            <div class="leftdivReport1">
+                                <font color="teal">Time:</font>
 
-	</div>
 
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeDiv" style="width: 50% !important">
+
+                        <div class="innerFields">
+                            <div class="leftdivReport1">
+                                <input type="text" class="inputImg1" id="txttimepicker" disabled />
+
+
+                            </div>
+                            <div class="leftdivReport2">
+
+
+                                <img src="images/15Clock.png" alt="" id="btntimepicker" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+        <div class="fieldname1">GPS Location of Incident</div>
+        <div class="inputFields">
+            <input type="text" id="txtidGPSIncident" class="inputTextnew"
+                   readonly />
+            <!--<p style="background-color:Blue" id="txtidGPSIncidentPara"></p>-->
+        </div>
+
+        <div class="fieldnameAccident">Description of Location</div>
+        <div class="inputFields">
+            <textarea rows="4" cols="150" class="inputText" id="taidLocDesc"></textarea>
+        </div>
+
+        <div class="heightBtn">
+            <img src="images/nxt.png" alt=""
+                 onclick="gotoAccidentReportToDescPage()" id="btnidAccidentReport"
+                 width="100%" />
+        </div>
+        </div>
+
+
+    </div>
 
 
 	<!-- change here -->
@@ -1384,13 +1441,12 @@ var TimeHistroy = $('#txttimepicker').val();
 			<table class="HeaderTable" width="100%">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
+						onclick="gobackPage()"><img src="images/bck.png" alt="" />
+     
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
 					</td>
 				</tr>
 			</table>
@@ -1420,8 +1476,8 @@ var TimeHistroy = $('#txttimepicker').val();
 			</div>
 
 			<div class="heightBtn">
-				<img src="images/next.png" alt="" onclick="gotoPhotoPage()"
-					width="50%" />
+				<img src="images/nxt.png" alt="" onclick="gotoPhotoPage()"
+					width="100%" />
 			</div>
 		</div>
 
@@ -1433,56 +1489,66 @@ var TimeHistroy = $('#txttimepicker').val();
 			<table class="HeaderTable" width="100%">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
+						onclick="gobackPage()"><img src="images/bck.png"
+     alt="" />
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
 					</td>
 				</tr>
 			</table>
-		</div>
-		<div data-role="content">
-			<div class="PhotoLocationHeading">Photo of Location</div>
-			<div class="inputFields" id="idAddPhotoImg">
-				<img src="images/Addphoto.png" style="width: 50%;" alt=""
-					onclick="capturePhotoWithFile();" />
-			</div>
-			<div id="idDelImgPhotoImg">
-				<!--<div class="deleteImg">
-                <img src="images/delete.png" alt="" style="width: 100%" /></div>
-            <div class="photodiv">
-                <img src="images/5mount-img.png" alt="" style="width: 100%" /></div>-->
-			</div>
-			<div style="margin-top: 10px; display: none;"
-				id="idAddanotherphotoImg">
-				<img src="images/6Addanotherphoto.png" alt="" style="width: 100%"
-					onclick="capturePhotoWithFile();" />
-			</div>
 
-			<div id="idVedioShowdiv" style="display: none"></div>
-			<div style="margin-top: 20px !important;"></div>
-			<div style="display: block;" id="idVediocapturediv">
-				<img src="images/Capture.png" alt="" style="width:50%;"
-					onclick="captureVedio();" />
-			</div>
-
-			<div class="result-block" style="display: none">
-				<div style="color: White">Capture Result:</div>
-				<span id="capture-result" style="color: White"></span><br /> <span
-					id="capture-data"></span><br />
-				<!--<div id="audio-result"  style="color:White">Play Vedio</div>-->
-
-			</div>
+            <table class="ContentTable" cellspacing="0" cellpadding="0">
+                <tr class="PartyRow">
+                    <td class="Party">Location Photo And Video</td>
+                </tr>
+            </table>
+        
+        </div>
 
 
-			<div class="heightBtn">
-				<img src="images/next.png" alt="" onclick="gotoDamagePhotoPage()"
-					width="50%" />
-			</div>
-		</div>
+        <center><!-- Newly added for arrange div tag to center   -->
+
+            <div data-role="content">
+                <!--<div class="PhotoLocationHeading">Photo of Location</div>-->
+                <div class="inputFields" id="idAddPhotoImg">
+                    <img src="images/Addphoto.png" style="width: 80%;" alt=""
+                         onclick="capturePhotoWithFile();" />
+                </div>
+                <div id="idDelImgPhotoImg">
+                    <!--<div class="deleteImg">
+                    <img src="images/delete.png" alt="" style="width: 100%" /></div>
+                <div class="photodiv">
+                    <img src="images/5mount-img.png" alt="" style="width: 100%" /></div>-->
+                </div>
+                <div style="margin-top: 10px; display: none;"
+                     id="idAddanotherphotoImg">
+                    <img src="images/6Addanotherphoto.png" alt="" style="width: 80%"
+                         onclick="capturePhotoWithFile();" />
+                </div>
+
+                <div id="idVedioShowdiv" style="display: none"></div>
+                <div style="margin-top: 20px !important;"></div>
+                <div style="display: block;" id="idVediocapturediv">
+                    <img src="images/Capture.png" alt="" style="width:80%;"
+                         onclick="captureVedio();" />
+                </div>
+
+                <div class="result-block" style="display: none">
+                    <div style="color: White">Capture Result:</div>
+                    <span id="capture-result" style="color: White"></span><br /> <span id="capture-data"></span><br />
+                    <!--<div id="audio-result"  style="color:White">Play Vedio</div>-->
+
+                </div>
+
+
+                <div class="heightBtn">
+                    <img src="images/nxt.png" alt="" onclick="gotoDamagePhotoPage()"
+                         width="100%" />
+                </div>
+            </div>
+        </center>
 
 
 	</div>
@@ -1492,19 +1558,30 @@ var TimeHistroy = $('#txttimepicker').val();
 			<table class="HeaderTable" width="100%">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
+						onclick="gobackPage()"><img src="images/cancel.png" alt="" />
+  
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+					<td width="15%" style="text-align: left !important;"><img src="images/bck.png" alt="" onclick="goindexPage()" />
 					</td>
 				</tr>
 			</table>
+
+            <table class="ContentTable" cellspacing="0" cellpadding="0">
+                <tr class="PartyRow">
+                    <td class="Party">Photo Of Damage</td>
+                </tr>
+            </table>
+
+
+
+
 		</div>
+
+        <center>
 		<div data-role="content">
-			<div class="PhotoLocationHeading">Photo of Damage</div>
+			<!--<div class="PhotoLocationHeading">Photo of Damage</div>-->
 			<div class="inputFields" id="idAddDamagePhotoImg">
 				<img src="images/Addphoto.png" style="width: 50%" alt=""
 					onclick="capturePhotoWithFiledamagePhoto();" />
@@ -1524,26 +1601,24 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 			<div class="heightBtn">
-				<img src="images/next.png" alt="" onclick="gotoFirstPartyPage()"
-					width="50%" />
+				<img src="images/nxt.png" alt="" onclick="gotoFirstPartyPage()"
+					width="100%" />
 			</div>
 		</div>
-
-
-	</div>
+            </center>
+</div>
 	<div data-role="page" id="FirstPartyPage" class="BodyBackground">
 		<div data-role="header" data-position="fixed">
 			<table class="HeaderTable" width="100%"
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
+						onclick="gobackPage()"><img src="imagesbck.png" alt="" />
+   
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
 					</td>
 				</tr>
 			</table>
@@ -1774,8 +1849,8 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 			<div class="heightBtn">
-				<img src="images/next.png" alt="" onclick="gotoWitnessPageFromFP()"
-					width="50%" />
+				<img src="images/nxt.png" alt="" onclick="gotoWitnessPageFromFP()"
+					width="100%" />
 			</div>
 			<input type="hidden" id="" value="" />
 		</div>
@@ -2019,8 +2094,8 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 			<div class="heightBtn">
-				<img src="images/next.png" alt="" onclick="gotoWitnessPageFromSP()"
-					width="50%" />
+				<img src="images/nxt.png" alt="" onclick="gotoWitnessPageFromSP()"
+					width="100%" />
 			</div>
 			<input type="hidden" id="Hidden2" value="" />
 		</div>
@@ -2033,13 +2108,12 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
+						onclick="gobackPage()"><img src="images/cancel.png" alt="" />
+     
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+					<td width="15%" style="text-align: left !important;"><img src="images/bck.png" alt="" onclick="goindexPage()" />
 					</td>
 				</tr>
 			</table>
@@ -2141,8 +2215,8 @@ var TimeHistroy = $('#txttimepicker').val();
 					onclick="gotoSecondWitnessPage()" />
 			</div>
 			<div class="heightBtn">
-				<img src="images/next.png" alt=""
-					onclick="gotopolicecasePageFromFirstWitness()" width="50%" />
+				<img src="images/nxt.png" alt=""
+					onclick="gotopolicecasePageFromFirstWitness()" width="100%" />
 			</div>
 		</div>
 	</div>
@@ -2154,13 +2228,12 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
+						onclick="gobackPage()"><img src="images/bck.png" alt="" />
+     
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
 					</td>
 				</tr>
 			</table>
@@ -2256,8 +2329,8 @@ var TimeHistroy = $('#txttimepicker').val();
 				<br /> <br /> <br />
 			</div>
 			<div class="heightBtn">
-				<img src="images/next.png" alt=""
-					onclick="gotopolicecasePageFromSecondWitness()" width="50%" />
+				<img src="images/nxt.png" alt=""
+					onclick="gotopolicecasePageFromSecondWitness()" width="100%" />
 			</div>
 		</div>
 	</div>
@@ -2268,14 +2341,12 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						id="saveback" onclick="gobackPage()"><img
-						src="images/2left-arrow.png" alt="" />
+						id="saveback" onclick="gobackPage()"><img src="images/bck.png" alt="" />
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()"
-						id="savecancel" />
+					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()"
+     id="savecancel" />
 					</td>
 				</tr>
 			</table>
@@ -2303,7 +2374,7 @@ var TimeHistroy = $('#txttimepicker').val();
 			</div>
 
 			<div class="heightBtn">
-				<img src="images/SAVE.png" alt="" onclick="btnSaveAllDetails(sid)" width="50%" />
+				<img src="images/SAVE.png" alt="" onclick="btnSaveAllDetails(sid)" width="100%" />
 			</div>
 
 
@@ -2441,7 +2512,7 @@ var TimeHistroy = $('#txttimepicker').val();
 			<table width="100%" cellpadding="0" cellspacing="0">
 				<tr>
 					<td
-						style="background-image: url('images/aabutton.png'); height: 70px; border-bottom: 2px solid white;"
+						style="background-image: url('images/aabutton.png'); height: 70px; border-bottom: 1px solid teal; border-top: 1px solid teal;"
 						align="center" colspan="4" onclick="goindexPage()">
 						<div>
 							<img src="images/Caricon.png" alt="" />
@@ -2451,7 +2522,7 @@ var TimeHistroy = $('#txttimepicker').val();
 				</tr>
 				<tr>
 					<td
-						style="background-image: url('images/aabutton.png'); height: 70px; border-right: 2px solid white;"
+						style="background-image: url('images/aabutton.png'); height: 70px; border-right: 1px solid teal;"
 						align="center" width="25%"
 						onclick="window.jsinterface.getpoiString();">
 						<div>
@@ -2461,7 +2532,7 @@ var TimeHistroy = $('#txttimepicker').val();
 					</td>
 
 					<td
-						style="background-image: url('images/aabutton.png'); height: 70px; border-right: 2px solid white;"
+						style="background-image: url('images/aabutton.png'); height: 70px; border-right: 1px solid teal;"
 						align="center" width="25%"
 						onclick="window.jsinterface.getSomeString();">
 						<div>
@@ -2473,7 +2544,7 @@ var TimeHistroy = $('#txttimepicker').val();
 						style="background-image: url('images/aabutton.png'); height: 70px;"
 						align="center" width="25%" onclick="gotoAboutAAPage();">
 						<div>
-							<img src="images/AAnew.png" alt="" />
+							<img src="images/aa.png" alt="" />
 							<div>
 								<div class="footerfont">About</div>
 					</td>
@@ -2505,43 +2576,49 @@ var TimeHistroy = $('#txttimepicker').val();
 				<tr>
 
 					<td class="tdcenterspace">
-						<p class="paraAboutAA">
-							<b style="color: #009999 !important;">FNB Road Assist Service
-							</b>is a suite of mobile phone applications designed to give you
-							critical help on the road. With this app you'll get:
-						</p>
-						<p class="paraAboutAA">
-							<span class="paraAboutAAbold"><b
-								style="color: #009999 !important;">FNB Road Assist: </b> </span> A
-							roadside emergency alert button that, as registered user, sends
-							your name, vehicle and location details to the AA's Emergency
-							Call Centre to provide you with necessary roadside assistance and
-							medical evacuation. You'll get instant access to your AA
-							Emergency Roadside Assistance benefit entitlements.
+                        <p class="paraAboutfnb">
+                            <b style="color: #009999 !important;">
+                                FNB Road Assist Service
+                            </b>is a suite of mobile phone applications designed to give you
+                            critical help on the road. With this app you'll get:
+                        </p>
+                        <p class="paraAboutfnb">
+                            <span class="paraAboutAAbold">
+                                <b style="color: #009999 !important;">FNB Road Assist:</b>
+                            </span> A
+                            roadside emergency alert button that, as registered user, sends
+                            your name, vehicle and location details to the AA's Emergency
+                            Call Centre to provide you with necessary roadside assistance and
+                            medical evacuation. You'll get instant access to your AA
+                            Emergency Roadside Assistance benefit entitlements.
 
-						</p>
-						<p class="paraAboutAA">
-							<span class="paraAboutAAbold"><b
-								style="color: #009999 !important;">FNB Road Assist's
-									Accident Service:</b> </span> This mobile application provides invaluable
-							assistance at the scene of an accident, guiding you through the
-							accident process, and recording all the information, photos,
-							recordings and videos you'll need for an insurance claim, or for
-							later legal action, so that nothing is forgotten. Your incident
-							will be saved to your website profile, so you can Update the
-							information at any time...and send the details directly to your
-							insurer.
+                        </p>
+                        <p class="paraAboutfnb">
+                            <span class="paraAboutAAbold">
+                                <b style="color: #009999 !important;">
+                                    FNB Road Assist's
+                                    Accident Service:
+                                </b>
+                            </span> This mobile application provides invaluable
+                            assistance at the scene of an accident, guiding you through the
+                            accident process, and recording all the information, photos,
+                            recordings and videos you'll need for an insurance claim, or for
+                            later legal action, so that nothing is forgotten. Your incident
+                            will be saved to your website profile, so you can Update the
+                            information at any time...and send the details directly to your
+                            insurer.
 
-						</p>
-						<p class="paraAboutAA">
-							<span class="paraAboutAAbold"><b
-								style="color: #009999 !important;">Points of Interest: </b> </span>This
-							feature helps you to find what you're looking for in an
-							unfamiliar area. Whether it is the closest hospital in an
-							emergency, accommodation for an overnight stay or even the
-							nearest fuel station...this feature will locate it for you
-							quickly and easily.
-						</p>
+                        </p>
+                        <p class="paraAboutfnb">
+                            <span class="paraAboutAAbold">
+                                <b style="color: #009999 !important;">Points of Interest:</b>
+                            </span>This
+                            feature helps you to find what you're looking for in an
+                            unfamiliar area. Whether it is the closest hospital in an
+                            emergency, accommodation for an overnight stay or even the
+                            nearest fuel station...this feature will locate it for you
+                            quickly and easily.
+                        </p>
 					</td>
 
 				</tr>
