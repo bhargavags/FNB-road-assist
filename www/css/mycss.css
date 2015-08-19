@@ -390,8 +390,21 @@ text-shadow: none!important;
 .leftdivReport1
 {
     float:left;
-    width: 40%;
+    width: 78%;
+  
+    
 }
+
+.leftdivReport1
+{
+    float:left;
+    width: 78%;
+  height:30%;
+    
+}
+
+
+
 .leftName
 {
     float:left;
@@ -411,6 +424,19 @@ margin-right: 13px;
 width:50%!important
    
 }
+
+/*Newly added*/
+.leftdivReportimg
+{
+   
+  float: right;
+margin-top: 8px;
+/* margin-right: 13px;*/
+width:21%!important
+   
+}
+
+
 
 .fieldname
 {
@@ -518,8 +544,8 @@ margin-bottom: 1%!important;
 .inputFields1
 {
     
-    width:50%!important;
-   
+    width:90%!important;
+    margin-left:5%
    
     
 }
@@ -595,6 +621,75 @@ font-weight: normal;
 text-shadow:none!important;
 height:40px!important;
 }
+
+/* Gps loaction  */
+
+.inputText
+{
+
+    border:none!important;
+     width:100%!important;
+  color: #black!important;
+font-family:'FNB Sans'!important;
+font-size: 14px!important;
+background-color:white!important;
+font-weight: normal;
+text-shadow:none!important;
+height:20px!important;
+}
+
+.innerField
+{
+        width: 100%;
+         float: left;
+    border-color:white!important;
+    border-width:1px;
+    border-style:solid;
+    height:40px;
+    background-color: white!important;
+     border-top:1px solid teal!important;
+    border-bottom:1px solid teal!important;
+    border-left:1px solid teal!important;
+   
+    
+}
+
+.textarea
+{
+        width: 100%;
+         float: left;
+    border-color:white!important;
+    border-width:1px;
+    border-style:solid;
+    height:80px;
+    background-color: white!important;
+     border-top:1px solid teal!important;
+    border-bottom:1px solid teal!important;
+    border-left:1px solid teal!important;
+   
+    
+}
+
+
+.inner
+{
+    border-color:Transparent!important;
+    border-width:1px;
+    border-style:solid;
+    height:80px;
+    background-color: white!important;
+     border-top:1px solid teal!important;
+    border-bottom:1px solid teal!important;
+    border-right:1px solid teal!important;
+   
+   
+    
+}
+
+
+
+
+
 .DateText
 {
     float:left!important;
@@ -602,7 +697,7 @@ height:40px!important;
 
 .innerFields
 {
-    border-color:none!important;
+    border-color:teal!important;
     border-width:1px;
     border-style:solid;
     height:40px;
@@ -1003,6 +1098,7 @@ text-shadow: none!important;
 {
    /* background-color:white!important;*/
    background-color:#eaeaea!important;
+   margin:auto!important;
    /* max-height:100%;*/
 }
 

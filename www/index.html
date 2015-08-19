@@ -1334,34 +1334,35 @@ var TimeHistroy = $('#txttimepicker').val();
         </div>
       
             <div data-role="content" class="BodyBackground">
+                <div style=" width:100%!important">
+                    <div style="width: 100% !important; display: inline-block; margin-left:5%;  " >
 
-                <div style="width: 100% !important; display: inline-block;">
+                        <div class="dateDiv" style="width: 45% !important">
 
-                    <div class="dateDiv" style="width: 20% !important">
+                            <div class="innerFields">
+                                <div class="leftdivReport1">
+                                    <font color="teal">Date:</font>
 
-                        <div class="innerFields">
-                            <div class="leftdivReport1">
-                                <font color="teal">Date:</font>
+                                </div>
 
                             </div>
-
                         </div>
-                    </div>
-                    <div class="timeDiv" style="width: 50% !important">
+                        <div class="timeDiv" style="width: 45% !important">
 
-                        <div class="innerFields">
-                            <div class="leftdivReport1">
-                                <input type="text" class="inputImg1" id="txtdatepicker" disabled />
-                                <!-- <input type="text" class="inputImg1" id="txttimepicker" disabled />-->
-                                <!--  <input type="text" class="txttimepicker" />-->
+                            <div class="innerFields">
+                                <div class="leftdivReport1">
+                                    <input type="text" class="inputImg1" id="txtdatepicker" disabled />
+                                    <!-- <input type="text" class="inputImg1" id="txttimepicker" disabled />-->
+                                    <!--  <input type="text" class="txttimepicker" />-->
 
-                            </div>
-                            <div class="leftdivReport2">
+                                </div>
+                                <div class="leftdivReportimg">
 
-                                <img src="images/14Date.png" id="btndatepicker"
-                                     click="getDatePicker()" alt="" />
-                                <!-- <img src="images/15Clock.png" alt="" id="btntimepicker" />-->
+                                    <img src="images/14Date.png" id="btndatepicker"
+                                         click="getDatePicker()" alt="" />
+                                    <!-- <img src="images/15Clock.png" alt="" id="btntimepicker" />-->
 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1371,37 +1372,124 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
                 <!--   newly added -->
-                <div style="width: 100% !important; display: inline-block;">
+                <div style=" width:100%!important">
+                    <div style="width: 100% !important; display: inline-block;  margin-left:5%; margin-top:3%  ">
 
-                    <div class="dateDiv" style="width: 20% !important">
+                        <div class="dateDiv" style="width: 45% !important">
 
-                        <div class="innerFields">
-                            <div class="leftdivReport1">
-                                <font color="teal">Time:</font>
-
-
-
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="timeDiv" style="width: 50% !important">
-
-                        <div class="innerFields">
-                            <div class="leftdivReport1">
-                                <input type="text" class="inputImg1" id="txttimepicker" disabled />
+                            <div class="innerFields">
+                                <div class="leftdivReport1">
+                                    <font color="teal">Time:</font>
 
 
-                            </div>
-                            <div class="leftdivReport2">
 
 
-                                <img src="images/15Clock.png" alt="" id="btntimepicker" />
+                                </div>
 
                             </div>
                         </div>
+                        <div class="timeDiv" style="width: 45% !important">
+
+                            <div class="innerFields">
+                                <div class="leftdivReport1">
+                                    <input type="text" class="inputImg1" id="txttimepicker" disabled />
+
+
+                                </div>
+                                <div class="leftdivReportimg">
+
+
+                                    <img src="images/15Clock.png" alt="" id="btntimepicker" />
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    </div>
+
+
+
+
+
+                <div style=" width:100%!important">
+                    <div style="width: 100% !important; display: inline-block;  margin-left:5%; margin-top:6% ">
+
+                        <div class="dateDiv" style="width: 45% !important">
+
+                            <div class="innerField">
+                                <div class="leftdivReport1"><span>  GPS Location Of Incident:</span>
+                                  
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="timeDiv" style="width: 45% !important">
+
+                            <div class="innerFields">
+                                <div class="leftdivReport1">
+                                    <input type="text" id="txtidGPSIncident" class="inputText"
+                                           readonly />
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+              <!--  <div style=" width:100%!important">
+                    <div style="width: 100% !important; display: inline-block;  margin-left:5%; margin-top:4% ">
+
+                        <div class="dateDiv" style="width: 45% !important">
+
+                            <div class="innerField">
+                                <div class="leftdivReport1">
+                                    Description of Location:
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="timeDiv" style="width: 45% !important">
+
+                            <div class="inner" style="hieght:20%">
+                                <div class="leftdivReport1">
+                                    <textarea rows="4" cols="150" class="inputText" id="taidLocDesc" ></textarea>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+                <div style=" width:100%!important">
+                    <div style="width: 100% !important; display: inline-block;  margin-left:5%; margin-top:6% ">
+
+                        <div class="dateDiv" style="width: 25% !important">
+
+                            <div class="textarea" style="height:20">
+                                <div class="leftdivReport1">
+                                    <font style="color:teal">Description of Location:</font>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="timeDiv" style="width: 65% !important">
+
+                            <div class="inner">
+                                <div class="leftdivReport1">
+                                    <textarea rows="4" cols="150" class="inputText" id="taidLocDesc"></textarea>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
 
@@ -1410,24 +1498,34 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 
-        <div class="fieldname1">GPS Location of Incident</div>
-        <div class="inputFields">
-            <input type="text" id="txtidGPSIncident" class="inputTextnew"
-                   readonly />
-            <!--<p style="background-color:Blue" id="txtidGPSIncidentPara"></p>-->
-        </div>
 
-        <div class="fieldnameAccident">Description of Location</div>
-        <div class="inputFields">
-            <textarea rows="4" cols="150" class="inputText" id="taidLocDesc"></textarea>
-        </div>
 
-        <div class="heightBtn">
-            <img src="images/nxt.png" alt=""
-                 onclick="gotoAccidentReportToDescPage()" id="btnidAccidentReport"
-                 width="100%" />
-        </div>
-        </div>
+
+
+
+
+
+
+
+                  <!-- <div class="fieldname1">GPS Location of Incident</div>
+                    <div class="inputFields1">
+                        <input type="text" id="txtidGPSIncident" class="inputTextnew"
+                               readonly />
+                        <!--<p style="background-color:Blue" id="txtidGPSIncidentPara"></p>-->
+                  <!--  </div>  -->
+
+                  <!--  <div class="fieldnameAccident">Description of Location</div>
+                    <div class="inputFields">
+                        <textarea rows="4" cols="150" class="inputText" id="taidLocDesc"></textarea>
+                    </div>  -->
+
+
+                    <div class="heightBtn">
+                        <img src="images/nxt.png" alt=""
+                             onclick="gotoAccidentReportToDescPage()" id="btnidAccidentReport"
+                             width="100%" />
+                    </div>
+                </div>
 
 
     </div>
