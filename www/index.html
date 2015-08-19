@@ -1465,7 +1465,7 @@ var TimeHistroy = $('#txttimepicker').val();
                     </div>
 
                 </div> -->
-                <div style=" width:100%!important">
+              <!-- <div style=" width:100%!important">
                     <div style="width: 100% !important; display: inline-block;  margin-left:5%; margin-top:6% ">
 
                         <div class="dateDiv" style="width: 25% !important">
@@ -1490,10 +1490,17 @@ var TimeHistroy = $('#txttimepicker').val();
                         </div>
                     </div>
 
+                </div> -->
+
+
+                <div class="fulltext" style="margin-top:3%;margin-bottom:2%;margin-left:5%">
+                    <div class="bar"> Accident Description: </div>
+                    <div class="bar2">
+                        <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc" placeholder="Type Your Accident Description Here"></textarea>
+
+                    </div>
+
                 </div>
-
-
-
 
 
 
@@ -1551,33 +1558,68 @@ var TimeHistroy = $('#txttimepicker').val();
 
 		</div>
 		<div data-role="content">
-			<div class="fieldnameAccident">Accident Description</div>
+
+		<!--	<div class="fieldnameAccident">Accident Description</div>
 			<div class="inputFields">
-                <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc"></textarea>
-			</div>
-			<div class="fieldnameAccident">Road Conditions</div>
-			<div class="inputFields">
-				<!--<select class="selectOptionsRoad" id="idSelectRoadCondition1">
-                        <option value="Good">Good</option>
-                        <option value="Bad">Bad</option>
-                        <option value="Wet">Wet</option>
-                       
-                    </select>-->
-				<input type="text" id="idSelectRoadCondition" class="inputText" />
+				<textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc"></textarea>
+			</div> -->
 
-			</div>
-			<div class="fieldnameAccident">Notes</div>
-			<div class="inputFields">
+            <div class="full">
+        <div class="bar"> Accident Description: </div>
+                <div class="bar2">
+                    <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc" placeholder="Type Your Accident Description Here"></textarea>
 
-				<textarea rows="4" cols="150" class="inputText" id="idAccDescNotes"></textarea>
+                </div>
+      
+    </div>
 
-			</div>
+            <div class="full" style="margin-top:3%">
+                <div class="bar"> Road Conditions:</div>
+                <div class="bar2">
+                   <input type="text" id="idSelectRoadCondition" class="inputText" />
 
-			<div class="heightBtn">
-				<img src="images/nxt.png" alt="" onclick="gotoPhotoPage()"
-					width="100%" />
-			</div>
-		</div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="full" style="margin-top:3%">
+                <div class="bar"> Accident Description: </div>
+                <div class="bar2">
+                    <textarea rows="4" cols="150" class="inputText" id="idAccDescNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
+
+                </div>
+            </div>
+
+
+
+                <!--<div class="fieldnameAccident">Road Conditions</div>
+        <div class="inputFields">
+            <!--<select class="selectOptionsRoad" id="idSelectRoadCondition1">
+                    <option value="Good">Good</option>
+                    <option value="Bad">Bad</option>
+                    <option value="Wet">Wet</option>
+
+                </select>-->
+                
+
+       
+                
+          <!--  <div class="inputFields">
+
+                <textarea rows="4" cols="150" class="inputText" id="idAccDescNotes"></textarea>
+
+            </div> -->
+
+
+
+                <div class="heightBtn" style="margin-top:15%">
+                    <img src="images/nxt.png" alt="" onclick="gotoPhotoPage()"
+                         width="100%" />
+                </div>
+            </div>
 
 
 	</div>
@@ -1656,12 +1698,12 @@ var TimeHistroy = $('#txttimepicker').val();
 			<table class="HeaderTable" width="100%">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/cancel.png" alt="" />
+						onclick="gobackPage()"><img src="images/bck.png" alt="" />
   
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img src="images/bck.png" alt="" onclick="goindexPage()" />
+					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
 					</td>
 				</tr>
 			</table>
@@ -1681,7 +1723,7 @@ var TimeHistroy = $('#txttimepicker').val();
 		<div data-role="content">
 			<!--<div class="PhotoLocationHeading">Photo of Damage</div>-->
 			<div class="inputFields" id="idAddDamagePhotoImg">
-				<img src="images/Addphoto.png" style="width: 50%" alt=""
+				<img src="images/Addphoto.png" style="width: 80%" alt=""
 					onclick="capturePhotoWithFiledamagePhoto();" />
 			</div>
 			<div id="idDelImgDamagePhotoImg">
@@ -1711,7 +1753,7 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="imagesbck.png" alt="" />
+						onclick="gobackPage()"><img src="images/bck.png" alt="" />
    
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
@@ -1961,13 +2003,12 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/2left-arrow.png"
-						alt="" />
+						onclick="gobackPage()"><img src="images/bck.png"
+     alt="" />
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img
-						src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
 					</td>
 				</tr>
 			</table>
@@ -2206,12 +2247,12 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/cancel.png" alt="" />
+						onclick="gobackPage()"><img src="images/bck.png" alt="" />
      
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img src="images/bck.png" alt="" onclick="goindexPage()" />
+					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
 					</td>
 				</tr>
 			</table>
@@ -2457,7 +2498,36 @@ var TimeHistroy = $('#txttimepicker').val();
 		<div data-role="content">
 
 
-			<div class="fieldname">Officer Name</div>
+            <div class="full" style="margin-top:3%">
+                <div class="bar"> Officer Name:</div>
+                <div class="bar2">
+                    <input type="text" class="inputText" id="txtidpolicename" />
+
+                </div>
+
+            </div>
+
+            <div class="full" style="margin-top:3%">
+                <div class="bar"> Officer Number:</div>
+                <div class="bar2">
+                    <input type="text" class="inputText" id="txtidpolicenumber" />
+
+                </div>
+
+            </div>
+
+
+            <div class="full" style="margin-top:5%">
+                <div class="bar">Case Number:</div>
+                <div class="bar2">
+                    <input type="text" class="inputText" id="txtidcasenumber" />
+
+                </div>
+
+            </div>
+
+
+		<!--	<div class="fieldname">Officer Name</div>
 			<div class="inputFields">
 				<input type="text" class="inputText" id="txtidpolicename" />
 			</div>
@@ -2469,7 +2539,11 @@ var TimeHistroy = $('#txttimepicker').val();
 			<div class="fieldnameAccident">Case Number</div>
 			<div class="inputFields">
 				<input type="text" class="inputText" id="txtidcasenumber" />
-			</div>
+			</div> -->
+
+
+
+
 
 			<div class="heightBtn">
 				<img src="images/SAVE.png" alt="" onclick="btnSaveAllDetails(sid)" width="100%" />
