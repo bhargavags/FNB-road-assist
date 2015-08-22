@@ -647,6 +647,7 @@ background-color:white!important;
 font-weight: normal;
 text-shadow:none!important;
 height:60px!important;
+padding-right:3%;
 }
 
 .innerField
@@ -1002,16 +1003,16 @@ min-width:50%!important;
 /*color: white!important;*/
 font-family: 'FNB Sans'!important;
 font-size: 14px!important;
-background-color: #009999!important;
+background-color: #ffffff!important;
 
-border-bottom:1px solid white!important;
+border-bottom:1px solid teal!important;
 padding:20px!important;
 font-weight:bold!important;
 text-shadow:none!important;
 }
 .Assist
 {
-   color: white!important; 
+   color: Teal!important; 
    margin:0!important;
 }
 .headingdiv
@@ -1239,4 +1240,12 @@ text-shadow: none!important;
 	padding: 0em;
 	margin: 0em;
 	padding-left:10px!important;
+}
+.listPoi {
+font-family: 'FNB Sans'!important;
+	font-size: 14px !important;
+	background-color: #ffffff !important;
+	border-bottom: 1px solid Teal !important;
+	
+	
 }

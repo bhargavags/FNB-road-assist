@@ -47,15 +47,24 @@
     background-size:100% 100%;
     vertical-align:middle;
     text-align:center;
+    border-bottom:2px solid Teal!important;
+    border-top:2px solid Teal!important;
+    border-right:2px solid Teal!important;
+    border-left:2px solid Teal!important;
+    margin:auto;
+   
+    
 }
 
 .textbox {
-    width:95%;
+    width:100%;
     height:90%;
     font-family: FNB Sans!important;
      font-size:12px;color:#009999 !important;
     background:transparent;
     margin:none!important;
+    
+   
  }
  ::-webkit-input-placeholder {
    color: #009999 !important;
@@ -119,12 +128,13 @@ font-weight:none;
 text-shadow: none!important;
 padding-bottom:5px;
 overflow: hidden;
-      o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
+o-text-overflow: ellipsis;
+text-overflow: ellipsis;
  }
  .searchdiv
  {
-     width:100%;background-color:#009999!important;
+     width:100%;background-color:#ffffff!important;
+   
  }
  .borderright
 {
@@ -1687,7 +1697,7 @@ document.getElementById('view-loadingpoi').style.display = "block";
      
 
 </head>
-<body style="background-color: black">
+<body style="background-color: white">
 
     <div id="view-loadingpoi" class="view" style="text-align: center; margin: auto; display: none;
         z-index: 99; position: fixed;">
@@ -1697,25 +1707,32 @@ document.getElementById('view-loadingpoi').style.display = "block";
     </div>
     <div data-role="page" id="POIPage" class="BodyBackground">
         <div data-role="header" data-position="fixed">
+
+       
             <table class="HeaderTable" width="100%">
                 <tr class="HeaderTr">
-                    <td width="10%" style="text-align: center!important;" >
-                       
+                    <td width="15%" style="padding-top:6px;padding-left: 25px; text-align: center !important;width:10%!important;"
+                        onclick="gobackPage()">
+                        <img src="images/bck.png" alt="" />
+
                     </td>
-                    <td width="80%" style="text-align: center!important;font-size:16px!important;">
-                       Points of Interest
+                    <td width="80%" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial;">
+                        Points Of Interest
                     </td>
-                    <td width="10%" style="text-align: left!important;">
-                    
-                    </td>
+                    <td width="10%" style="text-align: left !important;"></td>
                 </tr>
             </table>
+
         </div>
         <div data-role="content" style="padding: 0px!important">
+
             <div class="listData" onclick="gotoQAAccomodation()">
                 <p class="Assist">
-                  Accommodation</p>
+                    Accommodation
+                </p>
+                <img src="images/line_arrow.png" alt="" width="40px" height="50px" style="position:absolute;right: 9%; margin-top:-31px" " />
             </div>
+
           <!--  <div class="listData" onclick="gotoASAgents()">
                 <p class="Assist">
                    FNB ACCREDITED SALES AGENTS</p>
@@ -1723,12 +1740,12 @@ document.getElementById('view-loadingpoi').style.display = "block";
             <div class="listData" onclick="gotoBPFillingStations()">
               <p class="Assist">
                    Filling Stations</p>
-              
+                <img src="images/line_arrow.png" alt="" width="40px" height="50px" style="position:absolute;right: 9%; margin-top:-31px"" />
             </div>
             <div class="listData" onclick="gotoHospitals()">
                 <p class="Assist">
                   Hospitals</p>
-             
+                <img src="images/line_arrow.png" alt="" width="40px" height="50px" style="position:absolute;right: 9%; margin-top:-31px" " />
             </div>
         </div>
         <div>
@@ -1741,7 +1758,7 @@ document.getElementById('view-loadingpoi').style.display = "block";
             <table class="HeaderTable" width="100%">
                 <tr class="HeaderTr">
                     <td width="10%" style="padding-top:6px;padding-left:20px;" onclick="gotopre()">
-                        <img src="images/2left-arrow.png" alt="" />
+                        <img src="images/bck.png" alt="" />
                     </td>
                     <td width="80%" style="text-align: center!important;font-size:16px!important;padding-right:10%;">
                        Accommodation
@@ -1765,18 +1782,18 @@ document.getElementById('view-loadingpoi').style.display = "block";
     </div>
     <div data-role="page" id="FuelStationSearchPage" class="BodyBackground">
         <div data-role="header" data-position="fixed">
-            <table class="HeaderTable" width="100%" style="border-bottom: 1px solid white !important;>
-                				<tr class="HeaderTr">
+            <table class="HeaderTable" width="100%" style="border-bottom: 1px solid white !important;">
+                		<tr class="HeaderTr">		
                     <td width="10%" style="padding-top:6px;padding-left:20px;" onclick="gotoQAAccomodation()">
-                        <img src="images/2left-arrow.png" alt="">
+                        <img src="images/bck.png" alt="">
                     </td>
                     <td width="80%" style="text-align: center!important;font-size:16px!important;padding-right:20%;">
                        Accommodation
                     </td>
                     </tr>
             </table>
-            <div class="searchdiv">
-                <table class="searchbox" width="100%" cellpadding="0" cellspacing="0" style="border-bottom: 1px solid white !important;>
+            <div class="searchdiv" style="margin-top:2%" >
+                <table class="searchbox" width="90%" cellpadding="0" cellspacing="0" style="border-bottom: 1px solid white !important;">
                     <tr id="search">
                         <td style="margin-left:10px">
                             <input id="isSearchLoc" type="text" class="textbox" placeholder="Search" />
@@ -1809,7 +1826,7 @@ document.getElementById('view-loadingpoi').style.display = "block";
             <table class="HeaderTable" width="100%">
                 <tr class="HeaderTr">
                     <td width="10%" style="padding-top:6px;padding-left: 20px;" onclick="gobackPage()">
-                        <img src="images/2left-arrow.png" alt="" />
+                        <img src="images/bck.png" alt="" />
                     </td>
                     <td width="80%" style="text-align: center!important;">
                        Sales Agents
@@ -1878,7 +1895,7 @@ document.getElementById('view-loadingpoi').style.display = "block";
             <table class="HeaderTable" width="100%">
                 <tr class="HeaderTr">
                     <td width="10%" style="padding-top:6px;padding-left: 20px;" onclick="gotopre()">
-                        <img src="images/2left-arrow.png" alt="" />
+                        <img src="images/bck.png" alt="" />
                     </td>
                     <td width="80%" style="text-align: center!important;font-size:16px!important;padding-right:10%">
                       Filling Stations
@@ -1900,10 +1917,10 @@ document.getElementById('view-loadingpoi').style.display = "block";
     </div>
     <div data-role="page" id="BPSearchPage" class="BodyBackground">
         <div data-role="header" data-position="fixed">
-            <table class="HeaderTable" width="100%" style="border-bottom: 1px solid white !important;>
+            <table class="HeaderTable" width="100%" style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
                     <td width="10%" style="padding-top:6px;padding-left: 20px;" onclick="gotoBPFillingStations()">
-                        <img src="images/2left-arrow.png" alt="">
+                        <img src="images/bck.png" alt="">
                     </td>
                     <td width="80%" style="text-align: center!important;font-size:16px!important;padding-right:20%;">
                       Filling Stations
@@ -1942,7 +1959,7 @@ document.getElementById('view-loadingpoi').style.display = "block";
             <table class="HeaderTable" width="100%">
                 <tr class="HeaderTr">
                     <td width="15%" style="padding-top:6px;padding-left: 20px;" onclick="gotoPOIPage()">
-                        <img src="images/2left-arrow.png" alt="" />
+                        <img src="images/bck.png" alt="" />
                     </td>
                     <td width="70%" style="text-align: center!important;font-size:16px!important;">
                        Hospitals
