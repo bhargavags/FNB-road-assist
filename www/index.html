@@ -1333,107 +1333,111 @@ var TimeHistroy = $('#txttimepicker').val();
 
         </div>
       
-            <div data-role="content" class="BodyBackground">
-                <div style=" width:100%!important">
-                    <div style="width: 100% !important; display: inline-block; margin-left:5%;  " >
+        <div data-role="content" class="BodyBackground">
+            <div style=" width:100%!important">
+                <div style="width: 100% !important; display: inline-block; margin-left:5%;  ">
 
-                        <div class="dateDiv" style="width: 45% !important">
+                    <div class="dateDiv" style="width: 45% !important">
 
-                            <div class="innerFields">
-                                <div class="leftdivReport1">
-                                    <font color="teal">Date:</font>
+                        <div class="innerFields">
+                            <div class="leftdivReport1" >
+                                <font  color="teal">Date:</font>
 
-                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeDiv" style="width: 45% !important">
+
+                        <div class="innerFields">
+                            <div class="leftdivReport2">
+                                <input type="text" class="inputImg1" id="txtdatepicker" disabled />
+                                <!-- <input type="text" class="inputImg1" id="txttimepicker" disabled />-->
+                                <!--  <input type="text" class="txttimepicker" />-->
+
+                            </div>
+
+
+                            <div class="leftdivReportimg">
+
+                                <img src="images/14Date.png" id="btndatepicker"
+                                     click="getDatePicker()" alt="" />
+                                <!-- <img src="images/15Clock.png" alt="" id="btntimepicker" />-->
 
                             </div>
                         </div>
-                        <div class="timeDiv" style="width: 45% !important">
+                    </div>
+                </div>
+            </div>
 
-                            <div class="innerFields">
-                                <div class="leftdivReport1">
-                                    <input type="text" class="inputImg1" id="txtdatepicker" disabled />
-                                    <!-- <input type="text" class="inputImg1" id="txttimepicker" disabled />-->
-                                    <!--  <input type="text" class="txttimepicker" />-->
 
-                                </div>
-                                <div class="leftdivReportimg">
 
-                                    <img src="images/14Date.png" id="btndatepicker"
-                                         click="getDatePicker()" alt="" />
-                                    <!-- <img src="images/15Clock.png" alt="" id="btntimepicker" />-->
 
-                                </div>
+            <!--   newly added -->
+
+            <div style=" width:100%!important">
+                <div style="width: 100% !important; display: inline-block;  margin-left:5%; margin-top:3%  ">
+
+                    <div class="dateDiv" style="width: 45% !important">
+
+                        <div class="innerFields">
+                            <div class="leftdivReport1">
+                                <font color="teal">Time:</font>
+
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="timeDiv" style="width: 45% !important">
+
+                        <div class="innerFields">
+                            <div class="leftdivReport2">
+                                <input type="text" class="inputImg1" id="txttimepicker" disabled />
+
+
+                            </div>
+                            <div class="leftdivReportimg">
+
+
+                                <img src="images/15Clock.png" alt="" id="btntimepicker" />
+
                             </div>
                         </div>
                     </div>
                 </div>
 
+            </div>
 
 
-
-                <!--   newly added -->
-               
-                <div style=" width:100%!important">
-                    <div style="width: 100% !important; display: inline-block;  margin-left:5%; margin-top:3%  ">
-
-                        <div class="dateDiv" style="width: 45% !important">
-
-                            <div class="innerFields">
-                                <div class="leftdivReport1">
-                                    <font color="teal">Time:</font>
-
-
-
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="timeDiv" style="width: 45% !important">
-
-                            <div class="innerFields">
-                                <div class="leftdivReport1">
-                                    <input type="text" class="inputImg1" id="txttimepicker" disabled />
-
-
-                                </div>
-                                <div class="leftdivReportimg">
-
-
-                                    <img src="images/15Clock.png" alt="" id="btntimepicker" />
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>
-
-
-                <div class="fulltext" style="margin-top:3%; margin-left:5%">
-                    <div class="bar"> GPS Location Of Incident:</div>
-                    <div class="bar2">
-                        <input type="text" id="txtidGPSIncident" class="inputText"
-                               readonly />
-
-                    </div>
+            <div class="fulltext" style="margin-top:3%; margin-left:5%">
+                <div class="bar"> GPS Location Of Incident:</div>
+                <div class="bar2">
+                    <input type="text" id="txtidGPSIncident" class="inputText"
+                           readonly />
 
                 </div>
 
-                <div class="fulltext" style="margin-top:3%; margin-left:5%;margin-bottom:3%">
-                    <div class="bar">Accident Description:</div>
-                    <div class="bar2">
-                        <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc" placeholder="Enter Sescription Of Location"></textarea>
+            </div>
 
-                    </div>
+            <div class="fulltext" style="margin-top:3%; margin-left:5%;margin-bottom:3%">
+                <div class="bar">Accident Description:</div>
+                <div class="bar2">
+                    <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc" placeholder="Enter Sescription Of Location"></textarea>
 
                 </div>
+
+            </div>
+        </div>
+
                     <div class="heightBtn">
                         <img src="images/nxt.png" alt=""
                              onclick="gotoAccidentReportToDescPage()" id="btnidAccidentReport"
                              width="100%" />
                     </div>
-                </div>
+               
        
 
     </div>
@@ -1458,23 +1462,23 @@ var TimeHistroy = $('#txttimepicker').val();
 			</table>
 
 		</div>
-		<div data-role="content">
+        <div data-role="content">
 
-		<!--	<div class="fieldnameAccident">Accident Description</div>
-			<div class="inputFields">
-				<textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc"></textarea>
-			</div> -->
+            <!--	<div class="fieldnameAccident">Accident Description</div>
+            <div class="inputFields">
+                <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc"></textarea>
+            </div> -->
 
-            <div class="full">
-        <div class="bar"> Accident Description: </div>
+            <div class="full" style="margin-top:25px">
+                <div class="bar"> Accident Description: </div>
                 <div class="bar2">
                     <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc" placeholder="Type Your Accident Description Here"></textarea>
 
                 </div>
-      
-    </div>
 
-            <div class="full" style="margin-top:3%">
+            </div>
+
+            <div class="full" style="margin-top:5%">
                 <div class="bar"> Road Conditions:</div>
                 <div class="bar2">
                     <input type="text" id="idSelectRoadCondition" class="inputText" placeholder="Type The Road Condition Here" />
@@ -1486,7 +1490,7 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 
-            <div class="full" style="margin-top:3% ;margin-bottom:5%">
+            <div class="full" style="margin-top:5% ;margin-bottom:5%">
                 <div class="bar"> Notes: </div>
                 <div class="bar2">
                     <textarea rows="4" cols="150" class="inputText" id="idAccDescNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
@@ -1496,7 +1500,7 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 
-                <!--<div class="fieldnameAccident">Road Conditions</div>
+            <!--<div class="fieldnameAccident">Road Conditions</div>
         <div class="inputFields">
             <!--<select class="selectOptionsRoad" id="idSelectRoadCondition1">
                     <option value="Good">Good</option>
@@ -1504,23 +1508,19 @@ var TimeHistroy = $('#txttimepicker').val();
                     <option value="Wet">Wet</option>
 
                 </select>-->
-                
+            <!--  <div class="inputFields">
 
-       
-                
-          <!--  <div class="inputFields">
+              <textarea rows="4" cols="150" class="inputText" id="idAccDescNotes"></textarea>
 
-                <textarea rows="4" cols="150" class="inputText" id="idAccDescNotes"></textarea>
+          </div> -->
 
-            </div> -->
+        </div>
 
-
-
-                <div class="heightBtn" style="margin-top:15%">
+                <div class="heightBtn" style="margin-top:10%">
                     <img src="images/nxt.png" alt="" onclick="gotoPhotoPage()"
                          width="100%" />
                 </div>
-            </div>
+            
 
 
 	</div>
@@ -1559,9 +1559,9 @@ var TimeHistroy = $('#txttimepicker').val();
                 </div>
                 <div id="idDelImgPhotoImg">
                     <!--<div class="deleteImg">
-                    <img src="images/delete.png" alt="" style="width: 100%" /></div>
-                <div class="photodiv">
-                    <img src="images/5mount-img.png" alt="" style="width: 100%" /></div>-->
+                <img src="images/delete.png" alt="" style="width: 100%" /></div>
+            <div class="photodiv">
+                <img src="images/5mount-img.png" alt="" style="width: 100%" /></div>-->
                 </div>
                 <div style="margin-top: 10px; display: none;"
                      id="idAddanotherphotoImg">
@@ -1583,12 +1583,12 @@ var TimeHistroy = $('#txttimepicker').val();
 
                 </div>
 
-
+            </div>
                 <div class="heightBtn">
                     <img src="images/nxt.png" alt="" onclick="gotoDamagePhotoPage()"
                          width="100%" />
                 </div>
-            </div>
+           
         </center>
 
 
@@ -1621,31 +1621,31 @@ var TimeHistroy = $('#txttimepicker').val();
 		</div>
 
         <center>
-		<div data-role="content">
-			<!--<div class="PhotoLocationHeading">Photo of Damage</div>-->
-			<div class="inputFields" id="idAddDamagePhotoImg">
-				<img src="images/Addphoto.png" style="width: 80%" alt=""
-					onclick="capturePhotoWithFiledamagePhoto();" />
-			</div>
-			<div id="idDelImgDamagePhotoImg">
-				<!--<div class="deleteImg">
+            <div data-role="content">
+                <!--<div class="PhotoLocationHeading">Photo of Damage</div>-->
+                <div class="inputFields" id="idAddDamagePhotoImg">
+                    <img src="images/Addphoto.png" style="width: 80%" alt=""
+                         onclick="capturePhotoWithFiledamagePhoto();" />
+                </div>
+                <div id="idDelImgDamagePhotoImg">
+                    <!--<div class="deleteImg">
                 <img src="images/delete.png" alt="" style="width: 100%" /></div>
             <div class="photodiv">
                 <img src="images/5mount-img.png" alt="" style="width: 100%" /></div>-->
-			</div>
-			<div style="margin-top: 10px; display: none;"
-				id="idAddanotherDamagephotoImg">
-				<img src="images/6Addanotherphoto.png" alt="" style="width: 100%;"
-					onclick="capturePhotoWithFiledamagePhoto()" />
-			</div>
+                </div>
+                <div style="margin-top: 10px; display: none;"
+                     id="idAddanotherDamagephotoImg">
+                    <img src="images/6Addanotherphoto.png" alt="" style="width: 100%;"
+                         onclick="capturePhotoWithFiledamagePhoto()" />
+                </div>
 
-
+            </div>
 
 			<div class="heightBtn">
 				<img src="images/nxt.png" alt="" onclick="gotoFirstPartyPage()"
 					width="100%" />
 			</div>
-		</div>
+	
             </center>
 </div>
 	<div data-role="page" id="FirstPartyPage" class="BodyBackground">
@@ -1669,14 +1669,14 @@ var TimeHistroy = $('#txttimepicker').val();
 				</tr>
 			</table>
 		</div>
-		<div data-role="content">
+        <div data-role="content">
 
-			<div style="width: 100% !important; display: inline-block;">
+            <div style="width: 100% !important; display: inline-block;">
                 <div class="full" style="margin-top:5%">
 
 
-                    <div class="bar">Title: </div>
-                    <div class="bar2">
+                    <div class="titlearea">Title: </div>
+                    <div class="title">
                         <select class="selectOptions" id="idselectpartyTitle" placeholder="Mr">
                             <option value="Miss">Miss</option>
                             <option value="Mrs">Mrs</option>
@@ -1702,35 +1702,42 @@ var TimeHistroy = $('#txttimepicker').val();
                         <input type="text" class="inputImg" id="txtidPartySurName" placeholder="Enter Surname" />
                     </div>
 
-                </div>							
+                </div>
 
-			</div>
+            </div>
 
-		<!--	<div class="fieldname">ID number</div>
-			<div class="inputFields">
-				<input type="text" class="inputText" id="txtFirstpartyIDNumber" />
-			</div>
-			<div class="fieldname">Licence number</div>
-			<div class="inputFields">
-				<input type="text" class="inputText" id="txtidDriverLicenseNum" />
-			</div> -->
+            <!--	<div class="fieldname">ID number</div>
+        <div class="inputFields">
+            <input type="text" class="inputText" id="txtFirstpartyIDNumber" />
+        </div>
+        <div class="fieldname">Licence number</div>
+        <div class="inputFields">
+            <input type="text" class="inputText" id="txtidDriverLicenseNum" />
+        </div> -->
+            <!--  <div class="fieldnameAccident"
+                style="width: 100% !important; display: inline-block;">
 
+               <div class="camera">
+                   <img src="images/photolicence.png" alt=""
+                        onclick="capturePhotoWithFileDriverLicenseNum();" style="width:100%" />
+               </div>
+           </div> -->
 
-			<div class="fieldnameAccident"
-				style="width: 100% !important; display: inline-block;">
-				
-				<div class="camera">
-                    <img src="images/photolicence.png" alt=""
-                         onclick="capturePhotoWithFileDriverLicenseNum();"style="width:100%" />
-				</div>
-			</div> 
+            <div class="cameraview" onclick="capturePhotoWithFileDriverLicenseNum();">
 
-			<div id="idDriverLicenseNumPhoto">
-				<!-- <div style="margin-left: 110px">
-                    <img src="images/delete.png" alt="" /></div>
-                <div class="photodiv">
-                    <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
-			</div>
+                <div style=" padding :20px; color: teal">
+                Add Photo of Licence
+                <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+            </div>
+
+        </div>
+
+            <div id="idDriverLicenseNumPhoto">
+                <!-- <div style="margin-left: 110px">
+                <img src="images/delete.png" alt="" /></div>
+            <div class="photodiv">
+                <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
+            </div>
 
             <div class="full" style="margin-top:5%">
                 <div class="bar">Phone: </div>
@@ -1738,31 +1745,31 @@ var TimeHistroy = $('#txttimepicker').val();
                     <input type="text" class="inputText" id="txtFirstpartyPhNumber" placeholder="Enter Phone Number" />
                 </div>
 
-            </div>	
+            </div>
             <div class="full" style="margin-top:5%">
                 <div class="bar">Email: </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyemail" placeholder="Enter Email address" />
                 </div>
 
-            </div>	
+            </div>
             <div class="full" style="margin-top:5%">
                 <div class="bar">Note: </div>
                 <div class="bar2">
                     <textarea rows="4" cols="150" class="inputText" id="txtFirstpartyNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
-                             
+
                 </div>
 
-            </div>	
-			
-			
+            </div>
 
-            <div 
-                 style="background: #ffffff !important; padding: 10px; margin-top: 65px; height:30px; ">
-                <div class="thirdparty" style="margin-top:65px;padding-top:3%; background: #ffffff !important; height:40px; float:left; width:100%; color: #009999 !important; font-family: 'FNB Sans' !important; font-size: 20px; text-shadow: none">
+
+
+            <div class="PartyInsurance" style="background-color: #ffffff !important; ">
+                <div style="color:#009999;">
                     3rd
                     Party Vehicle
                 </div>
+
             </div>
 
             <div class="full" style="margin-top:5%">
@@ -1804,104 +1811,140 @@ var TimeHistroy = $('#txttimepicker').val();
 
                 </div>
             </div>
-			
 
-            <div class="full" style="margin-top:5%">
-                <div class="bar">VIN Number: </div>
-                <div class="bar2">
+
+            <table class="full"  style=" margin-top:3%;">
+
+                <tr>
+                    <td class="vinnumberclr">
+                        VIN Number:
+                    </td>
+
+                    <td>
+                        <input type="text" class="inputImg" id="txtfirstpartyVINNum" />
+                    </td>
+                    <td width="5%" class="leftdivReport2" ; onclick="showpopup();">
+                        <img src="images/questionmark.png" alt="" style="margin-top:27px;"  />
+                    </td>
+                </tr>
+            </table>
+
+
+
+
+
+
+
+            <!--	<div class="fieldnameAccident">VIN number</div>
+            <div class="innerFieldsvinNo">
+                <div class="leftdivReport1VIN">
                     <input type="text" class="inputImg" id="txtFirstpartyVINNum" />
-                    <a class="leftdivReport2" onclick="showpopup()"> <img src="images/questionmark.png" alt="" /> </a>
+                </div>
+                <div class="leftdivReport2" onclick="showpopup()">
+                    <a> <img src="images/questionmark.png" alt="" /> </a>
+                </div>
+            </div> -->
+
+
+
+
+
+
+            <div id="popupBasic" style="display: none">
+                <div id="deletepopup">
+                    <img src="images/delete.png" alt="" />
+                </div>
+                <div style="border: 1px solid #009999; width: 80%; margin-left: 19px;">
+                    <p class="paraAboutAAQuestionmark">
+                        Look on the dashboard
+                        passanger side, diretly under the windscreen
+                    </p>
                 </div>
             </div>
 
+            <!-- <div data-role="popup" id="popupBasic" class="paraAboutAAQuestionmark">
+        <p class="paraAboutAAQuestionmark">Check on the dashboard passanger side, diretly under the windscreen</p>
+        </div>-->
 
-
-
-
-
-		<!--	<div class="fieldnameAccident">VIN number</div>
-			<div class="innerFieldsvinNo">
-				<div class="leftdivReport1VIN">
-					<input type="text" class="inputImg" id="txtFirstpartyVINNum" />
-				</div>
-				<div class="leftdivReport2" onclick="showpopup()">
-					<a> <img src="images/questionmark.png" alt="" /> </a>
-				</div>
-			</div> -->
-
-
-
-
-
-
-			<div id="popupBasic" style="display: none">
-				<div id="deletepopup">
-					<img src="images/delete.png" alt="" />
-				</div>
-				<div
-					style="border: 1px solid #009999; width: 80%; margin-left: 19px;">
-					<p class="paraAboutAAQuestionmark">Look on the dashboard
-						passanger side, diretly under the windscreen</p>
-				</div>
-			</div>
-
-			<!-- <div data-role="popup" id="popupBasic" class="paraAboutAAQuestionmark">
-            <p class="paraAboutAAQuestionmark">Check on the dashboard passanger side, diretly under the windscreen</p>
-            </div>-->
-
-			<div data-role="popup" id="popupBasic"
-				class="paraAboutAAQuestionmark">
-				<a href="#" data-rel="back" data-theme="a" data-icon="delete"
-					data-iconpos="X" class="ui-btn-right"><img
-					src="images/delete.png" alt="" /> </a>
-				<p class="paraAboutAAQuestionmark">Check on the dashboard
-					passanger side, diretly under the windscreen</p>
-			</div>
+            <div data-role="popup" id="popupBasic"
+                 class="paraAboutAAQuestionmark">
+                <a href="#" data-rel="back" data-theme="a" data-icon="delete"
+                   data-iconpos="X" class="ui-btn-right">
+                    <img src="images/delete.png" alt="" />
+                </a>
+                <p class="paraAboutAAQuestionmark">
+                    Check on the dashboard
+                    passanger side, diretly under the windscreen
+                </p>
+            </div>
 
 
             <div class="full" style="margin-top:5%">
                 <div class="bar">Notes: </div>
                 <div class="bar2">
-                    <textarea rows="4" cols="150" class="inputText" id="txtFirstpartyVehicleNotes"></textarea>                             
+                    <textarea rows="4" cols="150" class="inputText" id="txtFirstpartyVehicleNotes"></textarea>
                 </div>
             </div>
 
-			<div class="fieldnameAccident"
-				style="width: 100% !important; display: inline-block;">
-				
-				<div class="camera">
+           <!-- <div class="fieldnameAccident"
+                 style="width: 100% !important; display: inline-block;">
+
+                <div class="camera">
                     <img src="images/three1.png" alt=""
                          onclick="capturePhotoWithFileLicenseDisk();" style="width:100%" />
-				</div>
-			</div>
+                </div>
+            </div> -->
+
+            <div class="full" style="margin-top:5%;background-color:white;" onclick="capturePhotoWithFileDriverLicenseNum();">
+
+                <div style=" padding :20px; color: teal">
+                    Add Photo Of Location
+                    <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+                </div>
+
+            </div>
 
 
-			<div id="idLicenseDiskPhoto">
-				<!-- <div style="margin-left: 110px">
-                    <img src="images/delete.png" alt="" /></div>
-                <div class="photodiv">
-                    <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
-			</div>
-			<div class="fieldnameAccident"
-				style="width: 100% !important; display: inline-block;">
-			
-				<div class="camera">
+
+            <div id="idLicenseDiskPhoto">
+                <!-- <div style="margin-left: 110px">
+                <img src="images/delete.png" alt="" /></div>
+            <div class="photodiv">
+                <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
+            </div>
+
+        <!--   <div class="fieldnameAccident"
+                 style="width: 100% !important; display: inline-block;">
+
+                <div class="camera">
                     <img src="images/three2.png" alt=""
                          onclick="capturePhotoWithFileDamagePhoto();" style="width:100%" />
-				</div>
-			</div>
-			<div id="idDamagePhoto">
-				<!-- <div style="margin-left: 110px">
-                    <img src="images/delete.png" alt="" /></div>
-                <div class="photodiv">
-                    <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>  margin-top: 20px;-->
-			<!-- style="background: #009999 !important; padding: 10px; margin-top: 220px;height:20px;" 
-			style="margin-top:0px; float:left; width:100%; color: #ffffff !important; font-family: 'FNB Sans' !important; font-size: 16px; font-weight: normal; text-shadow: none"
-			<div style="color:#ffffff;">-->
-			</div>
-			<div class="PartyInsurance" style="background-color: #ffffff !important; ">
-				<div style="color:#009999;">3rd Party Insurance</div>
-			</div>
+                </div>
+            </div>  --> 
+
+            <div class="full" style="margin-top:5%;background-color:white;" onclick="capturePhotoWithFileDamagePhoto();">
+
+                <div style=" padding :20px; color: teal">
+                    Add Photo Of Damage
+                    <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+                </div>
+
+            </div>
+
+
+
+            <div id="idDamagePhoto">
+                <!-- <div style="margin-left: 110px">
+                <img src="images/delete.png" alt="" /></div>
+            <div class="photodiv">
+                <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>  margin-top: 20px;-->
+                <!-- style="background: #009999 !important; padding: 10px; margin-top: 220px;height:20px;"
+            style="margin-top:0px; float:left; width:100%; color: #ffffff !important; font-family: 'FNB Sans' !important; font-size: 16px; font-weight: normal; text-shadow: none"
+            <div style="color:#ffffff;">-->
+            </div>
+            <div class="PartyInsurance" style="background-color: #ffffff !important; ">
+                <div style="color:#009999;">3rd Party Insurance</div>
+            </div>
 
 
             <div class="full" style="margin-top:2%">
@@ -1917,7 +1960,7 @@ var TimeHistroy = $('#txttimepicker').val();
                     <input type="text" class="inputText" id="txtFirstpartyInsurerPcnum" placeholder="Enter Policy Number" />
                 </div>
             </div>
-   
+
             <div class="full" style="margin-top:3%;margin-bottom:3%">
                 <div class="bar">Phone Number:   </div>
                 <div class="bar2">
@@ -1925,25 +1968,25 @@ var TimeHistroy = $('#txttimepicker').val();
                 </div>
             </div>
 
-            
-                      
-               
-              <!--  <div class="fieldnameAccident" style="display: none">Color</div>
-                <div class="inputFields" style="display: none">
-                    <input type="text" class="inputText" id="txtFirstpartyInsurerVcolor" />
-                </div>
-                <div class="fieldnameAccident" style="display: none">
-                    Registration
-                </div>
-                <div class="inputFields" style="display: none">
-                    <input type="text" class="inputText" id="txtFirstpartyInsurerVReg" />
-                </div>
-                <div class="fieldnameAccident" style="display: none">Vin No</div>
-                <div class="inputFields" style="display: none">
-                    <input type="text" class="inputText" id="txtFirstpartyInsurerVinnum" />
-                </div>-->
 
 
+
+            <!--  <div class="fieldnameAccident" style="display: none">Color</div>
+          <div class="inputFields" style="display: none">
+              <input type="text" class="inputText" id="txtFirstpartyInsurerVcolor" />
+          </div>
+          <div class="fieldnameAccident" style="display: none">
+              Registration
+          </div>
+          <div class="inputFields" style="display: none">
+              <input type="text" class="inputText" id="txtFirstpartyInsurerVReg" />
+          </div>
+          <div class="fieldnameAccident" style="display: none">Vin No</div>
+          <div class="inputFields" style="display: none">
+              <input type="text" class="inputText" id="txtFirstpartyInsurerVinnum" />
+          </div>-->
+
+        </div>
                 <div class="heightBtnAnother">
                     <img src="images/Addanother.png" alt="" style="width: 105%;"
                          onclick="gotoSecondPartyPage()" />
@@ -1955,7 +1998,7 @@ var TimeHistroy = $('#txttimepicker').val();
                          width="100%" />
                 </div>
                 <input type="hidden" id="" value="" />
-            </div>
+           
 	</div>
 
 	<div data-role="page" id="SecondPartyPage" class="BodyBackground">
@@ -1965,8 +2008,8 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/bck.png"
-     alt="" />
+						onclick="gobackPage()"><img src="images/bck.png" alt="" />
+     
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
@@ -1982,14 +2025,14 @@ var TimeHistroy = $('#txttimepicker').val();
 		</div>
 
 
-		<div data-role="content">
+        <div data-role="content">
 
-			<div style="width: 100% !important; display: inline-block;">		
+            <div style="width: 100% !important; display: inline-block;">
                 <div class="full" style="margin-top:5%">
 
 
-                    <div class="bar">Title: </div>
-                    <div class="bar2">
+                    <div class="titlearea">Title: </div>
+                    <div class="title">
                         <select class="selectOptions" id="idselectpartyTitle" placeholder="Mr">
                             <option value="Miss">Miss</option>
                             <option value="Mrs">Mrs</option>
@@ -2002,6 +2045,8 @@ var TimeHistroy = $('#txttimepicker').val();
                     </div>
 
                 </div>
+
+
                 <div class="full" style="margin-top:5%">
                     <div class="bar">First Name: </div>
                     <div class="bar2">
@@ -2015,36 +2060,47 @@ var TimeHistroy = $('#txttimepicker').val();
                         <input type="text" class="inputImg" id="txtidPartySurName" placeholder="Enter Surname" />
                     </div>
 
-                </div>		
+                </div>
 
 
 
-			</div>
+            </div>
 
-		<!--	<div class="fieldname">ID number</div>
-			<div class="inputFields">
-				<input type="text" class="inputText" id="txtSecondpartyIDNumber" />
-			</div>
-			<div class="fieldname">Licence number</div>
-			<div class="inputFields">
-				<input type="text" class="inputText"
-					id="txtidSecondpartyDriverLicenseNum" />
-			</div>-->
+            <!--	<div class="fieldname">ID number</div>
+            <div class="inputFields">
+                <input type="text" class="inputText" id="txtSecondpartyIDNumber" />
+            </div>
+            <div class="fieldname">Licence number</div>
+            <div class="inputFields">
+                <input type="text" class="inputText"
+                    id="txtidSecondpartyDriverLicenseNum" />
+            </div>-->
 
-			<div class="fieldnameAccident"
-				style="width: 100% !important; display: inline-block;">				
-				<div class="camera">
+         <!-- <div class="fieldnameAccident"
+                 style="width: 100% !important; display: inline-block;">
+                <div class="camera">
                     <img src="images/photolicence.png" alt=""
                          onclick="capturePhotoWithFileDriverLicenseNumSP();" style="width:100%" />
-				</div>
-			</div>
+                </div>
+            </div> -->
+            <div class="full" style="margin-top:5%;background-color:white;" onclick="capturePhotoWithFileDriverLicenseNumSP();">
 
-			<div id="idSecondpartyDriverLicenseNumPhoto">
-				<!-- <div style="margin-left: 110px">
-                    <img src="images/delete.png" alt="" /></div>
-                <div class="photodiv">
-                    <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
-			</div>
+                <div style=" padding :20px; color: teal">
+                   Add Photo of Licence
+                    <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+                </div>
+
+            </div>
+
+
+
+
+            <div id="idSecondpartyDriverLicenseNumPhoto">
+                <!-- <div style="margin-left: 110px">
+                <img src="images/delete.png" alt="" /></div>
+            <div class="photodiv">
+                <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
+            </div>
 
             <div class="full" style="margin-top:5%">
                 <div class="bar">Phone: </div>
@@ -2052,7 +2108,7 @@ var TimeHistroy = $('#txttimepicker').val();
                     <input type="text" class="inputText" id="txtSecondpartyPhNumber" placeholder="Enter Phone Number" />
                 </div>
 
-            </div>	
+            </div>
 
             <div class="full" style="margin-top:5%">
                 <div class="bar">Email: </div>
@@ -2060,9 +2116,9 @@ var TimeHistroy = $('#txttimepicker').val();
                     <input type="text" class="inputText" id="txtSecondpartyemail" placeholder="Enter Email address" />
                 </div>
 
-            </div>	
+            </div>
 
-			
+
             <div class="full" style="margin-top:5%">
                 <div class="bar">Note: </div>
                 <div class="bar2">
@@ -2070,16 +2126,18 @@ var TimeHistroy = $('#txttimepicker').val();
 
                 </div>
 
-            </div>	
-
-			
+            </div>
 
 
-            <div style="background: #ffffff !important; padding: 10px; margin-top: 65px; height:30px; ">
-                <div class="thirdparty" style="margin-top:65px;padding-top:3%; background: #ffffff !important; height:40px; float:left; width:100%; color: #009999 !important; font-family: 'FNB Sans' !important; font-size: 20px; text-shadow: none">
+
+
+
+            <div class="PartyInsurance" style="background-color: #ffffff !important; ">
+                <div style="color:#009999;">
                     3rd
                     Party Vehicle
                 </div>
+
             </div>
 
             <div class="full" style="margin-top:5%">
@@ -2122,29 +2180,44 @@ var TimeHistroy = $('#txttimepicker').val();
                 </div>
             </div>
 
-            <div class="full" style="margin-top:5%">
+          <!--  <div class="full" style="margin-top:5%">
                 <div class="bar">VIN Number: </div>
                 <div class="bar2">
                     <input type="text" class="inputImg" id="txtSecondpartyVINNum" />
-                    <a class="leftdivReport2" onclick="showpopup()"> <img src="images/questionmark.png" alt="" /> </a>
+                    <div class="leftdivReport2" onclick="showpopup()"> <img src="images/questionmark.png" alt="" /> </div>
+                </div>
+            </div> -->
+            <table class="full" style=" margin-top:3%;">
+
+                <tr>
+                    <td class="vinnumberclr">
+                        VIN Number:
+                    </td>
+
+                    <td>
+                        <input type="text" class="inputImg" id="txtSecondpartyVINNum" />
+                    </td>
+                    <td width="5%" class="leftdivquestion" ; onclick="showpopup();">
+                        <img src="images/questionmark.png" alt="" style="margin-top:27px;" />
+                    </td>
+                </tr>
+            </table>
+
+
+            <div id="popupSpartyHelp" style="display: none">
+                <div id="deletepopupSpartyHelp">
+                    <img src="images/delete.png" alt="" />
+                </div>
+                <div style="border: 1px solid #009999; width: 80%; margin-left: 19px;">
+                    <p class="paraAboutAAQuestionmark">
+                        Look on the dashboard
+                        passanger side, diretly under the windscreen
+                    </p>
                 </div>
             </div>
 
-			
-
-			<div id="popupSpartyHelp" style="display: none">
-				<div id="deletepopupSpartyHelp">
-					<img src="images/delete.png" alt="" />
-				</div>
-				<div
-					style="border: 1px solid #009999; width: 80%; margin-left: 19px;">
-					<p class="paraAboutAAQuestionmark">Look on the dashboard
-						passanger side, diretly under the windscreen</p>
-				</div>
-			</div>
 
 
-			
 
             <div class="full" style="margin-top:5%">
                 <div class="bar">Notes: </div>
@@ -2153,52 +2226,67 @@ var TimeHistroy = $('#txttimepicker').val();
                 </div>
             </div>
 
-            <div class="fieldnameAccident"
+          <!--  <div class="fieldnameAccident"
                  style="width: 100% !important; display: inline-block;">
 
                 <div class="camera">
                     <img src="images/three1.png" alt=""
                          onclick="capturePhotoWithFileLicenseDiskSP();" style="width:100%" />
                 </div>
+            </div> -->
+            <div class="full" style="margin-top:5%;background-color:white;"  onclick="capturePhotoWithFileLicenseDiskSP();">
+
+                <div style=" padding :20px; color: teal">
+                    Add Photo Of Location
+                    <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+                </div>
+
             </div>
-			
 
-			<div id="idSecondpartyLicenseDiskPhoto">
-				<!-- <div style="margin-left: 110px">
-                    <img src="images/delete.png" alt="" /></div>
-                <div class="photodiv">
-                    <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
-			</div>
+            <div id="idSecondpartyLicenseDiskPhoto">
+                <!-- <div style="margin-left: 110px">
+                <img src="images/delete.png" alt="" /></div>
+            <div class="photodiv">
+                <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
+            </div>
 
-			
 
-            <div class="fieldnameAccident"
+
+         <!--   <div class="fieldnameAccident"
                  style="width: 100% !important; display: inline-block;">
 
                 <div class="camera">
                     <img src="images/three2.png" alt=""
                          onclick="capturePhotoWithFileDamagePhotoSP();" style="width:100%" />
                 </div>
+            </div> -->
+
+            <div class="full" style="margin-top:5%;background-color:white;" onclick="capturePhotoWithFileDamagePhotoSP();">
+
+                <div style=" padding :20px; color: teal">
+                    Add Photo Of Damage
+                    <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+                </div>
+
             </div>
+            <div id="idSecondpartyDamagePhoto">
+                <!-- <div style="margin-left: 110px">
+                <img src="images/delete.png" alt="" /></div>
+            <div class="photodiv">
+                <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
+            </div>
+            <!--  <div
+            style="background: #009999 !important; padding: 10px; margin-top: 220px; height:20px;">
+            <div
+                style="margin-top:0px; float:left; width:100%; color: #ffffff !important; font-family: 'FNB Sans' !important; font-size: 16px; font-weight: normal; text-shadow: none">3rd
+                Party Insurance</div>
+                <div style="color:#ffffff;"></div>
+        </div>-->
 
+            <div class="PartyInsurance" style="background-color: #ffffff !important; ">
+                <div style="color:#009999;">3rd Party Insurance</div>
 
-			<div id="idSecondpartyDamagePhoto">
-				<!-- <div style="margin-left: 110px">
-                    <img src="images/delete.png" alt="" /></div>
-                <div class="photodiv">
-                    <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
-			</div>
-			<!--  <div
-				style="background: #009999 !important; padding: 10px; margin-top: 220px; height:20px;">
-				<div
-					style="margin-top:0px; float:left; width:100%; color: #ffffff !important; font-family: 'FNB Sans' !important; font-size: 16px; font-weight: normal; text-shadow: none">3rd
-					Party Insurance</div>
-					<div style="color:#ffffff;"></div>
-			</div>-->
-			
-				<div class="PartyInsurance" style="background-color: #ffffff !important; "><div style="color:#009999;">3rd Party Insurance</div>
-				
-			</div>
+            </div>
 
             <div class="full" style="margin-top:2%">
                 <div class="bar">Insurer:   </div>
@@ -2206,7 +2294,7 @@ var TimeHistroy = $('#txttimepicker').val();
                     <input type="text" class="inputText" id="txtSecondpartyInsurer" placeholder="Enter Insurer" />
                 </div>
             </div>
-			
+
             <div class="full" style="margin-top:2%">
                 <div class="bar">Policy No:   </div>
                 <div class="bar2">
@@ -2222,32 +2310,33 @@ var TimeHistroy = $('#txttimepicker').val();
             </div>
 
 
-			
-
-			<div class="fieldnameAccident" style="display: none">Colour</div>
-			<div class="inputFields" style="display: none">
-				<input type="text" class="inputText"
-					id="txtSecondpartyInsurerVcolor" />
-			</div>
-			<div class="fieldnameAccident" style="display: none">Registration
-			</div>
-			<div class="inputFields" style="display: none">
-				<input type="text" class="inputText" id="txtSecondpartyInsurerVReg" />
-			</div>
-			<div class="fieldnameAccident" style="display: none">Vin number</div>
-			<div class="inputFields" style="display: none">
-				<input type="text" class="inputText"
-					id="txtSecondpartyInsurerVinnum" />
-			</div>
 
 
+            <div class="fieldnameAccident" style="display: none">Colour</div>
+            <div class="inputFields" style="display: none">
+                <input type="text" class="inputText"
+                       id="txtSecondpartyInsurerVcolor" />
+            </div>
+            <div class="fieldnameAccident" style="display: none">
+                Registration
+            </div>
+            <div class="inputFields" style="display: none">
+                <input type="text" class="inputText" id="txtSecondpartyInsurerVReg" />
+            </div>
+            <div class="fieldnameAccident" style="display: none">Vin number</div>
+            <div class="inputFields" style="display: none">
+                <input type="text" class="inputText"
+                       id="txtSecondpartyInsurerVinnum" />
+            </div>
+
+        </div>
 
 			<div class="heightBtn">
 				<img src="images/nxt.png" alt="" onclick="gotoWitnessPageFromSP()"
 					width="100%" />
 			</div>
 			<input type="hidden" id="Hidden2" value="" />
-		</div>
+		
 
 	</div>
 	<div data-role="page" id="WitnessPage" class="BodyBackground">
@@ -2274,14 +2363,14 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 		</div>
-		<div data-role="content">
+        <div data-role="content">
             <div style="width: 100% !important; display: inline-block;">
 
                 <div class="full" style="margin-top:5%">
 
 
-                    <div class="bar">Title: </div>
-                    <div class="bar2">
+                    <div class="titlearea">Title: </div>
+                    <div class="title">
                         <select class="selectOptions" id="idselectwitnesstitle" placeholder="Mr">
                             <option value="Miss">Miss</option>
                             <option value="Mrs">Mrs</option>
@@ -2297,18 +2386,18 @@ var TimeHistroy = $('#txttimepicker').val();
                 <div class="full" style="margin-top:5%">
                     <div class="bar">First Name: </div>
                     <div class="bar2">
-                        <input type="text" class="inputImg" id="txtidwitnessName" placeholder="Enter First Name"  />
+                        <input type="text" class="inputImg" id="txtidwitnessName" placeholder="Enter First Name" />
                     </div>
 
                 </div>
                 <div class="full" style="margin-top:5%">
                     <div class="bar">Surname: </div>
                     <div class="bar2">
-                        <input type="text" class="inputImg" id="txtidwitnessSurName" placeholder="Enter Surname"/>
+                        <input type="text" class="inputImg" id="txtidwitnessSurName" placeholder="Enter Surname" />
                     </div>
 
-                </div>							
-			</div>
+                </div>
+            </div>
 
             <div class="full" style="margin-top:5%">
                 <div class="bar">Phone Number: </div>
@@ -2316,14 +2405,14 @@ var TimeHistroy = $('#txttimepicker').val();
                     <input type="text" class="inputText" id="txtidwitnessPhnum" plceholder="Enter Phone Number" />
                 </div>
 
-            </div>	
+            </div>
             <div class="full" style="margin-top:5%">
                 <div class="bar">Email Address: </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtidwitnessEmail" placeholder="Enter Email Address" />
                 </div>
 
-            </div>	
+            </div>
 
             <div class="full" style="margin-top:5%">
                 <div class="bar">Notes: </div>
@@ -2332,17 +2421,17 @@ var TimeHistroy = $('#txttimepicker').val();
                 </div>
 
 
-            </div>	
+            </div>
 
-			
-			
 
-			<!--<div class="fieldnameAccident">Witness Statment</div>
-            <div class="inputFields"><input type="text" class="inputText" id="txtidwitnessSt1"/></div>-->
 
-		
 
-            <div class="full" style="margin-top:5%; margin-bottom:3%">
+            <!--<div class="fieldnameAccident">Witness Statment</div>
+        <div class="inputFields"><input type="text" class="inputText" id="txtidwitnessSt1"/></div>-->
+
+
+
+         <!--   <div class="full" style="margin-top:5%; margin-bottom:3%">
                 <div class="witness">Witness statement: </div>
                 <div class="witness2" style="float: left; ">
                     <input type="text" class="inputText" id="txtidwitnessSt" />
@@ -2351,19 +2440,36 @@ var TimeHistroy = $('#txttimepicker').val();
                     <img src="images/Mike.png" alt=""
                          style="float: right;color:#000000; margin-top: -58px;" onclick="captureAudio()" />
                 </div>
+            </div> -->
+
+            <table class="full" style=" margin-top:3%;">
+
+                <tr>
+                    <td class="vinnumberclr">
+                        Witness statement:
+                    </td>
+
+                    <td>
+                        <input type="text" class="inputText" id="txtidwitnessSt" />
+                    </td>
+                    <td width="5%" class="leftdivReport2" ; onclick="showpopup();">
+                        <img src="images/Mike.png" alt="" onclick="captureAudioSWitness()"; style="margin-top:27px; "  />
+                    </td>
+                </tr>
+            </table>
+
+
+            <div class="result-block" style="display: none">
+                <div style="color: White">Capture Result:</div>
+                <span id="capture-resultAudio" style="color: White"></span><br /> <span id="capture-dataAudio"></span><br />
+                <!--<div id="audio-result"  style="color:White">Play Vedio</div>-->
+
             </div>
-
-			<div class="result-block" style="display: none">
-				<div style="color: White">Capture Result:</div>
-				<span id="capture-resultAudio" style="color: White"></span><br /> <span
-					id="capture-dataAudio"></span><br />
-				<!--<div id="audio-result"  style="color:White">Play Vedio</div>-->
-
-			</div>
-			<div id="idAudioDiv"></div>
-			<div style="height: 50px">
-				<br /> <br /> <br />
-			</div>
+            <div id="idAudioDiv"></div>
+            <div style="height: 50px">
+                <br /> <br /> <br />
+            </div>
+        </div>
 			<div class="heightBtnAnother">
 				<img src="images/Another-witness.png" alt="" style="width: 100%;"
 					onclick="gotoSecondWitnessPage()" />
@@ -2372,7 +2478,7 @@ var TimeHistroy = $('#txttimepicker').val();
 				<img src="images/nxt.png" alt=""
 					onclick="gotopolicecasePageFromFirstWitness()" width="100%" />
 			</div>
-		</div>
+		
 	</div>
 
 	<div data-role="page" id="SecondWitnessPage" class="BodyBackground">
@@ -2399,8 +2505,8 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 		</div>
-		<div data-role="content">
-			
+        <div data-role="content">
+
             <div class="full" style="margin-top:5%">
                 <div class="bar">First Name: </div>
                 <div class="bar2">
@@ -2438,41 +2544,44 @@ var TimeHistroy = $('#txttimepicker').val();
                     <input type="text" class="inputText" id="txtidwitnessEmail" placeholder="Enter Email Address" />
                 </div>
 
-            </div>	
+            </div>
 
 
 
 
 
-			
-			<!--<div class="fieldnameAccident">Witness Statment</div>
-            <div class="inputFields"><input type="text" class="inputText" id="txtidwitnessSt1"/></div>-->
-			<div class="fieldname">Witness Statement</div>
-			<div class="inputFields"
-				style="width: 100% !important; display: inline-block;">
-				<div style="float: left; width: 75% !important">
-					<input type="text" class="inputText" id="txtidSwitnessSt" />
-				</div>
-				<div style="float: left; width: 25% !important">
-					<img src="images/Mike.png" alt=""
-						style="float: right; margin-top: 5px;"
-						onclick="captureAudioSWitness()" />
-				</div>
-			</div>
-			<div class="result-block" style="display: none">
-				<div style="color: White">Capture Result:</div>
-				<span id="capture-resultswitAudio" style="color: White"></span><br />
-				<span id="capture-dataswitAudio"></span><br />
-			</div>
-			<div id="idSecondWitAudio"></div>
-			<div style="height: 50px">
-				<br /> <br /> <br />
-			</div>
+
+            <!--<div class="fieldnameAccident">Witness Statment</div>
+        <div class="inputFields"><input type="text" class="inputText" id="txtidwitnessSt1"/></div>-->
+            <div class="fieldname">Witness Statement</div>
+            <div class="inputFields"
+                 style="width: 100% !important; display: inline-block;">
+                <div style="float: left; width: 75% !important">
+                    <input type="text" class="inputText" id="txtidSwitnessSt" />
+                </div>
+                <div style="float: left; width: 25% !important">
+                    <img src="images/Mike.png" alt=""
+                         style="float: right; margin-top: 5px;"
+                         onclick="captureAudioSWitness()" />
+                </div>
+            </div>
+
+
+            <div class="result-block" style="display: none">
+                <div style="color: White">Capture Result:</div>
+                <span id="capture-resultswitAudio" style="color: White"></span><br />
+                <span id="capture-dataswitAudio"></span><br />
+            </div>
+            <div id="idSecondWitAudio"></div>
+            <div style="height: 50px">
+                <br /> <br /> <br />
+            </div>
+        </div>
 			<div class="heightBtn">
 				<img src="images/nxt.png" alt=""
 					onclick="gotopolicecasePageFromSecondWitness()" width="100%" />
 			</div>
-		</div>
+		
 	</div>
 
 	<div data-role="page" id="policecasePage" class="BodyBackground">
@@ -2496,7 +2605,7 @@ var TimeHistroy = $('#txttimepicker').val();
 				</tr>
 			</table>
 		</div>
-		<div data-role="content">
+        <div data-role="content">
 
 
             <div class="full" style="margin-top:3%">
@@ -2511,7 +2620,7 @@ var TimeHistroy = $('#txttimepicker').val();
             </div>
 
             <div class="full" style="margin-top:3%">
-                <div class="bar"><span style="padding-top:15%;" >Officer Number:</span> </div>
+                <div class="bar"><span style="padding-top:15%;">Officer Number:</span> </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtidpolicenumber" placeholder="Enter Officer number" />
 
@@ -2530,33 +2639,30 @@ var TimeHistroy = $('#txttimepicker').val();
             </div>
 
 
-			<!--<div class="fieldname">Officer Name</div>
-			<div class="inputFields">
-				<input type="text" class="inputText" id="txtidpolicename" />
-			</div>
+            <!--<div class="fieldname">Officer Name</div>
+        <div class="inputFields">
+            <input type="text" class="inputText" id="txtidpolicename" />
+        </div>
 
-			<div class="fieldname">Officer Number</div>
-			<div class="inputFields">
-				<input type="text" class="inputText" id="txtidpolicenumber" />
-			</div>
-			<div class="fieldnameAccident">Case Number</div> -->
-		<!--	<div class="inputFields" style="background-color:#eaeaea"> 
-				<input type="text" class="inputText" id="txtidcasenumber" />
-			</div>  -->
-
-
+        <div class="fieldname">Officer Number</div>
+        <div class="inputFields">
+            <input type="text" class="inputText" id="txtidpolicenumber" />
+        </div>
+        <div class="fieldnameAccident">Case Number</div> -->
+            <!--	<div class="inputFields" style="background-color:#eaeaea">
+                <input type="text" class="inputText" id="txtidcasenumber" />
+            </div>  -->
 
 
+
+        </div>
 
 			<div class="heightBtn" >
 				<img src="images/SAVE.png" alt="" onclick="btnSaveAllDetails(sid)" width="100%" />
 			</div>
 
 
-			<div>
-
-            </div>
-		</div>
+	
 
 	</div>
 
