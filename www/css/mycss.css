@@ -1150,6 +1150,12 @@ text-shadow: none!important;
 	height:83px;
 	border:solid 1px #009999;
 }
+.fullgpslction{
+    width:90%;
+	float:left;
+	height:56px;
+	border:solid 1px #009999;
+}
 
 .bar {
 	width:39%;
