@@ -648,6 +648,23 @@ height:48px!important;
 padding-right:3%;
 }
 
+/* Newly input css for textarea*/
+
+.txtareainput
+{
+
+    border:none!important;
+     width:100%!important;
+  color: #black!important;
+font-family:'FNB Sans'!important;
+font-size: 14px!important;
+background-color:white!important;
+font-weight: normal;
+text-shadow:none!important;
+height:75px!important;
+padding-right:3%;
+}
+
 .innerField
 {
         width: 100%;
