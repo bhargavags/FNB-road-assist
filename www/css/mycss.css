@@ -271,7 +271,7 @@ text-shadow:none!important;
 .paraAboutfnb
 {
 font-family:'FNB Sans'!important;
-color: #000000!important;
+color: #4D4D4D!important;
 
 font-size: 14px!important;
 text-align:justify!important;
@@ -309,7 +309,7 @@ font-weight:normal;
 .Party
 {
 width:100%;
-float:left;
+/*float:left;*/
 height:28px;
 color:teal!important;
 background-color:#ffffff!important;
@@ -970,7 +970,7 @@ margin-left:20px;
 .selectOptions
 {
     width:107.5%!important;
-   /* background:black!important;*/
+    background-color:white!important;
     height:56px;
    /* border-color:teal!important;*/
     border-left-color:teal!important;
@@ -1157,6 +1157,14 @@ text-shadow: none!important;
 	border:solid 1px #009999;
 }
 
+.thirdpartytextarea{
+    width:99%;
+	float:left;
+	height:85px;
+	border:solid 1px #009999;
+    background-color:#ffffff!important;
+}
+
 .bar {
 	width:39%;
 	background-color:#FFFFFF;
@@ -1201,7 +1209,7 @@ text-shadow: none!important;
 .textarea2 {
 	width:59%;
 	background-color:#FFFFFF;
-	height:81px;
+	height:83px;
 	float:left;
 	color:#000000;
 	text-align:center;
@@ -1355,5 +1363,5 @@ font-family: 'FNB Sans'!important;
 {
    
    color:teal!important;
-   width: 39%;
+   width: 25%;
 }
