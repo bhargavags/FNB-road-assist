@@ -1569,40 +1569,34 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
                 </div>
-
-                <div class="inputFields" >
-                    <img src="images/Addphoto.png" style="width: 80%; height:70px;" alt=""
-                         onclick="capturePhotoWithFile();" />
-                    <div id="idDelImgPhotoImg">
-                        <!--<div class="deleteImg">
+                <div id="idDelImgPhotoImg">
+                    <!--<div class="deleteImg">
                 <img src="images/delete.png" alt="" style="width: 100%" /></div>
             <div class="photodiv">
                 <img src="images/5mount-img.png" alt="" style="width: 100%" /></div>-->
-                    </div>
-                    </div>
+                </div>
 
+                <div style="margin-top: 10px; display: none;"
+                     id="idAddanotherphotoImg">
+                    <img src="images/6Addanotherphoto.png" alt="" style="width: 80%"
+                         onclick="capturePhotoWithFile();" />
+                </div>
 
-                    <div style="margin-top: 10px; display: none;"
-                         id="idAddanotherphotoImg">
-                        <img src="images/6Addanotherphoto.png" alt="" style="width: 80%"
-                             onclick="capturePhotoWithFile();" />
-                    </div>
+                <div id="idVedioShowdiv" style="display: none"></div>
+                <div style="margin-top: 20px !important;"></div>
+                <div style="display: block;" id="idVediocapturediv">
+                    <img src="images/Capture.png" alt="" style="width:80%;"
+                         onclick="captureVedio();" />
+                </div>
 
-                    <div id="idVedioShowdiv" style="display: none"></div>
-                    <div style="margin-top: 20px !important;"></div>
-                    <div style="display: block;" id="idVediocapturediv">
-                        <img src="images/Capture.png" alt="" style="width:80%;"
-                             onclick="captureVedio();" />
-                    </div>
-
-                    <div class="result-block" style="display: none">
-                        <div style="color: White">Capture Result:</div>
-                        <span id="capture-result" style="color: White"></span><br /> <span id="capture-data"></span><br />
-                        <!--<div id="audio-result"  style="color:White">Play Vedio</div>-->
-
-                    </div>
+                <div class="result-block" style="display: none">
+                    <div style="color: White">Capture Result:</div>
+                    <span id="capture-result" style="color: White"></span><br /> <span id="capture-data"></span><br />
+                    <!--<div id="audio-result"  style="color:White">Play Vedio</div>-->
 
                 </div>
+
+            </div>
                 <div class="heightBtn">
                     <img src="images/nxt.png" alt="" onclick="gotoDamagePhotoPage()"
                          width="100%" />
