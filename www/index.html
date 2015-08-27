@@ -449,7 +449,7 @@ try{
           
           var path = $('#capture-result').text();
          $('#idVedioShowdiv').show();
-          $('#idVedioShowdiv').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Capture Video<img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /><div class="photodiv" id="idvedioDiv"><div class="mainPhotodiv"><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteVedio(this)" style="width: 100%" /></div><div class="photodiv" id="idvedioDiv"><video style="width:100%" poster="http://196.38.94.34:9091/Images/PlayVedio.png" controls><source src="' + path + '" type="video/mp4"></video></div></div></video></div></div>');
+          $('#idVedioShowdiv').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Capture Video<img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /><div class="photodiv" id="idvedioDiv"><div class=""><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteVedio(this)" style="width: 100%" /></div><div class="photodiv" id="idvedioDiv"><video style="width:100%" poster="http://196.38.94.34:9091/Images/PlayVedio.png" controls><source src="' + path + '" type="video/mp4"></video></div></div></video></div></div>');
            
         }
           catch(ex)
