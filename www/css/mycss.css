@@ -308,7 +308,7 @@ font-weight:normal;
 /*** 1st Party**/
 .Party
 {
-width:100%;
+width:50%;
 /*float:left;*/
 height:28px;
 color:teal!important;
@@ -317,7 +317,7 @@ font-family:'FNB Sans' !important;
 font-size: 14px;
 font-weight: normal;
 padding :3%;
-padding-left:10%;
+/*padding-left:8%;*/
 vertical-align: middle;
 border-bottom:1px solid teal!important
 /*
@@ -328,11 +328,11 @@ height:100%;*/
 {
     background:#747474;
     height:40px;
-    padding:0px;
+   
 }
 .PartyTable
 {
-    border:1;
+    border:1px;
     width:100%
 }
 .tdleftspaceparty
@@ -1143,6 +1143,21 @@ text-shadow: none!important;
    /* max-height:100%;*/
 }
 
+
+/*new class for whta to do and about fnb page  */
+
+.BodyBackgroundsecond
+{
+   /* background-color:white!important;*/
+   background-color:#ffffff!important;
+   margin:auto!important;
+   /* max-height:100%;*/
+}
+
+
+
+
+
 /*video { 
    width:305px; 
    height:160px;  
@@ -1422,9 +1437,9 @@ font-family: 'FNB Sans'!important;
     border-top:1px solid teal!important;
     border-right:1px solid teal!important;
     border-left:1px solid teal!important;
+}
+#popupBasic{
 
 
-
-
-
+     background-color: lightblue;
 }
