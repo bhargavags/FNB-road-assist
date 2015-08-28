@@ -622,7 +622,7 @@ height:45px!important;
 .inputTextnew
 {
      width:100%!important;
-  color: #black!important;
+  color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
 background-color:white!important;
@@ -638,7 +638,7 @@ height:40px!important;
 
     border:none!important;
      width:100%!important;
-  color: #black!important;
+  color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
 background-color:white!important;
@@ -653,7 +653,7 @@ padding-right:3%;
 
     border:none!important;
      width:123%!important;
-  color: #black!important;
+  color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
 background-color:white!important;
@@ -673,9 +673,9 @@ padding-right:3%;
 
     border:none!important;
      width:130%!important;
-  color: #black!important;
+  color: #000000!important;
 font-family:'FNB Sans'!important;
-font-size: 10px!important;
+font-size: 14px!important;
 background-color:white!important;
 font-weight: normal;
 text-shadow:none!important;
@@ -1340,10 +1340,49 @@ text-shadow: none!important;
 	text-align:center;
 	font-size:10px;
 	border:none;
-    padding-top:16px;
+    padding-top:9px;
 	padding-left:0%;
 	padding-right:2%;
 }
+
+
+
+
+/* Newly added*/
+
+.note {
+	width:16%;
+	background-color:#FFFFFF;
+	height:60px;
+	float:left;
+	color:#009999;
+	text-align:center;
+	font-size:15px;
+    padding-top:25px;
+    text-align:left;
+
+}
+
+.note1 {
+	width:63%;
+	background-color:#FFFFFF;
+	height:68px;
+	float:left;
+	color:#000000;
+	text-align:center;
+	font-size:10px;
+	border:none;
+    padding-top:14px;
+	padding-left:0%;
+	padding-right:2%;
+}
+
+
+
+
+
+
+
 
 
 
