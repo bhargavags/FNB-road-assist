@@ -1421,19 +1421,19 @@ var TimeHistroy = $('#txttimepicker').val();
                 </div>
 
             </div> --> 
+            
+                <div class="fullgpslction" style="margin-top:3%; margin-left:0%;margin-right:0%;">
+                    <div class="gpsdiv" style="padding-left:0px;"><span style="padding-left:2px;">GPS Location Of Incident: </span></div>
+                    <div class="gps">
+                        <input type="text" id="txtidGPSIncident" class="inputText"
+                               readonly />
+                    </div>
 
-            <div class="fullgpslction" style="margin-top:3%; margin-left:0%;margin-right:0%;">
-                <div class="gpsdiv" style="padding-left:0px;">GPS Location Of Incident: </div>
-                <div class="gps">
-                    <input type="text" id="txtidGPSIncident" class="inputText"
-                           readonly />
                 </div>
-
-            </div>
-
+          
 
             <div class="fulltext" style="margin-top:3%; margin-left:0%;margin-bottom:3%">
-                <div class="textarea1" style="padding-left:0px;">Accident Description:</div>
+                <div class="textarea1" style="padding-left:0px;"> <span style="padding-left:1px;"> Accident Description:</span></div>
                 <div class="textarea2">
                     <textarea rows="4" cols="150" class="txtareainput" id="idAccDesc" placeholder="Enter Sescription Of Location"></textarea>
 
@@ -1479,19 +1479,19 @@ var TimeHistroy = $('#txttimepicker').val();
                 <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc"></textarea>
             </div> -->
 
-            <div class="full" style="margin-top:25px;padding-left:3px;">
+            <div class="full" style="margin-top:25px;padding-left:5px;">
                 <div class="scpage"> Accident Description: </div>
-                <div class="bar2">
+                <div class="Accidentdesc">
                     <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc" placeholder="Type Your Accident Description Here"></textarea>
 
                 </div>
 
             </div>
 
-            <div class="full" style="margin-top:5%;padding-left:3px;">
+            <div class="full" style="margin-top:5%;padding-left:5px;">
                 <div class="scpage"> Road Conditions:</div>
-                <div class="bar2">
-                    <input type="text" id="idSelectRoadCondition" class="inputText" placeholder="Type The Road Condition Here" />
+                <div class="Accidentdesc">
+                    <input type="text" id="idSelectRoadCondition" class="inputTextroad" placeholder="Type The Road Condition Here" />
 
                 </div>
 
@@ -1500,10 +1500,10 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 
-            <div class="full" style="margin-top:5% ;margin-bottom:5%;padding-left:3px;">
+            <div class="full" style="margin-top:5% ;margin-bottom:5%;padding-left:5px;">
                 <div class="scpage"> Notes: </div>
                 <div class="bar2">
-                    <textarea rows="4" cols="150" class="inputText" id="idAccDescNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
+                    <textarea rows="4" cols="150" class="inputTextroad" id="idAccDescNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
 
                 </div>
             </div>
@@ -1702,14 +1702,14 @@ var TimeHistroy = $('#txttimepicker').val();
                     </div>
 
                 </div>
-                <div class="full" style="margin-top:5% ;padding-left:3px;">
-                    <div class="bar">First Name: </div>
+                <div class="full" style="margin-top:5% ;padding-left:5px;">
+                    <div class="bar">First Name:  </div>
                     <div class="bar2">
                         <input type="text" class="inputImg" id="txtidPartyName" placeholder="Enter First Name" />
                     </div>
 
                 </div>
-                <div class="full" style="margin-top:5%;padding-left:3px;">
+                <div class="full" style="margin-top:5%;padding-left:5px;">
                     <div class="bar">Surname: </div>
                     <div class="bar2">
                         <input type="text" class="inputImg" id="txtidPartySurName" placeholder="Enter Surname" />
@@ -1738,7 +1738,7 @@ var TimeHistroy = $('#txttimepicker').val();
 
             <div class="cameraview" onclick="capturePhotoWithFileDriverLicenseNum();">
 
-                <div style=" padding :20px; color: teal;padding-left:5px;">
+                <div style=" padding :20px; color: teal;padding-left:7px;">
                 Add Photo of Licence
                 <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
             </div>
@@ -1752,14 +1752,14 @@ var TimeHistroy = $('#txttimepicker').val();
                 <img src="images/5mount-img.png" alt="" style="width: 50%; height: 50%" /></div>-->
             </div>
 
-            <div class="full" style="margin-top:5%; padding-left:3px;">
+            <div class="full" style="margin-top:5%; padding-left:5px;">
                 <div class="bar">Phone: </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyPhNumber" placeholder="Enter Phone Number" />
                 </div>
 
             </div>
-            <div class="full" style="margin-top:5%;padding-left:3px;">
+            <div class="full" style="margin-top:5%;padding-left:5px;">
                 <div class="bar">Email: </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyemail" placeholder="Enter Email address" />
@@ -1776,7 +1776,7 @@ var TimeHistroy = $('#txttimepicker').val();
             </div> -->
 
             <div class="thirdpartytextarea" style="margin-top:3%; margin-bottom:3%">
-                <div class="textarea1" style="margin-left:3px;">Notes:</div>
+                <div class="textarea1" style="margin-left:5px;">Notes:</div>
                 <div class="textarea2">
                     <textarea rows="4" cols="150" class="txtareainput" id="txtFirstpartyNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
 
@@ -1794,7 +1794,7 @@ var TimeHistroy = $('#txttimepicker').val();
 
             </div>
 
-            <div class="full" style="margin-top:5%;padding-left:3px;">
+            <div class="full" style="margin-top:5%;padding-left:5px;">
                 <div class="bar">Make: </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyVehicleMake" placeholder="Enter Make Of Vehicle" />
@@ -1803,14 +1803,14 @@ var TimeHistroy = $('#txttimepicker').val();
 
             </div>
 
-            <div class="full" style="margin-top:5%;padding-left:3px;">
+            <div class="full" style="margin-top:5%;padding-left:5px;">
                 <div class="bar">Model: </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyVehicleModel" placeholder="Enter Model Of Vehicle" />
                 </div>
             </div>
 
-            <div class="full" style="margin-top:5%;padding-left:3px;">
+            <div class="full" style="margin-top:5%;padding-left:5px;">
                 <div class="bar">Year: </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyVehicleMake" placeholder="Enter Year Of Vehicle" />
@@ -1818,7 +1818,7 @@ var TimeHistroy = $('#txttimepicker').val();
                 </div>
             </div>
 
-            <div class="full" style="margin-top:5%;padding-left:3px;">
+            <div class="full" style="margin-top:5%;padding-left:5px;">
                 <div class="bar">Colour: </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyVehiclecolor" placeholder="Enter Colour Of Vehicle" />
@@ -1826,16 +1826,16 @@ var TimeHistroy = $('#txttimepicker').val();
             </div>
 
 
-            <div class="full" style="margin-top:5%;padding-left:3px;">
-                <div class="bar">Registration number: </div>
-                <div class="bar2">
+            <div class="full" style="margin-top:5%;padding-left:5px;">
+                <div class="register">Registration number: </div>
+                <div class="gps">
                     <input type="text" class="inputText" id="txtFirstpartyRegNum" placeholder="Enter Registration Number" />
 
                 </div>
             </div>
 
 
-            <table class="full"  style=" margin-top:3%;padding-left:3px;">
+            <table class="full"  style=" margin-top:3%;padding-left:5px;">
 
                 <tr>
                     <td class="vinnumberclr">
@@ -1902,7 +1902,7 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
             <div class="thirdpartytextarea" style="margin-top:3%; margin-bottom:3%">
-                <div class="textarea1"style="margin-left:3px;" >Notes:</div>
+                <div class="textarea1"style="margin-left:5px;" >Notes:</div>
                 <div class="textarea2">
                     <textarea rows="4" cols="150" class="txtareainput" id="txtFirstpartyVehicleNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
 
@@ -1922,7 +1922,7 @@ var TimeHistroy = $('#txttimepicker').val();
 
             <div class="full" style="margin-top:5%;background-color:white;" onclick="capturePhotoWithFileLicenseDisk();">
 
-                <div style=" padding :20px; color: teal;padding-left:5px">
+                <div style=" padding :20px; color: teal;padding-left:7px">
                     Add Photo Of Location
                     <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
                 </div>
@@ -1949,7 +1949,7 @@ var TimeHistroy = $('#txttimepicker').val();
 
             <div class="full" style="margin-top:5%;background-color:white;" onclick="capturePhotoWithFileDamagePhoto();">
 
-                <div style=" padding :20px; color: teal;padding-left:5px;">
+                <div style=" padding :20px; color: teal;padding-left:7px;">
                     Add Photo Of Damage
                     <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
                 </div>
@@ -1972,21 +1972,21 @@ var TimeHistroy = $('#txttimepicker').val();
             </div>
 
 
-            <div class="full" style="margin-top:2%;padding-left:3px;">
+            <div class="full" style="margin-top:2%;padding-left:5px;">
                 <div class="bar">Insurer:   </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyInsurer" placeholder="Enter Insurer" />
                 </div>
             </div>
 
-            <div class="full" style="margin-top:2%;padding-left:3px;">
+            <div class="full" style="margin-top:2%;padding-left:5px;">
                 <div class="bar">Policy No:   </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyInsurerPcnum" placeholder="Enter Policy Number" />
                 </div>
             </div>
 
-            <div class="full" style="margin-top:3%;margin-bottom:3%;padding-left:3px;">
+            <div class="full" style="margin-top:3%;margin-bottom:3%;padding-left:5px;">
                 <div class="bar">Phone Number:   </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtFirstpartyInsurerPhnum" placeholder="Enter Phone Number" />
@@ -2498,7 +2498,7 @@ var TimeHistroy = $('#txttimepicker').val();
             <table class="full" style=" margin-top:3%;">
 
                 <tr>
-                    <td class="vinnumberclr">
+                    <td class="witnessstmt">
                         Witness statement:
                     </td>
 
@@ -2622,7 +2622,7 @@ var TimeHistroy = $('#txttimepicker').val();
             <table class="full" style=" margin-top:1%; height:100px">
 
                 <tr>
-                    <td class="vinnumberclr" >
+                    <td class="witnessstmt">
                         Witness statement:
                     </td>
 
@@ -2691,7 +2691,7 @@ var TimeHistroy = $('#txttimepicker').val();
             </div>
 
             <div class="full" style="margin-top:3%">
-                <div class="bar"><span style="padding-top:13%;padding-left:3px;">OfficerNumbe:</span> </div>
+                <div class="bar"><span style="padding-top:13%;padding-left:3px;">OfficerNumber:</span> </div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtidpolicenumber" placeholder="Enter Officer number" />
 
