@@ -777,9 +777,9 @@ innerFieldsVIN
 }
 .photodiv
 {
-    width:100%;
    
-    background-color:white!important;
+   
+  /*  background-color:white!important;
    /* border-bottom:1px solid teal!important; 
   /*  border-right:1px solid teal!important;
    /* border-left:1px solid teal!important;*/
