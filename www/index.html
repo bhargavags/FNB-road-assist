@@ -251,7 +251,7 @@ NativeBridge.call("callfunction", [0,0,1]);
         }
         function onPhotoFileSuccessDriverLicenseNum(imageDataPath) {
         try{
-            $('#idDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLNum(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPath + '" alt="" style="width: 50%; height: 30%" id="DLImag" /></div></div>');
+            $('#idDriverLicenseNumPhoto').append('<div class="mainPhotodiv"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLNum(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPath + '" alt="" style="width: 50%; height: 30%" id="DLImag" /></div></div>');
         Licensephotos.push(imageDataPath);
          }catch(ex){       
          }
