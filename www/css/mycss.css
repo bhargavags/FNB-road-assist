@@ -610,14 +610,14 @@ font-weight:normal;
 }
 .inputTexttwo
 {
-     width:100%!important;
-  color: #black!important;
+     width:116%!important;
+  color: #000000!important;
     border:none!important;
 font-size: 14px!important;
 background-color:white!important;
 font-weight: normal;
 text-shadow:none!important;
-height:45px!important;
+height:42px!important;
 }
 .inputTextnew
 {
@@ -648,11 +648,14 @@ height:48px!important;
 padding-right:3%;
 }
 
-.inputTextroad
+
+/* Newly added */
+
+.inputReg
 {
 
     border:none!important;
-     width:123%!important;
+     width:130%!important;
   color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
@@ -663,6 +666,39 @@ height:48px!important;
 padding-right:3%;
 }
 
+
+
+
+.inputTextroad
+{
+
+border:none!important;
+width:123%!important;
+color: #000000!important;
+font-family:'FNB Sans'!important;
+font-size: 14px!important;
+background-color:white!important;
+font-weight: normal;
+text-shadow:none!important;
+height:31px!important;
+padding-right:3%;
+}
+
+.inputNote
+{
+
+border:none!important;
+width:144%!important;
+color: #000000!important;
+font-family:'FNB Sans'!important;
+font-size: 14px!important;
+background-color:white!important;
+font-weight: normal;
+text-shadow:none!important;
+height:46px!important;
+padding-right:3%;
+
+}
 
 
 
@@ -1235,8 +1271,9 @@ text-shadow: none!important;
     text-align:left;
 
 }
+
 .bar2 {
-	width:59%;
+	width:55%;
 	background-color:#FFFFFF;
 	height:56px;
 	float:left;
@@ -1248,16 +1285,30 @@ text-shadow: none!important;
 	padding-right:2%;
 }
 
+/*Newly added*/
+.officerNo {
+	width:40%;
+	background-color:#FFFFFF;
+	height:33px;
+	float:left;
+	color:#009999;
+	text-align:center;
+	font-size:15px;
+    padding-top:22px;
+    text-align:left;
+
+}
 
 .Accidentdesc {
 	width:47%;
 	background-color:#FFFFFF;
-	height:56px;
+	height:50px;
 	float:left;
 	color:#000000;
 	text-align:center;
 	font-size:10px;
 	border:none;
+    padding-top:2px;
 	padding-left:0%;
 	padding-right:2%;
 }
@@ -1272,7 +1323,7 @@ text-shadow: none!important;
 	font-size:10px;
 	border:none;
 	padding-left:0%;
-	padding-right:2%;
+	padding-right:1%;
 }
 
 
@@ -1314,11 +1365,22 @@ text-shadow: none!important;
 	color:#009999;
 	text-align:center;
 	font-size:15px;
-    padding-top:19px;
+    padding-top:15px;
     text-align:left;
 
 }
+.scaccident {
+    width:44%;
+	background-color:#FFFFFF;
+	height:33px;
+	float:left;
+	color:#009999;
+	text-align:center;
+	font-size:15px;
+    padding-top:15px;
+    text-align:left;
 
+}
 
 
 
@@ -1581,3 +1643,25 @@ font-family: 'FNB Sans'!important;
     border-right:1px solid teal!important;
     border-left:1px solid teal!important; 
 }
+
+.popup{
+    width:80%;
+    height:160px;  
+    border-bottom:1px solid teal!important;
+    border-top:1px solid teal!important;
+    border-right:1px solid teal!important;
+    border-left:1px solid teal!important; 
+    background-color:white!important;
+    border-bottom-left-radius:10px; 
+    border-bottom-right-radius:10px;
+    border-top-left-radius:10px; 
+    border-top-right-radius:10px;
+    } 
+ .popupheader{
+     border-top:1px solid Teal!important;
+     margin-top:-5%;
+     width:100%;
+     height:50px;
+  
+      
+ }

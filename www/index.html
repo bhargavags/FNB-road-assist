@@ -1479,8 +1479,8 @@ var TimeHistroy = $('#txttimepicker').val();
                 <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc"></textarea>
             </div> -->
 
-            <div class="full" style="margin-top:25px;padding-left:5px;">
-                <div class="scpage"> Accident Description: </div>
+            <div class="full" style="margin-top:25px;padding-left:5px;padding-top:12px;">
+                <div class="scaccident"> Accident Description: </div>
                 <div class="Accidentdesc">
                     <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc" placeholder="Type Your Accident Description Here"></textarea>
 
@@ -1488,8 +1488,8 @@ var TimeHistroy = $('#txttimepicker').val();
 
             </div>
 
-            <div class="full" style="margin-top:5%;padding-left:5px;">
-                <div class="scpage"> Road Conditions:</div>
+            <div class="full" style="margin-top:5%;padding-left:5px;padding-top:12px;"> 
+                <div class="scpage"  > Road Conditions:</div>
                 <div class="Accidentdesc">
                     <input type="text" id="idSelectRoadCondition" class="inputTextroad" placeholder="Type The Road Condition Here" />
 
@@ -1502,8 +1502,8 @@ var TimeHistroy = $('#txttimepicker').val();
 
             <div class="full" style="margin-top:5% ;margin-bottom:5%;padding-left:5px;">
                 <div class="scpage"> Notes: </div>
-                <div class="bar2">
-                    <textarea rows="4" cols="150" class="inputTextroad" id="idAccDescNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
+                <div class="bar2" >
+                    <textarea style="padding-top:8px;" rows="4" cols="150" class="inputNote" id="idAccDescNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
 
                 </div>
             </div>
@@ -1829,7 +1829,7 @@ var TimeHistroy = $('#txttimepicker').val();
             <div class="full" style="margin-top:5%;padding-left:5px;">
                 <div class="register">Registration number: </div>
                 <div class="gps">
-                    <input type="text" class="inputText" id="txtFirstpartyRegNum" placeholder="Enter Reg No" />
+                    <input type="text" class="inputReg" id="txtFirstpartyRegNum" placeholder="Enter Reg No" />
 
                 </div>
             </div>
@@ -1846,7 +1846,7 @@ var TimeHistroy = $('#txttimepicker').val();
                         <input type="text" class="inputImg" id="txtFirstpartyVINNum" placeholder="Enter VIN Number" />
                     </td>
                     <td width="5%" class="leftdivReport2" ; onclick="showpopup();">
-                        <img src="images/questionmark.png" alt="" style="margin-top:27px;"  />
+                        <img src="images/questionmark.png" alt="" style="margin-top:20px;"  />
                     </td>
                 </tr>
             </table>
@@ -1873,16 +1873,25 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
             <div id="popupBasic" style="display: none">
-                <div id="deletepopup">
-                    <img src="images/delete.png" alt="" />
+              <div id="del">
+                  <img src="images/delete2.png" alt="" style="padding-left:10%;" />
                 </div>
-                <div style="border: 1px solid #009999; width: 80%; margin-left: 19px;">
+                <div class="popup" style="margin-left:13%;">
+                    <div style="text-align:center;padding-top:4%"><font style="color:Teal">VIN Number</font></div>
                     <p class="paraAboutAAQuestionmark">
                         Look on the dashboard
                         passanger side, diretly under the windscreen
                     </p>
+                    <div  id="deletepopup" class="popupheader" style="padding-top:5%"> <font  style="color:Teal;padding-left:40%;">OK</font>  </div>
+                   
                 </div>
             </div>
+
+
+
+
+
+
 
             <!-- <div data-role="popup" id="popupBasic" class="paraAboutAAQuestionmark">
         <p class="paraAboutAAQuestionmark">Check on the dashboard passanger side, diretly under the windscreen</p>
@@ -2214,7 +2223,7 @@ var TimeHistroy = $('#txttimepicker').val();
             <div class="full" style="margin-top:5%;padding-left:5px;">
                 <div class="register">Registration number: </div>
                 <div class="gps">
-                    <input type="text" class="inputText" id="txtFirstpartyRegNum" placeholder="Enter Reg No" />
+                    <input type="text" class="inputReg" id="txtFirstpartyRegNum" placeholder="Enter Reg No" />
 
                 </div>
             </div>
@@ -2234,26 +2243,28 @@ var TimeHistroy = $('#txttimepicker').val();
                     </td>
 
                     <td>
-                        <input type="text" class="inputImg" id="txtSecondpartyVINNum" />
+                        <input type="text" class="inputImg" id="txtSecondpartyVINNum" placeholder="Enter VIN Number" />
                     </td>
                     <td width="5%" class="leftdivquestion" ; onclick="showpopupSPartyHelp();">
-                        <img src="images/questionmark.png" alt="" style="margin-top:27px;" />
+                        <img src="images/questionmark.png" alt="" style="margin-top:29px;" />
                     </td>
                 </tr>
             </table>
 
 
             <div id="popupSpartyHelp" style="display: none">
-                <div id="deletepopupSpartyHelp">
-                    <img src="images/delete.png" alt="" />
+                <div id="deletepopupSparty">
+                    <img src="images/delete2.png" alt="" />
                 </div>
-                <div style="border: 1px solid #009999; width: 80%; margin-left: 19px;">
+                <div class="popup" style="margin-left:13%;">
+                    <div style="text-align:center;padding-top:4%"><font style="color:Teal">VIN Number</font></div>
                     <p class="paraAboutAAQuestionmark">
                         Look on the dashboard
                         passanger side, diretly under the windscreen
                     </p>
-                </div>
+                    <div id="deletepopupSpartyHelp" class="popupheader" style="padding-top:5%"> <font style="color:Teal;padding-left:40%;">OK</font>  </div>
             </div>
+                </div>
 
 
 
@@ -2695,7 +2706,8 @@ var TimeHistroy = $('#txttimepicker').val();
             </div>
 
             <div class="full" style="margin-top:3%">
-                <div class="bar"><span style="padding-top:13%;padding-left:3px;">OfficerNumber:</span> </div>
+               <!-- <div class="bar"><span style="padding-top:13%;padding-left:3px;">Officer Number:</span> </div> -->
+                <div class="officerNo" style="padding-left:3px;">Officer Number:</div>
                 <div class="bar2">
                     <input type="text" class="inputText" id="txtidpolicenumber" placeholder="Enter Officer number" />
 
