@@ -1557,8 +1557,8 @@ font-family: 'FNB Sans'!important;
 
 .mainPhotodiv{
 
-    width:100%;
-    height:50%;
+   /* width:100%;
+    height:50%;*/
     background-color:white!important;
     border-bottom:1px solid teal!important;
     border-top:1px solid teal!important;
