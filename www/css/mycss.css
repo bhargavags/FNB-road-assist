@@ -777,6 +777,12 @@ innerFieldsVIN
 }
 .photodiv
 {
+    width:100%;
+    height:50%;
+    background-color:white!important;
+    border-bottom:1px solid teal!important; 
+    border-right:1px solid teal!important;
+    border-left:1px solid teal!important;
 }
 .camImg
 {
