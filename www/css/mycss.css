@@ -1568,5 +1568,16 @@ font-family: 'FNB Sans'!important;
 #popupBasic{
 
 
-     background-color: lightblue;
+    /*background-color: lightblue;*/ 
+}
+
+.mainPhoto{
+
+   /* width:100%;*/
+    height:30%;
+    background-color:white!important;
+    border-bottom:1px solid teal!important;
+   
+    border-right:1px solid teal!important;
+    border-left:1px solid teal!important; 
 }
