@@ -251,14 +251,14 @@ NativeBridge.call("callfunction", [0,0,1]);
         }
         function onPhotoFileSuccessDriverLicenseNum(imageDataPath) {
         try{
-            $('#idDriverLicenseNumPhoto').append('<div class="mainPhotodiv"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLNum(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPath + '" alt="" style="width: 50%; height: 30%" id="DLImag" /></div></div>');
+            $('#idDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLNum(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPath + '" alt="" style="width: 50%; height: 30%" id="DLImag" /></div></div>');
         Licensephotos.push(imageDataPath);
          }catch(ex){       
          }
         }
         function deleteImgLNum(ImgTag) {
             try {
-                $(ImgTag).parents('.mainPhotodiv').remove();
+                $(ImgTag).parents('.mainPhoto').remove();
             } catch (ex) {
             }
         }
@@ -272,14 +272,14 @@ NativeBridge.call("callfunction", [0,0,1]);
     }
     function onPhotoFileSuccessLicenseDisk(imageDataPathLDisk) {
     try{
-        $('#idLicenseDiskPhoto').append('<div class="mainPhotodiv"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLDisk(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDisk + '" alt="" style="width: 50%; height: 30%" id="PartyLocImg" /></div>');
+        $('#idLicenseDiskPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLDisk(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDisk + '" alt="" style="width: 50%; height: 30%" id="PartyLocImg" /></div>');
    PartyLocphotos.push(imageDataPathLDisk);
    }catch(ex){       
          }
     }
     function deleteImgLDisk(ImgTagDisk) {
     try{
-        $(ImgTagDisk).parents('.mainPhotodiv').remove();
+        $(ImgTagDisk).parents('.mainPhoto').remove();
         }catch(ex){       
          }
     }
@@ -292,14 +292,14 @@ try{
     }
     function onPhotoFileSuccessDamagePhoto(imageDataPathDamagePhoto) {
     try{
-        $('#idDamagePhoto').append('<div class="mainPhotodiv"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhoto(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhoto + '" alt="" style="width: 50%; height: 30%" id="PDmgPhotoImg" /></div>');
+        $('#idDamagePhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhoto(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhoto + '" alt="" style="width: 50%; height: 30%" id="PDmgPhotoImg" /></div>');
     PartyDmgphotos.push(imageDataPathDamagePhoto);
     }catch(ex){       
          }
     }
     function deleteImgDamagePhoto(ImgTagDamagePhoto) {
     try{
-        $(ImgTagDamagePhoto).parents('.mainPhotodiv').remove();
+        $(ImgTagDamagePhoto).parents('.mainPhoto').remove();
         }catch(ex){       
          }
     }
@@ -322,7 +322,7 @@ try{
     }
     function deleteImgLNumSP(ImgTagSP) {
     try{
-        $(ImgTagSP).parents('.mainPhotodiv').remove();
+        $(ImgTagSP).parents('.mainPhoto').remove();
         }catch(ex){       
          }
     }
@@ -343,7 +343,7 @@ try{
     }
     function deleteImgLDiskSP(ImgTagDiskSP) {
     try{
-        $(ImgTagDiskSP).parents('.mainPhotodiv').remove();
+        $(ImgTagDiskSP).parents('.mainPhoto').remove();
         }catch(ex){       
          }
     }
@@ -363,7 +363,7 @@ try{
     }
     function deleteImgDamagePhotoSP(ImgTagDamagePhotoSP) {
     try{
-        $(ImgTagDamagePhotoSP).parents('.mainPhotodiv').remove();
+        $(ImgTagDamagePhotoSP).parents('.mainPhoto').remove();
         }catch(ex){       
          }
     }
