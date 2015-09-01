@@ -1327,7 +1327,7 @@ var TimeHistroy = $('#txttimepicker').val();
 
             <table class="ContentTable" cellspacing="0" cellpadding="0">
                 <tr class="PartyRow">
-                    <td class="Party"><div style="width:63%;padding-left:4%" >Accident Date And Location</div></td>
+                    <td class="Party" style="padding-left:13px;">Accident Date And Location</td>
                 </tr>
             </table>
 
@@ -1433,7 +1433,7 @@ var TimeHistroy = $('#txttimepicker').val();
           
 
             <div class="fulltext" style="margin-top:3%; margin-left:0%;margin-bottom:3%">
-                <div class="textarea1" style="padding-left:0px;"> <span style="padding-left:1px;"> Accident Description:</span></div>
+                <div class="textarea1" style="padding-left:4px;"> <span style="padding-left:1px;"> Description Of Location:</span></div>
                 <div class="textarea2">
                     <textarea rows="4" cols="150" class="txtareainput" id="idAccDesc" placeholder="Enter Sescription Of Location"></textarea>
 
@@ -1479,19 +1479,19 @@ var TimeHistroy = $('#txttimepicker').val();
                 <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc"></textarea>
             </div> -->
 
-            <div class="full" style="margin-top:25px;padding-left:5px;padding-top:12px;">
+            <div class="accidentDescription" style="margin-top:5%;padding-left:5px;padding-top:12px;">
                 <div class="scaccident"> Accident Description: </div>
                 <div class="Accidentdesc">
-                    <textarea rows="4" cols="150" class="inputTexttwo" id="idAccDesc" placeholder="Type Your Accident Description Here"></textarea>
+                    <textarea style="padding-top:3px;" rows="4" cols="150" class="inputTexttwo" id="idAccDesc" placeholder="Type Your Accident Description Here"></textarea>
 
                 </div>
 
             </div>
 
-            <div class="full" style="margin-top:5%;padding-left:5px;padding-top:12px;"> 
-                <div class="scpage"  > Road Conditions:</div>
+            <div class="accidentDescription" style="margin-top:5%;padding-left:5px;padding-top:12px;">
+                <div class="scpage"> Road Conditions:</div>
                 <div class="Accidentdesc">
-                    <input type="text" id="idSelectRoadCondition" class="inputTextroad" placeholder="Type The Road Condition Here" />
+                    <input style="padding-top:8px;" type="text" id="idSelectRoadCondition" class="inputTextroad" placeholder="Type The Road Condition Here" />
 
                 </div>
 
@@ -1500,10 +1500,10 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 
-            <div class="full" style="margin-top:5% ;margin-bottom:5%;padding-left:5px;">
-                <div class="scpage"> Notes: </div>
-                <div class="bar2" >
-                    <textarea style="padding-top:8px;" rows="4" cols="150" class="inputNote" id="idAccDescNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
+            <div class="accidentDescription" style="margin-top:5% ;margin-bottom:5%;padding-left:5px;">
+                <div class="Notesclass"> Notes: </div>
+                <div class="bar2">
+                    <textarea style="padding-top:12px;" rows="4" cols="150" class="inputNote" id="idAccDescNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
 
                 </div>
             </div>
@@ -1678,7 +1678,7 @@ var TimeHistroy = $('#txttimepicker').val();
 			</table>
 			<table class="ContentTable" cellspacing="0" cellpadding="0">
 				<tr class="PartyRow">
-					<td class="Party"><div >3rd Party(1)</div></td>
+					<td class="Party"><div style="padding-left:2%;" >3rd Party(1)</div></td>
 				</tr>
 			</table>
 		</div>
@@ -1719,22 +1719,6 @@ var TimeHistroy = $('#txttimepicker').val();
 
             </div>
 
-            <!--	<div class="fieldname">ID number</div>
-        <div class="inputFields">
-            <input type="text" class="inputText" id="txtFirstpartyIDNumber" />
-        </div>
-        <div class="fieldname">Licence number</div>
-        <div class="inputFields">
-            <input type="text" class="inputText" id="txtidDriverLicenseNum" />
-        </div> -->
-            <!--  <div class="fieldnameAccident"
-                style="width: 100% !important; display: inline-block;">
-
-               <div class="camera">
-                   <img src="images/photolicence.png" alt=""
-                        onclick="capturePhotoWithFileDriverLicenseNum();" style="width:100%" />
-               </div>
-           </div> -->
 
             <div class="cameraview" onclick="capturePhotoWithFileDriverLicenseNum();">
 
@@ -1766,14 +1750,7 @@ var TimeHistroy = $('#txttimepicker').val();
                 </div>
 
             </div>
-        <!--    <div class="full" style="margin-top:5%">
-                <div class="bar">Note: </div>
-                <div class="bar2">
-                    <textarea rows="4" cols="150" class="inputText" id="txtFirstpartyNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
-
-                </div>
-
-            </div> -->
+       
 
             <div class="thirdpartytextarea" style="margin-top:3%; margin-bottom:3%">
                 <div class="note" style="margin-left:5px;">Notes:</div>
@@ -1845,14 +1822,17 @@ var TimeHistroy = $('#txttimepicker').val();
                     <td>
                         <input type="text" class="inputImg" id="txtFirstpartyVINNum" placeholder="Enter VIN Number" />
                     </td>
-                    <td width="5%" class="leftdivReport2" ; onclick="showpopup();">
-                        <img src="images/questionmark.png" alt="" style="margin-top:20px;"  />
+                    <td width="5%" class="leftdivReport2" ; onclick="showpopup()">
+                        <img src="images/questionmark.png" alt="" style="margin-top:20px;" />
                     </td>
                 </tr>
             </table>
 
 
+           
 
+
+            
 
 
 
@@ -1872,32 +1852,26 @@ var TimeHistroy = $('#txttimepicker').val();
 
 
 
-            <div id="popupBasic" style="display: none">
-              <div id="del">
-                  <img src="images/delete2.png" alt="" style="padding-left:10%;" />
+            <div id="popupBasic" class="popBodyBackground" style="display: none">
+                <div id="">
+                    <img src="images/delete2.png" alt="" style="padding-left:10%;" />
                 </div>
-                <div class="popup" style="margin-left:13%;">
+                <div class="popup" style="margin-left:7%;margin-top:130%">
                     <div style="text-align:center;padding-top:4%"><font style="color:Teal">VIN Number</font></div>
                     <p class="paraAboutAAQuestionmark">
                         Look on the dashboard
                         passanger side, diretly under the windscreen
                     </p>
-                    <div  id="deletepopup" class="popupheader" style="padding-top:5%"> <font  style="color:Teal;padding-left:45%;">OK</font>  </div>
-                   
+                    <div id="deletepopup" class="popupheader" style="padding-top:5%"> <font style="color:Teal;padding-left:45%;">OK</font>  </div>
+
                 </div>
             </div>
-
-
-
-
-
-
 
             <!-- <div data-role="popup" id="popupBasic" class="paraAboutAAQuestionmark">
         <p class="paraAboutAAQuestionmark">Check on the dashboard passanger side, diretly under the windscreen</p>
         </div>-->
 
-            <div data-role="popup" id="popupBasic"
+        <!--  <div data-role="popup" id="popupBasic"
                  class="paraAboutAAQuestionmark">
                 <a href="#" data-rel="back" data-theme="a" data-icon="delete"
                    data-iconpos="X" class="ui-btn-right">
@@ -1907,7 +1881,7 @@ var TimeHistroy = $('#txttimepicker').val();
                     Check on the dashboard
                     passanger side, diretly under the windscreen
                 </p>
-            </div>
+            </div> -->  
 
 
             <div class="thirdpartytextarea" style="margin-top:3%; margin-bottom:3%">
@@ -2034,8 +2008,7 @@ var TimeHistroy = $('#txttimepicker').val();
                 <input type="hidden" id="" value="" />
            
 	</div>
-
-
+   
 
 	<div data-role="page" id="SecondPartyPage" class="BodyBackground">
 		<div data-role="header" data-position="fixed">
@@ -2055,7 +2028,7 @@ var TimeHistroy = $('#txttimepicker').val();
 			</table>
 			<table class="ContentTable" cellspacing="0" cellpadding="0">
 				<tr class="PartyRow">
-					<td class="Party"><div>3rd Party(2)</div></td>
+					<td class="Party"><div style="padding-left:7px;">3rd Party(2)</div></td>
 				</tr>
 			</table>
 		</div>
@@ -2252,19 +2225,19 @@ var TimeHistroy = $('#txttimepicker').val();
             </table>
 
 
-            <div id="popupSpartyHelp" style="display: none">
+            <div id="popupSpartyHelp" class="popBodyBackground" style="display: none">
                 <div id="deletepopupSparty">
                     <img src="images/delete2.png" alt="" />
                 </div>
-                <div class="popup" style="margin-left:13%;">
+                <div class="popup" style="margin-left:7%;margin-top:130%">
                     <div style="text-align:center;padding-top:4%"><font style="color:Teal">VIN Number</font></div>
                     <p class="paraAboutAAQuestionmark">
                         Look on the dashboard
                         passanger side, diretly under the windscreen
                     </p>
-                    <div id="deletepopupSpartyHelp" class="popupheader" style="padding-top:5%"> <font style="color:Teal;padding-left:45%;">OK</font>  </div>
-            </div>
+                    <div id="deletepopupSpartyHelp" class="popupheader" style="padding-top:9%"> <font style="color:Teal;padding-left:43%;">OK</font>  </div>
                 </div>
+            </div>
 
 
 
@@ -2417,7 +2390,7 @@ var TimeHistroy = $('#txttimepicker').val();
 			</table>
 			<table class="ContentTable" cellspacing="0" cellpadding="0">
 				<tr class="PartyRow">
-					<td class="Party">1st Witness</td>
+					<td class="Party" style="padding-left:13px;">1st Witness</td>
 				</tr>
 			</table>
 
@@ -2564,7 +2537,7 @@ var TimeHistroy = $('#txttimepicker').val();
 			</table>
 			<table class="ContentTable" cellspacing="0" cellpadding="0">
 				<tr class="PartyRow">
-					<td class="Party">2nd Witness</td>
+					<td class="Party" style="padding-left:13px;">2nd Witness</td>
 				</tr>
 			</table>
 
@@ -2687,7 +2660,7 @@ var TimeHistroy = $('#txttimepicker').val();
             </table>
 			<table class="ContentTable" cellspacing="0" cellpadding="0">
 				<tr class="PartyRow">
-                    <td class="Party" >Police Case</td>
+                    <td class="Party" style="padding-left:13px;" >Police Case</td>
 				</tr>
 			</table>
 		</div>
@@ -3016,8 +2989,22 @@ var TimeHistroy = $('#txttimepicker').val();
 
 	</div>
 
+ <!--  <div data-role="page" id="popup" class="popthirdparty" style="display: none">
 
 
+        <div class="popup" style="margin-left:7%;margin-top:270%;">
+            <div style="text-align:center;padding-top:4%"><font style="color:Teal">VIN Number</font></div>
+            <p class="paraAboutAAQuestionmark">
+                Look on the dashboard
+                passanger side, diretly under the windscreen
+            </p>
+            <div  id="deletepopup" class="popupheader" style="padding-top:5%;"> <font style="color:Teal;padding-left:45%;">OK</font>  </div>
+
+        </div>
+
+    </div> --> 
+
+    
 
 
 </body>

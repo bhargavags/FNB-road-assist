@@ -149,6 +149,36 @@ function gotoWitnessPageFromFP() {
 	pageData.push(currentPage);
 }
 
+/*new popup function*/
+function showpopupdivSP() {
+
+    $.mobile.changePage('#popup', {
+        transition: "none",
+        reverse: false,
+        changeHash: false
+    });
+    currentPage = 'popup';
+    pageData.push(currentPage);
+
+
+}
+
+function thirdpartyoneFP() {
+
+    $.mobile.changePage('#FirstPartyPage', {
+        transition: "none",
+        reverse: false,
+        changeHash: false
+    });
+    currentPage = 'FirstPartyPage';
+    pageData.push(currentPage);
+
+
+}
+
+
+
+
 function gotoWitnessPageFromSP() {
 
 	/*var SPEmailID = document.getElementById('txtSecondpartyemail').value;
