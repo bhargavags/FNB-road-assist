@@ -1676,9 +1676,9 @@ font-family: 'FNB Sans'!important;
 
 .popup{
     margin-left:7%;
-    margin-top:38%;
+    margin-top:250%;
     width:80%;
-    position:fixed;
+   /* position:fixed;*/
     height:160px;  
     background-color:white!important;
     border-bottom-left-radius:10px; 
