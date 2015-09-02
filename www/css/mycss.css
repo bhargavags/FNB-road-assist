@@ -206,8 +206,10 @@ border:none!important;
  .ui-body-c,
 .ui-overlay-c 
 {
-    background:#009999!important;	
-   
+   background:#009999!important;
+   /* background-color: transparent;
+    background-image: url('../images/popbg.png');
+    background-repeat: no-repeat;*/ 	
  
 }
 .whetherimg
@@ -1674,8 +1676,9 @@ font-family: 'FNB Sans'!important;
 
 .popup{
     margin-left:7%;
-    margin-top:130%;
+    margin-top:38%;
     width:80%;
+    position:fixed;
     height:160px;  
     background-color:white!important;
     border-bottom-left-radius:10px; 
