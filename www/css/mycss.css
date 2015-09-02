@@ -530,7 +530,7 @@ float:left;
 font-weight:normal;
 color: #009999!important;
 font-family: 'FNB Sans' !important;
-font-size: 16px!important;
+font-size: 23px!important;
 text-shadow: none!important;
 margin-top: 4%!important;
 padding:3.3%;
@@ -710,9 +710,9 @@ padding-right:3%;
 .txtareainput
 {
 
-    border:none!important;
-     width:130%!important;
-  color: #000000!important;
+border:none!important;
+width:130%!important;
+color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
 background-color:white!important;
@@ -1187,6 +1187,24 @@ text-shadow:none!important;
 padding-left:10px;
 width:80%!important;
 }
+
+/*.Newly added*/
+
+
+.popAboutAAQuestionmark
+{
+color: black!important;
+
+font-size: 14px!important;
+text-align:Center!important;
+line-height:150%!important;
+text-shadow:none!important;
+padding-left:29px;
+width:80%!important;
+}
+
+
+
 .AudioName
 {
 color: #929292!important;
@@ -1278,7 +1296,7 @@ text-shadow: none!important;
 	background-color:#FFFFFF;
 	height:33px;
 	float:left;
-	color:#009999;
+	color:teal!important;
 	text-align:center;
 	font-size:15px;
     padding-top:22px;
@@ -1438,7 +1456,7 @@ text-shadow: none!important;
 	text-align:center;
 	font-size:10px;
 	border:none;
-    padding-top:9px;
+    padding-top:11px;
 	padding-left:0%;
 	padding-right:2%;
 }
@@ -1453,7 +1471,7 @@ text-shadow: none!important;
 	background-color:#FFFFFF;
 	height:60px;
 	float:left;
-	color:#009999;
+	color:teal!important;
 	text-align:center;
 	font-size:15px;
     padding-top:25px;
@@ -1502,7 +1520,7 @@ text-shadow: none!important;
 	background-color:#FFFFFF;
 	height:32px;
 	float:left;
-	color:#009999;
+	color:teal!important;
 	text-align:center;
 	font-size:15px;
     padding-top:23px;
