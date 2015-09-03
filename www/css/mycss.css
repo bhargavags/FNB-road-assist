@@ -1743,14 +1743,7 @@ font-family: 'FNB Sans'!important;
 
     
  }
+ .photo{
 
- .mainPhoto{
-
-
-     top:150%;
-   /* background-color:white!important;
-    border-bottom:1px solid teal!important;
-    border-top:1px solid teal!important;
-    border-right:1px solid teal!important;
-    border-left:1px solid teal!important; */
-}
+    top:50px;
+ }
