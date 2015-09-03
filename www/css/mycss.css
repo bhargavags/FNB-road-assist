@@ -1250,6 +1250,17 @@ text-shadow: none!important;
    background-size:cover; 
 }*/
 
+
+
+fullwit {
+	width:99%;
+	float:left;
+	height:86px;
+	border:solid 1px #009999;
+    background-color:#ffffff!important;
+}
+
+
 .full {
 	width:99%;
 	float:left;
@@ -1257,6 +1268,10 @@ text-shadow: none!important;
 	border:solid 1px #009999;
     background-color:#ffffff!important;
 }
+
+
+
+
 /*Newly added*/
 .accidentDescription {
 	width:99%;
