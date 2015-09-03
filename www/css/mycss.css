@@ -978,8 +978,9 @@ border-left:1px solid teal;
 .camera
 {
 width:100%;
+height:50%;
 float:left; 
-margin-top: 2%!important;
+margin-top: 10%!important;
 margin-bottom:2%!important;
 }
 .HistroyOuter
@@ -1702,7 +1703,7 @@ font-family: 'FNB Sans'!important;
 .main{
 
    width:100%;
-    height:20%;
+    height:50%;
     background-color:white!important;
     border-bottom:1px solid teal!important;
     border-top:1px solid teal!important;
