@@ -251,7 +251,7 @@ NativeBridge.call("callfunction", [0,0,1]);
         }
         function onPhotoFileSuccessDriverLicenseNum(imageDataPath) {
         try{
-            $('#idDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left:25%"><img  src="images/delete.png" alt="" onclick="deleteImgLNum(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPath + '" alt="" style="width: 50%; height: 30%" id="DLImag" /></div></div>');
+            $('#idDriverLicenseNumPhoto').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;">Add Photo Of Licence <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div><div class="deleteImg"> <img id="ImgIdDelete" src="images/delete.png" alt=""  onclick="deleteImgLNum(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv2"><img src="' + imageDatadamagePhoto + '" alt="" style="width: 100%;height:50%" id="DLImag" /></div></div>');
         Licensephotos.push(imageDataPath);
          }catch(ex){       
          }
@@ -272,7 +272,7 @@ NativeBridge.call("callfunction", [0,0,1]);
     }
     function onPhotoFileSuccessLicenseDisk(imageDataPathLDisk) {
     try{
-        $('#idLicenseDiskPhoto').append('<div class="mainPhoto"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Damage <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div><div class="deleteImg"> <img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImgDamagePhoto(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageDataPathDamagePhoto + '" alt="" style="width: 100%;height:50%" id="idPhotoDivLicDisk"/></div></div>');
+        $('#idLicenseDiskPhoto').append('<div class="mainPhoto"><div style="margin-left: 0px"><img  src="images/delete.png" alt="" onclick="deleteImgLDisk(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDisk + '" alt="" style="width: 50%; height: 30%" id="PartyLocImg" /></div>');
    PartyLocphotos.push(imageDataPathLDisk);
    }catch(ex){       
          }
@@ -292,7 +292,7 @@ try{
     }
     function onPhotoFileSuccessDamagePhoto(imageDataPathDamagePhoto) {
     try{
-        $('#idDamagePhoto').append('<div class="mainPhoto"><div style="margin-left: 330px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhoto(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhoto + '" alt="" style="width: 50%; height: 30%" id="PDmgPhotoImg" /></div>');
+        $('#idDamagePhoto').append('<div class="mainPhoto"><div style="margin-left: 0px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhoto(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhoto + '" alt="" style="width: 50%; height: 30%" id="PDmgPhotoImg" /></div>');
     PartyDmgphotos.push(imageDataPathDamagePhoto);
     }catch(ex){       
          }
@@ -315,7 +315,7 @@ try{
     }
     function onPhotoFileSuccessDriverLicenseNumSP(imageDataPathSP) {
     try{
-        $('#idSecondpartyDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 10px"><img  src="images/delete.png" alt="" onclick="deleteImgLNumSP(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPathSP + '" alt="" style="width: 50%; height: 30%" id="SPDLImg" /></div></div>');
+        $('#idSecondpartyDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 0px"><img  src="images/delete.png" alt="" onclick="deleteImgLNumSP(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPathSP + '" alt="" style="width: 50%; height: 30%" id="SPDLImg" /></div></div>');
      SPLicensephotos.push(imageDataPathSP);
    }catch(ex){       
          }
