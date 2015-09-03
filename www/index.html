@@ -272,7 +272,7 @@ NativeBridge.call("callfunction", [0,0,1]);
     }
     function onPhotoFileSuccessLicenseDisk(imageDataPathLDisk) {
     try{
-        $('#idLicenseDiskPhoto').append('<div class="mainPhoto"><div class="camerap" >  < </div> <div style="margin-left: 300px"><img  src="images/delete.png" alt="" onclick="deleteImgLDisk(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDisk + '" alt="" style="width: 50%; height: 30%" id="PartyLocImg" /></div>');
+        $('#idLicenseDiskPhoto').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Damage <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div><div class="deleteImg"> <img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageDatadamagePhoto + '" alt="" style="width: 100%;height:50%" id="imgdamagePhoto"/></div></div>');
    PartyLocphotos.push(imageDataPathLDisk);
    }catch(ex){       
          }
