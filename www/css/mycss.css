@@ -1270,7 +1270,13 @@ fullwit {
     background-color:#ffffff!important;
 }
 
-
+.witnessclass {
+	width:99%;
+	float:left;
+	height:150px;
+	border:solid 1px #009999;
+    background-color:#ffffff!important;
+}
 
 
 /*Newly added*/
