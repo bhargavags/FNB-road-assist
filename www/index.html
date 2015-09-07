@@ -34,7 +34,7 @@ FNB Sans
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-colour: #000;
+	background-color: #000;
 	border: 0px red medium;
 	opacity: 0.7;
 	filter: alpha(opacity =   50);
@@ -47,7 +47,7 @@ FNB Sans
   margin-right: auto;
   width: 100%;
   margin-top: 500px;*/
-	colour: #FFF;
+	color: #FFF;
 	left: 45%;
 	margin-top: 50%;
 	position: relative;
@@ -66,7 +66,7 @@ FNB Sans
 .listDataCall {
 	font-family:arial!important;
 	font-size: 14px !important;
-	background-colour: #ffffff !important;
+	background-color: #ffffff !important;
 	border-bottom: 1px solid Teal !important;
 	
 	
@@ -511,7 +511,7 @@ try{
 
             var path = $('#capture-resultAudio').text();
            
-            $('#idAudioDiv').append('<div class="mainPhotodiv"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagaudio" alt="" style="float: left; margin-top: 5px!important" onclick="playAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:-20px"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
+            $('#idAudioDiv').append('<div class="mainwitness"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagaudio" alt="" style="float: left; margin-top: 5px!important" onclick="playAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:-20px"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
 
         }
         catch (ex) {
@@ -571,13 +571,14 @@ function captureSuccessswit(mediaFiles) {
 
                 var path = $('#capture-resultswitAudio').text();
                
-                $('#idSecondWitAudio').append('<div class="mainPhotodiv"><div class="photodiv" id="idAudioDivImg" ><img src="images/Mike.png" id="imagSWaudio" alt="" style="float: left; margin-top: 5px!important" onclick="playSWAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:-20px"><img id="ImgIdSWDelete" src="images/delete.png" alt="" onclick="deleteSWitAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
+                $('#idSecondWitAudio').append('<div class="mainPhotodiv"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagSWaudio" alt="" style="float: left; margin-top: 5px!important" onclick="playSWAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:-20px"><img id="ImgIdSWDelete" src="images/delete.png" alt="" onclick="deleteSWitAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
 
             }
             catch (ex) {
                
             }
         }
+
         function deleteSWitAudio(ImgTagAudio) {
         try{
             $(ImgTagAudio).parents('.mainPhotodiv').remove();
