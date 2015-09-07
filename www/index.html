@@ -511,7 +511,7 @@ try{
 
             var path = $('#capture-resultAudio').text();
            
-            $('#idAudioDiv').append('<div class="mainwitness"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagaudio" alt="" style="float: left; top: 30px!important" onclick="playAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:30px"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
+            $('#idAudioDiv').append('<div class="witnessclass"><div class="witnessstmt" id="idAudioDivImg" ><img src="images/wave.png" id="imagaudio" alt="" style="float: left; top: 30px!important" onclick="playAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:30px"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
 
         }
         catch (ex) {
@@ -519,7 +519,7 @@ try{
         }
     }
     function deleteAudio(ImgTagAudio) {
-        $(ImgTagAudio).parents('.mainPhotodiv').remove();
+        $(ImgTagAudio).parents('.witnessclass').remove();
     }
 
     function playAudioclick(id) {
