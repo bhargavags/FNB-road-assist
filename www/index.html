@@ -1201,6 +1201,9 @@
 		<div data-role="header" data-position="fixed">
 			<table class="HeaderTable" width="100%">
 				<tr class="HeaderTr">
+                    <td width="15%" style="text-align:center!important;" onclick="gobackPage()"> Back
+                        
+                    </td>
 					<td width="100%" 
 						style="font-size: larger; padding: 10px; text-align: center !important;">
 						Accident</td>
@@ -1305,15 +1308,15 @@
 
             <table class="HeaderTable" width="100%">
                 <tr class="HeaderTr">
-                    <td width="15%" style="text-align:center!important;" onclick="gobackPage()">
-                        <img src="images/2left-arrow.png" alt="" />
+                    <td width="15%" style="text-align:center!important;" onclick="gobackPage()">Back
+                     
                     </td>
                     <td width="70%" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial;">
                         Report
                         an Accident
                     </td>
-                    <td width="15%" style="text-align:left!important;">
-                        <img src="images/3Cancel.png" alt="" onclick="goindexPage()" />
+                    <td width="15%" style="text-align:left!important;" onclick="goindexPage()"> Cancel
+                       <!-- <img src="images/3Cancel.png" alt="" onclick="goindexPage()" /> -->
                     </td>
                 </tr>
             </table>
@@ -1415,15 +1418,24 @@
 
             </div> --> 
             
-                <div class="fullgpslction" style="margin-top:3%; margin-left:0%;margin-right:0%;">
+         <!--       <div class="fullgpslction" style="margin-top:3%; margin-left:0%;margin-right:0%;">
                     <div class="gpsdiv" style="padding-left:0px;"><span style="padding-left:2px;">GPS Location Of Incident: </span></div>
                     <div class="gps">
                         <input type="text" id="txtidGPSIncident" class="inputText"
                                readonly />
                     </div>
 
+                </div> -->
+
+            <div class="fulltext" style="margin-top:3%; margin-left:0%;margin-right:0%">
+                <div class="textarea1" style="padding-left:4px;"> <span style="padding-left:1px;"> GPS Location Of Incident:</span></div>
+                <div class="gpstext">
+                    <input type="text" id="txtidGPSIncident" class="inputText"
+                           readonly />
+
                 </div>
-          
+
+            </div>
 
             <div class="fulltext" style="margin-top:3%; margin-left:0%;margin-bottom:3%">
                 <div class="textarea1" style="padding-left:4px;"> <span style="padding-left:1px;"> Description Of Location:</span></div>
@@ -1578,11 +1590,20 @@
                 <div id="idDelImgPhotoImg">        
                </div> 
 
-                <div style="margin-top: 5%; display: none;"
+           <div style="margin-top: 5%; display: none;"
                      id="idAddanotherphotoImg">
                     <img src="images/6Addanotherphoto.png" alt="" style="width: 80%"
                          onclick="capturePhotoWithFile();" />
-                </div>
+                </div>  
+
+         <!--     <div class="cameraview" id="idAddanotherphotoImg" onclick="capturePhotoWithFile();">
+
+                    <div style=" padding :20px; color: teal;padding-left:7px;">
+                        Add Photo of Location
+                        <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+                    </div>
+
+                </div> -->  
 
 
 
@@ -1659,10 +1680,20 @@
         <center>
             <div data-role="content">
                 <!--<div class="PhotoLocationHeading">Photo of Damage</div>-->
-                <div class="inputFields" id="idAddDamagePhotoImg" style="margin-top:5%;">
+
+              <!-- <div class="inputFields" id="idAddDamagePhotoImg" style="margin-top:5%;">
                     <img src="images/Addphoto.png" style="width: 80%" alt=""
                          onclick="capturePhotoWithFiledamagePhoto();" />
+                </div> --> 
+                <div class="cameraview" id="idAddDamagePhotoImg" onclick="capturePhotoWithFiledamagePhoto();">
+
+                    <div style=" padding :20px; color: teal;padding-left:7px;">
+                        Add Photo of Damage
+                        <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+                    </div>
+
                 </div>
+
                 <div id="idDelImgDamagePhotoImg">
                     <!--<div class="deleteImg">
                 <img src="images/delete.png" alt="" style="width: 100%" /></div>
@@ -1749,7 +1780,7 @@
             </div>
 
 
-            <div class="cameraview" onclick="capturePhotoWithFileDriverLicenseNum();">
+            <div width="100%" class="cameraview" onclick="capturePhotoWithFileDriverLicenseNum();">
 
                 <div style=" padding :20px; color: teal;padding-left:7px;">
                 Add Photo of Licence
@@ -1841,7 +1872,7 @@
             </div>
 
 
-            <table class="full"  style=" margin-top:3%;padding-left:5px;">
+            <table class="Vinclass" style=" margin-top:3%;padding-left:5px;">
 
                 <tr>
                     <td class="vinnumberclr">
@@ -1911,7 +1942,7 @@
 
             <div class="full" style="margin-top:5%;background-color:white;" onclick="capturePhotoWithFileDamagePhoto();">
 
-                <div style=" padding :20px; color: teal;padding-left:7px;">
+                <div  style=" padding :20px; color: teal;padding-left:7px;">
                     Add Photo Of Damage
                     <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
                 </div>
