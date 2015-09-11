@@ -1,260 +1,257 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-FNB Sans
-<meta https-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable = no" />
+
+    <meta https-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable = no" />
 
 
-<link rel="stylesheet" href="js/jquery.mobile-1.2.0.css" />
-<link href="css/mycss.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/jqueryalerts.js"></script>
-<link rel="stylesheet" href="js/jqueryalerts.css" />
-<link href="js/datepicker/jquery.datetimepicker.css" rel="stylesheet"
-	type="text/css" />
-<script src="js/datepicker/jquery.datetimepicker.js"
-	type="text/javascript"></script>
-<script type="text/javascript" src="js/common.js"></script>
-<script src="js/jquery.mobile-1.2.0.js" type="text/javascript"></script>
-<script type="text/javascript" src="cordova.js"></script>
-<script src="js/MicrosoftAjax.js" type="text/javascript"></script>
-<script src="http://fnbservice.fnbroadassist.co.za/AppService.svc/js"
-	type="text/javascript"></script>
-<!--<script src="http://fnbservice.star-knowledge.org/AppService.svc/js"
-	type="text/javascript"></script>-->
-<!--<script src="http://ppc.star-knowledge.com/AppService.svc/js"
-	type="text/javascript"></script>-->
+    <link rel="stylesheet" href="js/jquery.mobile-1.2.0.css" />
+    <link href="css/mycss.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jqueryalerts.js"></script>
+    <link rel="stylesheet" href="js/jqueryalerts.css" />
+    <link href="js/datepicker/jquery.datetimepicker.css" rel="stylesheet"
+          type="text/css" />
+    <script src="js/datepicker/jquery.datetimepicker.js"
+            type="text/javascript"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="js/jquery.mobile-1.2.0.js" type="text/javascript"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="http://fnbservice.fnbroadassist.co.za/AppService.svc/js"
+            type="text/javascript"></script>
+    <!--<script src="http://fnbservice.star-knowledge.org/AppService.svc/js"
+        type="text/javascript"></script>-->
+    <!--<script src="http://ppc.star-knowledge.com/AppService.svc/js"
+        type="text/javascript"></script>-->
 
-<style type="text/css">
-.view {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	background-color: #000;
-	border: 0px red medium;
-	opacity: 0.7;
-	filter: alpha(opacity =   50);
-	filter: "alpha(opacity=50)";
-	cursor: default;
-}
+    <style type="text/css">
+              .view {
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  background-color: #000;
+                  border: 0px red medium;
+                  opacity: 0.7;
+                  filter: alpha(opacity = 50);
+                  filter: "alpha(opacity=50)";
+                  cursor: default;
+              }
 
-.loadingimg { /*text-align: centre;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  margin-top: 500px;*/
-	color: #FFF;
-	left: 45%;
-	margin-top: 50%;
-	position: relative;
-	z-index: 1000;
-	height: 20%;
-	width: 50px;
-}
+              .loadingimg { /*text-align: centre;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 500px;*/
+                  color: #FFF;
+                  left: 45%;
+                  margin-top: 50%;
+                  position: relative;
+                  z-index: 1000;
+                  height: 20%;
+                  width: 50px;
+              }
 
-.footerfont {
-	color: Teal !important;
-	font-size: 14px !important;
-	text-shadow: none !important;
-  
-}
+              .footerfont {
+                  color: Teal !important;
+                  font-size: 14px !important;
+                  text-shadow: none !important;
+              }
 
-.listDataCall {
-	font-family:arial!important;
-	font-size: 14px !important;
-	background-color: #ffffff !important;
-	border-bottom: 1px solid Teal !important;
-	
-	
-}
-</style>
-<script type="text/javascript">
-var Locphotos = [];
- var AccDamgphotos = [];
-  var Licensephotos = [];
-   var PartyLocphotos = [];
-   var PartyDmgphotos = [];
-  var SPLicensephotos = [];
-   var SPartyLocphotos = [];
-   var SPartyDmgphotos = [];
-function Arrayclear(){
-Locphotos = [];
- AccDamgphotos = [];
-  Licensephotos = [];
-   PartyLocphotos = [];
-   PartyDmgphotos = [];
-  SPLicensephotos = [];
-   SPartyLocphotos = [];
-   SPartyDmgphotos = [];
-   goindexPage();
-}
-       function showpopup() {
-       try{
-        document.getElementById("popupBasic").style.display = "block";
-        }catch(ex){
-        
+              .listDataCall {
+                  font-family: arial !important;
+                  font-size: 14px !important;
+                  background-color: #ffffff !important;
+                  border-bottom: 1px solid Teal !important;
+              }
+    </style>
+    <script type="text/javascript">
+        var Locphotos = [];
+        var AccDamgphotos = [];
+        var Licensephotos = [];
+        var PartyLocphotos = [];
+        var PartyDmgphotos = [];
+        var SPLicensephotos = [];
+        var SPartyLocphotos = [];
+        var SPartyDmgphotos = [];
+        function Arrayclear() {
+            Locphotos = [];
+            AccDamgphotos = [];
+            Licensephotos = [];
+            PartyLocphotos = [];
+            PartyDmgphotos = [];
+            SPLicensephotos = [];
+            SPartyLocphotos = [];
+            SPartyDmgphotos = [];
+            goindexPage();
         }
-       }
-       function showpopupSPartyHelp() {
-       try{
-           document.getElementById("popupSpartyHelp").style.display = "block";
-           }catch(ex){
-       
-        }
-       }
-
-var sid;
-var query = window.location.search.substring(1);
-            var parms = query.split('&');
-
-            var pos = parms[0].indexOf('=');
-            if (pos > 0) {
-                sid = parms[0].substring(pos + 1);
+        function showpopup() {
+            try {
+                document.getElementById("popupBasic").style.display = "block";
+            } catch (ex) {
 
             }
-            
-           /* window.onresize = function(event) {
-    //alert('ok');
-			};*/
-          
-var currentPage = 'indexPage';
+        }
+        function showpopupSPartyHelp() {
+            try {
+                document.getElementById("popupSpartyHelp").style.display = "block";
+            } catch (ex) {
+
+            }
+        }
+
+        var sid;
+        var query = window.location.search.substring(1);
+        var parms = query.split('&');
+
+        var pos = parms[0].indexOf('=');
+        if (pos > 0) {
+            sid = parms[0].substring(pos + 1);
+
+        }
+
+        /* window.onresize = function(event) {
+ //alert('ok');
+         };*/
+
+        var currentPage = 'indexPage';
         var pictureSource;
         var destinationType;
         var smallImage
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady() {
-        try{
-            document.addEventListener("backbutton", backKeyDown, true);
-            pictureSource = navigator.camera.PictureSourceType;
-            destinationType = navigator.camera.DestinationType;
-            }catch(ex){
-        
+            try {
+                document.addEventListener("backbutton", backKeyDown, true);
+                pictureSource = navigator.camera.PictureSourceType;
+                destinationType = navigator.camera.DestinationType;
+            } catch (ex) {
+
+            }
         }
-        }
-        
+
         function backKeyDown() {
-try{
-            if ($("#popup_container").is(":visible") == true) {
+            try {
+                if ($("#popup_container").is(":visible") == true) {
+
+                }
+                else if ($("#ui-datepicker-div").is(":visible") == true) {
+
+                } else if (currentPage == 'indexPage') {
+                    navigator.app.exitApp();
+                }
+                else {
+
+                    pageData.pop();
+                    currentPage = pageData[pageData.length - 1];
+                    $.mobile.changePage('#' + currentPage, {
+                        transition: "none",
+                        reverse: true,
+                        changeHash: false
+                    });
+                }
+            } catch (ex) {
 
             }
-            else if ($("#ui-datepicker-div").is(":visible") == true) {
-
-            }else if (currentPage == 'indexPage') {
-            navigator.app.exitApp();
-        	}
-            else {
-
-                pageData.pop();
-                currentPage = pageData[pageData.length - 1];
-                $.mobile.changePage('#' + currentPage, {
-                    transition: "none",
-                    reverse: true,
-                    changeHash: false
-                });
-            }
-            }catch(ex){
-       
-        }
         }
         function onPhotoFileSuccess(imageData) {
-try{
-    $('#idDelImgPhotoImg').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Loction <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div> </div><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageData + '" alt="" style="width: 100%;height:50%" id="LocPhotoImag" /></div></div>');
-           
-            $('#idAddPhotoImg').show();
-            Locphotos.push(imageData);
-            $('#idAddanotherphotoImg').hide();
-            if ($('#idDelImgPhotoImg').html().trim()) {
-                $('#idAddPhotoImg').hide();
-                $('#idAddanotherphotoImg').show();
-              
-              
-            }
-            else {
-              
-                $('#idAddanotherphotoImg').hide();
+            try {
+                $('#idDelImgPhotoImg').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Loction <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div> </div><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageData + '" alt="" style="width: 100%;height:50%" id="LocPhotoImag" /></div></div>');
+
                 $('#idAddPhotoImg').show();
+                Locphotos.push(imageData);
+                $('#idAddanotherphotoImg').hide();
+                if ($('#idDelImgPhotoImg').html().trim()) {
+                    $('#idAddPhotoImg').hide();
+                    $('#idAddanotherphotoImg').show();
+
+
+                }
+                else {
+
+                    $('#idAddanotherphotoImg').hide();
+                    $('#idAddPhotoImg').show();
+                }
+            } catch (ex) {
+                //alert(ex);
             }
-}catch(ex){
-//alert(ex);
-}
         }
         function capturePhotoWithFile() {
-        try{
-           
-            navigator.camera.getPicture(onPhotoFileSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI,targetWidth: 500,targetHeight: 500,sourceType: navigator.camera.PictureSourceType.CAMERA,encodingType: navigator.camera.EncodingType.JPEG });
-        }catch(ex){
-       	 //alert('dd  '+ex);
-        }
+            try {
+
+                navigator.camera.getPicture(onPhotoFileSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, targetWidth: 500, targetHeight: 500, sourceType: navigator.camera.PictureSourceType.CAMERA, encodingType: navigator.camera.EncodingType.JPEG });
+            } catch (ex) {
+                //alert('dd  '+ex);
+            }
         };
         function onFail(message) {
-        try{
-            alert(message);
-            }catch(ex){
-           // alert('ex '+ex);
+            try {
+                alert(message);
+            } catch (ex) {
+                // alert('ex '+ex);
             }
         }
 
         function deleteImg(ImgTag) {
-        
+
             $(ImgTag).parents('.mainPhotodiv').remove();
         }
-       
-function callcode(){
-NativeBridge.call("callfunction", [0,0,1]);
-}
 
-</script>
-<script type="text/javascript">
-    function capturePhotoWithFiledamagePhoto() {
-       try{
-        navigator.camera.getPicture(onPhotoFileSuccessdamagePhotoAccident, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI,targetWidth: 500,targetHeight: 500,sourceType: navigator.camera.PictureSourceType.CAMERA,encodingType: navigator.camera.EncodingType.JPEG });
-    }catch(ex){
-       
-        }
-    }
-    function onPhotoFileSuccessdamagePhotoAccident(imageDatadamagePhoto) {
-  try{
-      $('#idDelImgDamagePhotoImg').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Damage <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div><div class="deleteImg"> <img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageDatadamagePhoto + '" alt="" style="width: 100%;height:50%" id="imgdamagePhoto"/></div></div>');
-
-        $('#idAddDamagePhotoImg').show();
-          AccDamgphotos.push(imageDatadamagePhoto);
-        $('#idAddanotherDamagephotoImg').hide();
-        if ($('#idDelImgDamagePhotoImg').html().trim()) {
-        $('#idAddDamagePhotoImg').hide();
-            $('#idAddanotherDamagephotoImg').show();
-
-
-        }
-        else {
-            $('#idAddDamagePhotoImg').hide();
-            $('#idAddanotherDamagephotoImg').show();
-        }
-         }catch(ex){
-       
+        function callcode() {
+            NativeBridge.call("callfunction", [0, 0, 1]);
         }
 
-    }
+    </script>
+    <script type="text/javascript">
+        function capturePhotoWithFiledamagePhoto() {
+            try {
+                navigator.camera.getPicture(onPhotoFileSuccessdamagePhotoAccident, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, targetWidth: 500, targetHeight: 500, sourceType: navigator.camera.PictureSourceType.CAMERA, encodingType: navigator.camera.EncodingType.JPEG });
+            } catch (ex) {
 
-</script>
-<script type="text/javascript">
+            }
+        }
+        function onPhotoFileSuccessdamagePhotoAccident(imageDatadamagePhoto) {
+            try {
+                $('#idDelImgDamagePhotoImg').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Damage <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div><div class="deleteImg"> <img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageDatadamagePhoto + '" alt="" style="width: 100%;height:50%" id="imgdamagePhoto"/></div></div>');
+
+                $('#idAddDamagePhotoImg').show();
+                AccDamgphotos.push(imageDatadamagePhoto);
+                $('#idAddanotherDamagephotoImg').hide();
+                if ($('#idDelImgDamagePhotoImg').html().trim()) {
+                    $('#idAddDamagePhotoImg').hide();
+                    $('#idAddanotherDamagephotoImg').show();
+
+
+                }
+                else {
+                    $('#idAddDamagePhotoImg').hide();
+                    $('#idAddanotherDamagephotoImg').show();
+                }
+            } catch (ex) {
+
+            }
+
+        }
+
+    </script>
+    <script type="text/javascript">
         /*** FirstParty DLPhoto ***/
         function capturePhotoWithFileDriverLicenseNum() {
-        try{
-        navigator.camera.getPicture(onPhotoFileSuccessDriverLicenseNum, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI,targetWidth: 500,targetHeight: 500,sourceType: navigator.camera.PictureSourceType.CAMERA,encodingType: navigator.camera.EncodingType.JPEG });
-         }catch(ex){
-       
-        }
+            try {
+                navigator.camera.getPicture(onPhotoFileSuccessDriverLicenseNum, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, targetWidth: 500, targetHeight: 500, sourceType: navigator.camera.PictureSourceType.CAMERA, encodingType: navigator.camera.EncodingType.JPEG });
+            } catch (ex) {
+
+            }
         }
         function onPhotoFileSuccessDriverLicenseNum(imageDataPath) {
-        try{
-            $('#idDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLNum(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPath + '" alt="" style="width: 50%; height: 30%" id="DLImag" /></div></div>');
-        Licensephotos.push(imageDataPath);
-         }catch(ex){       
-         }
+            try {
+                $('#idDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLNum(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPath + '" alt="" style="width: 50%; height: 30%" id="DLImag" /></div></div>');
+                Licensephotos.push(imageDataPath);
+            } catch (ex) {
+            }
         }
         function deleteImgLNum(ImgTag) {
             try {
@@ -264,939 +261,936 @@ NativeBridge.call("callfunction", [0,0,1]);
         }
 
         /*** FirstParty LicenseDisk Photo ***/
-    function capturePhotoWithFileLicenseDisk() {
-    try{
-     navigator.camera.getPicture(onPhotoFileSuccessLicenseDisk, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI,targetWidth: 500,targetHeight: 500,sourceType: navigator.camera.PictureSourceType.CAMERA,encodingType: navigator.camera.EncodingType.JPEG });
-    }catch(ex){       
-         }
-    }
-    function onPhotoFileSuccessLicenseDisk(imageDataPathLDisk) {
-    try{
-        $('#idLicenseDiskPhoto').append('<div class="mainPhoto"><div class="cameraphoto" >  < </div> <div style="margin-left: 160px"><img  src="images/delete.png" alt="" onclick="deleteImgLDisk(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDisk + '" alt="" style="width: 50%; height: 30%" id="PartyLocImg" /></div>');
-   PartyLocphotos.push(imageDataPathLDisk);
-   }catch(ex){       
-         }
-    }
-    function deleteImgLDisk(ImgTagDisk) {
-    try{
-        $(ImgTagDisk).parents('.mainPhoto').remove();
-        }catch(ex){       
-         }
-    }
-    /*** FirstParty DamagePhoto  ***/
-    function capturePhotoWithFileDamagePhoto() {
-try{
-        navigator.camera.getPicture(onPhotoFileSuccessDamagePhoto, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI,targetWidth: 500,targetHeight: 500,sourceType: navigator.camera.PictureSourceType.CAMERA,encodingType: navigator.camera.EncodingType.JPEG });
-    }catch(ex){       
-         }
-    }
-    function onPhotoFileSuccessDamagePhoto(imageDataPathDamagePhoto) {
-    try{
-        $('#idDamagePhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhoto(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhoto + '" alt="" style="width: 50%; height: 30%" id="PDmgPhotoImg" /></div>');
-    PartyDmgphotos.push(imageDataPathDamagePhoto);
-    }catch(ex){       
-         }
-    }
-    function deleteImgDamagePhoto(ImgTagDamagePhoto) {
-    try{
-        $(ImgTagDamagePhoto).parents('.mainPhoto').remove();
-        }catch(ex){       
-         }
-    }
-   
-</script>
-<script type="text/javascript">
-    /*** SecondParty DLPhoto ***/
-    function capturePhotoWithFileDriverLicenseNumSP() {
-    try{
-        navigator.camera.getPicture(onPhotoFileSuccessDriverLicenseNumSP, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI,targetWidth: 500,targetHeight: 500,sourceType: navigator.camera.PictureSourceType.CAMERA,encodingType: navigator.camera.EncodingType.JPEG });
-   }catch(ex){       
-         }
-    }
-    function onPhotoFileSuccessDriverLicenseNumSP(imageDataPathSP) {
-    try{
-        $('#idSecondpartyDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLNumSP(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPathSP + '" alt="" style="width: 50%; height: 30%" id="SPDLImg" /></div></div>');
-     SPLicensephotos.push(imageDataPathSP);
-   }catch(ex){       
-         }
-    }
-    function deleteImgLNumSP(ImgTagSP) {
-    try{
-        $(ImgTagSP).parents('.mainPhoto').remove();
-        }catch(ex){       
-         }
-    }
-
-    /*** SecondParty LicenseDisk Photo ***/
-    function capturePhotoWithFileLicenseDiskSP() {
-    try{
-        navigator.camera.getPicture(onPhotoFileSuccessLicenseDiskSP, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI,targetWidth: 500,targetHeight: 500,sourceType: navigator.camera.PictureSourceType.CAMERA,encodingType: navigator.camera.EncodingType.JPEG });
-   }catch(ex){       
-         }
-    }
-    function onPhotoFileSuccessLicenseDiskSP(imageDataPathLDiskSP) {
-    try{
-        $('#idSecondpartyLicenseDiskPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLDiskSP(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDiskSP + '" alt="" style="width: 50%; height: 30%" id="SPartyLocImg"/></div>');
-   SPartyLocphotos.push(imageDataPathLDiskSP);
-    }catch(ex){       
-         }
-    }
-    function deleteImgLDiskSP(ImgTagDiskSP) {
-    try{
-        $(ImgTagDiskSP).parents('.mainPhoto').remove();
-        }catch(ex){       
-         }
-    }
-    /*** SecondParty DamagePhoto  ***/
-    function capturePhotoWithFileDamagePhotoSP() {
-      try{
-        navigator.camera.getPicture(onPhotoFileSuccessDamagePhotoSP, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI,targetWidth: 500,targetHeight: 500,sourceType: navigator.camera.PictureSourceType.CAMERA,encodingType: navigator.camera.EncodingType.JPEG });
-    }catch(ex){       
-         }
-    }
-    function onPhotoFileSuccessDamagePhotoSP(imageDataPathDamagePhotoSP) {
-    try{
-        $('#idSecondpartyDamagePhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhotoSP(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhotoSP + '" alt="" style="width: 50%; height: 30%" id="SPDmgImg" /></div>');
-    SPartyDmgphotos.push(imageDataPathDamagePhotoSP);
-    }catch(ex){       
-         }
-    }
-    function deleteImgDamagePhotoSP(ImgTagDamagePhotoSP) {
-    try{
-        $(ImgTagDamagePhotoSP).parents('.mainPhoto').remove();
-        }catch(ex){       
-         }
-    }
-</script>
-<script type="text/javascript">
-   //Y->2014,y-14,H:iA-->
-    $(function () {
-      
-       // $('#txtdatepicker').datetimepicker({ timepicker: false, format: 'd/m/Y', minDate: 0, maxDate: 0, numberOfMonths: 0 });
-        $('#txtdatepicker').datetimepicker({  timepicker: false, format: 'd/m/Y', minDate: 0, maxDate: 0, numberOfMonths: 0 });
-        $('#btndatepicker').click(function () {
-        $('#txtdatepicker').datetimepicker('show');
-        });
-
-    $('#txttimepicker').datetimepicker({datepicker: false, format: 'H:i', minTime: '0', maxTime: '0'
-        });
-        $('#btntimepicker').click(function () {
-        $('#txttimepicker').datetimepicker('show');
-        });
-         $('#deletepopup').click(function () {
-           
-            $('#popupBasic').hide();
-
-
-        });
-        $('#deletepopupSpartyHelp').click(function () {
-            
-            $('#popupSpartyHelp').hide();
-
-
-        });
-});
-</script>
-
-<script type="text/javascript">
- 
- function callfunction(){
-     return;
- }
- </script>
-
-<!--Capture Vedio -->
-<script type="text/javascript" charset="utf-8">
-     function captureSuccessVedio(mediaFiles) {
-        try{
-          var i, len;
-          var formatSuccess = function (mediaFile) {
-              document.getElementById('capture-data').innerHTML =
-                    "Duration: <strong>" + mediaFile.duration + "</strong><br/>";
-          };
-
-          for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-             
-              document.getElementById('capture-result').innerHTML = mediaFiles[i].fullPath;
-            
-          };
-          Playvedio();
-        }catch(ex){       
-         }
-      }
-
-
-      function captureErrorVedio(error) {
-       
-      }
-
-     function captureVedio() {
-         try{
-          navigator.device.capture.captureVideo(captureSuccessVedio, captureErrorVedio, { limit: 1 });
-          }catch(ex){
-          
-          }
-      }
-      
-
-
-
-
-
-      function Playvedio() {
-         
-      try{
-          
-          var path = $('#capture-result').text();
-         $('#idVedioShowdiv').show();
-          $('#idVedioShowdiv').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Capture Video<img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /><div class="photodiv" id="idvedioDiv"><div class=""><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteVedio(this)" style="width: 100%" /></div><div class="photodiv" id="idvedioDiv"><video style="width:100%" poster="http://196.38.94.34:9091/Images/PlayVedio.png" controls><source src="' + path + '" type="video/mp4"></video></div></div></video></div></div>');
-           
+        function capturePhotoWithFileLicenseDisk() {
+            try {
+                navigator.camera.getPicture(onPhotoFileSuccessLicenseDisk, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, targetWidth: 500, targetHeight: 500, sourceType: navigator.camera.PictureSourceType.CAMERA, encodingType: navigator.camera.EncodingType.JPEG });
+            } catch (ex) {
+            }
         }
-          catch(ex)
-          {
-       
-          }
-  }
-  function deleteVedio(ImgTagVedio) {
-      $(ImgTagVedio).parents('.mainPhotodiv').remove();
-  }
+        function onPhotoFileSuccessLicenseDisk(imageDataPathLDisk) {
+            try {
+                $('#idLicenseDiskPhoto').append('<div class="mainPhoto"><div class="cameraphoto" >  < </div> <div style="margin-left: 160px"><img  src="images/delete.png" alt="" onclick="deleteImgLDisk(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDisk + '" alt="" style="width: 50%; height: 30%" id="PartyLocImg" /></div>');
+                PartyLocphotos.push(imageDataPathLDisk);
+            } catch (ex) {
+            }
+        }
+        function deleteImgLDisk(ImgTagDisk) {
+            try {
+                $(ImgTagDisk).parents('.mainPhoto').remove();
+            } catch (ex) {
+            }
+        }
+        /*** FirstParty DamagePhoto  ***/
+        function capturePhotoWithFileDamagePhoto() {
+            try {
+                navigator.camera.getPicture(onPhotoFileSuccessDamagePhoto, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, targetWidth: 500, targetHeight: 500, sourceType: navigator.camera.PictureSourceType.CAMERA, encodingType: navigator.camera.EncodingType.JPEG });
+            } catch (ex) {
+            }
+        }
+        function onPhotoFileSuccessDamagePhoto(imageDataPathDamagePhoto) {
+            try {
+                $('#idDamagePhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhoto(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhoto + '" alt="" style="width: 50%; height: 30%" id="PDmgPhotoImg" /></div>');
+                PartyDmgphotos.push(imageDataPathDamagePhoto);
+            } catch (ex) {
+            }
+        }
+        function deleteImgDamagePhoto(ImgTagDamagePhoto) {
+            try {
+                $(ImgTagDamagePhoto).parents('.mainPhoto').remove();
+            } catch (ex) {
+            }
+        }
+
+    </script>
+    <script type="text/javascript">
+        /*** SecondParty DLPhoto ***/
+        function capturePhotoWithFileDriverLicenseNumSP() {
+            try {
+                navigator.camera.getPicture(onPhotoFileSuccessDriverLicenseNumSP, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, targetWidth: 500, targetHeight: 500, sourceType: navigator.camera.PictureSourceType.CAMERA, encodingType: navigator.camera.EncodingType.JPEG });
+            } catch (ex) {
+            }
+        }
+        function onPhotoFileSuccessDriverLicenseNumSP(imageDataPathSP) {
+            try {
+                $('#idSecondpartyDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLNumSP(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPathSP + '" alt="" style="width: 50%; height: 30%" id="SPDLImg" /></div></div>');
+                SPLicensephotos.push(imageDataPathSP);
+            } catch (ex) {
+            }
+        }
+        function deleteImgLNumSP(ImgTagSP) {
+            try {
+                $(ImgTagSP).parents('.mainPhoto').remove();
+            } catch (ex) {
+            }
+        }
+
+        /*** SecondParty LicenseDisk Photo ***/
+        function capturePhotoWithFileLicenseDiskSP() {
+            try {
+                navigator.camera.getPicture(onPhotoFileSuccessLicenseDiskSP, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, targetWidth: 500, targetHeight: 500, sourceType: navigator.camera.PictureSourceType.CAMERA, encodingType: navigator.camera.EncodingType.JPEG });
+            } catch (ex) {
+            }
+        }
+        function onPhotoFileSuccessLicenseDiskSP(imageDataPathLDiskSP) {
+            try {
+                $('#idSecondpartyLicenseDiskPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLDiskSP(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDiskSP + '" alt="" style="width: 50%; height: 30%" id="SPartyLocImg"/></div>');
+                SPartyLocphotos.push(imageDataPathLDiskSP);
+            } catch (ex) {
+            }
+        }
+        function deleteImgLDiskSP(ImgTagDiskSP) {
+            try {
+                $(ImgTagDiskSP).parents('.mainPhoto').remove();
+            } catch (ex) {
+            }
+        }
+        /*** SecondParty DamagePhoto  ***/
+        function capturePhotoWithFileDamagePhotoSP() {
+            try {
+                navigator.camera.getPicture(onPhotoFileSuccessDamagePhotoSP, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI, targetWidth: 500, targetHeight: 500, sourceType: navigator.camera.PictureSourceType.CAMERA, encodingType: navigator.camera.EncodingType.JPEG });
+            } catch (ex) {
+            }
+        }
+        function onPhotoFileSuccessDamagePhotoSP(imageDataPathDamagePhotoSP) {
+            try {
+                $('#idSecondpartyDamagePhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhotoSP(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhotoSP + '" alt="" style="width: 50%; height: 30%" id="SPDmgImg" /></div>');
+                SPartyDmgphotos.push(imageDataPathDamagePhotoSP);
+            } catch (ex) {
+            }
+        }
+        function deleteImgDamagePhotoSP(ImgTagDamagePhotoSP) {
+            try {
+                $(ImgTagDamagePhotoSP).parents('.mainPhoto').remove();
+            } catch (ex) {
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        //Y->2014,y-14,H:iA-->
+        $(function () {
+
+            // $('#txtdatepicker').datetimepicker({ timepicker: false, format: 'd/m/Y', minDate: 0, maxDate: 0, numberOfMonths: 0 });
+            $('#txtdatepicker').datetimepicker({ timepicker: false, format: 'd/m/Y', minDate: 0, maxDate: 0, numberOfMonths: 0 });
+            $('#btndatepicker').click(function () {
+                $('#txtdatepicker').datetimepicker('show');
+            });
+
+            $('#txttimepicker').datetimepicker({
+                datepicker: false, format: 'H:i', minTime: '0', maxTime: '0'
+            });
+            $('#btntimepicker').click(function () {
+                $('#txttimepicker').datetimepicker('show');
+            });
+            $('#deletepopup').click(function () {
+
+                $('#popupBasic').hide();
 
 
-  
+            });
+            $('#deletepopupSpartyHelp').click(function () {
 
-            </script>
-<!-- Capture Audio -->
-
-<script type="text/javascript" charset="utf-8">
-    function captureSuccess(mediaFiles) {
-      try{
-        var i, len;
-        var formatSuccess = function (mediaFile) {
-            document.getElementById('capture-dataAudio').innerHTML =
-                    "Duration: <strong>" + mediaFile.duration + "</strong><br/>";
-        };
-
-        for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-
-            document.getElementById('capture-resultAudio').innerHTML = mediaFiles[i].fullPath;
-
-        };
-        PlayAudio();
-        }catch(ex){       
-         }
-
-    }
+                $('#popupSpartyHelp').hide();
 
 
-    function captureError(error) {
-        var msg = 'An error occurred during capture: ' + error.code;
-        navigator.notification.alert(msg, null, 'Uh oh!');
-        
-    }
+            });
+        });
+    </script>
 
-   function captureAudio() {
-     try{
-        navigator.device.capture.captureAudio(captureSuccess, captureError, { limit: 1 });
-    }catch(ex){       
-         }
-    }
-   
+    <script type="text/javascript">
+
+        function callfunction() {
+            return;
+        }
+    </script>
+
+    <!--Capture Vedio -->
+    <script type="text/javascript" charset="utf-8">
+        function captureSuccessVedio(mediaFiles) {
+            try {
+                var i, len;
+                var formatSuccess = function (mediaFile) {
+                    document.getElementById('capture-data').innerHTML =
+                          "Duration: <strong>" + mediaFile.duration + "</strong><br/>";
+                };
+
+                for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+
+                    document.getElementById('capture-result').innerHTML = mediaFiles[i].fullPath;
+
+                };
+                Playvedio();
+            } catch (ex) {
+            }
+        }
 
 
-
-
-    function PlayAudio() {
-      
-        try {
-
-            var path = $('#capture-resultAudio').text();
-           
-            $('#idAudioDiv').append('<div class="mainPhotodiv"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagaudio" alt="" style="float: left; top: 30px!important" onclick="playAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:30px"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
+        function captureErrorVedio(error) {
 
         }
-        catch (ex) {
-           
+
+        function captureVedio() {
+            try {
+                navigator.device.capture.captureVideo(captureSuccessVedio, captureErrorVedio, { limit: 1 });
+            } catch (ex) {
+
+            }
         }
-    }
-    function deleteAudio(ImgTagAudio) {
-        $(ImgTagAudio).parents('.mainPhotodiv').remove();
-    }
 
-    function playAudioclick(id) {
 
-     try{
-        var my_media = null;
-        my_media = new Media($('#capture-resultAudio').text());
-        my_media.play();
-        }catch(ex){       
-         }
-    }
-  
-/***second witness******/
-function captureSuccessswit(mediaFiles) {
-           try{
-            var i, len;
-            var formatSuccess = function (mediaFile) {
-                document.getElementById('capture-dataswitAudio').innerHTML =
-                        "Duration: <strong>" + mediaFile.duration + "</strong><br/>";
-            };
 
-            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
 
-                document.getElementById('capture-resultswitAudio').innerHTML = mediaFiles[i].fullPath;
 
-            };
-            PlaySwitAudio();
-}catch(ex){       
-         }
+
+        function Playvedio() {
+
+            try {
+
+                var path = $('#capture-result').text();
+                $('#idVedioShowdiv').show();
+                $('#idVedioShowdiv').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Capture Video<img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /><div class="photodiv" id="idvedioDiv"><div class=""><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteVedio(this)" style="width: 100%" /></div><div class="photodiv" id="idvedioDiv"><video style="width:100%" poster="http://196.38.94.34:9091/Images/PlayVedio.png" controls><source src="' + path + '" type="video/mp4"></video></div></div></video></div></div>');
+
+            }
+            catch (ex) {
+
+            }
+        }
+        function deleteVedio(ImgTagVedio) {
+            $(ImgTagVedio).parents('.mainPhotodiv').remove();
+        }
+
+
+
+
+    </script>
+    <!-- Capture Audio -->
+
+    <script type="text/javascript" charset="utf-8">
+        function captureSuccess(mediaFiles) {
+            try {
+                var i, len;
+                var formatSuccess = function (mediaFile) {
+                    document.getElementById('capture-dataAudio').innerHTML =
+                            "Duration: <strong>" + mediaFile.duration + "</strong><br/>";
+                };
+
+                for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+
+                    document.getElementById('capture-resultAudio').innerHTML = mediaFiles[i].fullPath;
+
+                };
+                PlayAudio();
+            } catch (ex) {
+            }
+
+        }
+
+
+        function captureError(error) {
+            var msg = 'An error occurred during capture: ' + error.code;
+            navigator.notification.alert(msg, null, 'Uh oh!');
+
+        }
+
+        function captureAudio() {
+            try {
+                navigator.device.capture.captureAudio(captureSuccess, captureError, { limit: 1 });
+            } catch (ex) {
+            }
+        }
+
+
+
+
+
+        function PlayAudio() {
+
+            try {
+
+                var path = $('#capture-resultAudio').text();
+
+                $('#idAudioDiv').append('<div class="mainPhotodiv"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagaudio" alt="" style="float: left; top: 30px!important" onclick="playAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:30px"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
+
+            }
+            catch (ex) {
+
+            }
+        }
+        function deleteAudio(ImgTagAudio) {
+            $(ImgTagAudio).parents('.mainPhotodiv').remove();
+        }
+
+        function playAudioclick(id) {
+
+            try {
+                var my_media = null;
+                my_media = new Media($('#capture-resultAudio').text());
+                my_media.play();
+            } catch (ex) {
+            }
+        }
+
+        /***second witness******/
+        function captureSuccessswit(mediaFiles) {
+            try {
+                var i, len;
+                var formatSuccess = function (mediaFile) {
+                    document.getElementById('capture-dataswitAudio').innerHTML =
+                            "Duration: <strong>" + mediaFile.duration + "</strong><br/>";
+                };
+
+                for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+
+                    document.getElementById('capture-resultswitAudio').innerHTML = mediaFiles[i].fullPath;
+
+                };
+                PlaySwitAudio();
+            } catch (ex) {
+            }
         }
 
 
         function captureErrorswit(error) {
             var msg = 'An error occurred during capture: ' + error.code;
             navigator.notification.jAlert(msg, null, 'Uh oh!');
-           
+
         }
 
         function captureAudioSWitness() {
-         try{
-            navigator.device.capture.captureAudio(captureSuccessswit, captureErrorswit, { limit: 1 });
-       }catch(ex){       
-         }
+            try {
+                navigator.device.capture.captureAudio(captureSuccessswit, captureErrorswit, { limit: 1 });
+            } catch (ex) {
+            }
         }
-     
+
         function PlaySwitAudio() {
-            
+
             try {
 
                 var path = $('#capture-resultswitAudio').text();
-               
+
                 $('#idSecondWitAudio').append('<div class="mainPhotodiv"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagSWaudio" alt="" style="float: left; margin-top: 5px!important" onclick="playSWAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:-20px"><img id="ImgIdSWDelete" src="images/delete.png" alt="" onclick="deleteSWitAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
 
             }
             catch (ex) {
-               
+
             }
         }
 
         function deleteSWitAudio(ImgTagAudio) {
-        try{
-            $(ImgTagAudio).parents('.mainPhotodiv').remove();
-            }catch(ex){       
-         }
+            try {
+                $(ImgTagAudio).parents('.mainPhotodiv').remove();
+            } catch (ex) {
+            }
         }
 
         function playSWAudioclick(id) {
-try{
-           
-            var my_media = null;
-            my_media = new Media($('#capture-resultswitAudio').text());
-            my_media.play();
-            }catch(ex){       
-         }
-        }
-            </script>
-<script type="text/javascript">
+            try {
 
- /**
-        * Upload Loc picture
-        */
-        function uploadLocPicture(AID) {
-        try{
-            var fileName ;
-            for(var i=0;i<Locphotos.length;i++)
-             {
-                if (!Locphotos[i]) {
-               
-                return;
-            }
-          fileName =  Locphotos[i];
-          /*** removed by shwetha (28-10-2014)***/
-           /* window.resolveLocalFileSystemURI(Locphotos[i], function (fileEntry) {
-                fileEntry.file(function (fileObj) {
-                fileName = fileObj.fullPath;});
-            });*/
-           
-          server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-            if (server) {
-               
-                var options = new FileUploadOptions();
-                options.fileKey = "file";
-                options.fileName = AID+"-A-LP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                options.mimeType = "image/jpeg";
-                var params = new Object();
-                params.value1 = "test";
-                params.value2 = "param";
-                options.params = params;
-                options.chunkedMode = false;
-                options.headers = {
-                Connection: "close"
-                };
-                
-                // Transfer picture to server
-                var ftLocphotos = new FileTransfer();
-                
-                ftLocphotos.upload(fileName, server, function (r) {
-                    
-                 
-                }, function (error) {
-                  
-                }, options);
-            }
-            }
-            }catch(ex){
-            
+                var my_media = null;
+                my_media = new Media($('#capture-resultswitAudio').text());
+                my_media.play();
+            } catch (ex) {
             }
         }
-         /********
-        * Upload DmgLoc picture
-        */
+    </script>
+    <script type="text/javascript">
+
+        /**
+               * Upload Loc picture
+               */
+        function uploadLocPicture(AID) {
+            try {
+                var fileName;
+                for (var i = 0; i < Locphotos.length; i++) {
+                    if (!Locphotos[i]) {
+
+                        return;
+                    }
+                    fileName = Locphotos[i];
+                    /*** removed by shwetha (28-10-2014)***/
+                    /* window.resolveLocalFileSystemURI(Locphotos[i], function (fileEntry) {
+                         fileEntry.file(function (fileObj) {
+                         fileName = fileObj.fullPath;});
+                     });*/
+
+                    server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                    if (server) {
+
+                        var options = new FileUploadOptions();
+                        options.fileKey = "file";
+                        options.fileName = AID + "-A-LP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                        options.mimeType = "image/jpeg";
+                        var params = new Object();
+                        params.value1 = "test";
+                        params.value2 = "param";
+                        options.params = params;
+                        options.chunkedMode = false;
+                        options.headers = {
+                            Connection: "close"
+                        };
+
+                        // Transfer picture to server
+                        var ftLocphotos = new FileTransfer();
+
+                        ftLocphotos.upload(fileName, server, function (r) {
+
+
+                        }, function (error) {
+
+                        }, options);
+                    }
+                }
+            } catch (ex) {
+
+            }
+        }
+        /********
+       * Upload DmgLoc picture
+       */
         function uploadAccDmgPicture(AID) {
-        try{
-            var fileName;
-            for(var i=0;i<AccDamgphotos.length;i++)
-             {
-                if (!AccDamgphotos[i]) {
-             
-                return;
-            }
-            
-            fileName = AccDamgphotos[i];
-             /*** removed by shwetha (28-10-2014)***/
-          /*  window.resolveLocalFileSystemURI(AccDamgphotos[i], function (fileEntry) {
-                fileEntry.file(function (fileObj) {
-                fileName = fileObj.fullPath;});
-            });*/
-            
-            server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-            if (server) {
-                
-                var options = new FileUploadOptions();
-                options.fileKey = "file";
-                options.fileName = AID+"-A-DP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                options.mimeType = "image/jpeg";
-                var params = new Object();
-                params.value1 = "test";
-                params.value2 = "param";
-                options.params = params;
-                options.chunkedMode = false;
-                options.headers = {
-                Connection: "close"
-                };
-                
-                // Transfer picture to server
-                var ftAccDmgphotos = new FileTransfer();
-                
-                ftAccDmgphotos.upload(fileName, server, function (r) {
-                   
-                     }, function (error) {
-                  
-                }, options);
-            }
-            }
-            }catch(ex){
-            
+            try {
+                var fileName;
+                for (var i = 0; i < AccDamgphotos.length; i++) {
+                    if (!AccDamgphotos[i]) {
+
+                        return;
+                    }
+
+                    fileName = AccDamgphotos[i];
+                    /*** removed by shwetha (28-10-2014)***/
+                    /*  window.resolveLocalFileSystemURI(AccDamgphotos[i], function (fileEntry) {
+                          fileEntry.file(function (fileObj) {
+                          fileName = fileObj.fullPath;});
+                      });*/
+
+                    server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                    if (server) {
+
+                        var options = new FileUploadOptions();
+                        options.fileKey = "file";
+                        options.fileName = AID + "-A-DP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                        options.mimeType = "image/jpeg";
+                        var params = new Object();
+                        params.value1 = "test";
+                        params.value2 = "param";
+                        options.params = params;
+                        options.chunkedMode = false;
+                        options.headers = {
+                            Connection: "close"
+                        };
+
+                        // Transfer picture to server
+                        var ftAccDmgphotos = new FileTransfer();
+
+                        ftAccDmgphotos.upload(fileName, server, function (r) {
+
+                        }, function (error) {
+
+                        }, options);
+                    }
+                }
+            } catch (ex) {
+
             }
         }
         function uploadDLicensePicture(AID) {
-        try{
-        
-         var fileName;
-        
-         for (var i = 0; i < Licensephotos.length; i++) {
-        
-             if (!Licensephotos[i]) {
-                
-                 return;
-             }
-             fileName = Licensephotos[i];
-            
-             /*** removed by shwetha (28-10-2014)***/
-           /*  window.resolveLocalFileSystemURI(Licensephotos[i], function (fileEntry) {
-                 fileEntry.file(function (fileObj) {
-                     fileName = fileObj.fullPath;
-                 });
-             });*/
-             // Verify server has been entered
-             server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-             if (server) {
-                 // Specify transfer options
-                 var options = new FileUploadOptions();
-                 options.fileKey = "file";
-                 options.fileName = AID + "-P1-LIP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                 options.mimeType = "image/jpeg";
-                 var params = new Object();
-                 params.value1 = "test";
-                 params.value2 = "param";
-                 options.params = params;
-                 options.chunkedMode = false;
-                 options.headers = {
-                     Connection: "close"
-                 };
+            try {
 
-                 // Transfer picture to server
-                 var ftDLphotos = new FileTransfer();
-                 
-                 ftDLphotos.upload(fileName, server, function (r) {
-                    
-                    
-                 }, function (error) {
-                    
-                 }, options);
-             }
-         }
-         }catch(ex){
-         
-         }
-     }
-         function uploadPartyLocPicture(AID) {
-         try{
-         var fileName;
-        
-         for (var i = 0; i < PartyLocphotos.length; i++) {
-        
-             if (!PartyLocphotos[i]) {
-               
-                 return;
-             }
-             
-              fileName = PartyLocphotos[i];
-             
-              
-             /*** removed by shwetha (28-10-2014)***/
-             /*window.resolveLocalFileSystemURI(PartyLocphotos[i], function (fileEntry) {
-                 fileEntry.file(function (fileObj) {
-                     fileName = fileObj.fullPath;
-                 });
-             });*/
-             // Verify server has been entered
-             server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-             if (server) {
-                 // Specify transfer options
-                 var options = new FileUploadOptions();
-                 options.fileKey = "file";
-                 options.fileName = AID + "-P1-LP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                 options.mimeType = "image/jpeg";
-                 var params = new Object();
-                 params.value1 = "test";
-                 params.value2 = "param";
-                 options.params = params;
-                 options.chunkedMode = false;
-                 options.headers = {
-                     Connection: "close"
-                 };
+                var fileName;
 
-                 // Transfer picture to server
-                 var ftPLocphotos = new FileTransfer();
-                 
-                 ftPLocphotos.upload(fileName, server, function (r) {
-                    
-                    
-                 }, function (error) {
-                   
-                 }, options);
-             }
-         }
-         }catch(ex){
-        
-         }
-     }
-      function uploadPartyDmgPicture(AID) {
-      try{
-         var fileName;
-        
-         for (var i = 0; i < PartyDmgphotos.length; i++) {
-          
-             if (!PartyDmgphotos[i]) {
-               
-                 return;
-             }
-              fileName = PartyLocphotos[i];
-              
-             /*** removed because of cordova version change by shwetha (28-10-2014)***/
-          /*   window.resolveLocalFileSystemURI(PartyDmgphotos[i], function (fileEntry) {
-                 fileEntry.file(function (fileObj) {
-                     fileName = fileObj.fullPath;
-                 });
-             });*/
-             // Verify server has been entered
-             server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-             if (server) {
-                 // Specify transfer options
-                 var options = new FileUploadOptions();
-                 options.fileKey = "file";
-                 options.fileName = AID + "-P1-DP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                 options.mimeType = "image/jpeg";
-                 var params = new Object();
-                 params.value1 = "test";
-                 params.value2 = "param";
-                 options.params = params;
-                 options.chunkedMode = false;
-                 options.headers = {
-                     Connection: "close"
-                 };
+                for (var i = 0; i < Licensephotos.length; i++) {
 
-                 // Transfer picture to server
-                 var ftPDmgphotos = new FileTransfer();
-                 
-                 ftPDmgphotos.upload(fileName, server, function (r) {
-                    
-                     
-                 }, function (error) {
-                    
-                 }, options);
-             }
-         }
-         }catch(ex){
-        
-         }
-     }
-     function uploadSPDLicensePicture(AID) {
-     try{
-         var fileName;
-         for (var i = 0; i < SPLicensephotos.length; i++) {
-             if (!SPLicensephotos[i]) {
-               
-                 return;
-             }
-              fileName = SPLicensephotos[i];
-             /*** removed by shwetha (28-10-2014)***/
-          /*   window.resolveLocalFileSystemURI(SPLicensephotos[i], function (fileEntry) {
-                 fileEntry.file(function (fileObj) {
-                     fileName = fileObj.fullPath;
-                 });
-             });*/
-             // Verify server has been entered
-             server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-             if (server) {
-                 // Specify transfer options
-                 var options = new FileUploadOptions();
-                 options.fileKey = "file";
-                 options.fileName = AID + "-P2-LIP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                 options.mimeType = "image/jpeg";
-                 var params = new Object();
-                 params.value1 = "test";
-                 params.value2 = "param";
-                 options.params = params;
-                 options.chunkedMode = false;
-                 options.headers = {
-                     Connection: "close"
-                 };
+                    if (!Licensephotos[i]) {
 
-                 // Transfer picture to server
-                 var ftSPDLphotos = new FileTransfer();
-                 
-                 ftSPDLphotos.upload(fileName, server, function (r) {
-                   
-                    
-                 }, function (error) {
-                     
-                 }, options);
-             }
-         }
-         }catch(ex){
-        
-         }
-     }
-     function uploadSecondPartyLocPicture(AID) {
-     try{
-         var fileName;
-         for (var i = 0; i < SPartyLocphotos.length; i++) {
-             if (!SPartyLocphotos[i]) {
-                
-                 return;
-             }
-              fileName = SPartyLocphotos[i];
-             /*** removed by shwetha (28-10-2014)***/
-             /*window.resolveLocalFileSystemURI(SPartyLocphotos[i], function (fileEntry) {
-                 fileEntry.file(function (fileObj) {
-                     fileName = fileObj.fullPath;
-                 });
-             });*/
-             // Verify server has been entered
-             server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-             if (server) {
-                 // Specify transfer options
-                 var options = new FileUploadOptions();
-                 options.fileKey = "file";
-                 options.fileName = AID + "-P2-LP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                 options.mimeType = "image/jpeg";
-                 var params = new Object();
-                 params.value1 = "test";
-                 params.value2 = "param";
-                 options.params = params;
-                 options.chunkedMode = false;
-                 options.headers = {
-                     Connection: "close"
-                 };
+                        return;
+                    }
+                    fileName = Licensephotos[i];
 
-                 // Transfer picture to server
-                 var ftSPLocphotos = new FileTransfer();
-                 
-                 ftSPLocphotos.upload(fileName, server, function (r) {
-                    
-                     
-                 }, function (error) {
-                    
-                 }, options);
-             }
-         }
-         }catch(ex){
-        
-         }
-     }
-     function uploadSecondPartyDmgPicture(AID) {
-     try{
-         var fileName;
-         for (var i = 0; i < SPartyDmgphotos.length; i++) {
-             if (!SPartyDmgphotos[i]) {
-                 
-                 return;
-             }
-              fileName = SPartyDmgphotos[i];
-             /*** removed by shwetha (28-10-2014)***/
-             /*window.resolveLocalFileSystemURI(SPartyDmgphotos[i], function (fileEntry) {
-                 fileEntry.file(function (fileObj) {
-                     fileName = fileObj.fullPath;
-                 });
-             });*/
-             // Verify server has been entered
-             server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-             if (server) {
-                 // Specify transfer options
-                 var options = new FileUploadOptions();
-                 options.fileKey = "file";
-                 options.fileName = AID + "-P2-DP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                 options.mimeType = "image/jpeg";
-                 var params = new Object();
-                 params.value1 = "test";
-                 params.value2 = "param";
-                 options.params = params;
-                 options.chunkedMode = false;
-                 options.headers = {
-                     Connection: "close"
-                 };
+                    /*** removed by shwetha (28-10-2014)***/
+                    /*  window.resolveLocalFileSystemURI(Licensephotos[i], function (fileEntry) {
+                          fileEntry.file(function (fileObj) {
+                              fileName = fileObj.fullPath;
+                          });
+                      });*/
+                    // Verify server has been entered
+                    server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                    if (server) {
+                        // Specify transfer options
+                        var options = new FileUploadOptions();
+                        options.fileKey = "file";
+                        options.fileName = AID + "-P1-LIP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                        options.mimeType = "image/jpeg";
+                        var params = new Object();
+                        params.value1 = "test";
+                        params.value2 = "param";
+                        options.params = params;
+                        options.chunkedMode = false;
+                        options.headers = {
+                            Connection: "close"
+                        };
 
-                 // Transfer picture to server
-                 var ftSPDmgphotos = new FileTransfer();
-                 
-                 ftSPDmgphotos.upload(fileName, server, function (r) {
-                     
-                     
-                 }, function (error) {
-                     
-                 }, options);
-             }
-         }
-         }catch(ex){
-         
-         }
-     }
-      /* uploadVedio */
+                        // Transfer picture to server
+                        var ftDLphotos = new FileTransfer();
 
-        
+                        ftDLphotos.upload(fileName, server, function (r) {
 
-        function uploadVedio(AID)
-        {
-        try{
-            var fileName = "";
-    	
-        var imageURI = $('#capture-result').text();
-       
-        if (!imageURI) {
-           
-            return;
+
+                        }, function (error) {
+
+                        }, options);
+                    }
+                }
+            } catch (ex) {
+
+            }
         }
-         fileName = imageURI;
-             /*** removed by shwetha (28-10-2014)***/
-        /*window.resolveLocalFileSystemURI(imageURI, function (fileEntry) {
-            fileEntry.file(function (fileObj) {
-			fnbfileupload.star-knowledge.org/Service.asmx
-                fileName = fileObj.fullPath;
+        function uploadPartyLocPicture(AID) {
+            try {
+                var fileName;
+
+                for (var i = 0; i < PartyLocphotos.length; i++) {
+
+                    if (!PartyLocphotos[i]) {
+
+                        return;
+                    }
+
+                    fileName = PartyLocphotos[i];
 
 
-            });
-        });*/
-        // Verify server has been entered 
-        server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-        if (server) {
-        	
-            // Specify transfer options
-            var options = new FileUploadOptions();
-            options.fileKey="file";
-            options.fileName = AID+"-A-V-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-            options.mimeType = "images/jpeg";
-          
-            options.headers = {
-            Connection: "close"
-             };
-            var params = {};
-            params.value1 = "test";
-            params.value2 = "param";
-            options.params = params;
-            options.chunkedMode = false;
-           
-            // Transfer picture to server
-            var ftvedio = new FileTransfer();
-           ftvedio.upload(fileName, server, function (r) {
-                  
-                    
-                }, function (error) {
-                   
-                }, options);
+                    /*** removed by shwetha (28-10-2014)***/
+                    /*window.resolveLocalFileSystemURI(PartyLocphotos[i], function (fileEntry) {
+                        fileEntry.file(function (fileObj) {
+                            fileName = fileObj.fullPath;
+                        });
+                    });*/
+                    // Verify server has been entered
+                    server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                    if (server) {
+                        // Specify transfer options
+                        var options = new FileUploadOptions();
+                        options.fileKey = "file";
+                        options.fileName = AID + "-P1-LP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                        options.mimeType = "image/jpeg";
+                        var params = new Object();
+                        params.value1 = "test";
+                        params.value2 = "param";
+                        options.params = params;
+                        options.chunkedMode = false;
+                        options.headers = {
+                            Connection: "close"
+                        };
+
+                        // Transfer picture to server
+                        var ftPLocphotos = new FileTransfer();
+
+                        ftPLocphotos.upload(fileName, server, function (r) {
+
+
+                        }, function (error) {
+
+                        }, options);
+                    }
+                }
+            } catch (ex) {
+
+            }
         }
-        }catch(ex){
-       
+        function uploadPartyDmgPicture(AID) {
+            try {
+                var fileName;
+
+                for (var i = 0; i < PartyDmgphotos.length; i++) {
+
+                    if (!PartyDmgphotos[i]) {
+
+                        return;
+                    }
+                    fileName = PartyLocphotos[i];
+
+                    /*** removed because of cordova version change by shwetha (28-10-2014)***/
+                    /*   window.resolveLocalFileSystemURI(PartyDmgphotos[i], function (fileEntry) {
+                           fileEntry.file(function (fileObj) {
+                               fileName = fileObj.fullPath;
+                           });
+                       });*/
+                    // Verify server has been entered
+                    server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                    if (server) {
+                        // Specify transfer options
+                        var options = new FileUploadOptions();
+                        options.fileKey = "file";
+                        options.fileName = AID + "-P1-DP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                        options.mimeType = "image/jpeg";
+                        var params = new Object();
+                        params.value1 = "test";
+                        params.value2 = "param";
+                        options.params = params;
+                        options.chunkedMode = false;
+                        options.headers = {
+                            Connection: "close"
+                        };
+
+                        // Transfer picture to server
+                        var ftPDmgphotos = new FileTransfer();
+
+                        ftPDmgphotos.upload(fileName, server, function (r) {
+
+
+                        }, function (error) {
+
+                        }, options);
+                    }
+                }
+            } catch (ex) {
+
+            }
         }
+        function uploadSPDLicensePicture(AID) {
+            try {
+                var fileName;
+                for (var i = 0; i < SPLicensephotos.length; i++) {
+                    if (!SPLicensephotos[i]) {
+
+                        return;
+                    }
+                    fileName = SPLicensephotos[i];
+                    /*** removed by shwetha (28-10-2014)***/
+                    /*   window.resolveLocalFileSystemURI(SPLicensephotos[i], function (fileEntry) {
+                           fileEntry.file(function (fileObj) {
+                               fileName = fileObj.fullPath;
+                           });
+                       });*/
+                    // Verify server has been entered
+                    server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                    if (server) {
+                        // Specify transfer options
+                        var options = new FileUploadOptions();
+                        options.fileKey = "file";
+                        options.fileName = AID + "-P2-LIP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                        options.mimeType = "image/jpeg";
+                        var params = new Object();
+                        params.value1 = "test";
+                        params.value2 = "param";
+                        options.params = params;
+                        options.chunkedMode = false;
+                        options.headers = {
+                            Connection: "close"
+                        };
+
+                        // Transfer picture to server
+                        var ftSPDLphotos = new FileTransfer();
+
+                        ftSPDLphotos.upload(fileName, server, function (r) {
+
+
+                        }, function (error) {
+
+                        }, options);
+                    }
+                }
+            } catch (ex) {
+
+            }
+        }
+        function uploadSecondPartyLocPicture(AID) {
+            try {
+                var fileName;
+                for (var i = 0; i < SPartyLocphotos.length; i++) {
+                    if (!SPartyLocphotos[i]) {
+
+                        return;
+                    }
+                    fileName = SPartyLocphotos[i];
+                    /*** removed by shwetha (28-10-2014)***/
+                    /*window.resolveLocalFileSystemURI(SPartyLocphotos[i], function (fileEntry) {
+                        fileEntry.file(function (fileObj) {
+                            fileName = fileObj.fullPath;
+                        });
+                    });*/
+                    // Verify server has been entered
+                    server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                    if (server) {
+                        // Specify transfer options
+                        var options = new FileUploadOptions();
+                        options.fileKey = "file";
+                        options.fileName = AID + "-P2-LP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                        options.mimeType = "image/jpeg";
+                        var params = new Object();
+                        params.value1 = "test";
+                        params.value2 = "param";
+                        options.params = params;
+                        options.chunkedMode = false;
+                        options.headers = {
+                            Connection: "close"
+                        };
+
+                        // Transfer picture to server
+                        var ftSPLocphotos = new FileTransfer();
+
+                        ftSPLocphotos.upload(fileName, server, function (r) {
+
+
+                        }, function (error) {
+
+                        }, options);
+                    }
+                }
+            } catch (ex) {
+
+            }
+        }
+        function uploadSecondPartyDmgPicture(AID) {
+            try {
+                var fileName;
+                for (var i = 0; i < SPartyDmgphotos.length; i++) {
+                    if (!SPartyDmgphotos[i]) {
+
+                        return;
+                    }
+                    fileName = SPartyDmgphotos[i];
+                    /*** removed by shwetha (28-10-2014)***/
+                    /*window.resolveLocalFileSystemURI(SPartyDmgphotos[i], function (fileEntry) {
+                        fileEntry.file(function (fileObj) {
+                            fileName = fileObj.fullPath;
+                        });
+                    });*/
+                    // Verify server has been entered
+                    server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                    if (server) {
+                        // Specify transfer options
+                        var options = new FileUploadOptions();
+                        options.fileKey = "file";
+                        options.fileName = AID + "-P2-DP-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                        options.mimeType = "image/jpeg";
+                        var params = new Object();
+                        params.value1 = "test";
+                        params.value2 = "param";
+                        options.params = params;
+                        options.chunkedMode = false;
+                        options.headers = {
+                            Connection: "close"
+                        };
+
+                        // Transfer picture to server
+                        var ftSPDmgphotos = new FileTransfer();
+
+                        ftSPDmgphotos.upload(fileName, server, function (r) {
+
+
+                        }, function (error) {
+
+                        }, options);
+                    }
+                }
+            } catch (ex) {
+
+            }
+        }
+        /* uploadVedio */
+
+
+
+        function uploadVedio(AID) {
+            try {
+                var fileName = "";
+
+                var imageURI = $('#capture-result').text();
+
+                if (!imageURI) {
+
+                    return;
+                }
+                fileName = imageURI;
+                /*** removed by shwetha (28-10-2014)***/
+                /*window.resolveLocalFileSystemURI(imageURI, function (fileEntry) {
+                    fileEntry.file(function (fileObj) {
+                    fnbfileupload.star-knowledge.org/Service.asmx
+                        fileName = fileObj.fullPath;
+
+
+                    });
+                });*/
+                // Verify server has been entered
+                server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                if (server) {
+
+                    // Specify transfer options
+                    var options = new FileUploadOptions();
+                    options.fileKey = "file";
+                    options.fileName = AID + "-A-V-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                    options.mimeType = "images/jpeg";
+
+                    options.headers = {
+                        Connection: "close"
+                    };
+                    var params = {};
+                    params.value1 = "test";
+                    params.value2 = "param";
+                    options.params = params;
+                    options.chunkedMode = false;
+
+                    // Transfer picture to server
+                    var ftvedio = new FileTransfer();
+                    ftvedio.upload(fileName, server, function (r) {
+
+
+                    }, function (error) {
+
+                    }, options);
+                }
+            } catch (ex) {
+
+            }
         }
         function uploadAudio(AID) {
-        try{
-            var fileName = "";
-            
-            var imageURI = $('#capture-resultAudio').text();
-            
-            if (!imageURI) {
-             
-                return;
-            }
-             fileName = imageURI;
-             /*** removed by shwetha (28-10-2014)***/
-           /* window.resolveLocalFileSystemURI(imageURI, function (fileEntry) {
-                fileEntry.file(function (fileObj) {
+            try {
+                var fileName = "";
 
-                    fileName = fileObj.fullPath;
+                var imageURI = $('#capture-resultAudio').text();
+
+                if (!imageURI) {
+
+                    return;
+                }
+                fileName = imageURI;
+                /*** removed by shwetha (28-10-2014)***/
+                /* window.resolveLocalFileSystemURI(imageURI, function (fileEntry) {
+                     fileEntry.file(function (fileObj) {
+
+                         fileName = fileObj.fullPath;
 
 
-                });
-            });*/
-            // Verify server has been entered
-            server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-            if (server) {
+                     });
+                 });*/
+                // Verify server has been entered
+                server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                if (server) {
 
-                // Specify transfer options
-                var options = new FileUploadOptions();
-                options.fileKey = "file";
-                options.fileName = AID+"-W1-A-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                options.mimeType = "images/jpeg";
-               
-                options.headers = {
-                    Connection: "close"
-                };
-                var params = {};
-                params.value1 = "test";
-                params.value2 = "param";
-                options.params = params;
-                options.chunkedMode = false;
-                
-                // Transfer picture to server
-                var ftaudio = new FileTransfer();
-                ftaudio.upload(fileName, server, function (r) {
-                 
-                   
-                }, function (error) {
-                   
-                }, options);
-            }
-            }catch(ex){
-            
+                    // Specify transfer options
+                    var options = new FileUploadOptions();
+                    options.fileKey = "file";
+                    options.fileName = AID + "-W1-A-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                    options.mimeType = "images/jpeg";
+
+                    options.headers = {
+                        Connection: "close"
+                    };
+                    var params = {};
+                    params.value1 = "test";
+                    params.value2 = "param";
+                    options.params = params;
+                    options.chunkedMode = false;
+
+                    // Transfer picture to server
+                    var ftaudio = new FileTransfer();
+                    ftaudio.upload(fileName, server, function (r) {
+
+
+                    }, function (error) {
+
+                    }, options);
+                }
+            } catch (ex) {
+
             }
         }
         function uploadAudioSwit(AID) {
-        try{
-            var fileName = "";
-            
-            var imageURI = $('#capture-resultswitAudio').text();
-            
-            if (!imageURI) {
-               
-                return;
-            }
-             fileName = imageURI;
-             /*** removed by shwetha (28-10-2014)***/
-          /*  window.resolveLocalFileSystemURI(imageURI, function (fileEntry) {
-                fileEntry.file(function (fileObj) {
+            try {
+                var fileName = "";
 
-                    fileName = fileObj.fullPath;
+                var imageURI = $('#capture-resultswitAudio').text();
+
+                if (!imageURI) {
+
+                    return;
+                }
+                fileName = imageURI;
+                /*** removed by shwetha (28-10-2014)***/
+                /*  window.resolveLocalFileSystemURI(imageURI, function (fileEntry) {
+                      fileEntry.file(function (fileObj) {
+
+                          fileName = fileObj.fullPath;
 
 
-                });
-            });*/
-            // Verify server has been entered
-            server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
-            if (server) {
+                      });
+                  });*/
+                // Verify server has been entered
+                server = "http://fnbfileupload.fnbroadassist.co.za/Service.asmx/UploadFile";
+                if (server) {
 
-                // Specify transfer options
-                var options = new FileUploadOptions();
-                options.fileKey = "file";
-                options.fileName = AID+"-W2-A-" + fileName.substr(fileName.lastIndexOf('/') + 1);
-                options.mimeType = "images/jpeg";
-               
-                options.headers = {
-                    Connection: "close"
-                };
-                var params = {};
-                params.value1 = "test";
-                params.value2 = "param";
-                options.params = params;
-                options.chunkedMode = false;
-                
-                // Transfer picture to server
-                var ftaudio = new FileTransfer();
-                ftaudio.upload(fileName, server, function (r) {
-                  
-                   
-                }, function (error) {
-                   
-                }, options);
-            }
-            }catch(ex){
-           
+                    // Specify transfer options
+                    var options = new FileUploadOptions();
+                    options.fileKey = "file";
+                    options.fileName = AID + "-W2-A-" + fileName.substr(fileName.lastIndexOf('/') + 1);
+                    options.mimeType = "images/jpeg";
+
+                    options.headers = {
+                        Connection: "close"
+                    };
+                    var params = {};
+                    params.value1 = "test";
+                    params.value2 = "param";
+                    options.params = params;
+                    options.chunkedMode = false;
+
+                    // Transfer picture to server
+                    var ftaudio = new FileTransfer();
+                    ftaudio.upload(fileName, server, function (r) {
+
+
+                    }, function (error) {
+
+                    }, options);
+                }
+            } catch (ex) {
+
             }
         }
-</script>
-<script type="text/javascript">
-function getDateTimeIncident() {
+    </script>
+    <script type="text/javascript">
+        function getDateTimeIncident() {
 
-    var now = new Date();
-    var year = now.getFullYear();
-    var month = now.getMonth() + 1;
-    var day = now.getDate();
-    var hour = now.getHours();
-    var minute = now.getMinutes();
-    var second = now.getSeconds();
-    var ampm = hour >= 12 ? 'PM' : 'AM';
-    if (month.toString().length == 1) {
-        var month = '0' + month;
-    }
-    if (day.toString().length == 1) {
-        var day = '0' + day;
-    }
-    if (hour.toString().length == 1) {
-        var hour = '0' + hour;
-    }
-    if (minute.toString().length == 1) {
-        var minute = '0' + minute;
-    }
-    if (second.toString().length == 1) {
-        var second = '0' + second;
-    }
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1;
+            var day = now.getDate();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+            var ampm = hour >= 12 ? 'PM' : 'AM';
+            if (month.toString().length == 1) {
+                var month = '0' + month;
+            }
+            if (day.toString().length == 1) {
+                var day = '0' + day;
+            }
+            if (hour.toString().length == 1) {
+                var hour = '0' + hour;
+            }
+            if (minute.toString().length == 1) {
+                var minute = '0' + minute;
+            }
+            if (second.toString().length == 1) {
+                var second = '0' + second;
+            }
 
-  $('#txtdatepicker').val(day + '/' + month + '/' + year);
-  $('#txttimepicker').val(hour + ':' + minute);
-  datetimeFormated = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
-   
-    
-var DateTimehistroy = $('#txtdatepicker').val();
-var TimeHistroy = $('#txttimepicker').val();
+            $('#txtdatepicker').val(day + '/' + month + '/' + year);
+            $('#txttimepicker').val(hour + ':' + minute);
+            datetimeFormated = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
 
 
-
-
-}
+            var DateTimehistroy = $('#txtdatepicker').val();
+            var TimeHistroy = $('#txttimepicker').val();
 
 
 
-</script>
+
+        }
+
+
+
+    </script>
 </head>
 <body>
 	<div id="view-loading" class="view"
@@ -1313,15 +1307,17 @@ var TimeHistroy = $('#txttimepicker').val();
                 <tr class="HeaderTr">
                     <td width="15%" style="padding-top:6px;padding-left: 25px; text-align: center !important;width:10%!important;"
                         onclick="gobackPage()">
-                        <img src="images/bck.png" alt="" />
+                      <!-- <img src="images/bck.png" alt="" /> --> Back
 
                     </td>
                     <td width="70%" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial;">
                         Report
                         an Accident
                     </td>
-                    <td width="15%" style="text-align: left !important;">
-                        <img src="images/cancel.png" alt="" onclick="goindexPage()" />
+                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()" /> 
+                      <!-- <img src="images/cancel.png" alt="" onclick="goindexPage()" />--> Cancel
+
+
                     </td>
                 </tr>
             </table>
@@ -1462,12 +1458,17 @@ var TimeHistroy = $('#txttimepicker').val();
 			<table class="HeaderTable" width="100%">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/bck.png" alt="" />
+						onclick="gobackPage()">
+                      <!-- <img src="images/bck.png" alt="" />--> 
+                        Back
      
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
+                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()" >
+                        
+                      <!--  <img src="images/cancel.png" alt="" onclick="goindexPage()" />-->
+                        Cancel
 					</td>
 				</tr>
 			</table>
@@ -1541,13 +1542,19 @@ var TimeHistroy = $('#txttimepicker').val();
 			<table class="HeaderTable" width="100%">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/bck.png"
-     alt="" />
+						onclick="gobackPage()">
+                      <!--  <img src="images/bck.png" alt="" />-->
+                        Back
+    
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
-					</td>
+                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()">
+
+                        <!--<img src="images/cancel.png" alt="" onclick="goindexPage()" />-->
+                        Cancel
+
+                    </td>
 				</tr>
 			</table>
 
@@ -1613,13 +1620,21 @@ var TimeHistroy = $('#txttimepicker').val();
 			<table class="HeaderTable" width="100%">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/bck.png" alt="" />
+						onclick="gobackPage()">
+                        
+                      <!-- <img src="images/bck.png" alt="" />--> 
+                        Back
   
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
-					</td>
+
+                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()">
+
+                       <!-- <img src="images/cancel.png" alt="" onclick="goindexPage()" /> -->
+                        Cancel
+
+                    </td>
 				</tr>
 			</table>
 
@@ -1668,13 +1683,19 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/bck.png" alt="" />
+						onclick="gobackPage()">
+                        
+                        <!-- <img src="images/bck.png" alt="" /> -->
+                        Back
    
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
-					</td>
+                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()">
+
+                       <!-- <img src="images/cancel.png" alt="" onclick="goindexPage()" />-->
+                        Cancel
+                    </td>
 				</tr>
 			</table>
 			<table class="ContentTable" cellspacing="0" cellpadding="0">
@@ -1953,13 +1974,18 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/bck.png" alt="" />
+						onclick="gobackPage()">
+                        <!-- <img src="images/bck.png" alt="" /> -->
+                        Back
      
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
-					</td>
+                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()">
+
+                       <!-- <img src="images/cancel.png" alt="" onclick="goindexPage()" /> -->
+                        Cancel
+                    </td>
 				</tr>
 			</table>
 			<table class="ContentTable" cellspacing="0" cellpadding="0">
@@ -2129,15 +2155,15 @@ var TimeHistroy = $('#txttimepicker').val();
 
             <div id="popupSpartyHelp" class="popBodyBackground" style="display: none;">
                 <div id="deletepopupSparty">
-                    <img src="images/delete2.png" alt="" />
+                    <img src="images/delete2.png" alt="" style="padding-left:10%;" />
                 </div>
                 <div class="popup" >
                     <div style="text-align:center;padding-top:4%"><font style="color:Teal">VIN Number</font></div>
-                    <p class="paraAboutAAQuestionmark">
+                    <p class="popAboutAAQuestionmark">
                         Look on the dashboard
                         passanger side, diretly under the windscreen
                     </p>
-                    <div id="deletepopupSpartyHelp" class="popupheader" style="padding-top:9%"> <font style="color:Teal;padding-left:43%;">OK</font>  </div>
+                    <div id="deletepopupSpartyHelp" class="popupheader" style="padding-top:5%"> <font style="color:Teal;padding-left:45%;">OK</font>  </div>
                 </div>
             </div>
 
@@ -2266,13 +2292,19 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/bck.png" alt="" />
+						onclick="gobackPage()">
+                        <!--<img src="images/bck.png" alt="" />-->
+                        Back
      
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
-					</td>
+                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()">
+
+                        <!--<img src="images/cancel.png" alt="" onclick="goindexPage()" />-->
+                        Cancel
+
+                    </td>
 				</tr>
 			</table>
 			<table class="ContentTable" cellspacing="0" cellpadding="0">
@@ -2398,13 +2430,19 @@ var TimeHistroy = $('#txttimepicker').val();
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
 					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()"><img src="images/bck.png" alt="" />
+						onclick="gobackPage()">
+
+                     <!-- <img src="images/bck.png" alt="" />-->  
+                       Back
      
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-					<td width="15%" style="text-align: left !important;"><img src="images/cancel.png" alt="" onclick="goindexPage()" />
-					</td>
+                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()">
+
+                        <!--<img src="images/cancel.png" alt="" onclick="goindexPage()" />-->
+                        Cancel
+                    </td>
 				</tr>
 			</table>
 			<table class="ContentTable" cellspacing="0" cellpadding="0">
@@ -2498,14 +2536,19 @@ var TimeHistroy = $('#txttimepicker').val();
                 <tr class="HeaderTr">
                     <td width="15%" style="text-align: center !important;width:10%!important;"
                         id="saveback" onclick="gobackPage()">
-                        <img src="images/bck.png" alt="" />
+
+                       <!-- <img src="images/bck.png" alt="" />-->
+                        Back
+
                     </td>
                     <td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">
                         Report
                         an Accident
                     </td>
-                    <td width="15%" style="text-align: left !important;">
-                        <img src="images/cancel.png" alt="" onclick="goindexPage()" id="savecancel" />
+                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()" id="savecancel">
+
+                     <!--  <img src="images/cancel.png" alt="" onclick="goindexPage()" id="savecancel" /> --> 
+                        Cancel
 
                     </td>
                 </tr>

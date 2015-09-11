@@ -392,7 +392,8 @@ text-shadow: none!important;
     float:left;
     width: 78%;
     padding-top:12px;
-  
+   border-bottom:red!important;
+   
     
 }
 
