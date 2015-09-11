@@ -1566,18 +1566,16 @@
         <center><!-- Newly added for arrange div tag to center   -->
 
             <div data-role="content">
-                <!--<div class="PhotoLocationHeading">Photo of Location</div>-->
-                <div class="inputFields" id="idAddPhotoImg" style="margin-top:5%">
-                    <img src="images/Addphoto.png" style="width: 80%;" alt=""
-                         onclick="capturePhotoWithFile();" />
+                <div class="cameraview" id="idAddPhotoImg" onclick="capturePhotoWithFile();">
 
+                    <div style=" padding :20px; color: teal;padding-left:7px;">
+                        Add Photo of Location
+                        <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+                    </div>
 
-                </div>   
-                <div id="idDelImgPhotoImg">
-                    <!--<div class="deleteImg">
-                <img src="images/delete.png" alt="" style="width: 100%" /></div>
-            <div class="photodiv">
-                <img src="images/5mount-img.png" alt="" style="width: 100%" /></div>-->
+                </div>
+                  
+                <div id="idDelImgPhotoImg">        
                </div> 
 
                 <div style="margin-top: 5%; display: none;"
@@ -1586,12 +1584,25 @@
                          onclick="capturePhotoWithFile();" />
                 </div>
 
+
+
                 <div id="idVedioShowdiv" style="display: none"></div>
                 <div style="margin-top: 20px !important;"></div>
-                <div style="display: block;" id="idVediocapturediv">
+
+              <!-- <div style="display: block;" id="idVediocapturediv">
                     <img src="images/Capture.png" alt="" style="width:80%;"
                          onclick="captureVedio();" />
+                </div> --> 
+                <div class="cameraview" style="display: block;" id="idVediocapturediv" onclick="captureVedio();">
+
+                    <div style=" padding :20px; color: teal;padding-left:7px;">
+                        Capture Video
+                        <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" />
+                    </div>
+
                 </div>
+
+
 
                 <div class="result-block" style="display: none">
                     <div style="color: White">Capture Result:</div>
