@@ -323,7 +323,7 @@ font-weight:normal;
 width:50%;
 /*float:left;*/
 height:28px;
-color:teal!important;
+color:#009ba4!important;
 background-color:#ffffff!important;
 font-family:'FNB Sans Light' !important;
 font-size: 22px;
@@ -402,7 +402,7 @@ text-shadow: none!important;
     float:left;
     width: 78%;
     padding-top:12px;
-   border-bottom:red!important;
+ 
    
     
 }
@@ -641,6 +641,22 @@ height:40px!important;
 
     border:none!important;
      width:100%!important;
+  color: #000000!important;
+font-family:'FNB Sans'!important;
+font-size: 14px!important;
+background-color:white!important;
+font-weight: normal;
+text-shadow:none!important;
+height:48px!important;
+padding-right:50%;
+}
+
+
+.inputgps
+{
+
+    border:none!important;
+     width:125%!important;
   color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
@@ -1252,7 +1268,7 @@ fullwit {
 }
 
 .Vinclass {
-	width:102%;
+	width:101%;
 	float:left;
 	height:56px;
 	border:solid 1px #009999;
@@ -1766,7 +1782,7 @@ font-family: 'FNB Sans'!important;
 
 .popup{
     margin-left:11%;
-    margin-top:280%;
+    margin-top:330%;
     width:80%;
    /*position:fixed;*/ 
     height:170px;  
@@ -1825,4 +1841,7 @@ font-family: 'FNB Sans'!important;
  .mainwitness{
      top:150px;
 
+ }
+ .class{
+     float:right:
  }
