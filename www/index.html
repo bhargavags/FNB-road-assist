@@ -93,6 +93,11 @@
         function showpopup() {
             try {
                 document.getElementById("popupBasic").style.display = "block";
+                document.getElementById("indexPage").style.display = "none";
+
+
+
+              
             } catch (ex) {
 
             }
@@ -104,6 +109,9 @@
 
             }
         }
+
+        
+
 
         var sid;
         var query = window.location.search.substring(1);
@@ -388,13 +396,26 @@
 
 
             });
+
             $('#deletepopupSpartyHelp').click(function () {
 
                 $('#popupSpartyHelp').hide();
 
 
-            });
+            })
+
         });
+        function showimage() {
+            try {
+
+                document.getElementById("back").style.display = "block";
+
+
+            } catch (ex) {
+
+            }
+        }
+
     </script>
 
     <script type="text/javascript">
@@ -1722,22 +1743,22 @@
             </center>
 </div>
 	<div data-role="page" id="FirstPartyPage" class="BodyBackground">
-		<div data-role="header" data-position="fixed">
+		<div id="div" data-role="header" data-position="fixed">
 			<table class="HeaderTable" width="100%"
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
-					<td width="15%" style="text-align: center !important;width:10%!important;"
-						onclick="gobackPage()">
-                        
+                    <td id="back" width="15%" style="text-align: center !important;width:10%!important;"
+                        onclick="gobackPage()">
+
                         <!-- <img src="images/bck.png" alt="" /> -->
                         Back
-   
-					</td>
+
+                    </td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()">
+                    <td id="cancel" width="15%" style="text-align: left !important;" onclick="goindexPage()">
 
-                       <!-- <img src="images/cancel.png" alt="" onclick="goindexPage()" />-->
+                        <!-- <img src="images/cancel.png" alt="" onclick="goindexPage()" />-->
                         Cancel
                     </td>
 				</tr>
@@ -1888,7 +1909,7 @@
                     <td>
                         <input type="text" class="inputImg" id="txtFirstpartyVINNum" placeholder="Enter VIN Number" />
                     </td>
-                    <td width="5%" class="leftdivReport2" ; onclick="showpopup()">
+                    <td width="5%" id="image" class="leftdivReport2" ; onclick="showpopup()">
                         <img src="images/questionmark.png" alt="" style="margin-top:20px;" />
                     </td>
                 </tr>
@@ -1906,7 +1927,7 @@
                             Look on the dashboard
                             passanger side, diretly under the windscreen
                         </p>
-                        <div id="deletepopup" class="popupheader" style="padding-top:5%"> <font style="color:Teal;padding-left:45%;">OK</font>  </div>
+                        <div onlclick="showimage()" id="deletepopup" class="popupheader" style="padding-top:5%"> <font style="color:Teal;padding-left:45%;">OK</font>  </div>
 
                     </div>
                 </div>

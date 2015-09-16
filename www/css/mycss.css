@@ -486,16 +486,6 @@ margin-bottom:1%!important;
 
 }
 
-
-
-
-
-
-
-
-
-
-
 .fieldnameAccident
 {
 /*color: #009999!important;
@@ -540,32 +530,19 @@ margin-bottom: 1%!important;
 .inputFields
 {
     
-    width:100%!important;
-   
-   
-    
+    width:100%!important;       
 }
 
 .imgwitnness{
 width: 25% !important;
 background-color:white!important;
-
 }
 
 .inputFields1
-{
-    
-    width:90%!important;
-    margin-left:5%
-   
-    
+{  
+   width:90%!important;
+    margin-left:5%     
 }
-
-
-
-
-
-
 
 .heightBtnAnother
 {
@@ -592,9 +569,6 @@ background-color:white!important;
 text-shadow:none!important;
 opacity:1!important;
 
-
-  
- 
 }
 .inputImg1
 {
@@ -684,9 +658,6 @@ text-shadow:none!important;
 height:48px!important;
 padding-right:3%;
 }
-
-
-
 
 .inputTextroad
 {
@@ -780,15 +751,8 @@ padding-right:3%;
     background-color: white!important;
      border-top:1px solid teal!important;
     border-bottom:1px solid teal!important;
-    border-right:1px solid teal!important;
-   
-   
-    
+    border-right:1px solid teal!important;   
 }
-
-
-
-
 
 .DateText
 {
@@ -832,18 +796,13 @@ innerFieldsVIN
 }
 .photodiv
 {
-   
-   
+ 
   /*  background-color:white!important;
-   /* border-bottom:1px solid teal!important; 
+ /* border-bottom:1px solid teal!important; 
   /*  border-right:1px solid teal!important;
    /* border-left:1px solid teal!important;*/
 }
-.camImg
-{
-    float:left;
-    padding:5px!important;
-}
+
 
 .AddphotoText
 {
@@ -945,15 +904,10 @@ margin-bottom:3%!important;
 }
 
 .License
-{
-    /* width:85%; 
-    float:left; 
-    margin-top: 4%!important;*/
-    
-    width:85%;
+{   
+ width:85%;
 float:left;
 font-weight:normal;
-
 color: #009999!important;
 font-family: 'FNB Sans'!important;
 font-size: 14px!important;
@@ -1233,22 +1187,6 @@ text-shadow: none!important;
    margin:auto!important;
    /* max-height:100%;*/
 }
-
-
-
-
-
-/*video { 
-   width:305px; 
-   height:160px;  
-   background:transparent url('poster.jpg') no-repeat 0 0; 
-   -webkit-background-size:cover; 
-   -moz-background-size:cover; 
-   -o-background-size:cover; 
-   background-size:cover; 
-}*/
-
-
 
 fullwit {
 	width:100%;
@@ -1575,14 +1513,6 @@ fullwit {
     text-align:left;
 
 }
-
-
-
-
-
-
-
-
 
 .witness {
 	width:25%;

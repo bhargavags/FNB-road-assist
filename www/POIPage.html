@@ -41,16 +41,17 @@
             width: 50px;
         }
         .searchbox {
+
     background-image: url('/images/search-text-area.png');
 	background-repeat: no-repeat;
 	background-position:center;
     background-size:100% 100%;
     vertical-align:middle;
     text-align:center;
-    border-bottom:2px solid Teal!important;
-    border-top:2px solid Teal!important;
-    border-right:2px solid Teal!important;
-    border-left:2px solid Teal!important;
+    border-bottom:1px solid teal!important;
+    border-top:1px solid Teal!important;
+    border-right:1px solid Teal!important;
+    border-left:1px solid Teal!important;
     margin:auto;
    
     
@@ -67,11 +68,11 @@
    
  }
  ::-webkit-input-placeholder {
-   color: #009999 !important;
+   color: #cfcfcf !important;
 }
 input[type="text"]{
     border: 0px solid #009999;
-    color:#009999 !important;
+    color:#000000 !important;
     background:white !important;
     width:95%;height:100%;
     -webkit-border-radius: 4px;
@@ -81,6 +82,7 @@ input[type="text"]{
       }
 .displayAddressKM
 {
+    
 border-bottom:1px solid #009999!important;
 height:50px;
 width:100%;
@@ -91,10 +93,10 @@ font-size: 14px!important;
 text-shadow: none!important;
 color: black!important;
 overflow: hidden;
-      o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-       white-space: nowrap;
-}
+o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+white-space: nowrap;
+}Accommodation 
  .displaykm
  {
 float: left;
@@ -120,7 +122,7 @@ text-align:center;
  .displayAddress
  {
  width:50%;
-    padding-left: 10px;
+    padding-left: 20px;
 color: #009999!important;
 font-family: FNB Sans!important;
 font-size: 14px!important;
@@ -133,7 +135,8 @@ text-overflow: ellipsis;
  }
  .searchdiv
  {
-     width:100%;background-color:#ffffff!important;
+     width:100%;
+     background-color:#ffffff!important;
    
  }
  .borderright
@@ -154,6 +157,23 @@ width: 100%;margin-top:-16px;max-width:none;height:300px;
     overflow-y: scroll;
    
 }
+
+::-webkit-input-placeholder {
+   color: #cfcfcf;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #cfcfcf;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:  #cfcfcf;  
+}
+
+:-ms-input-placeholder {  
+   color:  #cfcfcf;  
+}
+
     </style>
     <script type="text/javascript">
     var currentlat;
@@ -1712,8 +1732,8 @@ document.getElementById('view-loadingpoi').style.display = "block";
             <table class="HeaderTable" width="100%">
                 <tr class="HeaderTr">
                     <td width="15%" style="padding-top:6px;padding-left: 25px; text-align: center !important;width:10%!important;"
-                        onclick="gobackPage()">
-                        <img src="images/bck.png" alt="" />
+                        onclick="gobackPage()"> Back
+                       <!-- <img src="images/bck.png" alt="" /> -->
 
                     </td>
                     <td width="80%" style="text-align: center !important;  font-family: 'FNB Sans' !important; float:initial;">
@@ -1780,20 +1800,21 @@ document.getElementById('view-loadingpoi').style.display = "block";
             </div>
         
     </div>
-    <div data-role="page" id="FuelStationSearchPage" class="BodyBackground">
+    <div data-role="page" id="FuelStationSearchPage" class="BodyBackgroundsecond">
         <div data-role="header" data-position="fixed">
             <table class="HeaderTable" width="100%" style="border-bottom: 1px solid white !important;">
-                		<tr class="HeaderTr">		
+                <tr class="HeaderTr">
                     <td width="10%" style="padding-top:6px;padding-left:20px;" onclick="gotoQAAccomodation()">
                         <img src="images/bck.png" alt="">
                     </td>
                     <td width="80%" style="text-align: center!important;font-size:16px!important;padding-right:20%;">
-                       Accommodation
+                        Accommodation
                     </td>
-                    </tr>
+                </tr>
             </table>
-            <div class="searchdiv" style="margin-top:2%" >
-                <table class="searchbox" width="90%" cellpadding="0" cellspacing="0" style="border-bottom: 1px solid white !important;">
+
+            <div class="searchdiv" style="margin-top:2%">
+                <table class="searchbox" width="90%" cellpadding="0" cellspacing="0" style=" padding-left:2%;">
                     <tr id="search">
                         <td style="margin-left:10px">
                             <input id="isSearchLoc" type="text" class="textbox" placeholder="Search" />
@@ -1804,23 +1825,43 @@ document.getElementById('view-loadingpoi').style.display = "block";
                     </tr>
                 </table>
             </div>
+
+            <!-- <div class="searchdiv" style="margin-top:2%">
+                 <table class="searchbox" width="90%" cellpadding="0" cellspacing="0">
+                     <tr>
+
+                         <td style="margin-left:10px">
+                             <input id="isSearchLocBP" type="text" class="textbox" placeholder="Search" />
+                         </td>
+                         <td height="30%" align="center" onclick="searchBP();">
+                             <img src="images/searchimg.png" class="imgstylesmall" id="Img2" style="margin-top: 5px;" />
+                         </td>
+                     </tr>
+                 </table>
+             </div> -->
+
+
+
         </div>
         <div data-role="content" style="padding: 0px!important">
-        
-        <!--displayAddress km-->
-        <div id="nomsgdisp">
-        
-         </div>
-        <div id="listaddress">
-        
-         </div>
-        
-        </div>
-         <div>
-               <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+
+            <!--displayAddress km-->
+            <div id="nomsgdisp">
+
             </div>
-        
+            <div id="listaddress">
+
+            </div>
+
+        </div>
+        <div>
+            <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        </div>
+
     </div>
+
+
+
     <div data-role="page" id="FuelStationSalesAgentPage" class="BodyBackground">
         <div data-role="header" data-position="fixed">
             <table class="HeaderTable" width="100%">
@@ -1915,44 +1956,44 @@ document.getElementById('view-loadingpoi').style.display = "block";
             </div>
         
     </div>
-    <div data-role="page" id="BPSearchPage" class="BodyBackground">
+    <div data-role="page" id="BPSearchPage" class="BodyBackgroundsecond">
         <div data-role="header" data-position="fixed">
             <table class="HeaderTable" width="100%" style="border-bottom: 1px solid white !important;">
-				<tr class="HeaderTr">
+                <tr class="HeaderTr">
                     <td width="10%" style="padding-top:6px;padding-left: 20px;" onclick="gotoBPFillingStations()">
                         <img src="images/bck.png" alt="">
                     </td>
                     <td width="80%" style="text-align: center!important;font-size:16px!important;padding-right:20%;">
-                      Filling Stations
+                        Filling Stations
                     </td>
                 </tr>
             </table>
-              <div class="searchdiv">
-        <table class="searchbox" width="100%" cellpadding="0" cellspacing="0">
-            <tr>
-               
-                <td style="margin-left:10px">
-                    <input id="isSearchLocBP" type="text" class="textbox" placeholder="Search" />
-                </td>
-                 <td height="30%" align="center" onclick="searchBP();">
-                    <img src="images/searchimg.png" class="imgstylesmall" id="Img2" style="margin-top: 5px;" />
-                </td>
-            </tr>
-            </table>
-        </div>
+            <div class="searchdiv" style="margin-top:2%">
+                <table class="searchbox" width="90%" cellpadding="0" cellspacing="0">
+                    <tr>
+
+                        <td style="margin-left:10px">
+                            <input id="isSearchLocBP" type="text" class="textbox" placeholder="Search" />
+                        </td>
+                        <td height="30%" align="center" onclick="searchBP();">
+                            <img src="images/searchimg.png" class="imgstylesmall" id="Img2" style="margin-top: 5px;" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div data-role="content" style="padding: 0px!important">
-      
-        <!--displayAddress km-->
-        <div id="listaddressBP">
-        
-         </div>
-        
-        </div>
-         <div>
-               <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+
+            <!--displayAddress km-->
+            <div id="listaddressBP">
+
             </div>
-        
+
+        </div>
+        <div>
+            <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        </div>
+
     </div>
     <div data-role="page" id="HospitalsPage" class="BodyBackground">
         <div data-role="header" data-position="fixed">

@@ -319,6 +319,24 @@ function gotoAboutAAPage() {
 	pageData.push(currentPage);
 }
 
+
+function gotopopup() {
+
+
+    $.mobile.changePage('#popuppage', {
+        transition: "none",
+        reverse: false,
+        changeHash: false
+    });
+    currentPage = 'popuppage';
+    pageData.push(currentPage);
+}
+
+
+
+
+
+
 function getDateTimeIncident() {
 
 	var now = new Date();
