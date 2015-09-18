@@ -93,6 +93,8 @@
         function showpopup() {
             try {
                 document.getElementById("popupBasic").style.display = "block";
+                document.getElementById("back").style.display = "none";
+                document.getElementById("cancel").style.display = "none";
                 
 
 
@@ -105,6 +107,9 @@
         function showpopupSPartyHelp() {
             try {
                 document.getElementById("popupSpartyHelp").style.display = "block";
+                document.getElementById("back2").style.display = "none";
+                document.getElementById("cancel2").style.display = "none";
+
             } catch (ex) {
 
             }
@@ -393,28 +398,22 @@
             $('#deletepopup').click(function () {
 
                 $('#popupBasic').hide();
-
+                $('#back').show();
+                $('#cancel').show();
 
             });
 
             $('#deletepopupSpartyHelp').click(function () {
 
                 $('#popupSpartyHelp').hide();
+                $('#back2').show();
+                $('#cancel2').show();
 
 
             })
 
         });
-        function showimage() {
-            try {
-
-                document.getElementById("back").style.display = "block";
-
-
-            } catch (ex) {
-
-            }
-        }
+       
 
     </script>
 
@@ -1927,7 +1926,7 @@
                             Look on the dashboard
                             passanger side, diretly under the windscreen
                         </p>
-                        <div onlclick="showimage()" id="deletepopup" class="popupheader" style="padding-top:5%"> <font style="color:Teal;padding-left:45%;">OK</font>  </div>
+                        <div  id="deletepopup" class="popupheader" style="padding-top:5%"> <font style="color:Teal;padding-left:45%;">OK</font>  </div>
 
                     </div>
                 </div>
@@ -2059,7 +2058,7 @@
 			<table class="HeaderTable" width="100%"
 				style="border-bottom: 1px solid white !important;">
 				<tr class="HeaderTr">
-					<td width="15%" style="text-align: center !important;width:10%!important;"
+					<td id="back2" width="15%" style="text-align: center !important;width:10%!important;"
 						onclick="gobackPage()">
                         <!-- <img src="images/bck.png" alt="" /> -->
                         Back
@@ -2067,7 +2066,7 @@
 					</td>
 					<td width="70%" style="text-align: center !important; font-family: 'FNB Sans' !important; float:initial;">Report
 						an Accident</td>
-                    <td width="15%" style="text-align: left !important;" onclick="goindexPage()">
+                    <td id="cancel2" width="15%" style="text-align: left !important;" onclick="goindexPage()">
 
                        <!-- <img src="images/cancel.png" alt="" onclick="goindexPage()" /> -->
                         Cancel

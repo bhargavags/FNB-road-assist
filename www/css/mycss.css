@@ -1711,6 +1711,7 @@ font-family: 'FNB Sans'!important;
 }
 
 .popup{
+   
     margin-left:11%;
     margin-top:330%;
     width:80%;
@@ -1741,11 +1742,11 @@ font-family: 'FNB Sans'!important;
 
   
   background-color: transparent;
-   /*background-image: url('../images/popbg.png');*/
-    background-color: rgba(0, 0, 0, 0.5);
-    background-repeat: no-repeat;
+  /* background-image: url('../images/popbg.png');*/
+   background-color: rgba(0, 0, 0, 0.5);
+   /* background-repeat: no-repeat;*/
    
-   /*background-attachment: scroll;*/ 
+  /* background-attachment: fixed; */
    /* background-size: 600%;*/
     background-size:cover;
    width: 100%;
