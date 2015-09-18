@@ -173,7 +173,7 @@
         }
         function onPhotoFileSuccess(imageData) {
             try {
-                $('#idDelImgPhotoImg').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Loction <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div> </div><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageData + '" alt="" style="width: 100%;height:50%; padding-left:1px;padding-right:1px" id="LocPhotoImag" /></div></div>');
+                $('#idDelImgPhotoImg').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Loction <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div> </div><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageData + '" alt="" style="width: 100%;height:50%;padding-right:1px" id="LocPhotoImag" /></div></div>');
 
                 $('#idAddPhotoImg').show();
                 Locphotos.push(imageData);
@@ -229,7 +229,7 @@
         }
         function onPhotoFileSuccessdamagePhotoAccident(imageDatadamagePhoto) {
             try {
-                $('#idDelImgDamagePhotoImg').append('<div class="mainPhoto"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Damage <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div><div class="deleteImg"> <img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageDatadamagePhoto + '" alt="" style="width: 100%;height:50%" id="imgdamagePhoto"/></div></div>');
+                $('#idDelImgDamagePhotoImg').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Damage <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div><div class="deleteImg"> <img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageDatadamagePhoto + '" alt="" style="width: 100%;height:50%" id="imgdamagePhoto"/></div></div>');
 
                 $('#idAddDamagePhotoImg').show();
                 AccDamgphotos.push(imageDatadamagePhoto);
@@ -262,7 +262,7 @@
         }
         function onPhotoFileSuccessDriverLicenseNum(imageDataPath) {
             try {
-                $('#idDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 0px"><img  src="images/delete.png" alt="" onclick="deleteImgLNum(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPath + '" alt="" style="width: 50%; height: 30%" id="DLImag" /></div></div>');
+                $('#idDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px;"><img  src="images/delete.png" alt="" onclick="deleteImgLNum(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPath + '" alt="" style="width: 50%; height: 30%" id="DLImag" /></div></div>');
                 Licensephotos.push(imageDataPath);
             } catch (ex) {
             }
@@ -326,7 +326,7 @@
         }
         function onPhotoFileSuccessDriverLicenseNumSP(imageDataPathSP) {
             try {
-                $('#idSecondpartyDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 0px"><img  src="images/delete.png" alt="" onclick="deleteImgLNumSP(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPathSP + '" alt="" style="width: 50%; height: 30%" id="SPDLImg" /></div></div>');
+                $('#idSecondpartyDriverLicenseNumPhoto').append('<div class="mainPhoto"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLNumSP(this)"/></div><div class="photodiv id="idPhotoDiv2"><img  src="' + imageDataPathSP + '" alt="" style="width: 50%; height: 30%" id="SPDLImg" /></div></div>');
                 SPLicensephotos.push(imageDataPathSP);
             } catch (ex) {
             }
@@ -468,7 +468,7 @@
 
                 var path = $('#capture-result').text();
                 $('#idVedioShowdiv').show();
-                $('#idVedioShowdiv').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Capture Video<img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /><div class="photodiv" id="idvedioDiv"><div class=""><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteVedio(this)" style="width: 100%" /></div><div class="photodiv" id="idvedioDiv"><video style="width:100%" poster="http://196.38.94.34:9091/Images/PlayVedio.png" controls><source src="' + path + '" type="video/mp4"></video></div></div></video></div></div>');
+                $('#idVedioShowdiv').append('<div class="mainPhotodiv style="margin-top:3%;"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Capture Video<img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /><div class="photodiv" id="idvedioDiv"><div class=""><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteVedio(this)" style="width: 100%" /></div><div class="photodiv" id="idvedioDiv"><video style="width:100%" poster="http://196.38.94.34:9091/Images/PlayVedio.png" controls><source src="' + path + '" type="video/mp4"></video></div></div></video></div></div>');
 
             }
             catch (ex) {
@@ -1366,7 +1366,7 @@
                     </div>
                     <div class="timeDiv" style="width: 50% !important">
 
-                        <div class="innerFields">
+                        <div class="dateinnerfields">
                             <div class="leftdivReport2">
                                 <input type="text" class="inputImg1" id="txtdatepicker" disabled />
                                 <!-- <input type="text" class="inputImg1" id="txttimepicker" disabled />-->
@@ -1410,7 +1410,7 @@
                     </div>
                     <div class="timeDiv" style="width: 50% !important">
 
-                        <div class="innerFields">
+                        <div class="dateinnerfields">
                             <div class="leftdivReport2">
                                 <input type="text" class="inputImg1" id="txttimepicker" disabled />
 
@@ -1907,7 +1907,7 @@
                     </td>
 
                     <td>
-                        <input type="text" class="inputImg" id="txtFirstpartyVINNum" placeholder="Enter VIN Number" />
+                        <input type="text" class="inputVin" id="txtFirstpartyVINNum" placeholder="Enter VIN Number" />
                     </td>
                     <td width="5%" id="image" class="leftdivReport2" ; onclick="showpopup()">
                         <img src="images/questionmark.png" alt="" style="margin-top:20px;" />
@@ -2023,14 +2023,14 @@
             <div class="full" style="margin-top:2%;padding-left:5px;">
                 <div class="bar">Policy No:   </div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtFirstpartyInsurerPcnum" placeholder="Enter Policy Number" />
+                    <input type="text" class="inputTxtNew" id="txtFirstpartyInsurerPcnum" placeholder="Enter Policy Number" />
                 </div>
             </div>
 
             <div class="full" style="margin-top:3%;margin-bottom:3%;padding-left:5px;">
                 <div class="bar">Phone Number:   </div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtFirstpartyInsurerPhnum" placeholder="Enter Phone Number" />
+                    <input type="text" class="inputTxtNew" id="txtFirstpartyInsurerPhnum" placeholder="Enter Phone Number" />
                 </div>
             </div>
 
@@ -2213,7 +2213,7 @@
 
 
 
-            <div class="full" style="margin-top:5%;">
+            <div class="full" style="margin-top:5%;padding-left:5px;">
                 <div class="register">Registration number: </div>
                 <div class="gps">
                     <input type="text" class="inputReg" id="txtFirstpartyRegNum" placeholder="Enter Reg No" />
@@ -2230,7 +2230,7 @@
                     </td>
 
                     <td>
-                        <input type="text" class="inputImg" id="txtSecondpartyVINNum" placeholder="Enter VIN Number" />
+                        <input type="text" class="inputVin" id="txtSecondpartyVINNum" placeholder="Enter VIN Number" />
                     </td>
                     <td width="5%" class="leftdivquestion" ; onclick="showpopupSPartyHelp();">
                         <img src="images/questionmark.png" alt="" style="margin-top:29px;" />
@@ -2345,14 +2345,14 @@
             <div class="full" style="margin-top:2%">
                 <div class="bar" style="padding-left:3px;">Policy No:   </div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtSecondpartyInsurerPcnum" placeholder="Enter Policy Number" />
+                    <input type="text" class="inputTxtNew" id="txtSecondpartyInsurerPcnum" placeholder="Enter Policy Number" />
                 </div>
             </div>
 
             <div class="full" style="margin-top:3%;margin-bottom:3%">
                 <div class="bar" style="padding-left:3px;">Phone Number:   </div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtSecondpartyInsurerPhnum" placeholder="Enter Phone Number" />
+                    <input type="text" class="inputTxtNew" id="txtSecondpartyInsurerPhnum" placeholder="Enter Phone Number" />
                 </div>
             </div>
 
@@ -2440,7 +2440,7 @@
                 <div class="full" style="margin-top:5%">
                     <div class="bar" style="padding-left:7px;">First Name: </div>
                     <div class="bar2">
-                        <input type="text" class="inputImg" id="txtidwitnessName" placeholder="Enter First Name" />
+                        <input type="text" class="inputTxtNew" id="txtidwitnessName" placeholder="Enter First Name" />
                     </div>
 
                 </div>
@@ -2456,14 +2456,14 @@
             <div class="full" style="margin-top:5%">
                 <div class="bar" style="padding-left:7px;">Phone Number: </div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtidwitnessPhnum" placeholder="Enter Phone Number" />
+                    <input type="text" class="inputTxtNew" id="txtidwitnessPhnum" placeholder="Enter Phone Number" />
                 </div>
 
             </div>
             <div class="full" style="margin-top:5%">
                 <div class="bar" style="padding-left:7px;">Email Address: </div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtidwitnessEmail" placeholder="Enter Email Address" />
+                    <input type="text" class="inputTxtNew" id="txtidwitnessEmail" placeholder="Enter Email Address" />
                 </div>
 
             </div>
@@ -2554,7 +2554,7 @@
             <div class="full" style="margin-top:5%">
                 <div class="bar" style="padding-left:7px;">First Name: </div>
                 <div class="bar2">
-                    <input type="text" class="inputImg" id="txtidwitnessName" placeholder="Enter First Name" />
+                    <input type="text" class="inputTxtNew" id="txtidwitnessName" placeholder="Enter First Name" />
                 </div>
 
             </div>
@@ -2570,14 +2570,14 @@
             <div class="full" style="margin-top:5%">
                 <div class="bar" style="padding-left:7px;">Phone Number: </div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtidwitnessPhnum" placeholder="Enter Phone Number" />
+                    <input type="text" class="inputTxtNew" id="txtidwitnessPhnum" placeholder="Enter Phone Number" />
                 </div>
 
             </div>
             <div class="full" style="margin-top:5%">
                 <div class="bar"style="padding-left:7px;">Email Address: </div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtidwitnessEmail" placeholder="Enter Email Address" />
+                    <input type="text" class="inputTxtNew" id="txtidwitnessEmail" placeholder="Enter Email Address" />
                 </div>
 
             </div>
@@ -2663,7 +2663,7 @@
 
                 <div class="bar" style="padding-left:3px;">Officer Name: </div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtidpolicename" placeholder="Enter Officer Name" />
+                    <input type="text" class="inputTxtNew" id="txtidpolicename" placeholder="Enter Officer Name" />
 
                 </div>
 
@@ -2673,7 +2673,7 @@
                <!-- <div class="bar"><span style="padding-top:13%;padding-left:3px;">Officer Number:</span> </div> -->
                 <div class="officerNo" style="padding-left:3px;">Officer Number:</div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtidpolicenumber" placeholder="Enter Officer number" />
+                    <input type="text" class="inputTextofficer" id="txtidpolicenumber" placeholder="Enter Officer number" />
 
                 </div>
 
@@ -2683,7 +2683,7 @@
             <div class="full" style="margin-top:5% ;margin-bottom:7%">
                 <div class="bar" style="padding-left:3px;">Case Number:</div>
                 <div class="bar2">
-                    <input type="text" class="inputText" id="txtidcasenumber" placeholder="Enter Case Number" />
+                    <input type="text" class="inputTxtNew" id="txtidcasenumber" placeholder="Enter Case Number" />
 
                 </div>
 

@@ -559,6 +559,22 @@ background-color:white!important;
 }
 .inputImg
 {
+    padding-left:10px;
+  border:none!important;
+  width:132%!important;
+  height:49px!important;
+  color: black!important;
+font-family:'FNB Sans'!important;
+font-size: 14px!important;
+background-color:white!important;
+text-shadow:none!important;
+opacity:1!important;
+
+}
+
+.inputVin
+{
+    padding-left:10px;
   border:none!important;
   width:100%!important;
   height:49px!important;
@@ -570,6 +586,8 @@ text-shadow:none!important;
 opacity:1!important;
 
 }
+
+
 .inputImg1
 {
   border:none!important;
@@ -614,7 +632,37 @@ height:40px!important;
 {
 
     border:none!important;
-     width:100%!important;
+     width:140%!important;
+  color: #000000!important;
+font-family:'FNB Sans'!important;
+font-size: 14px!important;
+background-color:white!important;
+font-weight: normal;
+text-shadow:none!important;
+height:48px!important;
+padding-right:50%;
+}
+
+.inputTxtNew
+{
+
+    border:none!important;
+     width:110%!important;
+  color: #000000!important;
+font-family:'FNB Sans'!important;
+font-size: 14px!important;
+background-color:white!important;
+font-weight: normal;
+text-shadow:none!important;
+height:48px!important;
+padding-right:50%;
+}
+
+.inputTextofficer
+{
+
+    border:none!important;
+     width:105%!important;
   color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
@@ -761,13 +809,33 @@ padding-right:3%;
 
 .innerFields
 {
-    border-color:teal!important;
+   /* border-color:teal!important;*/
+   border-bottom:1px solid teal!important;
+   border-top:1px solid teal!important;
+   border-left:1px solid teal!important;
+   border-right:1px solid teal!important;
     border-width:1px;
     border-style:solid;
     height:40px;
     background-color: white!important;
     
 }
+
+.dateinnerfields
+{
+   /* border-color:teal!important;*/
+   border-bottom:1px solid teal!important;
+   border-top:1px solid teal!important;
+   border-left:1px solid white!important;
+   border-right:1px solid teal!important;
+    border-width:1px;
+    border-style:solid;
+    height:40px;
+    background-color: white!important;
+    
+}
+
+
 
 .innerFieldsvinNo
 {
@@ -1259,7 +1327,7 @@ fullwit {
 }
 
 .bar {
-	width:37%;
+	
 	background-color:#FFFFFF;
 	height:33px;
 	float:left;
