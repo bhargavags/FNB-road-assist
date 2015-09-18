@@ -173,7 +173,7 @@
         }
         function onPhotoFileSuccess(imageData) {
             try {
-                $('#idDelImgPhotoImg').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Loction <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div> </div><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageData + '" alt="" style="width: 100%;height:50%" id="LocPhotoImag" /></div></div>');
+                $('#idDelImgPhotoImg').append('<div class="mainPhotodiv"><div class="cameraphoto" ><div style=" padding :20px; color: teal;padding-left:5px;"> Photo Of Loction <img src="images/camera3.png" alt="" width="40px" height="30px" style="position:absolute;right: 9%;margin-top: -8px;" /> </div> </div><div class="deleteImg"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteImg(this)" style="width: 100%" /></div> <div class="photodiv" id="idPhotoDiv"><img src="' + imageData + '" alt="" style="width: 90%;height:50%" id="LocPhotoImag" /></div></div>');
 
                 $('#idAddPhotoImg').show();
                 Locphotos.push(imageData);
@@ -283,7 +283,7 @@
         }
         function onPhotoFileSuccessLicenseDisk(imageDataPathLDisk) {
             try {
-                $('#idLicenseDiskPhoto').append('<div class="mainPhoto"><div class="cameraphoto" >  < </div> <div style="margin-left: 0px"><img  src="images/delete.png" alt="" onclick="deleteImgLDisk(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDisk + '" alt="" style="width: 50%; height: 30%" id="PartyLocImg" /></div>');
+                $('#idLicenseDiskPhoto').append('<div class="mainPhotodiv"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLDisk(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDisk + '" alt="" style="width: 50%; height: 30%" id="PartyLocImg" /></div>');
                 PartyLocphotos.push(imageDataPathLDisk);
             } catch (ex) {
             }
@@ -303,7 +303,7 @@
         }
         function onPhotoFileSuccessDamagePhoto(imageDataPathDamagePhoto) {
             try {
-                $('#idDamagePhoto').append('<div class="mainPhoto"><div style="margin-left: 0px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhoto(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhoto + '" alt="" style="width: 50%; height: 30%" id="PDmgPhotoImg" /></div>');
+                $('#idDamagePhoto').append('<div class="mainPhotodiv"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhoto(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhoto + '" alt="" style="width: 50%; height: 30%" id="PDmgPhotoImg" /></div>');
                 PartyDmgphotos.push(imageDataPathDamagePhoto);
             } catch (ex) {
             }
@@ -347,7 +347,7 @@
         }
         function onPhotoFileSuccessLicenseDiskSP(imageDataPathLDiskSP) {
             try {
-                $('#idSecondpartyLicenseDiskPhoto').append('<div class="mainPhoto"><div style="margin-left: 0px"><img  src="images/delete.png" alt="" onclick="deleteImgLDiskSP(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDiskSP + '" alt="" style="width: 50%; height: 30%" id="SPartyLocImg"/></div>');
+                $('#idSecondpartyLicenseDiskPhoto').append('<div class="mainPhotodiv"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgLDiskSP(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathLDiskSP + '" alt="" style="width: 50%; height: 30%" id="SPartyLocImg"/></div>');
                 SPartyLocphotos.push(imageDataPathLDiskSP);
             } catch (ex) {
             }
@@ -367,7 +367,7 @@
         }
         function onPhotoFileSuccessDamagePhotoSP(imageDataPathDamagePhotoSP) {
             try {
-                $('#idSecondpartyDamagePhoto').append('<div class="mainPhoto"><div style="margin-left: 0px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhotoSP(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhotoSP + '" alt="" style="width: 50%; height: 30%" id="SPDmgImg" /></div>');
+                $('#idSecondpartyDamagePhoto').append('<div class="mainPhotodiv"><div style="margin-left: 110px"><img  src="images/delete.png" alt="" onclick="deleteImgDamagePhotoSP(this)"/></div><div class="photodiv" id="idPhotoDivLicDisk"><img  src="' + imageDataPathDamagePhotoSP + '" alt="" style="width: 50%; height: 30%" id="SPDmgImg" /></div>');
                 SPartyDmgphotos.push(imageDataPathDamagePhotoSP);
             } catch (ex) {
             }
@@ -2162,7 +2162,7 @@
 
           
             <div class="thirdpartytextarea" style="margin-top:3%; margin-left:0%;margin-bottom:3%">
-                <div class="note" style="padding-left:3px;">Notes:</div>
+                <div class="note" style="padding-left:5px;">Notes:</div>
                 <div class="note1">
                     <textarea rows="4" cols="150" class="txtareainput" id="txtSecondpartyNotes" placeholder="Any Other Notes Regarding The Accident"></textarea>
 
