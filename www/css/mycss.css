@@ -576,6 +576,7 @@ opacity:1!important;
 
 .inputVin
 {
+    padding-top:5px;
     padding-left:10px;
   border:none!important;
   width:100%!important;
@@ -606,14 +607,14 @@ font-weight:normal;
 }
 .inputTexttwo
 {
-width:130%!important; 
+width:123%!important; 
 color: #000000!important;
 border:none!important;
 font-size: 14px!important;
 background-color:white!important;
 font-weight: normal;
 text-shadow:none!important;
-height:42px!important;
+height:60px!important;
 margin-top:2px;
 }
 .inputTextnew
@@ -765,7 +766,7 @@ padding-right:3%;
 {
 
 border:none!important;
-width:133%!important;
+width:130%!important;
 color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
