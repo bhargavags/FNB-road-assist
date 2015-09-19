@@ -606,7 +606,7 @@ font-weight:normal;
 }
 .inputTexttwo
 {
-width:140%!important; 
+width:130%!important; 
 color: #000000!important;
 border:none!important;
 font-size: 14px!important;
@@ -715,7 +715,7 @@ padding-right:50%;
 {
 
     border:none!important;
-     width:125%!important;
+     width:135%!important;
   color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
@@ -730,7 +730,7 @@ padding-right:3%;
 {
 
 border:none!important;
-width:123%!important;
+width:130%!important;
 color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
@@ -745,7 +745,7 @@ padding-right:3%;
 {
 
 border:none!important;
-width:144%!important;
+width:154%!important;
 color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
@@ -765,7 +765,7 @@ padding-right:3%;
 {
 
 border:none!important;
-width:145%!important;
+width:133%!important;
 color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
@@ -1429,7 +1429,7 @@ fullwit {
 
 /* newly added*/
 .register {
-	width:49%;
+	/*width:49%;*/
 	background-color:#FFFFFF;
 	height:35px;
 	float:left;
