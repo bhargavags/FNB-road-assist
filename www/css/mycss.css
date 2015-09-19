@@ -559,6 +559,8 @@ background-color:white!important;
 }
 .inputImg
 {
+
+    padding-top:30px;
     padding-left:10px;
   border:none!important;
   width:132%!important;
@@ -604,7 +606,7 @@ font-weight:normal;
 }
 .inputTexttwo
 {
-width:104%!important; 
+width:140%!important; 
 color: #000000!important;
 border:none!important;
 font-size: 14px!important;
@@ -639,9 +641,26 @@ font-size: 14px!important;
 background-color:white!important;
 font-weight: normal;
 text-shadow:none!important;
+height:51px!important;
+padding-right:50%;
+}
+.witnessinput
+{
+
+    border:none!important;
+     width:100%!important;
+  color: #000000!important;
+font-family:'FNB Sans'!important;
+font-size: 14px!important;
+background-color:white!important;
+font-weight: normal;
+text-shadow:none!important;
 height:48px!important;
 padding-right:50%;
 }
+
+
+
 
 .inputTxtNew
 {
@@ -678,7 +697,7 @@ padding-right:50%;
 {
 
     border:none!important;
-     width:125%!important;
+     width:150%!important;
   color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
@@ -746,7 +765,7 @@ padding-right:3%;
 {
 
 border:none!important;
-width:128%!important;
+width:145%!important;
 color: #000000!important;
 font-family:'FNB Sans'!important;
 font-size: 14px!important;
@@ -1268,7 +1287,7 @@ fullwit {
 .full {
 	width:100%;
 	float:left;
-	height:56px;
+	height:59px;
 	border:solid 1px #009999;
     background-color:#ffffff!important;
 }
@@ -1354,7 +1373,7 @@ fullwit {
 
 /*Newly added*/
 .officerNo {
-	width:40%;
+	/*width:40%;*/
 	background-color:#FFFFFF;
 	height:33px;
 	float:left;
@@ -1483,7 +1502,7 @@ fullwit {
 }
 
 .textarea2 {
-	width:30%;
+	width:35%;
 	background-color:#FFFFFF;
 	height:68px;
 	float:left;
@@ -1521,7 +1540,7 @@ fullwit {
 
 
 .note {
-	width:16%;
+	/*width:16%;*/
 	background-color:#FFFFFF;
 	height:60px;
 	float:left;
