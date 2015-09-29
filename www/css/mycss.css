@@ -347,6 +347,10 @@ height:100%;*/
     border:1px;
     width:100%
 }
+
+
+
+
 .tdleftspaceparty
 {
     width:20%;
@@ -1887,7 +1891,30 @@ font-family: 'FNB Sans'!important;
  .thirdpartyArea{
 
      width:65%;
-     vertical-align: middle;
-     
-     
+     vertical-align: middle;    
  }
+
+.search
+{
+width:50%;
+
+height:5px;
+color:#009ba4!important;
+background-color:#ffffff!important;
+
+
+}
+
+.ContentTableheight
+{
+    width:100%;
+    height:10px;
+    vertical-align:top;
+    overflow:hidden;
+}
+.PartyRowheight
+{
+    background:#747474;
+    height:10px;
+   
+}
