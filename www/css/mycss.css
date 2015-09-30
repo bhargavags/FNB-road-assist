@@ -1831,7 +1831,7 @@ font-family: 'FNB Sans'!important;
 .popup{
    
     margin-left:11%;
-    top:200%;
+    top:230%;
     width:80%;
    /*position:fixed;*/ 
     height:170px;  
@@ -1840,6 +1840,7 @@ font-family: 'FNB Sans'!important;
     border-bottom-right-radius:10px;
     border-top-left-radius:10px; 
     border-top-right-radius:10px;
+     background-attachment: fixed;
    
     } 
  .popupheader{
@@ -1858,7 +1859,7 @@ font-family: 'FNB Sans'!important;
  .popBodyBackground{
 
 
-  
+   background-attachment: fixed;
   background-color: transparent;
   /* background-image: url('../images/popbg.png');*/
    background-color: rgba(0, 0, 0, 0.5);
