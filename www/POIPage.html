@@ -94,10 +94,8 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             padding-left: 3%;
-            vertical-align:middle;
-            
-            
-                    }
+            vertical-align: middle;
+        }
 
         .displaykm {
             margin-bottom: 2%;
@@ -139,7 +137,7 @@
             overflow: hidden;
             o-text-overflow: ellipsis;
             text-overflow: ellipsis;
-            vertical-align:middle;
+            vertical-align: middle;
         }
 
         .searchdiv {
@@ -255,6 +253,10 @@
         var advanceDelay = 1;
         var avalue;
         var indexvalue;
+
+        var BPavalue;
+        var BPindexvalue;
+
         var directionsDisplay;
         var directionsService = new google.maps.DirectionsService();
         document.addEventListener("deviceready", onDeviceReady, false);
@@ -536,9 +538,7 @@
                     var showValuelatitude;
                     var showValuelong;
                     document.getElementById('view-loadingpoi').style.display = "block";
-                    //alert("view it");
-                    //alert("latitude inside"+avalue);
-                    //alert("latitude inside"+indexvalue);
+
                     if (indexvalue == 2) {
 
                         showValuelatitude = avalue.getAttribute("data-latiude");
@@ -859,7 +859,7 @@
 
 
 
-                    data = data + '<div class="displayAddressKM">' +
+                    data = data + '<div class="displayAddressKM"  data-latiude="' + searchdata[i][4] + '" data-longitude="' + searchdata[i][5] + '"  onclick="gotoQAAccomodation(this,2);">' +
                              '<div class="displayAddress" id="displayAddress">' + searchdata[i][0] + '</div>' +
                                    '<div class="displaykm" id="displaykm">' + searchdata[i][1] + '</div><div class="displaykm" id="displaytimemin">' + searchdata[i][2] + '</div><div class="displaykmlast" id="displaytimehrs">' + searchdata[i][3] + '</div></div>';
 
@@ -1320,7 +1320,10 @@
         }
 
 
-        function gotoBPFillingStations() {
+        function gotoBPFillingStations(a, index) {
+
+            BPavalue = a;
+            BPindexvalue = index;
 
             searchdataBP = [];
             pinnedlocationsBP = [];
@@ -1471,13 +1474,23 @@
             } else {
 
                 setTimeout(function () {
-
+                    var BPshowValuelatitude;
+                    var BPshowValuelong;
                     document.getElementById('view-loadingpoi').style.display = "block";
+
+                    if (BPindexvalue == 2) {
+
+                        BPshowValuelatitude = BPavalue.getAttribute("data-latiude");
+                        BPshowValuelong = BPavalue.getAttribute("data-longitude");
+                    }
+
+
                     var origins = response.originAddresses;
                     var destinations = response.destinationAddresses;
                     var outputDiv = document.getElementById('outputDivBP');
                     outputDiv.innerHTML = '';
                     deleteOverlays();
+
 
                     var data = '';
                     var localplace = new google.maps.LatLng(currentlat, currentlong);
@@ -1489,13 +1502,27 @@
                         currentlong = "28.127421";
                     }
 
-                    maploc = new google.maps.Map(document.getElementById("mapdispBP"), {
-                        center: localplace,
-                        zoom: 14,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                        disableDefaultUI: true
-                    });
 
+                    if (BPindexvalue == 2) {
+                        var BPlocalplace = new google.maps.LatLng(BPshowValuelatitude, BPshowValuelong);
+                        maploc = new google.maps.Map(document.getElementById("mapdispBP"), {
+                            // center: localplace1,
+                            zoom: 26,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            disableDefaultUI: true
+                        });
+                        maploc.panTo(BPlocalplace);
+                    } else {
+
+
+
+                        maploc = new google.maps.Map(document.getElementById("mapdispBP"), {
+                            center: localplace,
+                            zoom: 14,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            disableDefaultUI: true
+                        });
+                    }
                     var image = 'images/greenpointer.png';
                     var point = new google.maps.LatLng(currentlat, currentlong);
                     var marker = new google.maps.Marker({
@@ -1505,6 +1532,7 @@
 
                     })
 
+
                     google.maps.event.addListener(marker, "click", function (event) {
 
                         if (infowindow) infowindow.close();
@@ -1513,7 +1541,7 @@
                         var evelatitu = currentlong.split('.')[1];
 
 
-                        if ((currentlat.replace(/^\s+|\s+$/g, '') == event.latLng.k) && (currentlong.replace(/^\s+|\s+$/g, '') == event.latLng.B.toFixed(evelatitu.length))) {
+                        if ((currentlat.replace(/^\s+|\s+$/g, '') == event.latLng.lat()) && (currentlong.replace(/^\s+|\s+$/g, '') == event.latLng.lng().toFixed(evelatitu.length))) {
                             var txthtml = "<div class='mappopuploc'>My Location<br\>" + response.originAddresses[0] + "</div>";
 
                             infowindow = new google.maps.InfoWindow({
@@ -1521,7 +1549,7 @@
                             });
                             infowindow.open(maploc, this);
                         }
-                        else if (((currentlat.replace(/^\s+|\s+$/g, '').indexOf(event.latLng.k)) != -1) && ((currentlong.replace(/^\s+|\s+$/g, '').indexOf(event.latLng.B.toFixed(evelatitu.length))) != -1)) {
+                        else if (((currentlat.replace(/^\s+|\s+$/g, '').indexOf(event.latLng.lat())) != -1) && ((currentlong.replace(/^\s+|\s+$/g, '').indexOf(event.latLng.lng().toFixed(evelatitu.length))) != -1)) {
                             var txthtml = "<div class='mappopuploc'>My Location<br\>" + response.originAddresses[0] + "</div>";
                             infowindow = new google.maps.InfoWindow({
                                 content: txthtml
@@ -1574,7 +1602,7 @@
                                     kmshrsBP.push(hrsdata);
                                     pinnedlocationsBP.push(locationsnearbyBP[j]);
 
-                                    sortedsearchdataBP.push([results[j].distance.text, mindataBP, hrsBP, pinnedlocationsBP[j][0]]);
+                                    sortedsearchdataBP.push([results[j].distance.text, mindataBP, hrsBP, pinnedlocationsBP[j][0], pinnedlocationsBP[j][2], pinnedlocationsBP[j][3]]);
                                     sortedsearchdataBP.sort(function (a, b) {
 
                                         if (parseFloat(a[0]) != parseFloat(b[0])) return parseFloat(a[0]) > parseFloat(b[0]) ? 1 : -1;
@@ -1592,7 +1620,7 @@
 
                                         if (infowindow) infowindow.close();
                                         //pinnedlocationsBP.length
-                                        for (var j = 0; j < 1; j++) {
+                                        for (var j = 0; j < pinnedlocationsBP.length; j++) {
 
                                             var evelatitu = pinnedlocationsBP[j][3].split('.')[1];
                                             if (pinnedlocationsBP[j][0] != null || pinnedlocationsBP[j][0] != undefined) {
@@ -1654,7 +1682,7 @@
                                                 ph3 = "";
                                             }
 
-                                            if ((pinnedlocationsBP[j][2].replace(/^\s+|\s+$/g, '') == event.latLng.k) && (pinnedlocationsBP[j][3].replace(/^\s+|\s+$/g, '') == event.latLng.B.toFixed(evelatitu.length))) {
+                                            if ((pinnedlocationsBP[j][2].replace(/^\s+|\s+$/g, '') == event.latLng.lat()) || (pinnedlocationsBP[j][3].replace(/^\s+|\s+$/g, '') == event.latLng.lng().toFixed(evelatitu.length))) {
 
                                                 var txthtml = "<div class='mappopuploc'>Name: " + pinnedlocationsBP[j][0] + "<br/>" + "PhoneNumber: <a href='tel:" + ph1 + "' target='_blank' >" + ph1 + "</a>" + " " + "<a href='tel:" + ph2 + "' target='_blank' >" + ph2 + "</a>" + " " + "<a href='tel:" + ph3 + "' target='_blank' >" + ph3 + "</a>" + "<br/>Physical Address:<br/>" + pinnedlocationsBP[j][5] + " " + pinnedlocationsBP[j][6] + ", " + pinnedlocationsBP[j][7] + "</div>";
                                                 infowindow = new google.maps.InfoWindow({
@@ -1662,7 +1690,7 @@
                                                 });
                                                 infowindow.open(maploc, this);
                                             }
-                                            else if (((pinnedlocationsBP[j][2].replace(/^\s+|\s+$/g, '').indexOf(event.latLng.k)) != -1) && ((pinnedlocationsBP[j][3].replace(/^\s+|\s+$/g, '').indexOf(event.latLng.B.toFixed(evelatitu.length))) != -1)) {
+                                            else if (((pinnedlocationsBP[j][2].replace(/^\s+|\s+$/g, '').indexOf(event.latLng.lat())) != -1) || ((pinnedlocationsBP[j][3].replace(/^\s+|\s+$/g, '').indexOf(event.latLng.lng().toFixed(evelatitu.length))) != -1)) {
 
                                                 var txthtml = "<div class='mappopuploc'>Name: " + pinnedlocationsBP[j][0] + "<br/>" + "PhoneNumber: <a href='tel:" + ph1 + "' target='_blank' >" + ph1 + "</a>" + " " + "<a href='tel:" + ph2 + "' target='_blank' >" + ph2 + "</a>" + " " + "<a href='tel:" + ph3 + "' target='_blank' >" + ph3 + "</a>" + "<br/>Physical Address:<br/>" + pinnedlocationsBP[j][5] + " " + pinnedlocationsBP[j][6] + ", " + pinnedlocationsBP[j][7] + "</div>";
                                                 infowindow = new google.maps.InfoWindow({
@@ -1678,11 +1706,11 @@
                             }
                         }
                         for (var s = 0; s < sortedsearchdataBP.length; s++) {
-                            data = data + '<div class="displayAddressKM">' +
+                            data = data + '<div class="displayAddressKM"  data-latiude="' + sortedsearchdataBP[s][4] + '" data-longitude="' + sortedsearchdataBP[s][5] + '"  onclick="gotoBPFillingStations(this,2); return false;">' +
                                  '<div class="displayAddress" id="displayAddressBP">' + sortedsearchdataBP[s][3] + '</div>' +
                                        '<div class="displaykm" id="displaykmBP">' + sortedsearchdataBP[s][0] + '</div><div class="displaykm" id="displaytimeminBP">' + sortedsearchdataBP[s][1] + '</div><div class="displaykmlast" id="displaytimehrsBP">' + sortedsearchdataBP[s][2] + '</div></div>';
 
-                            var searcharry = [sortedsearchdataBP[s][3], sortedsearchdataBP[s][0], sortedsearchdataBP[s][1], sortedsearchdataBP[s][2]];
+                            var searcharry = [sortedsearchdataBP[s][3], sortedsearchdataBP[s][0], sortedsearchdataBP[s][1], sortedsearchdataBP[s][2], sortedsearchdataBP[s][4], sortedsearchdataBP[s][5]];
                             searchdataBP.push(searcharry);
                         }
                         displayLocBP.innerHTML = data;
@@ -1707,7 +1735,7 @@
                     if (comparetext.indexOf(searchtxt.toUpperCase()) >= 0) {
 
 
-                        data = data + '<div class="displayAddressKM">' +
+                        data = data + '<div class="displayAddressKM"  data-latiude="' + searchdataBP[i][4] + '" data-longitude="' + searchdataBP[i][5] + '"  onclick="gotoBPFillingStations(this,2); return false;">' +
                                         '<div class="displayAddress" id="displayAddressBP">' + searchdataBP[i][0] + '</div>' +
                                               '<div class="displaykm" id="displaykmBP">' + searchdataBP[i][1] + '</div><div class="displaykm" id="displaytimeminBP">' + searchdataBP[i][2] + '</div><div class="displaykmlast" id="displaytimehrs">' + searchdataBP[i][3] + '</div></div>';
 
@@ -1724,7 +1752,7 @@
 
 
 
-                    data = data + '<div class="displayAddressKM">' +
+                    data = data + '<div class="displayAddressKM"  data-latiude="' + searchdataBP[i][4] + '" data-longitude="' + searchdataBP[i][5] + '"  onclick="gotoBPFillingStations(this,2); return false;">' +
                                         '<div class="displayAddress" id="displayAddressBP">' + searchdataBP[i][0] + '</div>' +
                                               '<div class="displaykm" id="displaykmBP">' + searchdataBP[i][1] + '</div><div class="displaykm" id="displaytimeminBP">' + searchdataBP[i][2] + '</div><div class="displaykmlast" id="displaytimehrs">' + searchdataBP[i][3] + '</div></div>';
 
@@ -1809,7 +1837,7 @@
                 <p class="Assist">
                     Accommodation
                 </p>
-                <img src="images/line_arrow.png" alt="" width="40px" height="50px" style="position:absolute;right: 6%; margin-top:-31px" />
+                <img src="images/line_arrow.png" alt="" width="40px" height="50px" style="position:absolute;right: 9%; margin-top:-31px" />
 
 
             </div>
@@ -1817,17 +1845,17 @@
                   <p class="Assist">
                      FNB ACCREDITED SALES AGENTS</p>
               </div>-->
-            <div class="listData" onclick="gotoBPFillingStations()">
+            <div class="listData" onclick="gotoBPFillingStations(null,1)">
                 <p class="Assist">
                     Filling Stations
                 </p>
-                <img src="images/line_arrow.png" alt="" width="40px" height="50px" style="position:absolute;right: 6%; margin-top:-31px" />
+                <img src="images/line_arrow.png" alt="" width="40px" height="50px" style="position:absolute;right: 9%; margin-top:-31px" />
             </div>
             <div class="listData" onclick="gotoHospitals()">
                 <p class="Assist">
                     Hospitals
                 </p>
-                <img src="images/line_arrow.png" alt="" width="40px" height="50px" style="position:absolute;right: 6%; margin-top:-31px" />
+                <img src="images/line_arrow.png" alt="" width="40px" height="50px" style="position:absolute;right: 9%; margin-top:-31px" />
             </div>
         </div>
         <div>
@@ -1864,7 +1892,7 @@
 
     </div>
     <div data-role="page" id="FuelStationSearchPage" class="BodyBackgroundsecond">
-        <div data-role="header" data-position="fixed" style="background-color:#ffffff" >
+        <div data-role="header" data-position="fixed" style="background-color:#ffffff">
             <table class="HeaderTable" width="100%">
                 <tr class=" HeaderTr">
                     <td width="10%" style="padding-top:6px;padding-left:20px;" onclick="gotoQAAccomodation(null,1)">
@@ -1883,7 +1911,7 @@
                 </tr>
             </table>
 
-           <div class="searchdiv">
+            <div class="searchdiv">
                 <table class="searchbox" width="98%" cellpadding="0" cellspacing="0">
                     <tr id=" search">
                         <td style="margin-left:10px">
@@ -2011,7 +2039,7 @@
         <div data-role="header" data-position="fixed" style="background-color:white">
             <table class="HeaderTable" width="100%" style="border-bottom: 1px solid white !important;">
                 <tr class=" HeaderTr">
-                    <td width="10%" style="padding-top:6px;padding-left: 20px;" onclick="gotoBPFillingStations()">
+                    <td width="10%" style="padding-top:6px;padding-left: 20px;" onclick="gotoBPFillingStations(null,1)">
                         <!-- <img src="images/bck.png" alt="">-->
                         Back
                     </td>
@@ -2026,6 +2054,7 @@
                     <td class="search"></td>
                 </tr>
             </table>
+
 
             <div class="searchdiv">
                 <table class="searchbox" width="98%" cellpadding="0" cellspacing="0" style="margin-top:0.25%;">
