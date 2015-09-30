@@ -529,7 +529,7 @@
 
                 var path = $('#capture-resultAudio').text();
 
-                $('#idAudioDiv').append('<div class="mainPhotodiv"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagaudio" alt="" style="float: left; top: 30px!important" onclick="playAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:30px"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
+                $('#idAudioDiv').append('<div class="mainPhoto"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagaudio" alt="" style="float: left; top: 30px!important" onclick="playAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:-20px"><img id="ImgIdDelete" src="images/delete.png" alt="" onclick="deleteAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
 
             }
             catch (ex) {
@@ -537,7 +537,7 @@
             }
         }
         function deleteAudio(ImgTagAudio) {
-            $(ImgTagAudio).parents('.mainPhotodiv').remove();
+            $(ImgTagAudio).parents('.mainPhoto').remove();
         }
 
         function playAudioclick(id) {
@@ -589,7 +589,7 @@
 
                 var path = $('#capture-resultswitAudio').text();
 
-                $('#idSecondWitAudio').append('<div class="mainPhotodiv"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagSWaudio" alt="" style="float: left; margin-top: 5px!important" onclick="playSWAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:-20px"><img id="ImgIdSWDelete" src="images/delete.png" alt="" onclick="deleteSWitAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
+                $('#idSecondWitAudio').append('<div class="mainPhoto"><div class="photodiv" id="idAudioDivImg" ><img src="images/wave.png" id="imagSWaudio" alt="" style="float: left; margin-top: 5px!important" onclick="playSWAudioclick(this);"/></div> <div class="deleteImg" style="float:left!important;margin-top:-20px"><img id="ImgIdSWDelete" src="images/delete.png" alt="" onclick="deleteSWitAudio(this)" style="float: left; margin-top: 5px;" /></div></div>');
 
             }
             catch (ex) {
@@ -599,7 +599,7 @@
 
         function deleteSWitAudio(ImgTagAudio) {
             try {
-                $(ImgTagAudio).parents('.mainPhotodiv').remove();
+                $(ImgTagAudio).parents('.mainPhoto').remove();
             } catch (ex) {
             }
         }
@@ -2252,11 +2252,11 @@
             </table>
 
 
-            <div id="popupSpartyHelp" class="popBodyBackground" style="display: none;">
+            <div id="popupSpartyHelp" class="popBodyBackground" style="display: none;position:fixed;">
                 <div id="deletepopupSparty">
                     <img src="images/delete2.png" alt="" style="padding-left:10%;" />
                 </div>
-                <div class="popup" >
+                <div class="popup">
                     <div style="text-align:center;padding-top:4%"><font style="color:Teal">VIN Number</font></div>
                     <p class="popAboutAAQuestionmark">
                         Look on the dashboard
