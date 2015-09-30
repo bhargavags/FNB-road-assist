@@ -1831,7 +1831,7 @@ font-family: 'FNB Sans'!important;
 .popup{
    
     margin-left:11%;
-    margin-top:330%;
+    top:200%;
     width:80%;
    /*position:fixed;*/ 
     height:170px;  
